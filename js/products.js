@@ -1020,7 +1020,7 @@ window.CATALOGUE = {
         }
       ],
       "unit": "1 acrylic photo magnet",
-      "status": "order",
+      "status": "enquire",
       "application": "Place on a suitable magnetic metal surface. Check that the mounting holds securely before letting go. Stands shown in photos are not confirmed as included.",
       "care": "Use a soft cloth. Avoid abrasive cleaners, impact and moisture around the print.",
       "drive": ""
@@ -1067,7 +1067,7 @@ window.CATALOGUE = {
         }
       ],
       "unit": "1 acrylic photo magnet",
-      "status": "order",
+      "status": "enquire",
       "application": "Place on a suitable magnetic metal surface. Check that the mounting holds securely before letting go. Stands shown in photos are not confirmed as included.",
       "care": "Use a soft cloth. Avoid abrasive cleaners, impact and moisture around the print.",
       "drive": ""
@@ -1114,7 +1114,7 @@ window.CATALOGUE = {
         }
       ],
       "unit": "1 acrylic photo magnet",
-      "status": "order",
+      "status": "enquire",
       "application": "Place on a suitable magnetic metal surface. Check that the mounting holds securely before letting go. Stands shown in photos are not confirmed as included.",
       "care": "Use a soft cloth. Avoid abrasive cleaners, impact and moisture around the print.",
       "drive": ""
@@ -1161,7 +1161,7 @@ window.CATALOGUE = {
         }
       ],
       "unit": "1 acrylic photo magnet",
-      "status": "order",
+      "status": "enquire",
       "application": "Place on a suitable magnetic metal surface. Check that the mounting holds securely before letting go. Stands shown in photos are not confirmed as included.",
       "care": "Use a soft cloth. Avoid abrasive cleaners, impact and moisture around the print.",
       "drive": ""
@@ -1208,7 +1208,7 @@ window.CATALOGUE = {
         }
       ],
       "unit": "1 acrylic photo magnet",
-      "status": "order",
+      "status": "enquire",
       "application": "Place on a suitable magnetic metal surface. Check that the mounting holds securely before letting go. Stands shown in photos are not confirmed as included.",
       "care": "Use a soft cloth. Avoid abrasive cleaners, impact and moisture around the print.",
       "drive": ""
@@ -1255,7 +1255,7 @@ window.CATALOGUE = {
         }
       ],
       "unit": "1 acrylic photo magnet",
-      "status": "order",
+      "status": "enquire",
       "application": "Place on a suitable magnetic metal surface. Check that the mounting holds securely before letting go. Stands shown in photos are not confirmed as included.",
       "care": "Use a soft cloth. Avoid abrasive cleaners, impact and moisture around the print.",
       "drive": ""
@@ -1302,7 +1302,7 @@ window.CATALOGUE = {
         }
       ],
       "unit": "1 acrylic photo magnet",
-      "status": "order",
+      "status": "enquire",
       "application": "Place on a suitable magnetic metal surface. Check that the mounting holds securely before letting go. Stands shown in photos are not confirmed as included.",
       "care": "Use a soft cloth. Avoid abrasive cleaners, impact and moisture around the print.",
       "drive": ""
@@ -1330,7 +1330,7 @@ window.CATALOGUE = {
         }
       ],
       "unit": "1 acrylic poster",
-      "status": "order",
+      "status": "enquire",
       "application": "Use the fitted rear magnets on a clean, suitable magnetic metal surface. Check that the surface securely supports the display before releasing it.",
       "care": "Wipe the acrylic gently with a clean microfibre cloth. Keep away from sharp abrasion, excessive heat and moisture around the mounted edges.",
       "drive": ""
@@ -1358,7 +1358,7 @@ window.CATALOGUE = {
         }
       ],
       "unit": "1 acrylic poster",
-      "status": "order",
+      "status": "enquire",
       "application": "Use the fitted rear magnets on a clean, suitable magnetic metal surface. Check that the surface securely supports the display before releasing it.",
       "care": "Wipe the acrylic gently with a clean microfibre cloth. Keep away from sharp abrasion, excessive heat and moisture around the mounted edges.",
       "drive": ""

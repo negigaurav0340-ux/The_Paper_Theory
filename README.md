@@ -10,14 +10,23 @@ Keep the folder structure unchanged:
 
 - `index.html` contains the page structure.
 - `style.css` contains the core styling and responsive rules.
+- `loader.css` contains the Paperverse loading animation and its mobile/reduced-motion treatment.
 - `animations.css` contains the optional motion and catalogue effects. Remove this link from `index.html` if you ever want a completely static design.
 - `enhancements.css` contains the new catalogue sections and falling background effect.
 - `js/products.js` is the editable catalogue, variants and current pricing.
 - `js/app.js` handles filters, galleries, variants, favourites, cart, uploads and WhatsApp.
+- `js/loader.js` connects the progress animation to page readiness and creates the optional paper-spark sound in the browser. Sound is enabled by default, subject to each browser's autoplay policy.
 - `js/pdf.js` creates the branded order PDF.
 - `assets/products/` and `assets/videos/` contain renamed, optimised product media.
+- Product videos are loaded only when a visitor chooses to play them; the previous website-tour video has been removed to keep the storefront focused and faster.
 - `asset-inventory.csv` maps each original file to its website asset.
 - `vendor/` contains the local PDF library and its licence.
+
+## Mobile and loading behaviour
+
+The branded loader stays visible for about 3.5 seconds, with sound enabled by default. Mobile browsers may require the visitor's first tap before audible sound begins; this is a browser restriction. Visitors can turn sound off from the loader.
+
+Catalogue cards appear immediately on screens up to 700 px wide, avoiding mobile intersection-observer delays. Desktop retains the staggered reveal. Large showcase PNGs have lightweight WebP browsing versions, product videos use `preload="none"`, and catalogue images use native lazy loading and asynchronous decoding.
 
 ## Edit products and prices
 
@@ -30,6 +39,8 @@ The numeric prices reflect the latest supplied catalogue rates. The 10 × 8-inch
 Upload the contents of this folder to any static web host. The files use relative paths, so they can also be placed inside a subfolder. No server or database is required for browsing, the cart or PDF generation.
 
 The custom artwork picker creates a local preview only. It does not upload the original file. Customers must share the original using a viewer-accessible Google Drive link or send it in the WhatsApp conversation.
+
+Direct add-to-bag purchasing is intentionally limited to Regular, Matte and Holographic stickers, Memoroids and suncatchers. Acrylic displays and fridge magnets route to an enquiry. Shadow boxes and light boxes are marked Coming Soon.
 
 ## Contact settings
 

@@ -8,6 +8,8 @@
 - Regular and Matte stickers use ₹6 / ₹10 / ₹13 / ₹15 for 1 / 2 / 3 / 4 inches; Holographic uses only 2 inches at ₹30 and 4 inches at ₹40.
 - Free shipping activates at a ₹699 product subtotal in the bag, WhatsApp summary and PDF.
 - Shadow boxes remain launch-enquiry-only even where launch prices are displayed.
+- Direct purchase controls are limited to stickers, Memoroids and suncatchers; acrylic displays and magnets are enquiry-only.
+- The embedded dynamic store tour is 30 seconds, H.264/AAC at 1280 × 720, and continuously animates the browser, scrolling, cursor, glow and petals.
 - The catalogue includes labelled AI-generated concept images for acrylic display, Memoroids, suncatchers and shadow boxes.
 - Motion respects the visitor's reduced-motion setting.
 - JavaScript syntax checked for the catalogue, storefront and PDF modules.

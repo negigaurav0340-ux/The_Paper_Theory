@@ -51,14 +51,27 @@
     const prices = applicableVariants(product).map(v => v.price).filter(Number.isFinite);
     return prices.length ? Math.min(...prices) : Number.MAX_SAFE_INTEGER;
   }
+  function fastImage(image) {
+    const optimised = {
+      'assets/products/suncatcher-design-collection.png': 'assets/products/suncatcher-design-collection.webp',
+      'assets/products/memoroids-display-mockup.png': 'assets/products/memoroids-display-mockup.webp',
+      'assets/products/acrylic-magnetic-display-mockup.png': 'assets/products/acrylic-magnetic-display-mockup.webp',
+      'assets/products/shadow-box-trio-concept.png': 'assets/products/shadow-box-trio-concept.webp'
+    };
+    return optimised[image] || image;
+  }
   function imageMarkup(product, image, alt = product.name) {
-    return image ? `<img src="${image}" alt="${alt}" loading="lazy" onerror="this.parentElement.innerHTML='<div class=&quot;unpictured&quot;><span>✦</span><small>Product image unavailable</small></div>'">` : '<div class="unpictured"><span>✦</span><small>Custom piece · image confirmed with your request</small></div>';
+    return image ? `<img src="${fastImage(image)}" alt="${alt}" loading="lazy" decoding="async" onerror="this.parentElement.innerHTML='<div class=&quot;unpictured&quot;><span>✦</span><small>Product image unavailable</small></div>'">` : '<div class="unpictured"><span>✦</span><small>Custom piece · image confirmed with your request</small></div>';
   }
   function optionMarkup(values, selected) {
     return values.map(value => `<option${value === selected ? ' selected' : ''}>${value}</option>`).join('');
   }
   function initialVariant(product) {
     return applicableVariants(product)[0] || product.variants[0];
+  }
+  function canBuyDirectly(product) {
+    const buyable = ['Matte Stickers','Glossy / Regular Stickers','Holographic Stickers','Suncatcher Stickers','Memoroids'];
+    return product.status === 'order' && product.categories.some(category => buyable.includes(category));
   }
   function cardMarkup(product) {
     const variant = initialVariant(product);
@@ -67,12 +80,12 @@
     const finishes = [...new Set(variants.map(v => v.finish))];
     const category = productCategory(product);
     const image = variant?.image || product.images?.[0];
-    const status = product.status === 'soon' ? 'COMING SOON' : category.toUpperCase();
+    const status = product.status === 'soon' ? 'COMING SOON' : product.status === 'enquire' ? 'PREVIEW · ENQUIRE' : category.toUpperCase();
     return `<article class="card ${category.includes('Holographic') ? 'holo-card' : ''}" data-id="${product.id}">
       <div class="card-photo"><button class="image-button" data-view="${product.id}" aria-label="View ${product.name}">${imageMarkup(product, image)}</button><span class="badge ${category.includes('Holographic') ? 'holo' : ''}">${status}</span><button class="save ${favourites.has(product.id) ? 'saved' : ''}" data-save="${product.id}" aria-label="${favourites.has(product.id) ? 'Remove from' : 'Save to'} favourites">${favourites.has(product.id) ? '♥' : '♡'}</button></div>
       <div class="card-info"><p class="eyebrow">${product.theme} / ${product.id}</p><h3><button data-view="${product.id}">${product.name}</button></h3><p class="brief">${product.description}</p>
       <div class="variant-controls"><label>Size<select data-size>${optionMarkup(sizes, variant?.size)}</select></label><label>Finish<select data-finish>${optionMarkup(finishes, variant?.finish)}</select></label></div>
-      <div class="card-bottom"><strong data-price>${money(variant?.price)}</strong><span>${product.status === 'soon' ? '<button class="add" data-custom="' + product.id + '">Ask about launch</button>' : variant?.price == null ? '<button class="add" data-custom="' + product.id + '">Request quote</button>' : '<button class="add" data-add="' + product.id + '">Add to bag</button>'}</span></div><small>${product.unit}</small></div></article>`;
+      <div class="card-bottom"><strong data-price>${money(variant?.price)}</strong><span>${product.status === 'soon' ? '<button class="add" data-custom="' + product.id + '">Ask about launch</button>' : !canBuyDirectly(product) || variant?.price == null ? '<button class="add" data-custom="' + product.id + '">' + (product.status === 'enquire' ? 'Enquire' : 'Request quote') + '</button>' : '<button class="add" data-add="' + product.id + '">Add to bag</button>'}</span></div><small>${product.unit}</small></div></article>`;
   }
   function renderProducts() {
     const list = filteredProducts(); grid.innerHTML = list.map(cardMarkup).join('');
@@ -92,7 +105,7 @@
     variant ||= product.variants[0];
     card.querySelector('[data-size]').value = variant.size; card.querySelector('[data-finish]').value = variant.finish;
     card.querySelector('[data-price]').textContent = money(variant.price);
-    const image = card.querySelector('.card-photo img'); if (image && variant.image) image.src = variant.image;
+    const image = card.querySelector('.card-photo img'); if (image && variant.image) image.src = fastImage(variant.image);
     return variant;
   }
   function addProduct(product, variant, quantity = 1) {
@@ -129,21 +142,20 @@
 
   function openProduct(product) {
     currentProduct = product; const variant = product.variants[0]; const images = product.images || [];
-    $('#productDetail').innerHTML = `<div class="detail-layout"><div class="detail-media">${imageMarkup(product, variant.image || images[0])}<div class="thumbs">${images.map((image, index) => `<button data-thumb="${image}" aria-label="Show image ${index + 1}"><img src="${image}" alt=""></button>`).join('')}${product.video ? `<button data-video="${product.video}">▶ Video</button>` : ''}</div></div><div class="detail-info"><p class="eyebrow">${product.theme} / ${product.id}</p><h2>${product.name}</h2><p>${product.description}</p><div class="variant-controls"><label>Size<select id="detailSize">${optionMarkup([...new Set(product.variants.map(v => v.size))], variant.size)}</select></label><label>Finish<select id="detailFinish">${optionMarkup([...new Set(product.variants.map(v => v.finish))], variant.finish)}</select></label></div><div class="card-bottom"><strong id="detailPrice">${money(variant.price)}</strong><span id="detailAction"></span></div>${product.contents ? `<h4>Inside this package</h4><p>${product.contents.join(' · ')}</p>` : ''}${product.quality ? `<h4>Quality</h4><p>${product.quality}</p>` : ''}<h4>How to use or display</h4><p>${product.application}</p><h4>Care</h4><p>${product.care}</p><p class="fine">${product.unit} · Select your exact variant before adding.</p></div></div>`;
+    $('#productDetail').innerHTML = `<div class="detail-layout"><div class="detail-media">${imageMarkup(product, variant.image || images[0])}<div class="thumbs">${images.map((image, index) => `<button data-thumb="${fastImage(image)}" aria-label="Show image ${index + 1}"><img src="${fastImage(image)}" alt="" loading="lazy" decoding="async"></button>`).join('')}${product.video ? `<button data-video="${product.video}">▶ Product video</button>` : ''}</div></div><div class="detail-info"><p class="eyebrow">${product.theme} / ${product.id}</p><h2>${product.name}</h2><p>${product.description}</p><div class="variant-controls"><label>Size<select id="detailSize">${optionMarkup([...new Set(product.variants.map(v => v.size))], variant.size)}</select></label><label>Finish<select id="detailFinish">${optionMarkup([...new Set(product.variants.map(v => v.finish))], variant.finish)}</select></label></div><div class="card-bottom"><strong id="detailPrice">${money(variant.price)}</strong><span id="detailAction"></span></div>${product.contents ? `<h4>Inside this package</h4><p>${product.contents.join(' · ')}</p>` : ''}${product.quality ? `<h4>Quality</h4><p>${product.quality}</p>` : ''}<h4>How to use or display</h4><p>${product.application}</p><h4>Care</h4><p>${product.care}</p><p class="fine">${product.unit} · Select your exact variant before adding.</p></div></div>`;
     function syncDetail(prefer = 'size') {
       const size = $('#detailSize').value, finish = $('#detailFinish').value;
       let selected = product.variants.find(v => v.size === size && v.finish === finish);
       if (!selected) selected = prefer === 'finish' ? product.variants.find(v => v.finish === finish) : product.variants.find(v => v.size === size);
       selected ||= product.variants[0];
       $('#detailSize').value = selected.size; $('#detailFinish').value = selected.finish; $('#detailPrice').textContent = money(selected.price);
-      $('#detailAction').innerHTML = product.status === 'soon' ? '<button class="add" id="detailCustom">Ask about launch</button>' : selected.price == null ? '<button class="add" id="detailCustom">Request quote</button>' : '<button class="add" id="detailAdd">Add to bag</button>';
-      const photo = dialog.querySelector('.detail-main'); if (photo && selected.image) photo.src = selected.image;
+      $('#detailAction').innerHTML = product.status === 'soon' ? '<button class="add" id="detailCustom">Ask about launch</button>' : !canBuyDirectly(product) || selected.price == null ? `<button class="add" id="detailCustom">${product.status === 'enquire' ? 'Enquire' : 'Request quote'}</button>` : '<button class="add" id="detailAdd">Add to bag</button>';
+      const photo = dialog.querySelector('.detail-main'); if (photo && selected.image) photo.src = fastImage(selected.image);
       $('#detailAdd')?.addEventListener('click', () => addProduct(product, selected));
       $('#detailCustom')?.addEventListener('click', () => { dialog.close(); routeCustom(product); });
     }
     const main = dialog.querySelector('.detail-media>img'); if (main) main.classList.add('detail-main');
     dialog.querySelectorAll('[data-thumb]').forEach(button => button.addEventListener('click', () => { const media = dialog.querySelector('.detail-media'); media.querySelector('video')?.remove(); const image = media.querySelector('.detail-main') || document.createElement('img'); image.className = 'detail-main'; image.src = button.dataset.thumb; image.alt = product.name; media.prepend(image); }));
-    dialog.querySelector('[data-video]')?.addEventListener('click', event => { const media = dialog.querySelector('.detail-media'); media.querySelector('.detail-main')?.remove(); const video = document.createElement('video'); video.className = 'detail-main'; video.controls = true; video.autoplay = true; video.playsInline = true; video.src = event.currentTarget.dataset.video; media.prepend(video); });
     $('#detailSize').addEventListener('change', () => syncDetail('size')); $('#detailFinish').addEventListener('change', () => syncDetail('finish')); syncDetail(); dialog.showModal();
   }
 
@@ -218,10 +230,10 @@
   $('#continueWa').addEventListener('click', event => { if (!cart.length) { event.preventDefault(); toast('Your bag is empty'); } });
 
   const heroSlides = [
-    { image:'assets/products/suncatcher-design-collection.png', label:'SUNLIGHT, REIMAGINED', title:'A little window magic.', link:'#shop', text:'Explore suncatchers ↗', category:'Suncatcher Stickers' },
+    { image:'assets/products/suncatcher-design-collection.webp', label:'SUNLIGHT, REIMAGINED', title:'A little window magic.', link:'#shop', text:'Explore suncatchers ↗', category:'Suncatcher Stickers' },
     { image:'assets/products/tanjiro-holographic.jpg', label:'MOVE IT. WATCH IT SHIFT.', title:'Holographic heroes.', link:'#shop', text:'Shop holographic ↗', category:'Holographic Stickers' },
     { image:'assets/products/joey-how-you-doin.jpg', label:'FAVOURITE MOMENTS, FRAMED', title:'Your fridge, but happier.', link:'#shop', text:'Shop photo magnets ↗', category:'Fridge Magnets' },
-    { image:'assets/products/acrylic-magnetic-display-mockup.png', label:'A4 / MAGNETIC / ₹399', title:'Art that takes up space.', link:'#shop', text:'See acrylic displays ↗', category:'Acrylic Posters' }
+    { image:'assets/products/acrylic-magnetic-display-mockup.webp', label:'A4 / MAGNETIC / ₹399', title:'Art that takes up space.', link:'#shop', text:'See acrylic displays ↗', category:'Acrylic Posters' }
   ]; let heroIndex = 0, heroPaused = matchMedia('(prefers-reduced-motion: reduce)').matches;
   function renderHero() { const slide = heroSlides[heroIndex], photo = $('#heroPhoto'); photo.classList.remove('swap'); void photo.offsetWidth; photo.src = slide.image; photo.classList.add('swap'); photo.alt = slide.title; $('#heroLabel').textContent = slide.label; $('#heroTitle').textContent = slide.title; $('#heroLink').textContent = slide.text; $('#heroLink').dataset.category = slide.category; $('#heroIndex').textContent = `0${heroIndex + 1} / 0${heroSlides.length}`; $('#heroPause').textContent = heroPaused ? '▶' : 'Ⅱ'; $('#heroPause').setAttribute('aria-label', heroPaused ? 'Play carousel' : 'Pause carousel'); }
   function moveHero(delta) { heroIndex = (heroIndex + delta + heroSlides.length) % heroSlides.length; renderHero(); }
@@ -239,7 +251,7 @@
     }
     document.body.prepend(layer);
   }
-  const revealObserver = !reduceMotion && 'IntersectionObserver' in window ? new IntersectionObserver(entries => entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('is-visible'); revealObserver.unobserve(entry.target); } }), { threshold: .08, rootMargin: '0px 0px -35px' }) : null;
+  const revealObserver = !reduceMotion && matchMedia('(min-width: 701px)').matches && 'IntersectionObserver' in window ? new IntersectionObserver(entries => entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('is-visible'); revealObserver.unobserve(entry.target); } }), { threshold: .04, rootMargin: '0px 0px 80px' }) : null;
   function watchReveals() { document.querySelectorAll('.section, .card').forEach((element, index) => { if (element.classList.contains('is-visible')) return; element.classList.add('reveal'); element.style.setProperty('--reveal-delay', `${Math.min(index % 4, 3) * 65}ms`); if (revealObserver) revealObserver.observe(element); else element.classList.add('is-visible'); }); }
   if (!reduceMotion && matchMedia('(hover:hover)').matches) {
     const showcase = $('.hero-showcase'); document.querySelector('.hero').addEventListener('pointermove', event => { const bounds = event.currentTarget.getBoundingClientRect(), x = (event.clientX - bounds.left) / bounds.width - .5, y = (event.clientY - bounds.top) / bounds.height - .5; showcase.style.setProperty('--tilt-x', `${y * -2.2}deg`); showcase.style.setProperty('--tilt-y', `${x * 2.2}deg`); });
