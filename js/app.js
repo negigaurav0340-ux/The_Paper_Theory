@@ -70,7 +70,7 @@
     return applicableVariants(product)[0] || product.variants[0];
   }
   function canBuyDirectly(product) {
-    const buyable = ['Matte Stickers','Glossy / Regular Stickers','Holographic Stickers','Suncatcher Stickers','Memoroids'];
+    const buyable = ['Matte Stickers','Glossy / Regular Stickers','Holographic Stickers','Suncatcher Stickers','Memoroids','Light Boxes'];
     return product.status === 'order' && product.categories.some(category => buyable.includes(category));
   }
   function cardMarkup(product) {
@@ -94,7 +94,7 @@
     requestAnimationFrame(watchReveals);
   }
   function renderCategories() {
-    categoryHost.innerHTML = catalogue.categories.map(category => `<button class="${category === state.category ? 'active' : ''}" data-category="${category}" aria-pressed="${category === state.category}">${category}${['Shadow Boxes','Light Boxes'].includes(category) ? ' · Soon' : ''}</button>`).join('');
+    categoryHost.innerHTML = catalogue.categories.map(category => `<button class="${category === state.category ? 'active' : ''}" data-category="${category}" aria-pressed="${category === state.category}">${category}${category === 'Shadow Boxes' ? ' · Soon' : ''}</button>`).join('');
   }
   function selectVariant(card, prefer = 'size') {
     const product = byId(card.dataset.id);
@@ -108,12 +108,13 @@
     const image = card.querySelector('.card-photo img'); if (image && variant.image) image.src = fastImage(variant.image);
     return variant;
   }
-  function addProduct(product, variant, quantity = 1) {
-    const key = `${product.id}|${variant.id}`;
+  function addProduct(product, variant, quantity = 1, selection = '') {
+    const key = `${product.id}|${variant.id}|${selection}`;
     const existing = cart.find(item => item.key === key && item.type === 'product');
     if (existing) existing.quantity += quantity;
-    else cart.push({ type: 'product', key, productId: product.id, variantId: variant.id, quantity });
+    else cart.push({ type: 'product', key, productId: product.id, variantId: variant.id, quantity, selection });
     saveState(); updateCartCount(); toast(`${product.name} added to your bag`);
+    window.TPTAnalytics?.track('add_to_cart', { productId: product.id, variantId: variant.id });
   }
   function routeCustom(product) {
     $('#customType').value = product.categories[0]; updateCustomSelectors();
@@ -121,7 +122,7 @@
   }
   grid.addEventListener('change', event => { const card = event.target.closest('.card'); if (card) selectVariant(card, event.target.hasAttribute('data-finish') ? 'finish' : 'size'); });
   grid.addEventListener('click', event => {
-    const save = event.target.closest('[data-save]'); if (save) { const id = save.dataset.save; favourites.has(id) ? favourites.delete(id) : favourites.add(id); saveState(); renderProducts(); return; }
+    const save = event.target.closest('[data-save]'); if (save) { const id = save.dataset.save; const added = !favourites.has(id); added ? favourites.add(id) : favourites.delete(id); saveState(); renderProducts(); if (added) window.TPTAnalytics?.track('wishlist_added', { productId: id }); return; }
     const view = event.target.closest('[data-view]'); if (view) { openProduct(byId(view.dataset.view)); return; }
     const card = event.target.closest('.card'); if (!card) return;
     const product = byId(card.dataset.id); const variant = selectVariant(card);
@@ -142,6 +143,8 @@
 
   function openProduct(product) {
     currentProduct = product; const variant = product.variants[0]; const images = product.images || [];
+    const recent = safeParse('tpt-recent-v1', []).filter(id => id !== product.id); recent.unshift(product.id); localStorage.setItem('tpt-recent-v1', JSON.stringify(recent.slice(0, 8)));
+    window.TPTAnalytics?.track('product_view', { productId: product.id });
     $('#productDetail').innerHTML = `<div class="detail-layout"><div class="detail-media">${imageMarkup(product, variant.image || images[0])}<div class="thumbs">${images.map((image, index) => `<button data-thumb="${fastImage(image)}" aria-label="Show image ${index + 1}"><img src="${fastImage(image)}" alt="" loading="lazy" decoding="async"></button>`).join('')}${product.video ? `<button data-video="${product.video}">▶ Product video</button>` : ''}</div></div><div class="detail-info"><p class="eyebrow">${product.theme} / ${product.id}</p><h2>${product.name}</h2><p>${product.description}</p><div class="variant-controls"><label>Size<select id="detailSize">${optionMarkup([...new Set(product.variants.map(v => v.size))], variant.size)}</select></label><label>Finish<select id="detailFinish">${optionMarkup([...new Set(product.variants.map(v => v.finish))], variant.finish)}</select></label></div><div class="card-bottom"><strong id="detailPrice">${money(variant.price)}</strong><span id="detailAction"></span></div>${product.contents ? `<h4>Inside this package</h4><p>${product.contents.join(' · ')}</p>` : ''}${product.quality ? `<h4>Quality</h4><p>${product.quality}</p>` : ''}<h4>How to use or display</h4><p>${product.application}</p><h4>Care</h4><p>${product.care}</p><p class="fine">${product.unit} · Select your exact variant before adding.</p></div></div>`;
     function syncDetail(prefer = 'size') {
       const size = $('#detailSize').value, finish = $('#detailFinish').value;
@@ -149,9 +152,10 @@
       if (!selected) selected = prefer === 'finish' ? product.variants.find(v => v.finish === finish) : product.variants.find(v => v.size === size);
       selected ||= product.variants[0];
       $('#detailSize').value = selected.size; $('#detailFinish').value = selected.finish; $('#detailPrice').textContent = money(selected.price);
-      $('#detailAction').innerHTML = product.status === 'soon' ? '<button class="add" id="detailCustom">Ask about launch</button>' : !canBuyDirectly(product) || selected.price == null ? `<button class="add" id="detailCustom">${product.status === 'enquire' ? 'Enquire' : 'Request quote'}</button>` : '<button class="add" id="detailAdd">Add to bag</button>';
+      $('#detailAction').innerHTML = product.status === 'soon' ? '<button class="add" id="detailCustom">Ask about launch</button>' : !canBuyDirectly(product) || selected.price == null ? `<button class="add" id="detailCustom">${product.status === 'enquire' ? 'Enquire' : 'Request quote'}</button>` : '<span class="detail-purchase"><button class="add" id="detailBuy">Buy now</button><button class="add secondary-add" id="detailAdd">Add to bag</button></span>';
       const photo = dialog.querySelector('.detail-main'); if (photo && selected.image) photo.src = fastImage(selected.image);
       $('#detailAdd')?.addEventListener('click', () => addProduct(product, selected));
+      $('#detailBuy')?.addEventListener('click', () => { addProduct(product, selected); window.TPTAnalytics?.track('buy_now_clicked', { productId: product.id, variantId: selected.id }); dialog.close(); renderCart(); cartDialog.showModal(); });
       $('#detailCustom')?.addEventListener('click', () => { dialog.close(); routeCustom(product); });
     }
     const main = dialog.querySelector('.detail-media>img'); if (main) main.classList.add('detail-main');
@@ -162,7 +166,7 @@
   function cartLine(item) {
     if (item.type === 'custom') return `<article class="cart-item"><div class="unpictured"><span>✦</span></div><div><h3>${item.name}</h3><p>Custom · ${item.productType} · ${item.size} · ${item.finish} · Qty ${item.quantity}</p><p>Quote after review${item.fileName ? ` · Local reference: ${item.fileName}` : ''}</p><div class="quantity"><button class="remove" data-remove="${item.key}">Remove</button></div></div></article>`;
     const product = byId(item.productId), variant = product?.variants.find(v => v.id === item.variantId); if (!product || !variant) return '';
-    return `<article class="cart-item">${variant.image ? `<img src="${variant.image}" alt="">` : '<div class="unpictured"><span>✦</span></div>'}<div><h3>${product.name}</h3><p>${product.id} · ${variant.size} · ${variant.finish}</p><p>${money(variant.price)} each · <b>${money(variant.price * item.quantity)}</b></p><div class="quantity"><button data-qty="${item.key}" data-delta="-1" aria-label="Decrease quantity">−</button><span>${item.quantity}</span><button data-qty="${item.key}" data-delta="1" aria-label="Increase quantity">+</button><button class="remove" data-remove="${item.key}">Remove</button></div></div></article>`;
+    return `<article class="cart-item">${variant.image ? `<img src="${variant.image}" alt="">` : '<div class="unpictured"><span>✦</span></div>'}<div><h3>${product.name}</h3><p>${product.id} · ${variant.size} · ${variant.finish}</p>${item.selection ? `<p>Selected designs: ${item.selection}</p>` : ''}<p>${money(variant.price)} each · <b>${money(variant.price * item.quantity)}</b></p><div class="quantity"><button data-qty="${item.key}" data-delta="-1" aria-label="Decrease quantity">−</button><span>${item.quantity}</span><button data-qty="${item.key}" data-delta="1" aria-label="Increase quantity">+</button><button class="remove" data-remove="${item.key}">Remove</button></div></div></article>`;
   }
   function renderCart() {
     $('#cartItems').innerHTML = cart.length ? cart.map(cartLine).join('') : '<div class="empty"><h3>Your bag is waiting.</h3><p>Add a product or custom request to begin.</p></div>';
@@ -185,14 +189,17 @@
     const lines = [`Hi The Paper Theory! I'd like to enquire about this order:`];
     cart.forEach(item => {
       if (item.type === 'custom') lines.push(`• CUSTOM ${item.name} — ${item.productType}, ${item.size}, ${item.finish}, Qty ${item.quantity}${item.drive ? `\n  Drive: ${item.drive}` : ''}`);
-      else { const product = byId(item.productId), variant = product?.variants.find(v => v.id === item.variantId); if (product && variant) lines.push(`• ${product.name} (${product.id}) — ${variant.size}, ${variant.finish}, Qty ${item.quantity}, ${money(variant.price * item.quantity)}`); }
+      else { const product = byId(item.productId), variant = product?.variants.find(v => v.id === item.variantId); if (product && variant) lines.push(`• ${product.name} (${product.id}) — ${variant.size}, ${variant.finish}, Qty ${item.quantity}, ${money(variant.price * item.quantity)}${item.selection ? `\n  Selected designs: ${item.selection}` : ''}`); }
     });
     const subtotal = cart.reduce((sum, item) => { if (item.type !== 'product') return sum; const product = byId(item.productId), variant = product?.variants.find(v => v.id === item.variantId); return sum + (variant?.price || 0) * item.quantity; }, 0);
+    const customer = collectCustomer();
+    const address = [customer.house, customer.street, customer.landmark, customer.city, customer.state, customer.pin, customer.country].filter(Boolean).join(', ');
+    if (customer.name || address) lines.push('', `Delivery: ${customer.name || ''}${customer.phone ? ` · ${customer.phone}` : ''}`, address);
     lines.push('', subtotal >= catalogue.freeShippingThreshold ? `Free shipping applies: product subtotal is ${money(subtotal)}.` : 'Shipping will be calculated at order confirmation using my delivery PIN code.', 'Custom work is confirmed separately. I will send the order PDF and original reference files here.');
     return `https://wa.me/${catalogue.whatsapp}?text=${encodeURIComponent(lines.join('\n'))}`;
   }
 
-  const customTypes = ['Matte Stickers','Glossy / Regular Stickers','Holographic Stickers','Suncatcher Stickers','Memoroids','Polaroids','Fridge Magnets','Acrylic Posters','Shadow Boxes','Custom Packages / Bundles'];
+  const customTypes = ['Matte Stickers','Glossy / Regular Stickers','Holographic Stickers','Suncatcher Stickers','Memoroids','Polaroids','Fridge Magnets','Acrylic Posters','Light Boxes','Shadow Boxes','Custom Packages / Bundles'];
   $('#customType').innerHTML = customTypes.map(type => `<option>${type}</option>`).join('');
   function updateCustomSelectors() {
     const type = $('#customType').value; let sizes = ['1 inch','2 inches','3 inches','4 inches'], finishes = ['Matte'];
@@ -201,6 +208,7 @@
     if (type === 'Suncatcher Stickers') { sizes = ['3 inches','4 inches','5 inches','4-piece shape pack']; finishes = ['Circular design','Heart','Cloud','Diamond','Star','Mixed shapes']; }
     if (type === 'Fridge Magnets') { sizes = ['3 × 4 inches','4 × 5 inches']; finishes = ['Plain','Bubble']; }
     if (type === 'Acrylic Posters') { sizes = ['A4 · 210 × 297 mm']; finishes = ['Acrylic']; }
+    if (type === 'Light Boxes') { sizes = ['A4 · 210 × 297 mm']; finishes = ['Eren · Colour-changing','Goku · Colour-changing','Luffy · Colour-changing']; }
     if (['Memoroids','Polaroids'].includes(type)) { sizes = ['Pack of 6','Pack of 12']; finishes = ['Photo prints']; }
     if (type === 'Shadow Boxes') { sizes = ['10 × 4 inches','8 × 8 inches','10 × 8 inches']; finishes = ['Layered shadow box · coming soon']; }
     if (type === 'Custom Packages / Bundles') { sizes = ['To discuss']; finishes = ['To discuss']; }
@@ -221,21 +229,40 @@
     cart.push({ type: 'custom', key: `custom-${Date.now()}`, productType: $('#customType').value, size: $('#customSize').value, finish: $('#customFinish').value, name: $('#customName').value.trim(), quantity: Number($('#customQty').value), drive, notes: $('#customNotes').value.trim(), fileName: selectedUpload?.name || '', preview: selectedUpload?.data || null });
     saveState(); updateCartCount(); event.target.reset(); selectedUpload = null; $('#uploadPreview').hidden = true; updateCustomSelectors(); $('#uploadStatus').textContent = 'Custom request added to your bag. Original files still need to be shared through Drive or WhatsApp.'; toast('Custom request added to your bag');
   });
+  function collectCustomer() {
+    return {
+      name: $('#customerName').value.trim(), phone: $('#customerPhone').value.trim(), email: $('#customerEmail').value.trim(),
+      house: $('#customerHouse').value.trim(), street: $('#customerStreet').value.trim(), landmark: $('#customerLandmark').value.trim(),
+      city: $('#customerCity').value.trim(), state: $('#customerState').value.trim(), pin: $('#customerPin').value.trim(), country: $('#customerCountry').value.trim()
+    };
+  }
+  function validateCustomer(customer) {
+    const required = ['name','phone','house','street','city','state','pin','country'];
+    const missing = required.filter(key => !customer[key]);
+    if (missing.length) return 'Please complete every required delivery-address field before downloading the PDF.';
+    if (!/^\d{6}$/.test(customer.pin)) return 'Please enter a valid 6-digit Indian PIN code.';
+    return '';
+  }
   $('#downloadPdf').addEventListener('click', async event => {
+    const customer = collectCustomer(), addressError = validateCustomer(customer); $('#addressError').textContent = addressError;
+    if (addressError) { toast(addressError); return; }
     const button = event.currentTarget, label = button.textContent; button.disabled = true; button.textContent = 'Creating PDF…';
-    try { await window.createOrderPdf(cart, products, { name: $('#customerName').value, address: $('#customerAddress').value, pin: $('#customerPin').value }); toast('Order PDF downloaded'); }
+    try { window.TPTAnalytics?.track('checkout_started', { itemCount: cart.length }); await window.createOrderPdf(cart, products, customer); toast('Order PDF downloaded'); }
     catch (error) { console.error(error); toast('PDF could not be created. Please try again.'); }
     finally { button.disabled = false; button.textContent = label; }
   });
   $('#continueWa').addEventListener('click', event => { if (!cart.length) { event.preventDefault(); toast('Your bag is empty'); } });
 
   const heroSlides = [
+    { image:'assets/lightbox/lightbox-eren-on.webp', label:'FLAGSHIP · A4 · ₹1,199', title:'Eren Light Box.', link:'#lightboxExperience', text:'Experience Eren ↗', design:'eren' },
+    { image:'assets/lightbox/lightbox-goku-on.webp', label:'FLAGSHIP · REMOTE INCLUDED', title:'Goku Light Box.', link:'#lightboxExperience', text:'Experience Goku ↗', design:'goku' },
+    { image:'assets/lightbox/lightbox-luffy-on.webp', label:'FLAGSHIP · COLOUR-CHANGING', title:'Luffy Light Box.', link:'#lightboxExperience', text:'Experience Luffy ↗', design:'luffy' },
     { image:'assets/products/suncatcher-design-collection.webp', label:'SUNLIGHT, REIMAGINED', title:'A little window magic.', link:'#shop', text:'Explore suncatchers ↗', category:'Suncatcher Stickers' },
     { image:'assets/products/tanjiro-holographic.jpg', label:'MOVE IT. WATCH IT SHIFT.', title:'Holographic heroes.', link:'#shop', text:'Shop holographic ↗', category:'Holographic Stickers' },
     { image:'assets/products/joey-how-you-doin.jpg', label:'FAVOURITE MOMENTS, FRAMED', title:'Your fridge, but happier.', link:'#shop', text:'Shop photo magnets ↗', category:'Fridge Magnets' },
     { image:'assets/products/acrylic-magnetic-display-mockup.webp', label:'A4 / MAGNETIC / ₹399', title:'Art that takes up space.', link:'#shop', text:'See acrylic displays ↗', category:'Acrylic Posters' }
   ]; let heroIndex = 0, heroPaused = matchMedia('(prefers-reduced-motion: reduce)').matches;
-  function renderHero() { const slide = heroSlides[heroIndex], photo = $('#heroPhoto'); photo.classList.remove('swap'); void photo.offsetWidth; photo.src = slide.image; photo.classList.add('swap'); photo.alt = slide.title; $('#heroLabel').textContent = slide.label; $('#heroTitle').textContent = slide.title; $('#heroLink').textContent = slide.text; $('#heroLink').dataset.category = slide.category; $('#heroIndex').textContent = `0${heroIndex + 1} / 0${heroSlides.length}`; $('#heroPause').textContent = heroPaused ? '▶' : 'Ⅱ'; $('#heroPause').setAttribute('aria-label', heroPaused ? 'Play carousel' : 'Pause carousel'); }
+  function renderHero() { const slide = heroSlides[heroIndex], photo = $('#heroPhoto'), link = $('#heroLink'); photo.classList.remove('swap'); void photo.offsetWidth; photo.src = slide.image; photo.classList.add('swap'); photo.alt = slide.title; $('#heroLabel').textContent = slide.label; $('#heroTitle').textContent = slide.title; link.textContent = slide.text; link.href = slide.link; if (slide.category) link.dataset.category = slide.category; else delete link.dataset.category; if (slide.design) link.dataset.heroDesign = slide.design; else delete link.dataset.heroDesign; $('#heroIndex').textContent = `${String(heroIndex + 1).padStart(2,'0')} / ${String(heroSlides.length).padStart(2,'0')}`; $('#heroPause').textContent = heroPaused ? '▶' : 'Ⅱ'; $('#heroPause').setAttribute('aria-label', heroPaused ? 'Play carousel' : 'Pause carousel'); }
   function moveHero(delta) { heroIndex = (heroIndex + delta + heroSlides.length) % heroSlides.length; renderHero(); }
   $('#heroPrev').addEventListener('click', () => moveHero(-1)); $('#heroNext').addEventListener('click', () => moveHero(1)); $('#heroPause').addEventListener('click', () => { heroPaused = !heroPaused; renderHero(); }); setInterval(() => { if (!heroPaused) moveHero(1); }, 5500);
   const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -258,5 +285,6 @@
     document.querySelector('.hero').addEventListener('pointerleave', () => { showcase.style.setProperty('--tilt-x', '0deg'); showcase.style.setProperty('--tilt-y', '0deg'); });
   }
   const themes = [...new Set(products.map(product => product.theme))].sort(); $('#fandom').insertAdjacentHTML('beforeend', themes.map(theme => `<option>${theme}</option>`).join(''));
+  window.TPTStore = { addProduct, byId, openCart: () => { renderCart(); cartDialog.showModal(); }, toast, renderProducts, setCategory: category => { state.category = category; renderCategories(); renderProducts(); location.hash = 'shop'; } };
   createFallingMagic(); renderCategories(); renderProducts(); updateCartCount(); renderHero(); watchReveals();
 })();

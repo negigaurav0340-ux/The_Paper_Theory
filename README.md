@@ -13,10 +13,14 @@ Keep the folder structure unchanged:
 - `loader.css` contains the Paperverse loading animation and its mobile/reduced-motion treatment.
 - `animations.css` contains the optional motion and catalogue effects. Remove this link from `index.html` if you ever want a completely static design.
 - `enhancements.css` contains the new catalogue sections and falling background effect.
+- `premium.css` contains the additive Light Box, family-browser, sticker-pack and mobile-buy styling.
 - `js/products.js` is the editable catalogue, variants and current pricing.
+- `js/lightbox-data.js` adds the three ₹1,199 A4 Light Box variants and the exact-10 sticker pack without removing or reordering the original catalogue.
 - `js/app.js` handles filters, galleries, variants, favourites, cart, uploads and WhatsApp.
+- `js/premium.js` handles the Light ON/OFF slider, real-video events, remote/room interactions, product-family browsers, 10-sticker selection, recently viewed products and privacy-conscious local analytics.
 - `js/loader.js` connects the progress animation to page readiness and creates the optional paper-spark sound in the browser. Sound is enabled by default, subject to each browser's autoplay policy.
 - `js/pdf.js` creates the branded order PDF.
+- `admin.html`, `admin.css` and `admin.js` provide a local business dashboard based only on genuine browser events; no sample orders or revenue are fabricated.
 - `assets/products/` and `assets/videos/` contain renamed, optimised product media.
 - Product videos are loaded only when a visitor chooses to play them; the previous website-tour video has been removed to keep the storefront focused and faster.
 - `asset-inventory.csv` maps each original file to its website asset.
@@ -38,13 +42,21 @@ The numeric prices reflect the latest supplied catalogue rates. The 10 × 8-inch
 
 Upload the contents of this folder to any static web host. The files use relative paths, so they can also be placed inside a subfolder. No server or database is required for browsing, the cart or PDF generation.
 
-The custom artwork picker creates a local preview only. It does not upload the original file. Customers must share the original using a viewer-accessible Google Drive link or send it in the WhatsApp conversation.
+The custom artwork picker creates a local preview only. It does not upload the original file. Customers must share the original using a viewer-accessible Google Drive link or send it in the WhatsApp conversation. Checkout now asks for the complete delivery address (name, phone, house/building, street/locality, landmark, city, state, PIN and country), and the complete address is written into the downloaded order PDF.
 
-Direct add-to-bag purchasing is intentionally limited to Regular, Matte and Holographic stickers, Memoroids and suncatchers. Acrylic displays and fridge magnets route to an enquiry. Shadow boxes and light boxes are marked Coming Soon.
+Direct add-to-bag purchasing is available for Regular, Matte and Holographic stickers, Memoroids, suncatchers, the exact-10 sticker pack and the three A4 Light Box designs. Acrylic displays and fridge magnets still route to an enquiry, and Shadow Boxes remain Coming Soon.
+
+The three flagship Light Boxes—Eren, Goku and Luffy—are separate catalogue products. A lightweight auto-sliding, swipeable scroll-snap showcase is now the first storefront section, and the same designs also appear first in the existing hero carousel. Animation pauses after interaction, runs only while visible and respects reduced-motion preferences. No carousel framework is loaded.
+
+One fast-loading Instagram-style video container uses the real locally hosted Light Box demonstration and links to `@thepapertheory.in`. It avoids external Instagram scripts and loads the video only when the visitor chooses to play it.
+
+The dashboard Refresh control re-reads genuine browser analytics, displays a visible updated state, and also refreshes when the dashboard tab becomes active or browser storage changes.
 
 ## Contact settings
 
 - Instagram: `@thepapertheory.in`
+- YouTube: `@the_papertheory`
+- Email: `thepapertheory.in@gmail.com`
 - WhatsApp: `+91 82195 78050`
 
 These are stored in `js/products.js` and linked throughout the page.
