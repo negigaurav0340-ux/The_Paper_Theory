@@ -1,4 +1,4 @@
-/* EDIT PRODUCTS, VARIANTS AND BUSINESS SETTINGS HERE. Prices below are current catalogue rates. */
+/* Sticker-pack catalogue + preserved original non-sticker products. */
 window.CATALOGUE = {
   "brand": "The Paper Theory",
   "whatsapp": "918219578050",
@@ -7,757 +7,565 @@ window.CATALOGUE = {
   "pricesProvisional": false,
   "categories": [
     "All",
-    "Matte Stickers",
-    "Glossy / Regular Stickers",
-    "Holographic Stickers",
+    "Sticker Packs",
+    "Holographic Packs",
+    "Light Boxes",
     "Suncatcher Stickers",
     "Memoroids",
     "Polaroids",
     "Fridge Magnets",
     "Acrylic Posters",
     "Shadow Boxes",
-    "Light Boxes",
     "Original Designs",
     "Custom Packages / Bundles"
   ],
   "products": [
     {
-      "id": "ST-001",
-      "name": "Rengoku · Set Your Heart Ablaze",
+      "id": "PACK-ANIME-01",
+      "name": "Anime Classics Pack",
       "categories": [
-        "Glossy / Regular Stickers",
-        "Holographic Stickers"
+        "Sticker Packs",
+        "Holographic Packs"
       ],
-      "theme": "Demon Slayer",
-      "description": "Flame-bright hair and a determined expression bring this Rengoku design to life. Choose your size and available finish. Price shown is per sticker.",
+      "theme": "Anime",
+      "description": "12 classic anime sticker designs from the original store collection, bundled into one clean sheet. Includes ANIME-001–ANIME-012. Every preset sheet is ₹99 regular or ₹199 holographic.",
       "images": [
-        "assets/products/rengoku-flame.jpg",
-        "assets/products/rengoku-holographic.jpg"
+        "assets/lifestyle/anime-classics.webp",
+        "assets/lifestyle/anime-classics.webp"
       ],
       "variants": [
         {
-          "id": "G-1",
-          "size": "1 inch",
-          "finish": "Glossy / Regular",
-          "price": 6,
-          "image": "assets/products/rengoku-flame.jpg"
+          "id": "REG",
+          "size": "12 stickers · 3 × 4 sheet",
+          "finish": "Regular laminated",
+          "price": 99,
+          "image": "assets/lifestyle/anime-classics.webp"
         },
         {
-          "id": "G-2",
-          "size": "2 inches",
-          "finish": "Glossy / Regular",
-          "price": 10,
-          "image": "assets/products/rengoku-flame.jpg"
-        },
-        {
-          "id": "G-3",
-          "size": "3 inches",
-          "finish": "Glossy / Regular",
-          "price": 13,
-          "image": "assets/products/rengoku-flame.jpg"
-        },
-        {
-          "id": "G-4",
-          "size": "4 inches",
-          "finish": "Glossy / Regular",
-          "price": 15,
-          "image": "assets/products/rengoku-flame.jpg"
-        },
-        {
-          "id": "H-2",
-          "size": "2 inches",
+          "id": "HOLO",
+          "size": "12 stickers · 3 × 4 sheet",
           "finish": "Holographic",
-          "price": 30,
-          "image": "assets/products/rengoku-holographic.jpg"
-        },
-        {
-          "id": "H-4",
-          "size": "4 inches",
-          "finish": "Holographic",
-          "price": 40,
-          "image": "assets/products/rengoku-holographic.jpg"
+          "price": 199,
+          "image": "assets/lifestyle/anime-classics.webp"
         }
       ],
-      "unit": "1 sticker",
+      "unit": "1 sheet · 12 stickers",
       "status": "order",
-      "application": "Clean and dry a smooth surface. Peel the backing, align, and press from the centre outwards for a bubble-free finish.",
-      "care": "The laminated surface is scratch-resistant. Wipe gently; avoid soaking, harsh abrasion and prolonged heat.",
-      "drive": "",
-      "quality": "Laminated for a scratch-resistant finish and designed for clean, residue-free removal from suitable clean, smooth surfaces."
+      "quality": "Laminated waterproof sticker pack with a scratch-resistant surface and residue-free removal from suitable clean, smooth surfaces.",
+      "application": "Peel and apply to a clean, dry, smooth surface such as a laptop, bottle, journal, storage case or similar suitable surface.",
+      "care": "Wipe clean gently. For longest life, avoid repeated harsh abrasion, prolonged heat and soaking around exposed edges.",
+      "contents": [
+        "12 coordinated stickers",
+        "Catalogue codes ANIME-001–ANIME-012",
+        "Regular ₹99 · Holographic ₹199"
+      ]
     },
     {
-      "id": "ST-002",
-      "name": "Zenitsu · Little Thunder",
+      "id": "PACK-ANIME-HEROES",
+      "name": "Anime Heroes",
       "categories": [
-        "Glossy / Regular Stickers",
-        "Holographic Stickers"
+        "Sticker Packs",
+        "Holographic Packs"
       ],
-      "theme": "Demon Slayer",
-      "description": "A golden-haired chibi Zenitsu with a warm yellow palette. Choose your size and available finish. Price shown is per sticker.",
+      "theme": "Anime",
+      "description": "12 coordinated anime stickers in a ready-made sheet. Includes ANIME-013–ANIME-024. Every preset sheet is ₹99 regular or ₹199 holographic.",
       "images": [
-        "assets/products/zenitsu-thunder.jpg",
-        "assets/products/zenitsu-holographic.jpg"
+        "assets/lifestyle/anime-heroes.webp",
+        "assets/lifestyle/anime-heroes.webp"
       ],
       "variants": [
         {
-          "id": "G-1",
-          "size": "1 inch",
-          "finish": "Glossy / Regular",
-          "price": 6,
-          "image": "assets/products/zenitsu-thunder.jpg"
+          "id": "REG",
+          "size": "12 stickers · 3 × 4 sheet",
+          "finish": "Regular laminated",
+          "price": 99,
+          "image": "assets/lifestyle/anime-heroes.webp"
         },
         {
-          "id": "G-2",
-          "size": "2 inches",
-          "finish": "Glossy / Regular",
-          "price": 10,
-          "image": "assets/products/zenitsu-thunder.jpg"
-        },
-        {
-          "id": "G-3",
-          "size": "3 inches",
-          "finish": "Glossy / Regular",
-          "price": 13,
-          "image": "assets/products/zenitsu-thunder.jpg"
-        },
-        {
-          "id": "G-4",
-          "size": "4 inches",
-          "finish": "Glossy / Regular",
-          "price": 15,
-          "image": "assets/products/zenitsu-thunder.jpg"
-        },
-        {
-          "id": "H-2",
-          "size": "2 inches",
+          "id": "HOLO",
+          "size": "12 stickers · 3 × 4 sheet",
           "finish": "Holographic",
-          "price": 30,
-          "image": "assets/products/zenitsu-holographic.jpg"
-        },
-        {
-          "id": "H-4",
-          "size": "4 inches",
-          "finish": "Holographic",
-          "price": 40,
-          "image": "assets/products/zenitsu-holographic.jpg"
+          "price": 199,
+          "image": "assets/lifestyle/anime-heroes.webp"
         }
       ],
-      "unit": "1 sticker",
+      "unit": "1 sheet · 12 stickers",
       "status": "order",
-      "application": "Clean and dry a smooth surface. Peel the backing, align, and press from the centre outwards for a bubble-free finish.",
-      "care": "The laminated surface is scratch-resistant. Wipe gently; avoid soaking, harsh abrasion and prolonged heat.",
-      "drive": "",
-      "quality": "Laminated for a scratch-resistant finish and designed for clean, residue-free removal from suitable clean, smooth surfaces."
+      "quality": "Laminated waterproof sticker pack with a scratch-resistant surface and residue-free removal from suitable clean, smooth surfaces.",
+      "application": "Peel and apply to a clean, dry, smooth surface such as a laptop, bottle, journal, storage case or similar suitable surface.",
+      "care": "Wipe clean gently. For longest life, avoid repeated harsh abrasion, prolonged heat and soaking around exposed edges.",
+      "contents": [
+        "12 coordinated stickers",
+        "Catalogue codes ANIME-013–ANIME-024",
+        "Regular ₹99 · Holographic ₹199"
+      ]
     },
     {
-      "id": "ST-003",
-      "name": "Shinobu · Butterfly Calm",
+      "id": "PACK-ANIME-MEME",
+      "name": "Anime Meme Pack",
       "categories": [
-        "Glossy / Regular Stickers",
-        "Holographic Stickers"
+        "Sticker Packs",
+        "Holographic Packs"
       ],
-      "theme": "Demon Slayer",
-      "description": "Purple butterfly details and a soft smile make this Shinobu design a gentle accent. Choose your size and available finish. Price shown is per sticker.",
+      "theme": "Anime Meme",
+      "description": "16 coordinated anime meme stickers in a ready-made sheet. Includes AMEME-001–AMEME-016. Every preset sheet is ₹99 regular or ₹199 holographic.",
       "images": [
-        "assets/products/shinobu-butterfly.jpg",
-        "assets/products/shinobu-holographic.jpg"
+        "assets/lifestyle/anime-meme.webp",
+        "assets/lifestyle/anime-meme.webp"
       ],
       "variants": [
         {
-          "id": "G-1",
-          "size": "1 inch",
-          "finish": "Glossy / Regular",
-          "price": 6,
-          "image": "assets/products/shinobu-butterfly.jpg"
+          "id": "REG",
+          "size": "16 stickers · 4 × 4 sheet",
+          "finish": "Regular laminated",
+          "price": 99,
+          "image": "assets/lifestyle/anime-meme.webp"
         },
         {
-          "id": "G-2",
-          "size": "2 inches",
-          "finish": "Glossy / Regular",
-          "price": 10,
-          "image": "assets/products/shinobu-butterfly.jpg"
-        },
-        {
-          "id": "G-3",
-          "size": "3 inches",
-          "finish": "Glossy / Regular",
-          "price": 13,
-          "image": "assets/products/shinobu-butterfly.jpg"
-        },
-        {
-          "id": "G-4",
-          "size": "4 inches",
-          "finish": "Glossy / Regular",
-          "price": 15,
-          "image": "assets/products/shinobu-butterfly.jpg"
-        },
-        {
-          "id": "H-2",
-          "size": "2 inches",
+          "id": "HOLO",
+          "size": "16 stickers · 4 × 4 sheet",
           "finish": "Holographic",
-          "price": 30,
-          "image": "assets/products/shinobu-holographic.jpg"
-        },
-        {
-          "id": "H-4",
-          "size": "4 inches",
-          "finish": "Holographic",
-          "price": 40,
-          "image": "assets/products/shinobu-holographic.jpg"
+          "price": 199,
+          "image": "assets/lifestyle/anime-meme.webp"
         }
       ],
-      "unit": "1 sticker",
+      "unit": "1 sheet · 16 stickers",
       "status": "order",
-      "application": "Clean and dry a smooth surface. Peel the backing, align, and press from the centre outwards for a bubble-free finish.",
-      "care": "The laminated surface is scratch-resistant. Wipe gently; avoid soaking, harsh abrasion and prolonged heat.",
-      "drive": "",
-      "quality": "Laminated for a scratch-resistant finish and designed for clean, residue-free removal from suitable clean, smooth surfaces."
+      "quality": "Laminated waterproof sticker pack with a scratch-resistant surface and residue-free removal from suitable clean, smooth surfaces.",
+      "application": "Peel and apply to a clean, dry, smooth surface such as a laptop, bottle, journal, storage case or similar suitable surface.",
+      "care": "Wipe clean gently. For longest life, avoid repeated harsh abrasion, prolonged heat and soaking around exposed edges.",
+      "contents": [
+        "16 coordinated stickers",
+        "Catalogue codes AMEME-001–AMEME-016",
+        "Regular ₹99 · Holographic ₹199"
+      ]
     },
     {
-      "id": "ST-004",
-      "name": "Inosuke · Wild Spirit",
+      "id": "PACK-FEEL-GOOD",
+      "name": "Feel Good Pack",
       "categories": [
-        "Glossy / Regular Stickers",
-        "Holographic Stickers"
+        "Sticker Packs",
+        "Holographic Packs"
       ],
-      "theme": "Demon Slayer",
-      "description": "A bold boar-mask portrait with expressive blue eyes and layered colour. Choose your size and available finish. Price shown is per sticker.",
+      "theme": "Feel Good",
+      "description": "16 coordinated feel good stickers in a ready-made sheet. Includes FEEL-001–FEEL-016. Every preset sheet is ₹99 regular or ₹199 holographic.",
       "images": [
-        "assets/products/inosuke-boar.jpg",
-        "assets/products/inosuke-holographic.jpg"
+        "assets/lifestyle/feel-good.webp",
+        "assets/lifestyle/feel-good.webp"
       ],
       "variants": [
         {
-          "id": "G-1",
-          "size": "1 inch",
-          "finish": "Glossy / Regular",
-          "price": 6,
-          "image": "assets/products/inosuke-boar.jpg"
+          "id": "REG",
+          "size": "16 stickers · 4 × 4 sheet",
+          "finish": "Regular laminated",
+          "price": 99,
+          "image": "assets/lifestyle/feel-good.webp"
         },
         {
-          "id": "G-2",
-          "size": "2 inches",
-          "finish": "Glossy / Regular",
-          "price": 10,
-          "image": "assets/products/inosuke-boar.jpg"
-        },
-        {
-          "id": "G-3",
-          "size": "3 inches",
-          "finish": "Glossy / Regular",
-          "price": 13,
-          "image": "assets/products/inosuke-boar.jpg"
-        },
-        {
-          "id": "G-4",
-          "size": "4 inches",
-          "finish": "Glossy / Regular",
-          "price": 15,
-          "image": "assets/products/inosuke-boar.jpg"
-        },
-        {
-          "id": "H-2",
-          "size": "2 inches",
+          "id": "HOLO",
+          "size": "16 stickers · 4 × 4 sheet",
           "finish": "Holographic",
-          "price": 30,
-          "image": "assets/products/inosuke-holographic.jpg"
-        },
-        {
-          "id": "H-4",
-          "size": "4 inches",
-          "finish": "Holographic",
-          "price": 40,
-          "image": "assets/products/inosuke-holographic.jpg"
+          "price": 199,
+          "image": "assets/lifestyle/feel-good.webp"
         }
       ],
-      "unit": "1 sticker",
+      "unit": "1 sheet · 16 stickers",
       "status": "order",
-      "application": "Clean and dry a smooth surface. Peel the backing, align, and press from the centre outwards for a bubble-free finish.",
-      "care": "The laminated surface is scratch-resistant. Wipe gently; avoid soaking, harsh abrasion and prolonged heat.",
-      "drive": "",
-      "quality": "Laminated for a scratch-resistant finish and designed for clean, residue-free removal from suitable clean, smooth surfaces."
+      "quality": "Laminated waterproof sticker pack with a scratch-resistant surface and residue-free removal from suitable clean, smooth surfaces.",
+      "application": "Peel and apply to a clean, dry, smooth surface such as a laptop, bottle, journal, storage case or similar suitable surface.",
+      "care": "Wipe clean gently. For longest life, avoid repeated harsh abrasion, prolonged heat and soaking around exposed edges.",
+      "contents": [
+        "16 coordinated stickers",
+        "Catalogue codes FEEL-001–FEEL-016",
+        "Regular ₹99 · Holographic ₹199"
+      ]
     },
     {
-      "id": "ST-005",
-      "name": "Kamado Siblings · Together",
+      "id": "PACK-TEAM-MOTU",
+      "name": "Team Motu Pack",
       "categories": [
-        "Glossy / Regular Stickers",
-        "Holographic Stickers"
+        "Sticker Packs",
+        "Holographic Packs"
       ],
-      "theme": "Demon Slayer",
-      "description": "Tanjiro and Nezuko share a cheerful sibling moment in this colourful design. Choose your size and available finish. Price shown is per sticker.",
+      "theme": "Motu vs Bheem",
+      "description": "16 coordinated motu vs bheem stickers in a ready-made sheet. Includes MOTU-001–MOTU-016. Every preset sheet is ₹99 regular or ₹199 holographic.",
       "images": [
-        "assets/products/kamado-siblings.jpg",
-        "assets/products/siblings-holographic.jpg"
+        "assets/lifestyle/team-motu.webp",
+        "assets/lifestyle/team-motu.webp"
       ],
       "variants": [
         {
-          "id": "G-1",
-          "size": "1 inch",
-          "finish": "Glossy / Regular",
-          "price": 6,
-          "image": "assets/products/kamado-siblings.jpg"
+          "id": "REG",
+          "size": "16 stickers · 4 × 4 sheet",
+          "finish": "Regular laminated",
+          "price": 99,
+          "image": "assets/lifestyle/team-motu.webp"
         },
         {
-          "id": "G-2",
-          "size": "2 inches",
-          "finish": "Glossy / Regular",
-          "price": 10,
-          "image": "assets/products/kamado-siblings.jpg"
-        },
-        {
-          "id": "G-3",
-          "size": "3 inches",
-          "finish": "Glossy / Regular",
-          "price": 13,
-          "image": "assets/products/kamado-siblings.jpg"
-        },
-        {
-          "id": "G-4",
-          "size": "4 inches",
-          "finish": "Glossy / Regular",
-          "price": 15,
-          "image": "assets/products/kamado-siblings.jpg"
-        },
-        {
-          "id": "H-2",
-          "size": "2 inches",
+          "id": "HOLO",
+          "size": "16 stickers · 4 × 4 sheet",
           "finish": "Holographic",
-          "price": 30,
-          "image": "assets/products/siblings-holographic.jpg"
-        },
-        {
-          "id": "H-4",
-          "size": "4 inches",
-          "finish": "Holographic",
-          "price": 40,
-          "image": "assets/products/siblings-holographic.jpg"
+          "price": 199,
+          "image": "assets/lifestyle/team-motu.webp"
         }
       ],
-      "unit": "1 sticker",
+      "unit": "1 sheet · 16 stickers",
       "status": "order",
-      "application": "Clean and dry a smooth surface. Peel the backing, align, and press from the centre outwards for a bubble-free finish.",
-      "care": "The laminated surface is scratch-resistant. Wipe gently; avoid soaking, harsh abrasion and prolonged heat.",
-      "drive": "",
-      "quality": "Laminated for a scratch-resistant finish and designed for clean, residue-free removal from suitable clean, smooth surfaces."
+      "quality": "Laminated waterproof sticker pack with a scratch-resistant surface and residue-free removal from suitable clean, smooth surfaces.",
+      "application": "Peel and apply to a clean, dry, smooth surface such as a laptop, bottle, journal, storage case or similar suitable surface.",
+      "care": "Wipe clean gently. For longest life, avoid repeated harsh abrasion, prolonged heat and soaking around exposed edges.",
+      "contents": [
+        "16 coordinated stickers",
+        "Catalogue codes MOTU-001–MOTU-016",
+        "Regular ₹99 · Holographic ₹199"
+      ]
     },
     {
-      "id": "ST-006",
-      "name": "Giyu · Quiet Resolve",
+      "id": "PACK-TEAM-BHEEM",
+      "name": "Team Bheem Pack",
       "categories": [
-        "Glossy / Regular Stickers",
-        "Holographic Stickers"
+        "Sticker Packs",
+        "Holographic Packs"
       ],
-      "theme": "Demon Slayer",
-      "description": "A composed Giyu portrait with his distinctive patterned haori. Choose your size and available finish. Price shown is per sticker.",
+      "theme": "Motu vs Bheem",
+      "description": "16 coordinated motu vs bheem stickers in a ready-made sheet. Includes BHEEM-001–BHEEM-016. Every preset sheet is ₹99 regular or ₹199 holographic.",
       "images": [
-        "assets/products/giyu-water.jpg",
-        "assets/products/giyu-holographic.jpg"
+        "assets/lifestyle/team-bheem.webp",
+        "assets/lifestyle/team-bheem.webp"
       ],
       "variants": [
         {
-          "id": "G-1",
-          "size": "1 inch",
-          "finish": "Glossy / Regular",
-          "price": 6,
-          "image": "assets/products/giyu-water.jpg"
+          "id": "REG",
+          "size": "16 stickers · 4 × 4 sheet",
+          "finish": "Regular laminated",
+          "price": 99,
+          "image": "assets/lifestyle/team-bheem.webp"
         },
         {
-          "id": "G-2",
-          "size": "2 inches",
-          "finish": "Glossy / Regular",
-          "price": 10,
-          "image": "assets/products/giyu-water.jpg"
-        },
-        {
-          "id": "G-3",
-          "size": "3 inches",
-          "finish": "Glossy / Regular",
-          "price": 13,
-          "image": "assets/products/giyu-water.jpg"
-        },
-        {
-          "id": "G-4",
-          "size": "4 inches",
-          "finish": "Glossy / Regular",
-          "price": 15,
-          "image": "assets/products/giyu-water.jpg"
-        },
-        {
-          "id": "H-2",
-          "size": "2 inches",
+          "id": "HOLO",
+          "size": "16 stickers · 4 × 4 sheet",
           "finish": "Holographic",
-          "price": 30,
-          "image": "assets/products/giyu-holographic.jpg"
-        },
-        {
-          "id": "H-4",
-          "size": "4 inches",
-          "finish": "Holographic",
-          "price": 40,
-          "image": "assets/products/giyu-holographic.jpg"
+          "price": 199,
+          "image": "assets/lifestyle/team-bheem.webp"
         }
       ],
-      "unit": "1 sticker",
+      "unit": "1 sheet · 16 stickers",
       "status": "order",
-      "application": "Clean and dry a smooth surface. Peel the backing, align, and press from the centre outwards for a bubble-free finish.",
-      "care": "The laminated surface is scratch-resistant. Wipe gently; avoid soaking, harsh abrasion and prolonged heat.",
-      "drive": "",
-      "quality": "Laminated for a scratch-resistant finish and designed for clean, residue-free removal from suitable clean, smooth surfaces."
+      "quality": "Laminated waterproof sticker pack with a scratch-resistant surface and residue-free removal from suitable clean, smooth surfaces.",
+      "application": "Peel and apply to a clean, dry, smooth surface such as a laptop, bottle, journal, storage case or similar suitable surface.",
+      "care": "Wipe clean gently. For longest life, avoid repeated harsh abrasion, prolonged heat and soaking around exposed edges.",
+      "contents": [
+        "16 coordinated stickers",
+        "Catalogue codes BHEEM-001–BHEEM-016",
+        "Regular ₹99 · Holographic ₹199"
+      ]
     },
     {
-      "id": "ST-007",
-      "name": "Tanjiro · Keep Going",
+      "id": "PACK-DIWALI-01",
+      "name": "Diwali Devotional Pack",
       "categories": [
-        "Glossy / Regular Stickers",
-        "Holographic Stickers"
+        "Sticker Packs",
+        "Holographic Packs"
       ],
-      "theme": "Demon Slayer",
-      "description": "A bright Tanjiro design with his green check pattern and energetic colour accents. Choose your size and available finish. Price shown is per sticker.",
+      "theme": "Diwali",
+      "description": "12 coordinated diwali stickers in a ready-made sheet. Includes DIWALI-001–DIWALI-012. Every preset sheet is ₹99 regular or ₹199 holographic.",
       "images": [
-        "assets/products/tanjiro-determined.jpg",
-        "assets/products/tanjiro-holographic.jpg"
+        "assets/lifestyle/diwali-01.webp",
+        "assets/lifestyle/diwali-01.webp"
       ],
       "variants": [
         {
-          "id": "G-1",
-          "size": "1 inch",
-          "finish": "Glossy / Regular",
-          "price": 6,
-          "image": "assets/products/tanjiro-determined.jpg"
+          "id": "REG",
+          "size": "12 stickers · 3 × 4 sheet",
+          "finish": "Regular laminated",
+          "price": 99,
+          "image": "assets/lifestyle/diwali-01.webp"
         },
         {
-          "id": "G-2",
-          "size": "2 inches",
-          "finish": "Glossy / Regular",
-          "price": 10,
-          "image": "assets/products/tanjiro-determined.jpg"
-        },
-        {
-          "id": "G-3",
-          "size": "3 inches",
-          "finish": "Glossy / Regular",
-          "price": 13,
-          "image": "assets/products/tanjiro-determined.jpg"
-        },
-        {
-          "id": "G-4",
-          "size": "4 inches",
-          "finish": "Glossy / Regular",
-          "price": 15,
-          "image": "assets/products/tanjiro-determined.jpg"
-        },
-        {
-          "id": "H-2",
-          "size": "2 inches",
+          "id": "HOLO",
+          "size": "12 stickers · 3 × 4 sheet",
           "finish": "Holographic",
-          "price": 30,
-          "image": "assets/products/tanjiro-holographic.jpg"
-        },
-        {
-          "id": "H-4",
-          "size": "4 inches",
-          "finish": "Holographic",
-          "price": 40,
-          "image": "assets/products/tanjiro-holographic.jpg"
+          "price": 199,
+          "image": "assets/lifestyle/diwali-01.webp"
         }
       ],
-      "unit": "1 sticker",
+      "unit": "1 sheet · 12 stickers",
       "status": "order",
-      "application": "Clean and dry a smooth surface. Peel the backing, align, and press from the centre outwards for a bubble-free finish.",
-      "care": "The laminated surface is scratch-resistant. Wipe gently; avoid soaking, harsh abrasion and prolonged heat.",
-      "drive": "",
-      "quality": "Laminated for a scratch-resistant finish and designed for clean, residue-free removal from suitable clean, smooth surfaces."
+      "quality": "Laminated waterproof sticker pack with a scratch-resistant surface and residue-free removal from suitable clean, smooth surfaces.",
+      "application": "Peel and apply to a clean, dry, smooth surface such as a laptop, bottle, journal, storage case or similar suitable surface.",
+      "care": "Wipe clean gently. For longest life, avoid repeated harsh abrasion, prolonged heat and soaking around exposed edges.",
+      "contents": [
+        "12 coordinated stickers",
+        "Catalogue codes DIWALI-001–DIWALI-012",
+        "Regular ₹99 · Holographic ₹199"
+      ]
     },
     {
-      "id": "ST-008",
-      "name": "Nami · Daydream",
+      "id": "PACK-DIWALI-02",
+      "name": "Diwali Festive Pack",
       "categories": [
-        "Glossy / Regular Stickers",
-        "Holographic Stickers"
+        "Sticker Packs",
+        "Holographic Packs"
       ],
-      "theme": "One Piece",
-      "description": "An orange-haired Nami portrait in a relaxed, thoughtful pose. Choose your size and available finish. Price shown is per sticker.",
+      "theme": "Diwali",
+      "description": "12 coordinated diwali stickers in a ready-made sheet. Includes DIWALI-013–DIWALI-024. Every preset sheet is ₹99 regular or ₹199 holographic.",
       "images": [
-        "assets/products/nami-daydream.jpg",
-        "assets/products/nami-holographic.jpg"
+        "assets/sticker-packs/diwali-02-laptop.webp",
+        "assets/sticker-packs/diwali-02-laptop.webp"
       ],
       "variants": [
         {
-          "id": "G-1",
-          "size": "1 inch",
-          "finish": "Glossy / Regular",
-          "price": 6,
-          "image": "assets/products/nami-daydream.jpg"
+          "id": "REG",
+          "size": "12 stickers · 3 × 4 sheet",
+          "finish": "Regular laminated",
+          "price": 99,
+          "image": "assets/sticker-packs/diwali-02-laptop.webp"
         },
         {
-          "id": "G-2",
-          "size": "2 inches",
-          "finish": "Glossy / Regular",
-          "price": 10,
-          "image": "assets/products/nami-daydream.jpg"
-        },
-        {
-          "id": "G-3",
-          "size": "3 inches",
-          "finish": "Glossy / Regular",
-          "price": 13,
-          "image": "assets/products/nami-daydream.jpg"
-        },
-        {
-          "id": "G-4",
-          "size": "4 inches",
-          "finish": "Glossy / Regular",
-          "price": 15,
-          "image": "assets/products/nami-daydream.jpg"
-        },
-        {
-          "id": "H-2",
-          "size": "2 inches",
+          "id": "HOLO",
+          "size": "12 stickers · 3 × 4 sheet",
           "finish": "Holographic",
-          "price": 30,
-          "image": "assets/products/nami-holographic.jpg"
-        },
-        {
-          "id": "H-4",
-          "size": "4 inches",
-          "finish": "Holographic",
-          "price": 40,
-          "image": "assets/products/nami-holographic.jpg"
+          "price": 199,
+          "image": "assets/sticker-packs/diwali-02-laptop.webp"
         }
       ],
-      "unit": "1 sticker",
+      "unit": "1 sheet · 12 stickers",
       "status": "order",
-      "application": "Clean and dry a smooth surface. Peel the backing, align, and press from the centre outwards for a bubble-free finish.",
-      "care": "The laminated surface is scratch-resistant. Wipe gently; avoid soaking, harsh abrasion and prolonged heat.",
-      "drive": "",
-      "quality": "Laminated for a scratch-resistant finish and designed for clean, residue-free removal from suitable clean, smooth surfaces."
+      "quality": "Laminated waterproof sticker pack with a scratch-resistant surface and residue-free removal from suitable clean, smooth surfaces.",
+      "application": "Peel and apply to a clean, dry, smooth surface such as a laptop, bottle, journal, storage case or similar suitable surface.",
+      "care": "Wipe clean gently. For longest life, avoid repeated harsh abrasion, prolonged heat and soaking around exposed edges.",
+      "contents": [
+        "12 coordinated stickers",
+        "Catalogue codes DIWALI-013–DIWALI-024",
+        "Regular ₹99 · Holographic ₹199"
+      ]
     },
     {
-      "id": "ST-009",
-      "name": "Boa Hancock · Scarlet Elegance",
+      "id": "PACK-CUTE-MOOD",
+      "name": "Cute Mood Pack",
       "categories": [
-        "Glossy / Regular Stickers",
-        "Holographic Stickers"
+        "Sticker Packs",
+        "Holographic Packs"
       ],
-      "theme": "One Piece",
-      "description": "Long dark hair and a red outfit give this Boa Hancock portrait its striking contrast. Choose your size and available finish. Price shown is per sticker.",
+      "theme": "Cute / Relatable",
+      "description": "16 coordinated cute / relatable stickers in a ready-made sheet. Includes CUTE-001–CUTE-016. Every preset sheet is ₹99 regular or ₹199 holographic.",
       "images": [
-        "assets/products/boa-hancock.jpg",
-        "assets/products/boa-holographic.jpg"
+        "assets/lifestyle/cute-mood.webp",
+        "assets/lifestyle/cute-mood.webp"
       ],
       "variants": [
         {
-          "id": "G-1",
-          "size": "1 inch",
-          "finish": "Glossy / Regular",
-          "price": 6,
-          "image": "assets/products/boa-hancock.jpg"
+          "id": "REG",
+          "size": "16 stickers · 4 × 4 sheet",
+          "finish": "Regular laminated",
+          "price": 99,
+          "image": "assets/lifestyle/cute-mood.webp"
         },
         {
-          "id": "G-2",
-          "size": "2 inches",
-          "finish": "Glossy / Regular",
-          "price": 10,
-          "image": "assets/products/boa-hancock.jpg"
-        },
-        {
-          "id": "G-3",
-          "size": "3 inches",
-          "finish": "Glossy / Regular",
-          "price": 13,
-          "image": "assets/products/boa-hancock.jpg"
-        },
-        {
-          "id": "G-4",
-          "size": "4 inches",
-          "finish": "Glossy / Regular",
-          "price": 15,
-          "image": "assets/products/boa-hancock.jpg"
-        },
-        {
-          "id": "H-2",
-          "size": "2 inches",
+          "id": "HOLO",
+          "size": "16 stickers · 4 × 4 sheet",
           "finish": "Holographic",
-          "price": 30,
-          "image": "assets/products/boa-holographic.jpg"
-        },
-        {
-          "id": "H-4",
-          "size": "4 inches",
-          "finish": "Holographic",
-          "price": 40,
-          "image": "assets/products/boa-holographic.jpg"
+          "price": 199,
+          "image": "assets/lifestyle/cute-mood.webp"
         }
       ],
-      "unit": "1 sticker",
+      "unit": "1 sheet · 16 stickers",
       "status": "order",
-      "application": "Clean and dry a smooth surface. Peel the backing, align, and press from the centre outwards for a bubble-free finish.",
-      "care": "The laminated surface is scratch-resistant. Wipe gently; avoid soaking, harsh abrasion and prolonged heat.",
-      "drive": "",
-      "quality": "Laminated for a scratch-resistant finish and designed for clean, residue-free removal from suitable clean, smooth surfaces."
+      "quality": "Laminated waterproof sticker pack with a scratch-resistant surface and residue-free removal from suitable clean, smooth surfaces.",
+      "application": "Peel and apply to a clean, dry, smooth surface such as a laptop, bottle, journal, storage case or similar suitable surface.",
+      "care": "Wipe clean gently. For longest life, avoid repeated harsh abrasion, prolonged heat and soaking around exposed edges.",
+      "contents": [
+        "16 coordinated stickers",
+        "Catalogue codes CUTE-001–CUTE-016",
+        "Regular ₹99 · Holographic ₹199"
+      ]
     },
     {
-      "id": "ST-010",
-      "name": "Nezuko · Pocket Companion",
+      "id": "PACK-ENG-01",
+      "name": "Engineering & Campus Pack",
       "categories": [
-        "Glossy / Regular Stickers",
-        "Holographic Stickers"
+        "Sticker Packs",
+        "Holographic Packs"
       ],
-      "theme": "Demon Slayer",
-      "description": "A sweet chibi Nezuko with her bamboo muzzle and pink ribbon. Choose your size and available finish. Price shown is per sticker.",
+      "theme": "Engineering / Coding",
+      "description": "12 coding, engineering and campus-humour stickers for laptops, bottles and notebooks. Includes ENG-001–ENG-012. Every preset sheet is ₹99 regular or ₹199 holographic.",
       "images": [
-        "assets/products/nezuko-chibi.jpg",
-        "assets/products/nezuko-holographic.jpg"
+        "assets/lifestyle/engineering-campus.webp",
+        "assets/lifestyle/engineering-campus.webp"
       ],
       "variants": [
         {
-          "id": "G-1",
-          "size": "1 inch",
-          "finish": "Glossy / Regular",
-          "price": 6,
-          "image": "assets/products/nezuko-chibi.jpg"
+          "id": "REG",
+          "size": "12 stickers · 3 × 4 sheet",
+          "finish": "Regular laminated",
+          "price": 99,
+          "image": "assets/lifestyle/engineering-campus.webp"
         },
         {
-          "id": "G-2",
-          "size": "2 inches",
-          "finish": "Glossy / Regular",
-          "price": 10,
-          "image": "assets/products/nezuko-chibi.jpg"
-        },
-        {
-          "id": "G-3",
-          "size": "3 inches",
-          "finish": "Glossy / Regular",
-          "price": 13,
-          "image": "assets/products/nezuko-chibi.jpg"
-        },
-        {
-          "id": "G-4",
-          "size": "4 inches",
-          "finish": "Glossy / Regular",
-          "price": 15,
-          "image": "assets/products/nezuko-chibi.jpg"
-        },
-        {
-          "id": "H-2",
-          "size": "2 inches",
+          "id": "HOLO",
+          "size": "12 stickers · 3 × 4 sheet",
           "finish": "Holographic",
-          "price": 30,
-          "image": "assets/products/nezuko-holographic.jpg"
-        },
-        {
-          "id": "H-4",
-          "size": "4 inches",
-          "finish": "Holographic",
-          "price": 40,
-          "image": "assets/products/nezuko-holographic.jpg"
+          "price": 199,
+          "image": "assets/lifestyle/engineering-campus.webp"
         }
       ],
-      "unit": "1 sticker",
+      "unit": "1 sheet · 12 stickers",
       "status": "order",
-      "application": "Clean and dry a smooth surface. Peel the backing, align, and press from the centre outwards for a bubble-free finish.",
-      "care": "The laminated surface is scratch-resistant. Wipe gently; avoid soaking, harsh abrasion and prolonged heat.",
-      "drive": "",
-      "quality": "Laminated for a scratch-resistant finish and designed for clean, residue-free removal from suitable clean, smooth surfaces."
+      "quality": "Laminated waterproof sticker pack with a scratch-resistant surface and residue-free removal from suitable clean, smooth surfaces.",
+      "application": "Peel and apply to a clean, dry, smooth surface such as a laptop, bottle, journal, storage case or similar suitable surface.",
+      "care": "Wipe clean gently. For longest life, avoid repeated harsh abrasion, prolonged heat and soaking around exposed edges.",
+      "contents": [
+        "12 coordinated stickers",
+        "Catalogue codes ENG-001–ENG-012",
+        "Regular ₹99 · Holographic ₹199"
+      ]
     },
     {
-      "id": "ST-011",
-      "name": "Muichiro · Mist & Starlight",
+      "id": "PACK-FRIEND-01",
+      "name": "Friendship Pack",
       "categories": [
-        "Holographic Stickers"
+        "Sticker Packs",
+        "Holographic Packs"
       ],
-      "theme": "Demon Slayer",
-      "description": "A teal-haired Muichiro portrait with a sparkling holographic finish. Choose your size and available finish. Price shown is per sticker.",
+      "theme": "Friendship",
+      "description": "6 friendship and best-friend stickers in a compact mini pack. Includes FRIEND-001–FRIEND-006. Every preset sheet is ₹99 regular or ₹199 holographic.",
       "images": [
-        "assets/products/muichiro-holographic.jpg"
+        "assets/lifestyle/friendship.webp",
+        "assets/lifestyle/friendship.webp"
       ],
       "variants": [
         {
-          "id": "H-2",
-          "size": "2 inches",
-          "finish": "Holographic",
-          "price": 30,
-          "image": "assets/products/muichiro-holographic.jpg"
+          "id": "REG",
+          "size": "6 stickers · 2 × 3 sheet",
+          "finish": "Regular laminated",
+          "price": 99,
+          "image": "assets/lifestyle/friendship.webp"
         },
         {
-          "id": "H-4",
-          "size": "4 inches",
+          "id": "HOLO",
+          "size": "6 stickers · 2 × 3 sheet",
           "finish": "Holographic",
-          "price": 40,
-          "image": "assets/products/muichiro-holographic.jpg"
+          "price": 199,
+          "image": "assets/lifestyle/friendship.webp"
         }
       ],
-      "unit": "1 sticker",
+      "unit": "1 sheet · 6 stickers",
       "status": "order",
-      "application": "Clean and dry a smooth surface. Peel the backing, align, and press from the centre outwards for a bubble-free finish.",
-      "care": "The laminated surface is scratch-resistant. Wipe gently; avoid soaking, harsh abrasion and prolonged heat.",
-      "drive": "",
-      "quality": "Laminated for a scratch-resistant finish and designed for clean, residue-free removal from suitable clean, smooth surfaces."
+      "quality": "Laminated waterproof sticker pack with a scratch-resistant surface and residue-free removal from suitable clean, smooth surfaces.",
+      "application": "Peel and apply to a clean, dry, smooth surface such as a laptop, bottle, journal, storage case or similar suitable surface.",
+      "care": "Wipe clean gently. For longest life, avoid repeated harsh abrasion, prolonged heat and soaking around exposed edges.",
+      "contents": [
+        "6 coordinated stickers",
+        "Catalogue codes FRIEND-001–FRIEND-006",
+        "Regular ₹99 · Holographic ₹199"
+      ]
     },
     {
-      "id": "ST-012",
-      "name": "Kakashi · Behind the Mask",
+      "id": "PACK-CUSTOM",
+      "name": "Build Your Own Sticker Pack",
       "categories": [
-        "Glossy / Regular Stickers",
-        "Holographic Stickers"
+        "Sticker Packs",
+        "Holographic Packs",
+        "Custom Packages / Bundles"
       ],
-      "theme": "Naruto",
-      "description": "Silver hair, forehead protector and masked expression in a compact Kakashi design. Choose your size and available finish. Price shown is per sticker.",
+      "theme": "Custom Mix",
+      "description": "Select as many catalogue designs as you like, then choose a sheet: 4 × 4 (16 at 1 inch), 3 × 4 (12 at 2 inches), or 2 × 3 (6 at 3 inches). Each mixed sheet is ₹129 regular or ₹229 holographic.",
       "images": [
-        "assets/products/kakashi-masked.jpg",
-        "assets/products/kakashi-holographic.jpg"
+        "assets/lifestyle/anime-classics.webp",
+        "assets/lifestyle/anime-meme.webp"
       ],
       "variants": [
         {
-          "id": "G-1",
-          "size": "1 inch",
-          "finish": "Glossy / Regular",
-          "price": 6,
-          "image": "assets/products/kakashi-masked.jpg"
+          "id": "REG-6",
+          "size": "6 stickers · 2 × 3 · 3 inches sheet",
+          "finish": "Regular laminated · custom mix",
+          "price": 129,
+          "image": "assets/lifestyle/anime-classics.webp"
         },
         {
-          "id": "G-2",
-          "size": "2 inches",
-          "finish": "Glossy / Regular",
-          "price": 10,
-          "image": "assets/products/kakashi-masked.jpg"
+          "id": "HOLO-6",
+          "size": "6 stickers · 2 × 3 · 3 inches sheet",
+          "finish": "Holographic · custom mix",
+          "price": 229,
+          "image": "assets/lifestyle/anime-classics.webp"
         },
         {
-          "id": "G-3",
-          "size": "3 inches",
-          "finish": "Glossy / Regular",
-          "price": 13,
-          "image": "assets/products/kakashi-masked.jpg"
+          "id": "REG-12",
+          "size": "12 stickers · 3 × 4 · 2 inches sheet",
+          "finish": "Regular laminated · custom mix",
+          "price": 129,
+          "image": "assets/lifestyle/anime-classics.webp"
         },
         {
-          "id": "G-4",
-          "size": "4 inches",
-          "finish": "Glossy / Regular",
-          "price": 15,
-          "image": "assets/products/kakashi-masked.jpg"
+          "id": "HOLO-12",
+          "size": "12 stickers · 3 × 4 · 2 inches sheet",
+          "finish": "Holographic · custom mix",
+          "price": 229,
+          "image": "assets/lifestyle/anime-classics.webp"
         },
         {
-          "id": "H-2",
-          "size": "2 inches",
-          "finish": "Holographic",
-          "price": 30,
-          "image": "assets/products/kakashi-holographic.jpg"
+          "id": "REG-16",
+          "size": "16 stickers · 4 × 4 · 1 inch sheet",
+          "finish": "Regular laminated · custom mix",
+          "price": 129,
+          "image": "assets/lifestyle/anime-classics.webp"
         },
         {
-          "id": "H-4",
-          "size": "4 inches",
-          "finish": "Holographic",
-          "price": 40,
-          "image": "assets/products/kakashi-holographic.jpg"
+          "id": "HOLO-16",
+          "size": "16 stickers · 4 × 4 · 1 inch sheet",
+          "finish": "Holographic · custom mix",
+          "price": 229,
+          "image": "assets/lifestyle/anime-classics.webp"
         }
       ],
-      "unit": "1 sticker",
+      "unit": "1 custom sheet",
       "status": "order",
-      "application": "Clean and dry a smooth surface. Peel the backing, align, and press from the centre outwards for a bubble-free finish.",
-      "care": "The laminated surface is scratch-resistant. Wipe gently; avoid soaking, harsh abrasion and prolonged heat.",
-      "drive": "",
-      "quality": "Laminated for a scratch-resistant finish and designed for clean, residue-free removal from suitable clean, smooth surfaces."
+      "requiresSelection": true,
+      "selectionPrompt": "Enter sticker codes, e.g. ANIME-001, MOTU-004, ENG-002",
+      "quality": "Laminated waterproof sticker pack with a scratch-resistant surface and residue-free removal from suitable clean, smooth surfaces.",
+      "application": "Select up to 16 different catalogue codes per sheet. You can build as many sheets as you want.",
+      "care": "Wipe clean gently. Avoid prolonged heat and aggressive abrasion."
+    },
+    {
+      "id": "PACK-UPLOAD",
+      "name": "Your Artwork Sticker Sheet",
+      "categories": [
+        "Sticker Packs",
+        "Custom Packages / Bundles"
+      ],
+      "theme": "Your Artwork",
+      "description": "Supply your own print-ready sticker artwork for a 4 × 4, 3 × 4, or 2 × 3 sheet at ₹199. Share the original file through Drive or WhatsApp after placing the request.",
+      "images": [
+        "assets/lifestyle/anime-classics.webp"
+      ],
+      "variants": [
+        {
+          "id": "UPLOAD-16",
+          "size": "16 stickers · 4 × 4 · 1 inch sheet",
+          "finish": "Regular laminated · supplied artwork",
+          "price": 199,
+          "image": "assets/lifestyle/anime-classics.webp"
+        },
+        {
+          "id": "UPLOAD-12",
+          "size": "12 stickers · 3 × 4 · 2 inches sheet",
+          "finish": "Regular laminated · supplied artwork",
+          "price": 199,
+          "image": "assets/lifestyle/anime-classics.webp"
+        },
+        {
+          "id": "UPLOAD-6",
+          "size": "6 stickers · 2 × 3 · 3 inches sheet",
+          "finish": "Regular laminated · supplied artwork",
+          "price": 199,
+          "image": "assets/lifestyle/anime-classics.webp"
+        }
+      ],
+      "unit": "1 customer-artwork sheet",
+      "status": "order",
+      "requiresUpload": true,
+      "application": "Supply up to the sheet capacity as separate artwork or a print-ready layout. Share original files through Drive or WhatsApp for review before production.",
+      "care": "Wipe clean gently. Avoid heat and abrasion."
     },
     {
       "id": "SUN-001",
@@ -980,295 +788,19 @@ window.CATALOGUE = {
     },
     {
       "id": "MAG-001",
-      "name": "Monica · Iconic Moments",
+      "name": "Photo Fridge Magnet · Choose Your Design",
       "categories": [
         "Fridge Magnets"
       ],
-      "theme": "Friends",
-      "description": "A Friends-themed acrylic photo frame featuring Monica. A clear plain frame surrounds the collage artwork. Your photos can be requested too.",
+      "theme": "Photo Magnets",
+      "description": "Choose a design or request your own photo. Available in 3 × 4 or 4 × 5 inches, each with Plain or Bubble finish.",
       "images": [
-        "assets/products/friends-monica-collage.jpg"
-      ],
-      "variants": [
-        {
-          "id": "3-4-plain",
-          "size": "3 × 4 inches",
-          "finish": "Plain",
-          "price": 249,
-          "image": "assets/products/friends-monica-collage.jpg"
-        },
-        {
-          "id": "3-4-bubble",
-          "size": "3 × 4 inches",
-          "finish": "Bubble",
-          "price": 249,
-          "image": "assets/products/friends-monica-collage.jpg"
-        },
-        {
-          "id": "4-5-plain",
-          "size": "4 × 5 inches",
-          "finish": "Plain",
-          "price": 359,
-          "image": "assets/products/friends-monica-collage.jpg"
-        },
-        {
-          "id": "4-5-bubble",
-          "size": "4 × 5 inches",
-          "finish": "Bubble",
-          "price": 359,
-          "image": "assets/products/friends-monica-collage.jpg"
-        }
-      ],
-      "unit": "1 acrylic photo magnet",
-      "status": "enquire",
-      "application": "Place on a suitable magnetic metal surface. Check that the mounting holds securely before letting go. Stands shown in photos are not confirmed as included.",
-      "care": "Use a soft cloth. Avoid abrasive cleaners, impact and moisture around the print.",
-      "drive": ""
-    },
-    {
-      "id": "MAG-002",
-      "name": "Ross · The One with the Frame",
-      "categories": [
-        "Fridge Magnets"
-      ],
-      "theme": "Friends",
-      "description": "A Friends-themed acrylic photo frame featuring Ross. A clear plain frame surrounds the collage artwork. Your photos can be requested too.",
-      "images": [
-        "assets/products/friends-ross-collage.jpg"
-      ],
-      "variants": [
-        {
-          "id": "3-4-plain",
-          "size": "3 × 4 inches",
-          "finish": "Plain",
-          "price": 249,
-          "image": "assets/products/friends-ross-collage.jpg"
-        },
-        {
-          "id": "3-4-bubble",
-          "size": "3 × 4 inches",
-          "finish": "Bubble",
-          "price": 249,
-          "image": "assets/products/friends-ross-collage.jpg"
-        },
-        {
-          "id": "4-5-plain",
-          "size": "4 × 5 inches",
-          "finish": "Plain",
-          "price": 359,
-          "image": "assets/products/friends-ross-collage.jpg"
-        },
-        {
-          "id": "4-5-bubble",
-          "size": "4 × 5 inches",
-          "finish": "Bubble",
-          "price": 359,
-          "image": "assets/products/friends-ross-collage.jpg"
-        }
-      ],
-      "unit": "1 acrylic photo magnet",
-      "status": "enquire",
-      "application": "Place on a suitable magnetic metal surface. Check that the mounting holds securely before letting go. Stands shown in photos are not confirmed as included.",
-      "care": "Use a soft cloth. Avoid abrasive cleaners, impact and moisture around the print.",
-      "drive": ""
-    },
-    {
-      "id": "MAG-003",
-      "name": "Rachel · No Uterus, No Opinion",
-      "categories": [
-        "Fridge Magnets"
-      ],
-      "theme": "Friends",
-      "description": "A Friends-themed acrylic photo frame featuring Rachel. Scalloped bubble edging frames the character portrait. Your photos can be requested too.",
-      "images": [
-        "assets/products/rachel-no-uterus.jpg"
-      ],
-      "variants": [
-        {
-          "id": "3-4-plain",
-          "size": "3 × 4 inches",
-          "finish": "Plain",
-          "price": 249,
-          "image": "assets/products/rachel-no-uterus.jpg"
-        },
-        {
-          "id": "3-4-bubble",
-          "size": "3 × 4 inches",
-          "finish": "Bubble",
-          "price": 249,
-          "image": "assets/products/rachel-no-uterus.jpg"
-        },
-        {
-          "id": "4-5-plain",
-          "size": "4 × 5 inches",
-          "finish": "Plain",
-          "price": 359,
-          "image": "assets/products/rachel-no-uterus.jpg"
-        },
-        {
-          "id": "4-5-bubble",
-          "size": "4 × 5 inches",
-          "finish": "Bubble",
-          "price": 359,
-          "image": "assets/products/rachel-no-uterus.jpg"
-        }
-      ],
-      "unit": "1 acrylic photo magnet",
-      "status": "enquire",
-      "application": "Place on a suitable magnetic metal surface. Check that the mounting holds securely before letting go. Stands shown in photos are not confirmed as included.",
-      "care": "Use a soft cloth. Avoid abrasive cleaners, impact and moisture around the print.",
-      "drive": ""
-    },
-    {
-      "id": "MAG-004",
-      "name": "Chandler · Miss Chanandler Bong",
-      "categories": [
-        "Fridge Magnets"
-      ],
-      "theme": "Friends",
-      "description": "A Friends-themed acrylic photo frame featuring Chandler. Scalloped bubble edging frames the character portrait. Your photos can be requested too.",
-      "images": [
-        "assets/products/chandler-bong.jpg"
-      ],
-      "variants": [
-        {
-          "id": "3-4-plain",
-          "size": "3 × 4 inches",
-          "finish": "Plain",
-          "price": 249,
-          "image": "assets/products/chandler-bong.jpg"
-        },
-        {
-          "id": "3-4-bubble",
-          "size": "3 × 4 inches",
-          "finish": "Bubble",
-          "price": 249,
-          "image": "assets/products/chandler-bong.jpg"
-        },
-        {
-          "id": "4-5-plain",
-          "size": "4 × 5 inches",
-          "finish": "Plain",
-          "price": 359,
-          "image": "assets/products/chandler-bong.jpg"
-        },
-        {
-          "id": "4-5-bubble",
-          "size": "4 × 5 inches",
-          "finish": "Bubble",
-          "price": 359,
-          "image": "assets/products/chandler-bong.jpg"
-        }
-      ],
-      "unit": "1 acrylic photo magnet",
-      "status": "enquire",
-      "application": "Place on a suitable magnetic metal surface. Check that the mounting holds securely before letting go. Stands shown in photos are not confirmed as included.",
-      "care": "Use a soft cloth. Avoid abrasive cleaners, impact and moisture around the print.",
-      "drive": ""
-    },
-    {
-      "id": "MAG-005",
-      "name": "Monica · Seven!",
-      "categories": [
-        "Fridge Magnets"
-      ],
-      "theme": "Friends",
-      "description": "A Friends-themed acrylic photo frame featuring Monica. Scalloped bubble edging frames the character portrait. Your photos can be requested too.",
-      "images": [
-        "assets/products/monica-seven.jpg"
-      ],
-      "variants": [
-        {
-          "id": "3-4-plain",
-          "size": "3 × 4 inches",
-          "finish": "Plain",
-          "price": 249,
-          "image": "assets/products/monica-seven.jpg"
-        },
-        {
-          "id": "3-4-bubble",
-          "size": "3 × 4 inches",
-          "finish": "Bubble",
-          "price": 249,
-          "image": "assets/products/monica-seven.jpg"
-        },
-        {
-          "id": "4-5-plain",
-          "size": "4 × 5 inches",
-          "finish": "Plain",
-          "price": 359,
-          "image": "assets/products/monica-seven.jpg"
-        },
-        {
-          "id": "4-5-bubble",
-          "size": "4 × 5 inches",
-          "finish": "Bubble",
-          "price": 359,
-          "image": "assets/products/monica-seven.jpg"
-        }
-      ],
-      "unit": "1 acrylic photo magnet",
-      "status": "enquire",
-      "application": "Place on a suitable magnetic metal surface. Check that the mounting holds securely before letting go. Stands shown in photos are not confirmed as included.",
-      "care": "Use a soft cloth. Avoid abrasive cleaners, impact and moisture around the print.",
-      "drive": ""
-    },
-    {
-      "id": "MAG-006",
-      "name": "Phoebe · Regina Phalange",
-      "categories": [
-        "Fridge Magnets"
-      ],
-      "theme": "Friends",
-      "description": "A Friends-themed acrylic photo frame featuring Phoebe. Scalloped bubble edging frames the character portrait. Your photos can be requested too.",
-      "images": [
-        "assets/products/phoebe-regina.jpg"
-      ],
-      "variants": [
-        {
-          "id": "3-4-plain",
-          "size": "3 × 4 inches",
-          "finish": "Plain",
-          "price": 249,
-          "image": "assets/products/phoebe-regina.jpg"
-        },
-        {
-          "id": "3-4-bubble",
-          "size": "3 × 4 inches",
-          "finish": "Bubble",
-          "price": 249,
-          "image": "assets/products/phoebe-regina.jpg"
-        },
-        {
-          "id": "4-5-plain",
-          "size": "4 × 5 inches",
-          "finish": "Plain",
-          "price": 359,
-          "image": "assets/products/phoebe-regina.jpg"
-        },
-        {
-          "id": "4-5-bubble",
-          "size": "4 × 5 inches",
-          "finish": "Bubble",
-          "price": 359,
-          "image": "assets/products/phoebe-regina.jpg"
-        }
-      ],
-      "unit": "1 acrylic photo magnet",
-      "status": "enquire",
-      "application": "Place on a suitable magnetic metal surface. Check that the mounting holds securely before letting go. Stands shown in photos are not confirmed as included.",
-      "care": "Use a soft cloth. Avoid abrasive cleaners, impact and moisture around the print.",
-      "drive": ""
-    },
-    {
-      "id": "MAG-007",
-      "name": "Joey · How You Doin?",
-      "categories": [
-        "Fridge Magnets"
-      ],
-      "theme": "Friends",
-      "description": "A Friends-themed acrylic photo frame featuring Joey. Scalloped bubble edging frames the character portrait. Your photos can be requested too.",
-      "images": [
+        "assets/products/friends-monica-collage.jpg",
+        "assets/products/friends-ross-collage.jpg",
+        "assets/products/rachel-no-uterus.jpg",
+        "assets/products/chandler-bong.jpg",
+        "assets/products/monica-seven.jpg",
+        "assets/products/phoebe-regina.jpg",
         "assets/products/joey-how-you-doin.jpg"
       ],
       "variants": [
@@ -1277,35 +809,44 @@ window.CATALOGUE = {
           "size": "3 × 4 inches",
           "finish": "Plain",
           "price": 249,
-          "image": "assets/products/joey-how-you-doin.jpg"
+          "image": "assets/products/friends-monica-collage.jpg"
         },
         {
           "id": "3-4-bubble",
           "size": "3 × 4 inches",
           "finish": "Bubble",
           "price": 249,
-          "image": "assets/products/joey-how-you-doin.jpg"
+          "image": "assets/products/friends-monica-collage.jpg"
         },
         {
           "id": "4-5-plain",
           "size": "4 × 5 inches",
           "finish": "Plain",
           "price": 359,
-          "image": "assets/products/joey-how-you-doin.jpg"
+          "image": "assets/products/friends-monica-collage.jpg"
         },
         {
           "id": "4-5-bubble",
           "size": "4 × 5 inches",
           "finish": "Bubble",
           "price": 359,
-          "image": "assets/products/joey-how-you-doin.jpg"
+          "image": "assets/products/friends-monica-collage.jpg"
         }
       ],
       "unit": "1 acrylic photo magnet",
       "status": "enquire",
       "application": "Place on a suitable magnetic metal surface. Check that the mounting holds securely before letting go. Stands shown in photos are not confirmed as included.",
       "care": "Use a soft cloth. Avoid abrasive cleaners, impact and moisture around the print.",
-      "drive": ""
+      "drive": "",
+      "designNames": [
+        "Photo Fridge Magnet · Choose Your Design",
+        "Ross · The One with the Frame",
+        "Rachel · No Uterus, No Opinion",
+        "Chandler · Miss Chanandler Bong",
+        "Monica · Seven!",
+        "Phoebe · Regina Phalange",
+        "Joey · How You Doin?"
+      ]
     },
     {
       "id": "ACR-001",
@@ -1387,51 +928,6 @@ window.CATALOGUE = {
       "status": "quote",
       "application": "Confirm the intended surface and final material before production.",
       "care": "Care instructions depend on the final material."
-    },
-    {
-      "id": "MAT-001",
-      "name": "Your Design · Matte Sticker",
-      "categories": [
-        "Matte Stickers"
-      ],
-      "theme": "Custom",
-      "description": "A soft, low-glare laminated matte sticker made from your artwork. Choose a size and share the reference in the customised section.",
-      "images": [],
-      "variants": [
-        {
-          "id": "M-1",
-          "size": "1 inch",
-          "finish": "Matte",
-          "price": 6,
-          "image": null
-        },
-        {
-          "id": "M-2",
-          "size": "2 inches",
-          "finish": "Matte",
-          "price": 10,
-          "image": null
-        },
-        {
-          "id": "M-3",
-          "size": "3 inches",
-          "finish": "Matte",
-          "price": 13,
-          "image": null
-        },
-        {
-          "id": "M-4",
-          "size": "4 inches",
-          "finish": "Matte",
-          "price": 15,
-          "image": null
-        }
-      ],
-      "unit": "1 sticker",
-      "status": "order",
-      "application": "Clean and dry a smooth surface. Peel the backing, align, and press from the centre outwards for a bubble-free finish.",
-      "care": "The laminated surface is scratch-resistant. Wipe gently; avoid soaking, harsh abrasion and prolonged heat.",
-      "quality": "Laminated for a scratch-resistant finish and designed for clean, residue-free removal from suitable clean, smooth surfaces."
     },
     {
       "id": "POL-001",
@@ -1528,73 +1024,6 @@ window.CATALOGUE = {
       "care": "Final care guidance will be confirmed for your chosen product."
     },
     {
-      "id": "BND-001",
-      "name": "Demon Slayer · Starter Trio",
-      "categories": [
-        "Custom Packages / Bundles"
-      ],
-      "theme": "Demon Slayer",
-      "description": "Three coordinating character stickers in one starter set. Choose Regular or Holographic and a supported size.",
-      "images": [
-        "assets/products/rengoku-flame.jpg",
-        "assets/products/zenitsu-thunder.jpg",
-        "assets/products/shinobu-butterfly.jpg"
-      ],
-      "variants": [
-        {
-          "id": "BG-1",
-          "size": "1 inch",
-          "finish": "Glossy / Regular",
-          "price": 18,
-          "image": "assets/products/rengoku-flame.jpg"
-        },
-        {
-          "id": "BG-2",
-          "size": "2 inches",
-          "finish": "Glossy / Regular",
-          "price": 30,
-          "image": "assets/products/rengoku-flame.jpg"
-        },
-        {
-          "id": "BG-3",
-          "size": "3 inches",
-          "finish": "Glossy / Regular",
-          "price": 39,
-          "image": "assets/products/rengoku-flame.jpg"
-        },
-        {
-          "id": "BG-4",
-          "size": "4 inches",
-          "finish": "Glossy / Regular",
-          "price": 45,
-          "image": "assets/products/rengoku-flame.jpg"
-        },
-        {
-          "id": "BH-2",
-          "size": "2 inches",
-          "finish": "Holographic",
-          "price": 90,
-          "image": "assets/products/rengoku-flame.jpg"
-        },
-        {
-          "id": "BH-4",
-          "size": "4 inches",
-          "finish": "Holographic",
-          "price": 120,
-          "image": "assets/products/rengoku-flame.jpg"
-        }
-      ],
-      "unit": "3 stickers",
-      "contents": [
-        "1 × ST-001 Rengoku",
-        "1 × ST-002 Zenitsu",
-        "1 × ST-003 Shinobu"
-      ],
-      "status": "order",
-      "application": "Apply each sticker to a clean, dry, smooth surface.",
-      "care": "Avoid soaking and abrasion."
-    },
-    {
       "id": "BND-002",
       "name": "Build Your Own · Fandom Gift Set",
       "categories": [
@@ -1617,5 +1046,17 @@ window.CATALOGUE = {
       "care": "Care follows the items you select."
     }
   ],
-  "freeShippingThreshold": 699
+  "freeShippingThreshold": 699,
+  "stickerPricing": {
+    "presetRegular": 99,
+    "presetHolographic": 149,
+    "customRegular": 129,
+    "customHolographic": 179,
+    "sizes": [
+      "16 stickers · 4 × 4",
+      "12 stickers · 3 × 4",
+      "6 stickers · 2 × 3"
+    ],
+    "customerArtwork": 199
+  }
 };

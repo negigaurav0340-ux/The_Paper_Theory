@@ -18,3 +18,17 @@
 - PDF library was exercised separately with the Paper Theory logo and an A4 page.
 
 Automated browser rendering was unavailable in the packaging environment, so the final ZIP should receive a quick click-through in Chrome after extraction: add two variants of one sticker, open a video gallery, add a custom request, and download its PDF.
+
+## September 27 integrated update
+
+- Checked syntax for every JavaScript file in `js`, `api` and the dashboard.
+- Validated all 158 catalogue image paths and restored 146 legacy sticker images, 11 original preset sheets and their laptop previews. Several legacy source crops still contain incomplete artwork.
+- Confirmed the customer catalogue still supports 16, 12 and six sticker selections per sheet. The production print studio has been removed.
+- Tested analytics event sanitization, password validation and mocked live POST/GET storage flow. Live multi-visitor reporting remains contingent on the owner adding Upstash credentials; no customer identity is collected.
+- Checked local HTML file references, `sitemap.xml` parsing and JSON catalogue exports. Search ranking cannot be confirmed until the new build is deployed and Search Console has crawled it.
+
+## Final draft checks
+
+- Removed the A4/Cricut builder files and every public link to them. Sticker catalogue selection and the original 11 preset sheet carousel remain.
+- Tested admin custom From/To date filtering and date report sorting with sample events; checked that all reports use the same filtered event set.
+- Validated local HTML links, JSON-LD parse, sitemap XML and JavaScript syntax.

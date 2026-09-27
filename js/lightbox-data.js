@@ -40,24 +40,5 @@
     });
   });
 
-  if (!catalogue.products.some(item => item.id === 'PACK-10')) {
-    catalogue.products.push({
-      id: 'PACK-10',
-      name: 'Build Your Own · 10 Sticker Pack',
-      categories: ['Custom Packages / Bundles'],
-      theme: 'Custom',
-      description: 'Select exactly 10 eligible sticker designs in one chosen size. Price equals the single-sticker price for that size multiplied by 10.',
-      images: ['assets/products/rengoku-flame.jpg','assets/products/zenitsu-thunder.jpg','assets/products/shinobu-butterfly.jpg'],
-      variants: [
-        { id: 'PACK-10-1', size: '1 inch', finish: '10 glossy / regular stickers', price: 180, image: 'assets/products/rengoku-flame.jpg' },
-        { id: 'PACK-10-2', size: '2 inches', finish: '10 glossy / regular stickers', price: 300, image: 'assets/products/rengoku-flame.jpg' },
-        { id: 'PACK-10-3', size: '3 inches', finish: '10 glossy / regular stickers', price: 390, image: 'assets/products/rengoku-flame.jpg' },
-        { id: 'PACK-10-4', size: '4 inches', finish: '10 glossy / regular stickers', price: 450, image: 'assets/products/rengoku-flame.jpg' }
-      ],
-      unit: '10 stickers',
-      status: 'order',
-      application: 'Apply to clean, dry, smooth surfaces.',
-      care: 'Avoid soaking and harsh abrasion.'
-    });
-  }
+
 })();

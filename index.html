@@ -3,11 +3,19 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>The Paper Theory — Your fandom, off-screen.</title>
-<meta name="description" content="Anime stickers, A4 colour-changing Light Boxes, suncatchers, acrylic posters, photo magnets and custom collectibles. Your favourite worlds, made tangible.">
-<meta property="og:title" content="The Paper Theory — Your fandom, off-screen.">
-<meta property="og:description" content="A4 anime Light Boxes, stickers, magnets and custom fandom objects.">
+<title>The Paper Theory | Light Boxes, Sticker Packs & Custom Gifts India</title>
+<meta name="description" content="Shop The Paper Theory for A4 colour-changing anime Light Boxes, laminated sticker packs, custom stickers, suncatchers and photo magnets. Designed in Shimla, India.">
+<link rel="canonical" href="https://thepapertheory.in/">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta property="og:title" content="The Paper Theory | Light Boxes, Stickers & Custom Gifts">
+<meta property="og:description" content="Discover A4 colour-changing Light Boxes, laminated sticker packs and custom gifts from The Paper Theory.">
 <meta property="og:type" content="website">
+<meta property="og:site_name" content="The Paper Theory">
+<meta property="og:locale" content="en_IN">
+<meta property="og:url" content="https://thepapertheory.in/">
+<meta property="og:image" content="https://thepapertheory.in/assets/lightbox/lightbox-poster.webp">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://thepapertheory.in/#organization","name":"The Paper Theory","url":"https://thepapertheory.in/","logo":"https://thepapertheory.in/assets/logo.jpg","sameAs":["https://www.instagram.com/thepapertheory.in/","https://www.youtube.com/@the_papertheory"],"email":"thepapertheory.in@gmail.com","contactPoint":{"@type":"ContactPoint","contactType":"customer support","email":"thepapertheory.in@gmail.com","telephone":"+91-82195-78050"}},{"@type":"WebSite","@id":"https://thepapertheory.in/#website","name":"The Paper Theory","alternateName":"ThePaperTheory","url":"https://thepapertheory.in/","publisher":{"@id":"https://thepapertheory.in/#organization"},"inLanguage":"en-IN"}]}</script>
 <link rel="icon" href="assets/logo.jpg">
 <link rel="preload" href="assets/lightbox/lightbox-eren-on.webp" as="image">
 <link rel="stylesheet" href="style.css">
@@ -15,14 +23,21 @@
 <link rel="stylesheet" href="animations.css">
 <link rel="stylesheet" href="enhancements.css">
 <link rel="stylesheet" href="premium.css">
+<link rel="stylesheet" href="sticker-hub.css">
 <script defer src="js/loader.js">
 </script>
 <script defer src="js/products.js">
 </script>
 <script defer src="js/lightbox-data.js">
 </script>
+<script defer src="js/product-updates.js"></script>
+<script defer src="js/product-extensions.js"></script>
 <script defer src="js/logo-data.js">
 </script>
+<script defer src="js/sticker-packs-data.js"></script>
+<script defer src="js/catalogue-data.js"></script>
+<script defer src="js/catalogue-updates.js"></script>
+<script defer src="js/catalogue-extensions.js"></script>
 <script defer src="vendor/pdf-lib.min.js">
 </script>
 <script defer src="js/pdf.js">
@@ -31,6 +46,8 @@
 </script>
 <script defer src="js/premium.js">
 </script>
+<script defer src="js/sticker-hub.js"></script>
+<script defer src="js/instagram-reels.js"></script>
 </head>
 <body class="is-loading">
 <div class="site-loader" id="siteLoader" role="status" aria-live="polite" aria-label="The Paper Theory is loading">
@@ -109,7 +126,7 @@
 <p class="loader-note">PROVEN COOL. TESTED DAILY.</p>
 </div>
 <a class="skip" href="#shop">Skip to collection</a>
-<div class="announcement">FIRST 100 CUSTOMERS GET A COMPLIMENTARY LAMINATED PVC ANIME CARD <span>While the launch allocation lasts ✦</span>
+<div class="announcement">STICKER PACKS NOW START AT ₹99 · 6 / 12 / 16 DESIGNS <span>Regular laminated ₹99 · Holographic ₹199 · Custom mix +₹30 ✦</span>
 </div>
 <header>
 <a class="brand" href="#top">
@@ -119,6 +136,8 @@
 </a>
 <nav aria-label="Main navigation">
 <a href="#shop">Shop</a>
+<a href="sticker-packs.html">Sticker Packs</a>
+<a href="catalogue.html">Catalogue</a>
 <a href="#sunshine">Suncatchers</a>
 <a href="#custom">Customise</a>
 <a href="#help">Help</a>
@@ -194,12 +213,13 @@
 </div>
 </div>
 </section>
-<div class="marquee" aria-hidden="true">PEEL. STICK. REPEAT. ✦ YOUR SPACE, YOUR STORY. ✦ MADE TO KEEP. ✦</div>
+<div class="marquee" aria-hidden="true">PEEL. STICK. REPEAT. ✦ ₹99 REGULAR PACKS ✦ ₹199 HOLOGRAPHIC ✦ 6 / 12 / 16 STICKERS ✦</div>
+
 <section id="shop" class="section">
 <div class="section-heading">
 <div>
-<p class="eyebrow">THE COLLECTION / PICK YOUR FORMAT</p>
-<h2>Find your kind of <em>obsession.</em>
+<p class="eyebrow">THE COLLECTION / PACKS + FEATURE PRODUCTS</p>
+<h2>Shop without the <em>clutter.</em>
 </h2>
 </div>
 <span id="resultCount" aria-live="polite">
@@ -236,6 +256,23 @@
 <p>Try another search or ask us to make your idea.</p>
 <button id="clearFilters" class="button dark">Clear filters</button>
 </div>
+</section>
+<section class="catalogue-after-shop section" aria-label="Browse the sticker catalogue"><div><p class="eyebrow">CREATE A SHEET YOUR WAY</p><h2>Every design in one place.</h2><p>Filter by collection, choose your favourites, then select the sheet size and finish.</p></div><div class="catalogue-cta"><a href="catalogue.html">Browse through the catalogue ↗</a></div></section>
+<section class="sticker-pack-hub" id="stickerPacks">
+  <div class="sticker-pack-head"><div><p class="eyebrow">STICKER PACKS / LESS CLUTTER, MORE CHOICE</p><h2>Pick a pack.<br><em>Stick your world.</em></h2><p>Ready-made regular sheets ₹99; holographic ₹199. Mix your own catalogue codes for +₹30, or supply your artwork for ₹199 per sheet. Select 4 × 4 one-inch, 3 × 4 two-inch, or 2 × 3 three-inch designs.</p></div><div class="pack-controls"><button id="packPrev" aria-label="Previous sticker pack">←</button><button id="packNext" aria-label="Next sticker pack">→</button></div></div>
+  <div class="pack-track" id="stickerPackTrack" aria-label="Sticker pack carousel"></div>
+  <div class="design-carousel-head"><div><p class="eyebrow">COMPLETE SHEETS / EVERY PACK</p><h3>See the whole sheet.</h3><p>Every sticker on its original preset sheet, shown together.</p></div><div class="pack-controls"><button id="sheetPrev" type="button" aria-label="Previous complete sheet">←</button><button id="sheetNext" type="button" aria-label="Next complete sheet">→</button></div></div>
+  <div class="all-sticker-track sheet-track" id="allSheetTrack" aria-label="Complete preset sticker sheets carousel"></div>
+  <div class="design-carousel-head"><div><p class="eyebrow">ALL DESIGNS / ONE EASY SCROLL</p><h3>See every sticker.</h3><p>Browse the full variety here, then choose any codes in the catalogue.</p></div><div class="pack-controls"><button id="designPrev" type="button" aria-label="Previous sticker designs">←</button><button id="designNext" type="button" aria-label="Next sticker designs">→</button></div></div>
+  <div class="all-sticker-track" id="allStickerTrack" aria-label="All sticker designs carousel"></div>
+  <div class="price-rules">
+    <div class="price-rule"><del>₹299</del><b>₹99</b><strong>Regular pack</strong><span>6 / 12 / 16 stickers · laminated · waterproof · scratch-resistant · residue-free</span></div>
+    <div class="price-rule"><b>₹199</b><strong>Holographic pack</strong><span>Same preset pack, upgraded holographic finish</span></div>
+    <div class="price-rule"><b>₹129</b><strong>Custom regular</strong><span>Choose any codes from the catalogue · +₹30 custom mixing</span></div>
+    <div class="price-rule"><b>₹229</b><strong>Custom holographic</strong><span>Holographic + custom mixing</span></div>
+    <div class="price-rule"><b>₹199</b><strong>Your own artwork</strong><span>Per sheet · share original artwork after your request</span></div>
+  </div>
+
 </section>
 <section class="sunshine section" id="sunshine">
 <div class="sun-art">
@@ -452,7 +489,7 @@
 <figcaption>DESK / SHELF / BEDSIDE</figcaption>
 </figure>
 <div class="included-card">
-<p class="eyebrow">EVERYTHING INCLUDED FOR ₹1,199</p>
+<p class="eyebrow">EVERYTHING INCLUDED · <del>₹2,599</del> ₹1,199</p>
 <span>A4 Light Box</span>
 <b>+</b>
 <span>Built-in colour-changing light</span>
@@ -514,68 +551,15 @@
 </details>
 </div>
 </div>
-  <div class="family-browsers section">
-<div class="section-heading">
-<div>
-<p class="eyebrow">AN EXTRA WAY TO BROWSE</p>
-<h2>Explore by <em>product family.</em>
-</h2>
-</div>
-<p>Every original product card remains in the catalogue above.</p>
-</div>
-<div class="family-browser-grid">
-<article data-family="Glossy / Regular Stickers">
-<h3>Vinyl / Simple Stickers</h3>
-<div class="family-track" id="regularFamily">
-</div>
-<button data-family-open="Glossy / Regular Stickers">Browse all existing designs</button>
-</article>
-<article data-family="Holographic Stickers">
-<h3>Holographic Stickers</h3>
-<div class="family-track" id="holoFamily">
-</div>
-<button data-family-open="Holographic Stickers">Browse all existing designs</button>
-</article>
-<article data-family="Fridge Magnets">
-<h3>Fridge Magnets</h3>
-<div class="family-track" id="magnetFamily">
-</div>
-<button data-family-open="Fridge Magnets">Browse all existing designs</button>
-</article>
-</div>
-</div>
-  <div class="sticker-pack section">
-<div>
-<p class="eyebrow">BUILD YOUR OWN STICKER PACK</p>
-<h2>Exactly ten.<br>
-<em>Entirely yours.</em>
-</h2>
-<p>Choose one sticker size, then select exactly 10 eligible designs. Price is the chosen single-sticker price × 10—no hidden discount or mixed pricing.</p>
-<label>Pack size<select id="packSize">
-<option value="1 inch">1 inch</option>
-<option value="2 inches">2 inches</option>
-<option value="3 inches">3 inches</option>
-<option value="4 inches">4 inches</option>
-</select>
-</label>
-<div class="pack-total">
-<b id="packCount">0 / 10 selected</b>
-<strong id="packPrice">₹0</strong>
-</div>
-<button class="button dark" id="packAdd" disabled>ADD 10-STICKER PACK</button>
-</div>
-<div class="pack-picker" id="packPicker" aria-label="Choose ten sticker designs">
-</div>
-</div>
   <div class="social-proof instagram-showcase section">
 <div>
 <p class="eyebrow">FROM OUR INSTAGRAM</p>
 <h2>Watch the Light Box<br>
 <em>come alive.</em>
 </h2>
-<p>One fast-loading video container for real product demonstrations. The Instagram app opens only when you choose.</p>
+<p>Watch the Light Box demo and selected posts from @thepapertheory.in.</p>
 <div class="social-buttons">
-<a href="https://instagram.com/thepapertheory.in" target="_blank" rel="noopener">WATCH MORE · @thepapertheory.in ↗</a>
+<a href="https://www.instagram.com/thepapertheory.in/reels/" target="_blank" rel="noopener">VIEW LATEST REELS · @thepapertheory.in ↗</a>
 <a href="https://youtube.com/@the_papertheory" target="_blank" rel="noopener">YouTube · @the_papertheory ↗</a>
 <a href="mailto:thepapertheory.in@gmail.com">Email · thepapertheory.in@gmail.com ↗</a>
 </div>
@@ -583,8 +567,9 @@
 <figure class="instagram-video-card">
 <div class="instagram-video-head"><span>●</span><b>@thepapertheory.in</b><a href="https://instagram.com/thepapertheory.in" target="_blank" rel="noopener" aria-label="Open The Paper Theory on Instagram">↗</a></div>
 <video controls muted playsinline preload="none" poster="assets/lightbox/lightbox-poster.webp"><source src="assets/lightbox/lightbox-demo.mp4" type="video/mp4">Your browser does not support video.</video>
-<figcaption><b>REAL LIGHT BOX DEMO</b><span>Tap play to watch · Instagram-ready video</span></figcaption>
+<figcaption><b>LIGHT BOX DEMO</b><span>Tap play to watch · see Instagram for the latest reels</span></figcaption>
 </figure>
+<div id="instagramReelTrack" class="instagram-reel-track" aria-label="Instagram posts"></div>
 </div>
   <div class="recent-section section" id="recentSection" hidden>
 <div class="section-heading">
@@ -713,6 +698,8 @@
 </div>
 <div class="footer-bottom">
 <span>© 2026 The Paper Theory</span>
+<a href="light-boxes.html">Light Boxes</a>
+<a href="about.html">About The Paper Theory</a>
 <a href="#help">Shipping, care & ordering</a>
 <a href="#custom">Made for you</a>
 </div>
