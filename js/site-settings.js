@@ -1,3 +1,4 @@
+/* Published from the unified owner dashboard */
 window.TPT_SITE_SETTINGS = {
   "heroTitle": "Your fandom. Off-screen.",
   "heroDescription": "A little anime for your laptop. A favourite moment for your fridge. A whole new world for your space.",
