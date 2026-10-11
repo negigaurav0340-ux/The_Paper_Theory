@@ -576,7 +576,7 @@ window.STICKER_PACKS = [
   {
     "id": "LONG-ANIME-ORIGINAL",
     "slug": "long-anime-original",
-    "name": "Anime Original Long Sticker Pack",
+    "name": "Anime Original Large Long Sticker Pack",
     "theme": "Anime",
     "count": 4,
     "layout": "6 × 2 inches each",
@@ -590,12 +590,13 @@ window.STICKER_PACKS = [
       "LONG-ANIME-ORIGINAL-4"
     ],
     "kind": "long",
-    "laptopImage": "assets/sticker-packs/long-anime-original-laptop.webp"
+    "laptopImage": "assets/sticker-packs/long-anime-original-laptop.webp",
+    "longFormat": "Large"
   },
   {
     "id": "LONG-ANIME-VARIANT",
     "slug": "long-anime-variant",
-    "name": "Anime Variant Long Sticker Pack",
+    "name": "Anime Variant Large Long Sticker Pack",
     "theme": "Anime",
     "count": 4,
     "layout": "6 × 2 inches each",
@@ -609,12 +610,13 @@ window.STICKER_PACKS = [
       "LONG-ANIME-VARIANT-4"
     ],
     "kind": "long",
-    "laptopImage": "assets/sticker-packs/long-anime-variant-laptop.webp"
+    "laptopImage": "assets/sticker-packs/long-anime-variant-laptop.webp",
+    "longFormat": "Large"
   },
   {
     "id": "LONG-MULTI-ANIME",
     "slug": "long-multi-anime",
-    "name": "Multi Anime Long Sticker Pack",
+    "name": "Multi Anime Large Long Sticker Pack",
     "theme": "Anime",
     "count": 4,
     "layout": "6 × 2 inches each",
@@ -628,12 +630,13 @@ window.STICKER_PACKS = [
       "LONG-MULTI-ANIME-4"
     ],
     "kind": "long",
-    "laptopImage": "assets/sticker-packs/long-multi-anime-laptop.webp"
+    "laptopImage": "assets/sticker-packs/long-multi-anime-laptop.webp",
+    "longFormat": "Large"
   },
   {
     "id": "LONG-NARUTO-AKATSUKI",
     "slug": "long-naruto-akatsuki",
-    "name": "Naruto & Akatsuki Long Sticker Pack",
+    "name": "Naruto & Akatsuki Extra Large Long Sticker Pack",
     "theme": "Anime",
     "count": 2,
     "layout": "10 × 2 inches each",
@@ -645,6 +648,7 @@ window.STICKER_PACKS = [
       "LONG-NARUTO-AKATSUKI-2"
     ],
     "kind": "long",
-    "laptopImage": "assets/sticker-packs/long-naruto-akatsuki-laptop.webp"
+    "laptopImage": "assets/sticker-packs/long-naruto-akatsuki-laptop.webp",
+    "longFormat": "Extra Large"
   }
 ];

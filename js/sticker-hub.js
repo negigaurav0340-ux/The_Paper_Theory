@@ -12,10 +12,10 @@
   const price = (id, finish, fallback) => product(id)?.variants.find(v => v.finish.toLowerCase().includes(finish) && Number.isInteger(v.price))?.price ?? fallback;
   const money = value => `₹${value.toLocaleString('en-IN')}`;
   const regular = price('PACK-ANIME-01','regular',99), holo = price('PACK-ANIME-01','holographic',199);
-  const custom = price('PACK-CUSTOM','regular',129), customHolo = price('PACK-CUSTOM','holographic',229), upload = price('PACK-UPLOAD','regular',199);
+  const custom = price('PACK-CUSTOM','regular',99), customHolo = price('PACK-CUSTOM','holographic',199), upload = price('PACK-UPLOAD','regular',199);
   document.querySelectorAll('.price-rule').forEach((rule,i) => { const amount=[regular,holo,custom,customHolo,upload][i]; if(rule.querySelector('b')) rule.querySelector('b').textContent=money(amount); });
   const packIntro=document.querySelector('.sticker-pack-head > div > p:last-child');
-  if(packIntro) packIntro.textContent=`Ready-made regular sheets from ${money(regular)}; holographic from ${money(holo)}. Mix your own catalogue codes from ${money(custom)} regular or ${money(customHolo)} holographic, or supply your artwork from ${money(upload)} per sheet. Build a custom 4 × 4 sheet of 16 designs in the online editor.`;
+  if(packIntro) packIntro.textContent=`Ready-made regular sheets from ${money(regular)}; holographic from ${money(holo)}. Mix your own catalogue codes from ${money(custom)} regular or ${money(customHolo)} holographic, or supply your artwork from ${money(upload)} per sheet. Build 4 × 4 (16), 3 × 4 (12), or 2 × 3 (6) sheets, all ₹99 regular in the online editor.`;
   const galleries = new Map(packs.map(p => [p.id, [
     {image:p.image, packId:p.id,label:'Original designs · laptop placement preview'},
     {image:p.image,label:'Full original artwork · exact pack contents'},

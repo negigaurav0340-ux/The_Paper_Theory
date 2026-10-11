@@ -2034,7 +2034,7 @@ window.STICKER_CATALOGUE = [
     "name": "Anime Original Long Sticker Pack · design 1",
     "pack": "Anime Original Long Sticker Pack",
     "pack_id": "LONG-ANIME-ORIGINAL",
-    "category": "Long Stickers",
+    "category": "Large Long Stickers",
     "image": "assets/catalogue/clean/LONG-ANIME-ORIGINAL-1.png",
     "kind": "long",
     "sheet_count": 4
@@ -2044,7 +2044,7 @@ window.STICKER_CATALOGUE = [
     "name": "Anime Original Long Sticker Pack · design 2",
     "pack": "Anime Original Long Sticker Pack",
     "pack_id": "LONG-ANIME-ORIGINAL",
-    "category": "Long Stickers",
+    "category": "Large Long Stickers",
     "image": "assets/catalogue/clean/LONG-ANIME-ORIGINAL-2.png",
     "kind": "long",
     "sheet_count": 4
@@ -2054,7 +2054,7 @@ window.STICKER_CATALOGUE = [
     "name": "Anime Original Long Sticker Pack · design 3",
     "pack": "Anime Original Long Sticker Pack",
     "pack_id": "LONG-ANIME-ORIGINAL",
-    "category": "Long Stickers",
+    "category": "Large Long Stickers",
     "image": "assets/catalogue/clean/LONG-ANIME-ORIGINAL-3.png",
     "kind": "long",
     "sheet_count": 4
@@ -2064,7 +2064,7 @@ window.STICKER_CATALOGUE = [
     "name": "Anime Original Long Sticker Pack · design 4",
     "pack": "Anime Original Long Sticker Pack",
     "pack_id": "LONG-ANIME-ORIGINAL",
-    "category": "Long Stickers",
+    "category": "Large Long Stickers",
     "image": "assets/catalogue/clean/LONG-ANIME-ORIGINAL-4.png",
     "kind": "long",
     "sheet_count": 4
@@ -2074,7 +2074,7 @@ window.STICKER_CATALOGUE = [
     "name": "Anime Variant Long Sticker Pack · design 1",
     "pack": "Anime Variant Long Sticker Pack",
     "pack_id": "LONG-ANIME-VARIANT",
-    "category": "Long Stickers",
+    "category": "Large Long Stickers",
     "image": "assets/catalogue/clean/LONG-ANIME-VARIANT-1.png",
     "kind": "long",
     "sheet_count": 4
@@ -2084,7 +2084,7 @@ window.STICKER_CATALOGUE = [
     "name": "Anime Variant Long Sticker Pack · design 2",
     "pack": "Anime Variant Long Sticker Pack",
     "pack_id": "LONG-ANIME-VARIANT",
-    "category": "Long Stickers",
+    "category": "Large Long Stickers",
     "image": "assets/catalogue/clean/LONG-ANIME-VARIANT-2.png",
     "kind": "long",
     "sheet_count": 4
@@ -2094,7 +2094,7 @@ window.STICKER_CATALOGUE = [
     "name": "Anime Variant Long Sticker Pack · design 3",
     "pack": "Anime Variant Long Sticker Pack",
     "pack_id": "LONG-ANIME-VARIANT",
-    "category": "Long Stickers",
+    "category": "Large Long Stickers",
     "image": "assets/catalogue/clean/LONG-ANIME-VARIANT-3.png",
     "kind": "long",
     "sheet_count": 4
@@ -2104,7 +2104,7 @@ window.STICKER_CATALOGUE = [
     "name": "Anime Variant Long Sticker Pack · design 4",
     "pack": "Anime Variant Long Sticker Pack",
     "pack_id": "LONG-ANIME-VARIANT",
-    "category": "Long Stickers",
+    "category": "Large Long Stickers",
     "image": "assets/catalogue/clean/LONG-ANIME-VARIANT-4.png",
     "kind": "long",
     "sheet_count": 4
@@ -2114,7 +2114,7 @@ window.STICKER_CATALOGUE = [
     "name": "Multi Anime Long Sticker Pack · design 1",
     "pack": "Multi Anime Long Sticker Pack",
     "pack_id": "LONG-MULTI-ANIME",
-    "category": "Long Stickers",
+    "category": "Large Long Stickers",
     "image": "assets/catalogue/clean/LONG-MULTI-ANIME-1.png",
     "kind": "long",
     "sheet_count": 4
@@ -2124,7 +2124,7 @@ window.STICKER_CATALOGUE = [
     "name": "Multi Anime Long Sticker Pack · design 2",
     "pack": "Multi Anime Long Sticker Pack",
     "pack_id": "LONG-MULTI-ANIME",
-    "category": "Long Stickers",
+    "category": "Large Long Stickers",
     "image": "assets/catalogue/clean/LONG-MULTI-ANIME-2.png",
     "kind": "long",
     "sheet_count": 4
@@ -2134,7 +2134,7 @@ window.STICKER_CATALOGUE = [
     "name": "Multi Anime Long Sticker Pack · design 3",
     "pack": "Multi Anime Long Sticker Pack",
     "pack_id": "LONG-MULTI-ANIME",
-    "category": "Long Stickers",
+    "category": "Large Long Stickers",
     "image": "assets/catalogue/clean/LONG-MULTI-ANIME-3.png",
     "kind": "long",
     "sheet_count": 4
@@ -2144,7 +2144,7 @@ window.STICKER_CATALOGUE = [
     "name": "Multi Anime Long Sticker Pack · design 4",
     "pack": "Multi Anime Long Sticker Pack",
     "pack_id": "LONG-MULTI-ANIME",
-    "category": "Long Stickers",
+    "category": "Large Long Stickers",
     "image": "assets/catalogue/clean/LONG-MULTI-ANIME-4.png",
     "kind": "long",
     "sheet_count": 4
@@ -2154,7 +2154,7 @@ window.STICKER_CATALOGUE = [
     "name": "Naruto & Akatsuki Long Sticker Pack · design 1",
     "pack": "Naruto & Akatsuki Long Sticker Pack",
     "pack_id": "LONG-NARUTO-AKATSUKI",
-    "category": "Long Stickers",
+    "category": "Extra Large Long Stickers",
     "image": "assets/catalogue/clean/LONG-NARUTO-AKATSUKI-1.png",
     "kind": "long",
     "sheet_count": 2
@@ -2164,7 +2164,7 @@ window.STICKER_CATALOGUE = [
     "name": "Naruto & Akatsuki Long Sticker Pack · design 2",
     "pack": "Naruto & Akatsuki Long Sticker Pack",
     "pack_id": "LONG-NARUTO-AKATSUKI",
-    "category": "Long Stickers",
+    "category": "Extra Large Long Stickers",
     "image": "assets/catalogue/clean/LONG-NARUTO-AKATSUKI-2.png",
     "kind": "long",
     "sheet_count": 2

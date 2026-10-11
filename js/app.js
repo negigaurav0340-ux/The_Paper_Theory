@@ -69,7 +69,7 @@
     return optimised[image] || image;
   }
   function imageMarkup(product, image, alt = product.name) {
-    if(product.categories.includes('Long Stickers') && image){const count=Number(product.variants[0].size.match(/^\d+/)?.[0])||4;return `<div class="laptop-preview" data-strip-source="${escapeHtml(image)}" data-strip-count="${count}"><img src="${escapeHtml(image)}" alt="${escapeHtml(alt)} original complete artwork" loading="lazy"></div>`;}
+    if(product.categories.some(c=>c.endsWith('Long Stickers')) && image){const count=Number(product.variants[0].size.match(/^\d+/)?.[0])||4;return `<div class="laptop-preview" data-strip-source="${escapeHtml(image)}" data-strip-count="${count}"><img src="${escapeHtml(image)}" alt="${escapeHtml(alt)} original complete artwork" loading="lazy"></div>`;}
 
     const sheet=(window.STICKER_PACKS||[]).find(p=>p.id===product.id&&p.kind!=='long'&&p.code_list?.length);if(sheet)return `<div class="laptop-preview" data-pack-id="${escapeHtml(sheet.id)}"><img src="${escapeHtml(sheet.image)}" alt="${escapeHtml(product.name)} original artwork" loading="lazy"></div>`;
     return image ? `<img src="${fastImage(image)}" alt="${alt}" loading="lazy" decoding="async" onerror="this.parentElement.innerHTML='<div class=&quot;unpictured&quot;><span>✦</span><small>Product image unavailable</small></div>'">` : '<div class="unpictured"><span>✦</span><small>Custom piece · image confirmed with your request</small></div>';
@@ -176,7 +176,7 @@
         if (!product.requiresSelection) return '';
         const codes = ($('#detailSelection')?.value || '').toUpperCase().split(/[\s,;]+/).filter(Boolean);
         const expected = Number(selected.size.match(/^\d+/)?.[0]);
-        const known = new Set((window.STICKER_CATALOGUE || []).map(item => item.code));
+        const known = new Set((window.STICKER_CATALOGUE || []).filter(item=>item.kind!=='long').map(item => item.code));
         if (codes.length !== expected || new Set(codes).size !== codes.length || codes.some(code => !known.has(code))) {
           toast(`Choose ${expected} different valid catalogue codes`); return null;
         }
@@ -335,8 +335,8 @@
           if(!pack||sheet.finish!=='regular'||sheet.codes.length!==pack.count||!sheet.codes.every(c=>pack.code_list.includes(c)))throw Error('Invalid long pack');
           product=byId(pack.id);variant=product?.variants[0];
         }else{
-          if(sheet.codes.length!==16||items.some(x=>x.kind==='long')||!['regular','holo'].includes(sheet.finish))throw Error('Invalid regular sheet');
-          product=byId('PACK-CUSTOM');variant=product?.variants.find(v=>v.id===`${sheet.finish==='holo'?'HOLO':'REG'}-16`);
+          if(![6,12,16].includes(sheet.codes.length)||items.some(x=>x.kind==='long')||!['regular','holo'].includes(sheet.finish))throw Error('Invalid regular sheet');
+          product=byId('PACK-CUSTOM');variant=product?.variants.find(v=>v.id===`${sheet.finish==='holo'?'HOLO':'REG'}-${sheet.codes.length}`);
         }
         if(!product||!variant)throw Error('Unavailable sheet');return {product,variant,selection:sheet.codes.join(', ')};
       });
@@ -349,7 +349,7 @@
   const chosenCodes = new URLSearchParams(location.search).get('stickerCodes');
   if (chosenCodes) {
     const codes = chosenCodes.toUpperCase().split(',').map(code => code.trim()).filter(Boolean);
-    const known = new Set((window.STICKER_CATALOGUE || []).map(item => item.code));
+    const known = new Set((window.STICKER_CATALOGUE || []).filter(item=>item.kind!=='long').map(item => item.code));
     if ([6, 12, 16].includes(codes.length) && new Set(codes).size === codes.length && codes.every(code => known.has(code))) {
       openProduct(byId('PACK-CUSTOM'));
       $('#detailSize').value = byId('PACK-CUSTOM').variants.find(v => v.id === `REG-${codes.length}`)?.size;
