@@ -1,62 +1,55 @@
-(async () => {
-  'use strict';
-  await Promise.all([window.TPT_CATALOGUE_READY, window.TPT_PRODUCTS_READY]);
-  const packs = window.STICKER_PACKS || [], catalogue = window.STICKER_CATALOGUE || [];
-  const main = document.getElementById('catalogueRoot'), filters = document.getElementById('catalogueFilters');
-  const valid = new Set(catalogue.map(item => item.code)), storageKey = 'tpt-selected-sticker-codes';
-  let remembered = []; try { remembered = JSON.parse(localStorage.getItem(storageKey)) || []; } catch {}
-  const selected = new Set(remembered.filter(code => valid.has(code)));
-  const layout = document.getElementById('sheetLayout'), finish = document.getElementById('sheetFinish');
-  const search = document.getElementById('catalogueSearch'), resultCount = document.getElementById('catalogueResultCount');
-  const safe = value => String(value || '').replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
-  const mixed = window.CATALOGUE.products.find(item => item.id === 'PACK-CUSTOM');
-  const sheetPrice = (size, finish) => mixed?.variants.find(v => v.id === `${finish === 'holo' ? 'HOLO' : 'REG'}-${size}`)?.price ?? (finish === 'holo' ? 229 : 129);
-  const format = value => `₹${value.toLocaleString('en-IN')}`;
-  const ready=window.CATALOGUE.products.find(item=>item.id==='PACK-ANIME-01');
-  const readyPrice=finish=>ready?.variants.find(v=>v.finish.toLowerCase().includes(finish))?.price ?? (finish==='regular'?99:199);
-  const artwork=window.CATALOGUE.products.find(item=>item.id==='PACK-UPLOAD')?.variants[0]?.price ?? 199;
-  const intro=document.querySelector('.intro > div > p:last-child');
-  if(intro)intro.textContent=`Add any number of designs below. Then choose a 4 × 4 sheet of 1-inch stickers (16), a 3 × 4 sheet of 2-inch stickers (12), or a 2 × 3 sheet of 3-inch stickers (6). Each sheet costs the same within its finish: ready-made regular ${format(readyPrice('regular'))}, ready-made holographic ${format(readyPrice('holographic'))}; catalogue selections from ${format(sheetPrice(16,'regular'))} regular. Your own artwork is from ${format(artwork)} per sheet.`;
-  const preset=document.querySelector('.pricebox p');if(preset)preset.textContent=`Preset sheets · from ${format(readyPrice('regular'))} regular`;
-  const ownArt=document.querySelector('.sheet-config > a');if(ownArt)ownArt.textContent=`Using your own artwork? From ${format(artwork)} per sheet ↗`;
-  finish.querySelector('[value="regular"]').textContent=`Regular laminated · ${format(sheetPrice(16,'regular'))} mixed sheet`;
-  finish.querySelector('[value="holo"]').textContent=`Holographic · ${format(sheetPrice(16,'holo'))} mixed sheet`;
-  const groups = [...new Set(catalogue.map(item => item.category))];
-  let currentFilter = 'All', expanded = false;
-  filters.innerHTML = ['All', ...groups].map((name,index) => `<button class="${index ? '' : 'active'}" data-filter="${safe(name)}" aria-pressed="${!index}">${safe(name)}</button>`).join('');
-  function updateSelection() {
-    const capacity = Number(layout.value), count = selected.size, sheets = Math.floor(count / capacity), remaining = count % capacity;
-    document.getElementById('selectedCount').textContent = count;
-    document.getElementById('selectionHint').textContent = sheets ? `${sheets} complete sheet${sheets === 1 ? '' : 's'}${remaining ? ` · ${remaining} designs remain for another sheet` : ''}` : `Add ${capacity - count} more design${capacity - count === 1 ? '' : 's'} for this sheet`;
-    document.getElementById('sheetSummary').textContent = `${capacity} per sheet · ${format(sheetPrice(capacity,finish.value))} ${finish.value === 'holo' ? 'holographic' : 'regular'} when picked from the catalogue. ${count} selected; ${sheets} complete sheet${sheets === 1 ? '' : 's'}.`;
-    document.getElementById('shopSelection').disabled = count < capacity;
-    document.body.classList.toggle('holo-selected', finish.value === 'holo');
-    localStorage.setItem(storageKey, JSON.stringify([...selected]));
-  }
-  function render() {
-    const query = search.value.trim().toLowerCase();
-    const items = catalogue.filter(item => (currentFilter === 'All' || item.category === currentFilter) && (!query || `${item.code} ${item.name || ''} ${item.category} ${item.pack}`.toLowerCase().includes(query)));
-    resultCount.textContent = `${items.length} design${items.length === 1 ? '' : 's'} found`;
-    main.innerHTML = items.length ? [...new Set(items.map(item => item.pack_id))].map(id => {
-      const stickers = items.filter(item => item.pack_id === id), pack = packs.find(item => item.id === id);
-      return `<details class="pack-section" id="${safe(pack?.slug || id)}" ${expanded || query || currentFilter !== 'All' || location.hash.slice(1) === (pack?.slug || id) ? 'open' : ''}><summary class="pack-head"><div><p>${safe(pack?.theme || stickers[0].category)}</p><h2>${safe(pack?.name || stickers[0].pack)}</h2></div><div><b>${stickers.length} designs ↘</b><p>${safe(pack?.codes || '')}</p></div></summary><div class="grid">${stickers.map(item => `<label class="sticker"><input type="checkbox" value="${safe(item.code)}" aria-label="Select ${safe(item.code)}" ${selected.has(item.code) ? 'checked' : ''}><img src="${safe(item.image)}" alt="${safe(item.name || item.code)}" loading="lazy" decoding="async"><span class="code">${safe(item.code)}<small>${safe(item.name || item.category)}</small></span></label>`).join('')}</div></details>`;
-    }).join('') : '<p class="catalogue-empty">No designs match. Try another name or category.</p>';
-    if (location.hash) document.getElementById(decodeURIComponent(location.hash.slice(1)))?.scrollIntoView();
-  }
-  filters.addEventListener('click', event => { const button = event.target.closest('button[data-filter]'); if (!button) return; currentFilter = button.dataset.filter; filters.querySelectorAll('button').forEach(item => { item.classList.toggle('active', item === button); item.setAttribute('aria-pressed', String(item === button)); }); render(); });
-  search.addEventListener('input', render);
-  document.getElementById('togglePacks').addEventListener('click', event => { expanded = !expanded; event.target.textContent = expanded ? 'Collapse all packs' : 'Expand all packs'; main.querySelectorAll('details').forEach(details => { details.open = expanded; }); });
-  main.addEventListener('change', event => { const box = event.target.closest('input[type="checkbox"]'); if (!box) return; box.checked ? selected.add(box.value) : selected.delete(box.value); updateSelection(); });
-  layout.addEventListener('change', () => { finish.querySelector('[value="regular"]').textContent=`Regular laminated · ${format(sheetPrice(Number(layout.value),'regular'))} mixed sheet`; finish.querySelector('[value="holo"]').textContent=`Holographic · ${format(sheetPrice(Number(layout.value),'holo'))} mixed sheet`; updateSelection(); }); finish.addEventListener('change', updateSelection);
-  document.getElementById('clearCodes').addEventListener('click', () => { selected.clear(); main.querySelectorAll('input:checked').forEach(box => { box.checked = false; }); updateSelection(); });
-  document.getElementById('shopSelection').addEventListener('click', () => {
-    const codes = [...selected], capacity = Number(layout.value), sheetCount = Math.floor(codes.length / capacity);
-    if (!sheetCount) return;
-    const sheets = Array.from({length:sheetCount}, (_,i) => ({codes:codes.slice(i*capacity,(i+1)*capacity),finish:finish.value}));
-    localStorage.setItem(storageKey, JSON.stringify(codes.slice(sheetCount*capacity)));
-    location.href = `index.html?stickerSheets=${encodeURIComponent(JSON.stringify(sheets))}#shop`;
-  });
-  document.getElementById('copyCodes').addEventListener('click', async () => { if (!selected.size) return; const codes = [...selected].join(', '); try { await navigator.clipboard.writeText(codes); document.getElementById('selectionHint').textContent = 'Codes copied'; } catch { window.prompt('Copy your sticker codes:', codes); } });
-  document.getElementById('printCatalogue').addEventListener('click', () => window.print());
-  render(); updateSelection();
+(async()=>{
+'use strict';
+await Promise.all([window.TPT_CATALOGUE_READY,window.TPT_PRODUCTS_READY,window.TPT_PACKS_READY]);
+const catalogue=window.STICKER_CATALOGUE||[],packs=window.STICKER_PACKS||[],byCode=new Map(catalogue.map(s=>[s.code,s]));
+const $=id=>document.getElementById(id),safe=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const layout=$('sheetLayout'),finish=$('sheetFinish'),key='tpt-sheet-editor-v2';let selected=[],filter='All',expanded=false;
+try{const draft=JSON.parse(localStorage.getItem(key));if(draft){layout.value=['16','long4','long2'].includes(draft.layout)?draft.layout:'16';finish.value=draft.finish==='holo'?'holo':'regular';selected=(draft.codes||[]).filter(c=>byCode.has(c));}else{selected=(JSON.parse(localStorage.getItem('tpt-selected-sticker-codes'))||[]).filter(c=>byCode.has(c)).slice(0,16);}}catch{}
+const capacity=()=>layout.value==='long4'?4:layout.value==='long2'?2:16;
+const longMode=()=>layout.value!=='16';
+const eligible=s=>longMode()?s.kind==='long'&&s.sheet_count===capacity():s.kind!=='long';
+selected=selected.filter(c=>eligible(byCode.get(c))).slice(0,capacity());if(longMode()&&selected.length)selected=selected.filter(c=>byCode.get(c).pack_id===byCode.get(selected[0]).pack_id);
+const price=()=>longMode()?99:window.CATALOGUE.products.find(p=>p.id==='PACK-CUSTOM')?.variants.find(v=>v.id===(finish.value==='holo'?'HOLO-16':'REG-16'))?.price??129;
+const complete=()=>selected.length===capacity();
+function persist(){try{localStorage.setItem(key,JSON.stringify({layout:layout.value,finish:finish.value,codes:selected}));}catch{$('editorStatus').textContent='Browser storage unavailable; keep this page open.';}}
+function update(){
+ if(longMode())finish.value='regular';finish.disabled=longMode();
+ $('selectedCount').textContent=selected.length;$('selectionHint').textContent=complete()?'Sheet complete · ready to add to bag':`Choose ${capacity()-selected.length} more matching design(s)`;
+ $('sheetSummary').textContent=`${capacity()} ${longMode()?'long ':''}stickers per sheet · ₹${price()} · ${selected.length} selected.`;
+ $('shopSelection').disabled=!complete();$('downloadSheet').disabled=!complete();$('printSheet').disabled=!complete();
+ $('editorPreview').className='editor-preview '+(longMode()?layout.value:'');
+ $('editorPreview').innerHTML=Array.from({length:capacity()},(_,i)=>{const s=byCode.get(selected[i]);return `<div class="editor-slot">${s?`<img src="${safe(s.image)}" alt="${safe(s.name||s.code)}"><small>${safe(s.code)}</small><div class="slot-controls"><button data-move="${i}" data-dir="-1" ${i===0?'disabled':''} aria-label="Move ${safe(s.code)} earlier">←</button><button data-move="${i}" data-dir="1" ${i===selected.length-1?'disabled':''} aria-label="Move ${safe(s.code)} later">→</button><button data-remove="${i}" aria-label="Remove ${safe(s.code)}">×</button></div>`:`<small>Choose design ${i+1}</small>`}</div>`;}).join('');
+ $('catalogueRoot').querySelectorAll('input[type=checkbox]').forEach(box=>{box.checked=selected.includes(box.value);const item=byCode.get(box.value);box.disabled=!box.checked&&(complete()||(longMode()&&selected.length&&item.pack_id!==byCode.get(selected[0]).pack_id));});
+ document.body.classList.toggle('holo-selected',finish.value==='holo');persist();
+}
+function render(){
+ const query=$('catalogueSearch').value.trim().toLowerCase(),items=catalogue.filter(s=>eligible(s)&&(filter==='All'||s.category===filter)&&(!query||`${s.code} ${s.name||''} ${s.pack} ${s.category}`.toLowerCase().includes(query)));
+ $('catalogueResultCount').textContent=`${items.length} compatible designs`;
+ const groups=[...new Set(items.map(s=>s.pack_id))];
+ $('catalogueRoot').innerHTML=groups.map(id=>{const p=packs.find(p=>p.id===id),list=items.filter(s=>s.pack_id===id),slug=p?.slug||id;return `<details class="pack-section" id="${safe(slug)}" ${expanded||query||filter!=='All'||location.hash.slice(1)===slug?'open':''}><summary class="pack-head"><div><p>${safe(list[0].category)}</p><h2>${safe(p?.name||list[0].pack)}</h2></div><b>${list.length} designs ↘</b></summary>${longMode()?`<p>Exact ${capacity()}-sticker long sheet · ₹99 <button class="pack-select" data-exact-pack="${safe(id)}">Use this complete long sheet</button></p>`:''}<div class="grid">${list.map(s=>`<label class="sticker"><input type="checkbox" value="${safe(s.code)}" aria-label="Select ${safe(s.code)}"><img src="${safe(s.image)}" alt="${safe(s.name||s.code)}" loading="lazy"><span class="code">${safe(s.code)}<small>${safe(s.name||s.category)}</small></span></label>`).join('')}</div></details>`;}).join('')||'<p>No matching designs. Try another search or sheet type.</p>';
+ update();
+}
+function renderFilters(){const groups=[...new Set(catalogue.filter(eligible).map(s=>s.category))];$('catalogueFilters').innerHTML=['All',...groups].map(s=>`<button data-filter="${safe(s)}" class="${s===filter?'active':''}" aria-pressed="${s===filter}">${safe(s)}</button>`).join('');}
+$('catalogueFilters').onclick=e=>{const b=e.target.closest('[data-filter]');if(!b)return;filter=b.dataset.filter;renderFilters();render();};
+$('catalogueSearch').oninput=render;
+$('catalogueRoot').onchange=e=>{const b=e.target.closest('input[type=checkbox]');if(!b)return;if(b.checked){const item=byCode.get(b.value);if(!eligible(item)||complete()||(longMode()&&selected.length&&item.pack_id!==byCode.get(selected[0]).pack_id)){b.checked=false;return;}selected.push(b.value);}else selected=selected.filter(c=>c!==b.value);update();};
+$('catalogueRoot').onclick=e=>{const b=e.target.closest('[data-exact-pack]');if(!b)return;const p=packs.find(p=>p.id===b.dataset.exactPack);if(p?.kind==='long'&&p.count===capacity()){selected=p.code_list.slice();update();$('sheetEditor').scrollIntoView({behavior:'smooth'});}};
+$('editorPreview').onclick=e=>{const remove=e.target.closest('[data-remove]'),move=e.target.closest('[data-move]');if(remove)selected.splice(Number(remove.dataset.remove),1);else if(move){const i=Number(move.dataset.move),j=i+Number(move.dataset.dir);if(j>=0&&j<selected.length)[selected[i],selected[j]]=[selected[j],selected[i]];}update();};
+layout.onchange=()=>{selected=[];filter='All';$('editorStatus').textContent='Choose designs for this sheet type.';renderFilters();render();};finish.onchange=update;
+$('clearCodes').onclick=()=>{selected=[];update();};
+$('togglePacks').onclick=e=>{expanded=!expanded;e.target.textContent=expanded?'Collapse all packs':'Expand all packs';$('catalogueRoot').querySelectorAll('details').forEach(d=>d.open=expanded);};
+$('copyCodes').onclick=async()=>{if(!selected.length)return;try{await navigator.clipboard.writeText(selected.join(', '));$('editorStatus').textContent='Codes copied.';}catch{window.prompt('Copy your codes',selected.join(', '));}};
+$('shopSelection').onclick=()=>{if(!complete())return;const sheet={codes:selected,finish:finish.value,...(longMode()?{kind:'long',packId:byCode.get(selected[0]).pack_id}:{kind:'regular'})};location.href='index.html?stickerSheets='+encodeURIComponent(JSON.stringify([sheet]))+'#shop';};
+$('printCatalogue').onclick=()=>window.print();$('printSheet').onclick=()=>{if(!complete())return;document.body.classList.add('print-sheet-only');window.print();};window.addEventListener('afterprint',()=>document.body.classList.remove('print-sheet-only'));
+const load=src=>new Promise((resolve,reject)=>{const im=new Image();im.onload=()=>resolve(im);im.onerror=()=>reject(Error('A sticker image could not be loaded. Please retry.'));im.src=src;});
+$('downloadSheet').onclick=async()=>{if(!complete())return;const button=$('downloadSheet');button.disabled=true;const codes=selected.slice(),mode=layout.value;try{
+ $('editorStatus').textContent='Preparing original artwork…';const images=await Promise.all(codes.map(c=>load(byCode.get(c).image)));
+ const canvas=document.createElement('canvas');canvas.width=2480;canvas.height=3508;const ctx=canvas.getContext('2d');ctx.fillStyle='white';ctx.fillRect(0,0,canvas.width,canvas.height);
+ const cols=mode==='long2'?2:4,rows=mode==='16'?4:1,cw=mode==='16'?300:600,ch=mode==='16'?300:mode==='long2'?3000:1800,gap=mode==='16'?20:10,totalW=cols*cw+(cols-1)*gap,totalH=rows*ch+(rows-1)*gap,x0=(canvas.width-totalW)/2,y0=(canvas.height-totalH)/2;
+ images.forEach((im,i)=>{const ratio=Math.min(cw/im.naturalWidth,ch/im.naturalHeight),w=im.naturalWidth*ratio,h=im.naturalHeight*ratio;ctx.drawImage(im,x0+(i%cols)*(cw+gap)+(cw-w)/2,y0+Math.floor(i/cols)*(ch+gap)+(ch-h)/2,w,h);});
+ const blob=await new Promise(resolve=>canvas.toBlob(resolve,'image/png'));if(!blob)throw Error('Could not export this sheet.');const url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='The-Paper-Theory-'+mode+'-sheet.png';a.click();setTimeout(()=>URL.revokeObjectURL(url),30000);$('editorStatus').textContent='Downloaded A4 artwork (2480 × 3508). Print on A4 without cropping. Cricut registration marks must be added in Design Space.';
+ }catch(e){$('editorStatus').textContent=e.message;}finally{button.disabled=!complete();}};
+const intro=document.querySelector('.intro > div > p:last-child');intro.textContent='Choose 16 regular designs for a 4 × 4 custom sheet. Long stickers use dedicated sheets of 4 (6 × 2 inches each) or 2 (10 × 2 inches each), with the exact designs from one matching pack. Preview, reorder, download and add a completed sheet to your bag.';
+renderFilters();render();
+if(location.hash){const p=packs.find(p=>p.slug===decodeURIComponent(location.hash.slice(1)));if(p?.kind==='long'){layout.value=p.count===2?'long2':'long4';selected=[];renderFilters();render();}document.getElementById(location.hash.slice(1))?.scrollIntoView();}
 })();

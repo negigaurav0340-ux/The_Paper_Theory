@@ -1,159 +1,287 @@
-code,pack,category,name,image
-ANIME-001,Anime Classics,Anime,,assets/catalogue/anime-classics/ANIME-001.webp
-ANIME-002,Anime Classics,Anime,,assets/catalogue/anime-classics/ANIME-002.webp
-ANIME-003,Anime Classics,Anime,,assets/catalogue/anime-classics/ANIME-003.webp
-ANIME-004,Anime Classics,Anime,,assets/catalogue/anime-classics/ANIME-004.webp
-ANIME-005,Anime Classics,Anime,,assets/catalogue/anime-classics/ANIME-005.webp
-ANIME-006,Anime Classics,Anime,,assets/catalogue/anime-classics/ANIME-006.webp
-ANIME-007,Anime Classics,Anime,,assets/catalogue/anime-classics/ANIME-007.webp
-ANIME-008,Anime Classics,Anime,,assets/catalogue/anime-classics/ANIME-008.webp
-ANIME-009,Anime Classics,Anime,,assets/catalogue/anime-classics/ANIME-009.webp
-ANIME-010,Anime Classics,Anime,,assets/catalogue/anime-classics/ANIME-010.webp
-ANIME-011,Anime Classics,Anime,,assets/catalogue/anime-classics/ANIME-011.webp
-ANIME-012,Anime Classics,Anime,,assets/catalogue/anime-classics/ANIME-012.webp
-ANIME-013,Anime Heroes,Anime,,assets/catalogue/anime-heroes/ANIME-013.webp
-ANIME-014,Anime Heroes,Anime,,assets/catalogue/anime-heroes/ANIME-014.webp
-ANIME-015,Anime Heroes,Anime,,assets/catalogue/anime-heroes/ANIME-015.webp
-ANIME-016,Anime Heroes,Anime,,assets/catalogue/anime-heroes/ANIME-016.webp
-ANIME-017,Anime Heroes,Anime,,assets/catalogue/anime-heroes/ANIME-017.webp
-ANIME-018,Anime Heroes,Anime,,assets/catalogue/anime-heroes/ANIME-018.webp
-ANIME-019,Anime Heroes,Anime,,assets/catalogue/anime-heroes/ANIME-019.webp
-ANIME-020,Anime Heroes,Anime,,assets/catalogue/anime-heroes/ANIME-020.webp
-ANIME-021,Anime Heroes,Anime,,assets/catalogue/anime-heroes/ANIME-021.webp
-ANIME-022,Anime Heroes,Anime,,assets/catalogue/anime-heroes/ANIME-022.webp
-ANIME-023,Anime Heroes,Anime,,assets/catalogue/anime-heroes/ANIME-023.webp
-ANIME-024,Anime Heroes,Anime,,assets/catalogue/anime-heroes/ANIME-024.webp
-AMEME-001,Anime Meme Pack,Anime Meme,,assets/catalogue/anime-meme/AMEME-001.webp
-AMEME-002,Anime Meme Pack,Anime Meme,,assets/catalogue/anime-meme/AMEME-002.webp
-AMEME-003,Anime Meme Pack,Anime Meme,,assets/catalogue/anime-meme/AMEME-003.webp
-AMEME-004,Anime Meme Pack,Anime Meme,,assets/catalogue/anime-meme/AMEME-004.webp
-AMEME-005,Anime Meme Pack,Anime Meme,,assets/catalogue/anime-meme/AMEME-005.webp
-AMEME-006,Anime Meme Pack,Anime Meme,,assets/catalogue/anime-meme/AMEME-006.webp
-AMEME-007,Anime Meme Pack,Anime Meme,,assets/catalogue/anime-meme/AMEME-007.webp
-AMEME-008,Anime Meme Pack,Anime Meme,,assets/catalogue/anime-meme/AMEME-008.webp
-AMEME-009,Anime Meme Pack,Anime Meme,,assets/catalogue/anime-meme/AMEME-009.webp
-AMEME-010,Anime Meme Pack,Anime Meme,,assets/catalogue/anime-meme/AMEME-010.webp
-AMEME-011,Anime Meme Pack,Anime Meme,,assets/catalogue/anime-meme/AMEME-011.webp
-AMEME-012,Anime Meme Pack,Anime Meme,,assets/catalogue/anime-meme/AMEME-012.webp
-AMEME-013,Anime Meme Pack,Anime Meme,,assets/catalogue/anime-meme/AMEME-013.webp
-AMEME-014,Anime Meme Pack,Anime Meme,,assets/catalogue/anime-meme/AMEME-014.webp
-AMEME-015,Anime Meme Pack,Anime Meme,,assets/catalogue/anime-meme/AMEME-015.webp
-AMEME-016,Anime Meme Pack,Anime Meme,,assets/catalogue/anime-meme/AMEME-016.webp
-FEEL-001,Feel Good Pack,Feel Good,,assets/catalogue/feel-good/FEEL-001.webp
-FEEL-002,Feel Good Pack,Feel Good,,assets/catalogue/feel-good/FEEL-002.webp
-FEEL-003,Feel Good Pack,Feel Good,,assets/catalogue/feel-good/FEEL-003.webp
-FEEL-004,Feel Good Pack,Feel Good,,assets/catalogue/feel-good/FEEL-004.webp
-FEEL-005,Feel Good Pack,Feel Good,,assets/catalogue/feel-good/FEEL-005.webp
-FEEL-006,Feel Good Pack,Feel Good,,assets/catalogue/feel-good/FEEL-006.webp
-FEEL-007,Feel Good Pack,Feel Good,,assets/catalogue/feel-good/FEEL-007.webp
-FEEL-008,Feel Good Pack,Feel Good,,assets/catalogue/feel-good/FEEL-008.webp
-FEEL-009,Feel Good Pack,Feel Good,,assets/catalogue/feel-good/FEEL-009.webp
-FEEL-010,Feel Good Pack,Feel Good,,assets/catalogue/feel-good/FEEL-010.webp
-FEEL-011,Feel Good Pack,Feel Good,,assets/catalogue/feel-good/FEEL-011.webp
-FEEL-012,Feel Good Pack,Feel Good,,assets/catalogue/feel-good/FEEL-012.webp
-FEEL-013,Feel Good Pack,Feel Good,,assets/catalogue/feel-good/FEEL-013.webp
-FEEL-014,Feel Good Pack,Feel Good,,assets/catalogue/feel-good/FEEL-014.webp
-FEEL-015,Feel Good Pack,Feel Good,,assets/catalogue/feel-good/FEEL-015.webp
-FEEL-016,Feel Good Pack,Feel Good,,assets/catalogue/feel-good/FEEL-016.webp
-MOTU-001,Team Motu Pack,Motu vs Bheem,,assets/catalogue/team-motu/MOTU-001.webp
-MOTU-002,Team Motu Pack,Motu vs Bheem,,assets/catalogue/team-motu/MOTU-002.webp
-MOTU-003,Team Motu Pack,Motu vs Bheem,,assets/catalogue/team-motu/MOTU-003.webp
-MOTU-004,Team Motu Pack,Motu vs Bheem,,assets/catalogue/team-motu/MOTU-004.webp
-MOTU-005,Team Motu Pack,Motu vs Bheem,,assets/catalogue/team-motu/MOTU-005.webp
-MOTU-006,Team Motu Pack,Motu vs Bheem,,assets/catalogue/team-motu/MOTU-006.webp
-MOTU-007,Team Motu Pack,Motu vs Bheem,,assets/catalogue/team-motu/MOTU-007.webp
-MOTU-008,Team Motu Pack,Motu vs Bheem,,assets/catalogue/team-motu/MOTU-008.webp
-MOTU-009,Team Motu Pack,Motu vs Bheem,,assets/catalogue/team-motu/MOTU-009.webp
-MOTU-010,Team Motu Pack,Motu vs Bheem,,assets/catalogue/team-motu/MOTU-010.webp
-MOTU-011,Team Motu Pack,Motu vs Bheem,,assets/catalogue/team-motu/MOTU-011.webp
-MOTU-012,Team Motu Pack,Motu vs Bheem,,assets/catalogue/team-motu/MOTU-012.webp
-MOTU-013,Team Motu Pack,Motu vs Bheem,,assets/catalogue/team-motu/MOTU-013.webp
-MOTU-014,Team Motu Pack,Motu vs Bheem,,assets/catalogue/team-motu/MOTU-014.webp
-MOTU-015,Team Motu Pack,Motu vs Bheem,,assets/catalogue/team-motu/MOTU-015.webp
-MOTU-016,Team Motu Pack,Motu vs Bheem,,assets/catalogue/team-motu/MOTU-016.webp
-BHEEM-001,Team Bheem Pack,Motu vs Bheem,,assets/catalogue/team-bheem/BHEEM-001.webp
-BHEEM-002,Team Bheem Pack,Motu vs Bheem,,assets/catalogue/team-bheem/BHEEM-002.webp
-BHEEM-003,Team Bheem Pack,Motu vs Bheem,,assets/catalogue/team-bheem/BHEEM-003.webp
-BHEEM-004,Team Bheem Pack,Motu vs Bheem,,assets/catalogue/team-bheem/BHEEM-004.webp
-BHEEM-005,Team Bheem Pack,Motu vs Bheem,,assets/catalogue/team-bheem/BHEEM-005.webp
-BHEEM-006,Team Bheem Pack,Motu vs Bheem,,assets/catalogue/team-bheem/BHEEM-006.webp
-BHEEM-007,Team Bheem Pack,Motu vs Bheem,,assets/catalogue/team-bheem/BHEEM-007.webp
-BHEEM-008,Team Bheem Pack,Motu vs Bheem,,assets/catalogue/team-bheem/BHEEM-008.webp
-BHEEM-009,Team Bheem Pack,Motu vs Bheem,,assets/catalogue/team-bheem/BHEEM-009.webp
-BHEEM-010,Team Bheem Pack,Motu vs Bheem,,assets/catalogue/team-bheem/BHEEM-010.webp
-BHEEM-011,Team Bheem Pack,Motu vs Bheem,,assets/catalogue/team-bheem/BHEEM-011.webp
-BHEEM-012,Team Bheem Pack,Motu vs Bheem,,assets/catalogue/team-bheem/BHEEM-012.webp
-BHEEM-013,Team Bheem Pack,Motu vs Bheem,,assets/catalogue/team-bheem/BHEEM-013.webp
-BHEEM-014,Team Bheem Pack,Motu vs Bheem,,assets/catalogue/team-bheem/BHEEM-014.webp
-BHEEM-015,Team Bheem Pack,Motu vs Bheem,,assets/catalogue/team-bheem/BHEEM-015.webp
-BHEEM-016,Team Bheem Pack,Motu vs Bheem,,assets/catalogue/team-bheem/BHEEM-016.webp
-DIWALI-001,Diwali Devotional Pack,Diwali,,assets/catalogue/diwali-01/DIWALI-001.webp
-DIWALI-002,Diwali Devotional Pack,Diwali,,assets/catalogue/diwali-01/DIWALI-002.webp
-DIWALI-003,Diwali Devotional Pack,Diwali,,assets/catalogue/diwali-01/DIWALI-003.webp
-DIWALI-004,Diwali Devotional Pack,Diwali,,assets/catalogue/diwali-01/DIWALI-004.webp
-DIWALI-005,Diwali Devotional Pack,Diwali,,assets/catalogue/diwali-01/DIWALI-005.webp
-DIWALI-006,Diwali Devotional Pack,Diwali,,assets/catalogue/diwali-01/DIWALI-006.webp
-DIWALI-007,Diwali Devotional Pack,Diwali,,assets/catalogue/diwali-01/DIWALI-007.webp
-DIWALI-008,Diwali Devotional Pack,Diwali,,assets/catalogue/diwali-01/DIWALI-008.webp
-DIWALI-009,Diwali Devotional Pack,Diwali,,assets/catalogue/diwali-01/DIWALI-009.webp
-DIWALI-010,Diwali Devotional Pack,Diwali,,assets/catalogue/diwali-01/DIWALI-010.webp
-DIWALI-011,Diwali Devotional Pack,Diwali,,assets/catalogue/diwali-01/DIWALI-011.webp
-DIWALI-012,Diwali Devotional Pack,Diwali,,assets/catalogue/diwali-01/DIWALI-012.webp
-DIWALI-013,Diwali Festive Pack,Diwali,,assets/catalogue/diwali-02/DIWALI-013.webp
-DIWALI-014,Diwali Festive Pack,Diwali,,assets/catalogue/diwali-02/DIWALI-014.webp
-DIWALI-015,Diwali Festive Pack,Diwali,,assets/catalogue/diwali-02/DIWALI-015.webp
-DIWALI-016,Diwali Festive Pack,Diwali,,assets/catalogue/diwali-02/DIWALI-016.webp
-DIWALI-017,Diwali Festive Pack,Diwali,,assets/catalogue/diwali-02/DIWALI-017.webp
-DIWALI-018,Diwali Festive Pack,Diwali,,assets/catalogue/diwali-02/DIWALI-018.webp
-DIWALI-019,Diwali Festive Pack,Diwali,,assets/catalogue/diwali-02/DIWALI-019.webp
-DIWALI-020,Diwali Festive Pack,Diwali,,assets/catalogue/diwali-02/DIWALI-020.webp
-DIWALI-021,Diwali Festive Pack,Diwali,,assets/catalogue/diwali-02/DIWALI-021.webp
-DIWALI-022,Diwali Festive Pack,Diwali,,assets/catalogue/diwali-02/DIWALI-022.webp
-DIWALI-023,Diwali Festive Pack,Diwali,,assets/catalogue/diwali-02/DIWALI-023.webp
-DIWALI-024,Diwali Festive Pack,Diwali,,assets/catalogue/diwali-02/DIWALI-024.webp
-CUTE-001,Cute Mood Pack,Cute / Relatable,,assets/catalogue/cute-mood/CUTE-001.webp
-CUTE-002,Cute Mood Pack,Cute / Relatable,,assets/catalogue/cute-mood/CUTE-002.webp
-CUTE-003,Cute Mood Pack,Cute / Relatable,,assets/catalogue/cute-mood/CUTE-003.webp
-CUTE-004,Cute Mood Pack,Cute / Relatable,,assets/catalogue/cute-mood/CUTE-004.webp
-CUTE-005,Cute Mood Pack,Cute / Relatable,,assets/catalogue/cute-mood/CUTE-005.webp
-CUTE-006,Cute Mood Pack,Cute / Relatable,,assets/catalogue/cute-mood/CUTE-006.webp
-CUTE-007,Cute Mood Pack,Cute / Relatable,,assets/catalogue/cute-mood/CUTE-007.webp
-CUTE-008,Cute Mood Pack,Cute / Relatable,,assets/catalogue/cute-mood/CUTE-008.webp
-CUTE-009,Cute Mood Pack,Cute / Relatable,,assets/catalogue/cute-mood/CUTE-009.webp
-CUTE-010,Cute Mood Pack,Cute / Relatable,,assets/catalogue/cute-mood/CUTE-010.webp
-CUTE-011,Cute Mood Pack,Cute / Relatable,,assets/catalogue/cute-mood/CUTE-011.webp
-CUTE-012,Cute Mood Pack,Cute / Relatable,,assets/catalogue/cute-mood/CUTE-012.webp
-CUTE-013,Cute Mood Pack,Cute / Relatable,,assets/catalogue/cute-mood/CUTE-013.webp
-CUTE-014,Cute Mood Pack,Cute / Relatable,,assets/catalogue/cute-mood/CUTE-014.webp
-CUTE-015,Cute Mood Pack,Cute / Relatable,,assets/catalogue/cute-mood/CUTE-015.webp
-CUTE-016,Cute Mood Pack,Cute / Relatable,,assets/catalogue/cute-mood/CUTE-016.webp
-ENG-001,Engineering & Campus Pack,Engineering / Coding,,assets/catalogue/engineering-campus/ENG-001.webp
-ENG-002,Engineering & Campus Pack,Engineering / Coding,,assets/catalogue/engineering-campus/ENG-002.webp
-ENG-003,Engineering & Campus Pack,Engineering / Coding,,assets/catalogue/engineering-campus/ENG-003.webp
-ENG-004,Engineering & Campus Pack,Engineering / Coding,,assets/catalogue/engineering-campus/ENG-004.webp
-ENG-005,Engineering & Campus Pack,Engineering / Coding,,assets/catalogue/engineering-campus/ENG-005.webp
-ENG-006,Engineering & Campus Pack,Engineering / Coding,,assets/catalogue/engineering-campus/ENG-006.webp
-ENG-007,Engineering & Campus Pack,Engineering / Coding,,assets/catalogue/engineering-campus/ENG-007.webp
-ENG-008,Engineering & Campus Pack,Engineering / Coding,,assets/catalogue/engineering-campus/ENG-008.webp
-ENG-009,Engineering & Campus Pack,Engineering / Coding,,assets/catalogue/engineering-campus/ENG-009.webp
-ENG-010,Engineering & Campus Pack,Engineering / Coding,,assets/catalogue/engineering-campus/ENG-010.webp
-ENG-011,Engineering & Campus Pack,Engineering / Coding,,assets/catalogue/engineering-campus/ENG-011.webp
-ENG-012,Engineering & Campus Pack,Engineering / Coding,,assets/catalogue/engineering-campus/ENG-012.webp
-FRIEND-001,Friendship Pack,Friendship,,assets/catalogue/friendship/FRIEND-001.webp
-FRIEND-002,Friendship Pack,Friendship,,assets/catalogue/friendship/FRIEND-002.webp
-FRIEND-003,Friendship Pack,Friendship,,assets/catalogue/friendship/FRIEND-003.webp
-FRIEND-004,Friendship Pack,Friendship,,assets/catalogue/friendship/FRIEND-004.webp
-FRIEND-005,Friendship Pack,Friendship,,assets/catalogue/friendship/FRIEND-005.webp
-FRIEND-006,Friendship Pack,Friendship,,assets/catalogue/friendship/FRIEND-006.webp
-FOX-001,New Originals,Cute,Kitsu Star,assets/stickers/kitsu-star.webp
-ORIG-002,New Originals,Anime,Flame Hero,assets/stickers/anime-flame.webp
-ORIG-003,New Originals,Anime Meme,Coffee Mood,assets/stickers/coffee-meme.webp
-ORIG-004,New Originals,Feel Good,Sunny Days,assets/stickers/sunshine.webp
-ORIG-005,New Originals,Motu vs Bheem,Joyful Celebration,assets/stickers/joyful-motu.webp
-ORIG-006,New Originals,Motu vs Bheem,Brave Adventure,assets/stickers/brave-bheem.webp
-ORIG-007,New Originals,Diwali,Festive Diya,assets/stickers/diya.webp
-ORIG-008,New Originals,Cute / Relatable,Sleepy Cat,assets/stickers/sleepy-cat.webp
-ORIG-009,New Originals,Anime,Violet Star Hero,assets/stickers/violet-hero.webp
-ORIG-010,New Originals,Diwali,Diwali Sparkle,assets/stickers/festive.webp
-ORIG-011,New Originals,Engineering,Code and Coffee,assets/stickers/engineer.webp
-ORIG-012,New Originals,Friendship,Fox Friends,assets/stickers/fox-friends.webp
+code,name,pack,pack_id,category,image,kind,sheet_count
+ANIME-001,,Anime Classics,PACK-ANIME-01,Anime,assets/catalogue/clean/ANIME-001.png,,
+ANIME-002,,Anime Classics,PACK-ANIME-01,Anime,assets/catalogue/clean/ANIME-002.png,,
+ANIME-003,,Anime Classics,PACK-ANIME-01,Anime,assets/catalogue/clean/ANIME-003.png,,
+ANIME-004,,Anime Classics,PACK-ANIME-01,Anime,assets/catalogue/clean/ANIME-004.png,,
+ANIME-005,,Anime Classics,PACK-ANIME-01,Anime,assets/catalogue/clean/ANIME-005.png,,
+ANIME-006,,Anime Classics,PACK-ANIME-01,Anime,assets/catalogue/clean/ANIME-006.png,,
+ANIME-007,,Anime Classics,PACK-ANIME-01,Anime,assets/catalogue/clean/ANIME-007.png,,
+ANIME-008,,Anime Classics,PACK-ANIME-01,Anime,assets/catalogue/clean/ANIME-008.png,,
+ANIME-009,,Anime Classics,PACK-ANIME-01,Anime,assets/catalogue/clean/ANIME-009.png,,
+ANIME-010,,Anime Classics,PACK-ANIME-01,Anime,assets/catalogue/clean/ANIME-010.png,,
+ANIME-011,,Anime Classics,PACK-ANIME-01,Anime,assets/catalogue/clean/ANIME-011.png,,
+ANIME-012,,Anime Classics,PACK-ANIME-01,Anime,assets/catalogue/clean/ANIME-012.png,,
+ANIME-013,,Anime Heroes,PACK-ANIME-HEROES,Anime,assets/catalogue/clean/ANIME-013.png,,
+ANIME-014,,Anime Heroes,PACK-ANIME-HEROES,Anime,assets/catalogue/clean/ANIME-014.png,,
+ANIME-015,,Anime Heroes,PACK-ANIME-HEROES,Anime,assets/catalogue/clean/ANIME-015.png,,
+ANIME-016,,Anime Heroes,PACK-ANIME-HEROES,Anime,assets/catalogue/clean/ANIME-016.png,,
+ANIME-017,,Anime Heroes,PACK-ANIME-HEROES,Anime,assets/catalogue/clean/ANIME-017.png,,
+ANIME-018,,Anime Heroes,PACK-ANIME-HEROES,Anime,assets/catalogue/clean/ANIME-018.png,,
+ANIME-019,,Anime Heroes,PACK-ANIME-HEROES,Anime,assets/catalogue/clean/ANIME-019.png,,
+ANIME-020,,Anime Heroes,PACK-ANIME-HEROES,Anime,assets/catalogue/clean/ANIME-020.png,,
+ANIME-021,,Anime Heroes,PACK-ANIME-HEROES,Anime,assets/catalogue/clean/ANIME-021.png,,
+ANIME-022,,Anime Heroes,PACK-ANIME-HEROES,Anime,assets/catalogue/clean/ANIME-022.png,,
+ANIME-023,,Anime Heroes,PACK-ANIME-HEROES,Anime,assets/catalogue/clean/ANIME-023.png,,
+ANIME-024,,Anime Heroes,PACK-ANIME-HEROES,Anime,assets/catalogue/clean/ANIME-024.png,,
+AMEME-001,,Anime Meme Pack,PACK-ANIME-MEME,Anime Meme,assets/catalogue/clean/AMEME-001.png,,
+AMEME-002,,Anime Meme Pack,PACK-ANIME-MEME,Anime Meme,assets/catalogue/clean/AMEME-002.png,,
+AMEME-003,,Anime Meme Pack,PACK-ANIME-MEME,Anime Meme,assets/catalogue/clean/AMEME-003.png,,
+AMEME-004,,Anime Meme Pack,PACK-ANIME-MEME,Anime Meme,assets/catalogue/clean/AMEME-004.png,,
+AMEME-005,,Anime Meme Pack,PACK-ANIME-MEME,Anime Meme,assets/catalogue/clean/AMEME-005.png,,
+AMEME-006,,Anime Meme Pack,PACK-ANIME-MEME,Anime Meme,assets/catalogue/clean/AMEME-006.png,,
+AMEME-007,,Anime Meme Pack,PACK-ANIME-MEME,Anime Meme,assets/catalogue/clean/AMEME-007.png,,
+AMEME-008,,Anime Meme Pack,PACK-ANIME-MEME,Anime Meme,assets/catalogue/clean/AMEME-008.png,,
+AMEME-009,,Anime Meme Pack,PACK-ANIME-MEME,Anime Meme,assets/catalogue/clean/AMEME-009.png,,
+AMEME-010,,Anime Meme Pack,PACK-ANIME-MEME,Anime Meme,assets/catalogue/clean/AMEME-010.png,,
+AMEME-011,,Anime Meme Pack,PACK-ANIME-MEME,Anime Meme,assets/catalogue/clean/AMEME-011.png,,
+AMEME-012,,Anime Meme Pack,PACK-ANIME-MEME,Anime Meme,assets/catalogue/clean/AMEME-012.png,,
+AMEME-013,,Anime Meme Pack,PACK-ANIME-MEME,Anime Meme,assets/catalogue/clean/AMEME-013.png,,
+AMEME-014,,Anime Meme Pack,PACK-ANIME-MEME,Anime Meme,assets/catalogue/clean/AMEME-014.png,,
+AMEME-015,,Anime Meme Pack,PACK-ANIME-MEME,Anime Meme,assets/catalogue/clean/AMEME-015.png,,
+AMEME-016,,Anime Meme Pack,PACK-ANIME-MEME,Anime Meme,assets/catalogue/clean/AMEME-016.png,,
+FEEL-001,,Feel Good Pack,PACK-FEEL-GOOD,Feel Good,assets/catalogue/clean/FEEL-001.png,,
+FEEL-002,,Feel Good Pack,PACK-FEEL-GOOD,Feel Good,assets/catalogue/clean/FEEL-002.png,,
+FEEL-003,,Feel Good Pack,PACK-FEEL-GOOD,Feel Good,assets/catalogue/clean/FEEL-003.png,,
+FEEL-004,,Feel Good Pack,PACK-FEEL-GOOD,Feel Good,assets/catalogue/clean/FEEL-004.png,,
+FEEL-005,,Feel Good Pack,PACK-FEEL-GOOD,Feel Good,assets/catalogue/clean/FEEL-005.png,,
+FEEL-006,,Feel Good Pack,PACK-FEEL-GOOD,Feel Good,assets/catalogue/clean/FEEL-006.png,,
+FEEL-007,,Feel Good Pack,PACK-FEEL-GOOD,Feel Good,assets/catalogue/clean/FEEL-007.png,,
+FEEL-008,,Feel Good Pack,PACK-FEEL-GOOD,Feel Good,assets/catalogue/clean/FEEL-008.png,,
+FEEL-009,,Feel Good Pack,PACK-FEEL-GOOD,Feel Good,assets/catalogue/clean/FEEL-009.png,,
+FEEL-010,,Feel Good Pack,PACK-FEEL-GOOD,Feel Good,assets/catalogue/clean/FEEL-010.png,,
+FEEL-011,,Feel Good Pack,PACK-FEEL-GOOD,Feel Good,assets/catalogue/clean/FEEL-011.png,,
+FEEL-012,,Feel Good Pack,PACK-FEEL-GOOD,Feel Good,assets/catalogue/clean/FEEL-012.png,,
+FEEL-013,,Feel Good Pack,PACK-FEEL-GOOD,Feel Good,assets/catalogue/clean/FEEL-013.png,,
+FEEL-014,,Feel Good Pack,PACK-FEEL-GOOD,Feel Good,assets/catalogue/clean/FEEL-014.png,,
+FEEL-015,,Feel Good Pack,PACK-FEEL-GOOD,Feel Good,assets/catalogue/clean/FEEL-015.png,,
+FEEL-016,,Feel Good Pack,PACK-FEEL-GOOD,Feel Good,assets/catalogue/clean/FEEL-016.png,,
+MOTU-001,,Team Motu Pack,PACK-TEAM-MOTU,Motu vs Bheem,assets/catalogue/clean/MOTU-001.png,,
+MOTU-002,,Team Motu Pack,PACK-TEAM-MOTU,Motu vs Bheem,assets/catalogue/clean/MOTU-002.png,,
+MOTU-003,,Team Motu Pack,PACK-TEAM-MOTU,Motu vs Bheem,assets/catalogue/clean/MOTU-003.png,,
+MOTU-004,,Team Motu Pack,PACK-TEAM-MOTU,Motu vs Bheem,assets/catalogue/clean/MOTU-004.png,,
+MOTU-005,,Team Motu Pack,PACK-TEAM-MOTU,Motu vs Bheem,assets/catalogue/clean/MOTU-005.png,,
+MOTU-006,,Team Motu Pack,PACK-TEAM-MOTU,Motu vs Bheem,assets/catalogue/clean/MOTU-006.png,,
+MOTU-007,,Team Motu Pack,PACK-TEAM-MOTU,Motu vs Bheem,assets/catalogue/clean/MOTU-007.png,,
+MOTU-008,,Team Motu Pack,PACK-TEAM-MOTU,Motu vs Bheem,assets/catalogue/clean/MOTU-008.png,,
+MOTU-009,,Team Motu Pack,PACK-TEAM-MOTU,Motu vs Bheem,assets/catalogue/clean/MOTU-009.png,,
+MOTU-010,,Team Motu Pack,PACK-TEAM-MOTU,Motu vs Bheem,assets/catalogue/clean/MOTU-010.png,,
+MOTU-011,,Team Motu Pack,PACK-TEAM-MOTU,Motu vs Bheem,assets/catalogue/clean/MOTU-011.png,,
+MOTU-012,,Team Motu Pack,PACK-TEAM-MOTU,Motu vs Bheem,assets/catalogue/clean/MOTU-012.png,,
+MOTU-013,,Team Motu Pack,PACK-TEAM-MOTU,Motu vs Bheem,assets/catalogue/clean/MOTU-013.png,,
+MOTU-014,,Team Motu Pack,PACK-TEAM-MOTU,Motu vs Bheem,assets/catalogue/clean/MOTU-014.png,,
+MOTU-015,,Team Motu Pack,PACK-TEAM-MOTU,Motu vs Bheem,assets/catalogue/clean/MOTU-015.png,,
+MOTU-016,,Team Motu Pack,PACK-TEAM-MOTU,Motu vs Bheem,assets/catalogue/clean/MOTU-016.png,,
+BHEEM-001,,Team Bheem Pack,PACK-TEAM-BHEEM,Motu vs Bheem,assets/catalogue/clean/BHEEM-001.png,,
+BHEEM-002,,Team Bheem Pack,PACK-TEAM-BHEEM,Motu vs Bheem,assets/catalogue/clean/BHEEM-002.png,,
+BHEEM-003,,Team Bheem Pack,PACK-TEAM-BHEEM,Motu vs Bheem,assets/catalogue/clean/BHEEM-003.png,,
+BHEEM-004,,Team Bheem Pack,PACK-TEAM-BHEEM,Motu vs Bheem,assets/catalogue/clean/BHEEM-004.png,,
+BHEEM-005,,Team Bheem Pack,PACK-TEAM-BHEEM,Motu vs Bheem,assets/catalogue/clean/BHEEM-005.png,,
+BHEEM-006,,Team Bheem Pack,PACK-TEAM-BHEEM,Motu vs Bheem,assets/catalogue/clean/BHEEM-006.png,,
+BHEEM-007,,Team Bheem Pack,PACK-TEAM-BHEEM,Motu vs Bheem,assets/catalogue/clean/BHEEM-007.png,,
+BHEEM-008,,Team Bheem Pack,PACK-TEAM-BHEEM,Motu vs Bheem,assets/catalogue/clean/BHEEM-008.png,,
+BHEEM-009,,Team Bheem Pack,PACK-TEAM-BHEEM,Motu vs Bheem,assets/catalogue/clean/BHEEM-009.png,,
+BHEEM-010,,Team Bheem Pack,PACK-TEAM-BHEEM,Motu vs Bheem,assets/catalogue/clean/BHEEM-010.png,,
+BHEEM-011,,Team Bheem Pack,PACK-TEAM-BHEEM,Motu vs Bheem,assets/catalogue/clean/BHEEM-011.png,,
+BHEEM-012,,Team Bheem Pack,PACK-TEAM-BHEEM,Motu vs Bheem,assets/catalogue/clean/BHEEM-012.png,,
+BHEEM-013,,Team Bheem Pack,PACK-TEAM-BHEEM,Motu vs Bheem,assets/catalogue/clean/BHEEM-013.png,,
+BHEEM-014,,Team Bheem Pack,PACK-TEAM-BHEEM,Motu vs Bheem,assets/catalogue/clean/BHEEM-014.png,,
+BHEEM-015,,Team Bheem Pack,PACK-TEAM-BHEEM,Motu vs Bheem,assets/catalogue/clean/BHEEM-015.png,,
+BHEEM-016,,Team Bheem Pack,PACK-TEAM-BHEEM,Motu vs Bheem,assets/catalogue/clean/BHEEM-016.png,,
+DIWALI-001,,Diwali Devotional Pack,PACK-DIWALI-01,Diwali,assets/catalogue/clean/DIWALI-001.png,,
+DIWALI-002,,Diwali Devotional Pack,PACK-DIWALI-01,Diwali,assets/catalogue/clean/DIWALI-002.png,,
+DIWALI-003,,Diwali Devotional Pack,PACK-DIWALI-01,Diwali,assets/catalogue/clean/DIWALI-003.png,,
+DIWALI-004,,Diwali Devotional Pack,PACK-DIWALI-01,Diwali,assets/catalogue/clean/DIWALI-004.png,,
+DIWALI-005,,Diwali Devotional Pack,PACK-DIWALI-01,Diwali,assets/catalogue/clean/DIWALI-005.png,,
+DIWALI-006,,Diwali Devotional Pack,PACK-DIWALI-01,Diwali,assets/catalogue/clean/DIWALI-006.png,,
+DIWALI-007,,Diwali Devotional Pack,PACK-DIWALI-01,Diwali,assets/catalogue/clean/DIWALI-007.png,,
+DIWALI-008,,Diwali Devotional Pack,PACK-DIWALI-01,Diwali,assets/catalogue/clean/DIWALI-008.png,,
+DIWALI-009,,Diwali Devotional Pack,PACK-DIWALI-01,Diwali,assets/catalogue/clean/DIWALI-009.png,,
+DIWALI-010,,Diwali Devotional Pack,PACK-DIWALI-01,Diwali,assets/catalogue/clean/DIWALI-010.png,,
+DIWALI-011,,Diwali Devotional Pack,PACK-DIWALI-01,Diwali,assets/catalogue/clean/DIWALI-011.png,,
+DIWALI-012,,Diwali Devotional Pack,PACK-DIWALI-01,Diwali,assets/catalogue/clean/DIWALI-012.png,,
+DIWALI-013,,Diwali Festive Pack,PACK-DIWALI-02,Diwali,assets/catalogue/clean/DIWALI-013.png,,
+DIWALI-014,,Diwali Festive Pack,PACK-DIWALI-02,Diwali,assets/catalogue/clean/DIWALI-014.png,,
+DIWALI-015,,Diwali Festive Pack,PACK-DIWALI-02,Diwali,assets/catalogue/clean/DIWALI-015.png,,
+DIWALI-016,,Diwali Festive Pack,PACK-DIWALI-02,Diwali,assets/catalogue/clean/DIWALI-016.png,,
+DIWALI-017,,Diwali Festive Pack,PACK-DIWALI-02,Diwali,assets/catalogue/clean/DIWALI-017.png,,
+DIWALI-018,,Diwali Festive Pack,PACK-DIWALI-02,Diwali,assets/catalogue/clean/DIWALI-018.png,,
+DIWALI-019,,Diwali Festive Pack,PACK-DIWALI-02,Diwali,assets/catalogue/clean/DIWALI-019.png,,
+DIWALI-020,,Diwali Festive Pack,PACK-DIWALI-02,Diwali,assets/catalogue/clean/DIWALI-020.png,,
+DIWALI-021,,Diwali Festive Pack,PACK-DIWALI-02,Diwali,assets/catalogue/clean/DIWALI-021.png,,
+DIWALI-022,,Diwali Festive Pack,PACK-DIWALI-02,Diwali,assets/catalogue/clean/DIWALI-022.png,,
+DIWALI-023,,Diwali Festive Pack,PACK-DIWALI-02,Diwali,assets/catalogue/clean/DIWALI-023.png,,
+DIWALI-024,,Diwali Festive Pack,PACK-DIWALI-02,Diwali,assets/catalogue/clean/DIWALI-024.png,,
+CUTE-001,,Cute Mood Pack,PACK-CUTE-MOOD,Cute / Relatable,assets/catalogue/clean/CUTE-001.png,,
+CUTE-002,,Cute Mood Pack,PACK-CUTE-MOOD,Cute / Relatable,assets/catalogue/clean/CUTE-002.png,,
+CUTE-003,,Cute Mood Pack,PACK-CUTE-MOOD,Cute / Relatable,assets/catalogue/clean/CUTE-003.png,,
+CUTE-004,,Cute Mood Pack,PACK-CUTE-MOOD,Cute / Relatable,assets/catalogue/clean/CUTE-004.png,,
+CUTE-005,,Cute Mood Pack,PACK-CUTE-MOOD,Cute / Relatable,assets/catalogue/clean/CUTE-005.png,,
+CUTE-006,,Cute Mood Pack,PACK-CUTE-MOOD,Cute / Relatable,assets/catalogue/clean/CUTE-006.png,,
+CUTE-007,,Cute Mood Pack,PACK-CUTE-MOOD,Cute / Relatable,assets/catalogue/clean/CUTE-007.png,,
+CUTE-008,,Cute Mood Pack,PACK-CUTE-MOOD,Cute / Relatable,assets/catalogue/clean/CUTE-008.png,,
+CUTE-009,,Cute Mood Pack,PACK-CUTE-MOOD,Cute / Relatable,assets/catalogue/clean/CUTE-009.png,,
+CUTE-010,,Cute Mood Pack,PACK-CUTE-MOOD,Cute / Relatable,assets/catalogue/clean/CUTE-010.png,,
+CUTE-011,,Cute Mood Pack,PACK-CUTE-MOOD,Cute / Relatable,assets/catalogue/clean/CUTE-011.png,,
+CUTE-012,,Cute Mood Pack,PACK-CUTE-MOOD,Cute / Relatable,assets/catalogue/clean/CUTE-012.png,,
+CUTE-013,,Cute Mood Pack,PACK-CUTE-MOOD,Cute / Relatable,assets/catalogue/clean/CUTE-013.png,,
+CUTE-014,,Cute Mood Pack,PACK-CUTE-MOOD,Cute / Relatable,assets/catalogue/clean/CUTE-014.png,,
+CUTE-015,,Cute Mood Pack,PACK-CUTE-MOOD,Cute / Relatable,assets/catalogue/clean/CUTE-015.png,,
+CUTE-016,,Cute Mood Pack,PACK-CUTE-MOOD,Cute / Relatable,assets/catalogue/clean/CUTE-016.png,,
+ENG-001,,Engineering & Campus Pack,PACK-ENG-01,Engineering / Coding,assets/catalogue/clean/ENG-001.png,,
+ENG-002,,Engineering & Campus Pack,PACK-ENG-01,Engineering / Coding,assets/catalogue/clean/ENG-002.png,,
+ENG-003,,Engineering & Campus Pack,PACK-ENG-01,Engineering / Coding,assets/catalogue/clean/ENG-003.png,,
+ENG-004,,Engineering & Campus Pack,PACK-ENG-01,Engineering / Coding,assets/catalogue/clean/ENG-004.png,,
+ENG-005,,Engineering & Campus Pack,PACK-ENG-01,Engineering / Coding,assets/catalogue/clean/ENG-005.png,,
+ENG-006,,Engineering & Campus Pack,PACK-ENG-01,Engineering / Coding,assets/catalogue/clean/ENG-006.png,,
+ENG-007,,Engineering & Campus Pack,PACK-ENG-01,Engineering / Coding,assets/catalogue/clean/ENG-007.png,,
+ENG-008,,Engineering & Campus Pack,PACK-ENG-01,Engineering / Coding,assets/catalogue/clean/ENG-008.png,,
+ENG-009,,Engineering & Campus Pack,PACK-ENG-01,Engineering / Coding,assets/catalogue/clean/ENG-009.png,,
+ENG-010,,Engineering & Campus Pack,PACK-ENG-01,Engineering / Coding,assets/catalogue/clean/ENG-010.png,,
+ENG-011,,Engineering & Campus Pack,PACK-ENG-01,Engineering / Coding,assets/catalogue/clean/ENG-011.png,,
+ENG-012,,Engineering & Campus Pack,PACK-ENG-01,Engineering / Coding,assets/catalogue/clean/ENG-012.png,,
+FRIEND-001,,Friendship Pack,PACK-FRIEND-01,Friendship,assets/catalogue/clean/FRIEND-001.png,,
+FRIEND-002,,Friendship Pack,PACK-FRIEND-01,Friendship,assets/catalogue/clean/FRIEND-002.png,,
+FRIEND-003,,Friendship Pack,PACK-FRIEND-01,Friendship,assets/catalogue/clean/FRIEND-003.png,,
+FRIEND-004,,Friendship Pack,PACK-FRIEND-01,Friendship,assets/catalogue/clean/FRIEND-004.png,,
+FRIEND-005,,Friendship Pack,PACK-FRIEND-01,Friendship,assets/catalogue/clean/FRIEND-005.png,,
+FRIEND-006,,Friendship Pack,PACK-FRIEND-01,Friendship,assets/catalogue/clean/FRIEND-006.png,,
+FOX-001,Kitsu Star,New Originals,PACK-NEW-ORIGINALS,Cute,assets/stickers/kitsu-star.webp,,
+ORIG-002,Flame Hero,New Originals,PACK-NEW-ORIGINALS,Anime,assets/stickers/anime-flame.webp,,
+ORIG-003,Coffee Mood,New Originals,PACK-NEW-ORIGINALS,Anime Meme,assets/stickers/coffee-meme.webp,,
+ORIG-004,Sunny Days,New Originals,PACK-NEW-ORIGINALS,Feel Good,assets/stickers/sunshine.webp,,
+ORIG-005,Joyful Celebration,New Originals,PACK-NEW-ORIGINALS,Motu vs Bheem,assets/stickers/joyful-motu.webp,,
+ORIG-006,Brave Adventure,New Originals,PACK-NEW-ORIGINALS,Motu vs Bheem,assets/stickers/brave-bheem.webp,,
+ORIG-007,Festive Diya,New Originals,PACK-NEW-ORIGINALS,Diwali,assets/stickers/diya.webp,,
+ORIG-008,Sleepy Cat,New Originals,PACK-NEW-ORIGINALS,Cute / Relatable,assets/stickers/sleepy-cat.webp,,
+ORIG-009,Violet Star Hero,New Originals,PACK-NEW-ORIGINALS,Anime,assets/stickers/violet-hero.webp,,
+ORIG-010,Diwali Sparkle,New Originals,PACK-NEW-ORIGINALS,Diwali,assets/stickers/festive.webp,,
+ORIG-011,Code and Coffee,New Originals,PACK-NEW-ORIGINALS,Engineering,assets/stickers/engineer.webp,,
+ORIG-012,Fox Friends,New Originals,PACK-NEW-ORIGINALS,Friendship,assets/stickers/fox-friends.webp,,
+GYM-001,Discipline Beats Motivation,Gym Motivation,PACK-GYM-MOTIVATION,Fitness,assets/catalogue/clean/GYM-001.png,,
+GYM-002,No Excuses,Gym Motivation,PACK-GYM-MOTIVATION,Fitness,assets/catalogue/clean/GYM-002.png,,
+GYM-003,Better Than Yesterday,Gym Motivation,PACK-GYM-MOTIVATION,Fitness,assets/catalogue/clean/GYM-003.png,,
+GYM-004,Hydrate Lift Repeat,Gym Motivation,PACK-GYM-MOTIVATION,Fitness,assets/catalogue/clean/GYM-004.png,,
+GYM-005,Small Steps Big Results,Gym Motivation,PACK-GYM-MOTIVATION,Fitness,assets/catalogue/clean/GYM-005.png,,
+GYM-006,Pain Builds Character,Gym Motivation,PACK-GYM-MOTIVATION,Fitness,assets/catalogue/clean/GYM-006.png,,
+GYM-007,Rest Recharge Get Stronger,Gym Motivation,PACK-GYM-MOTIVATION,Fitness,assets/catalogue/clean/GYM-007.png,,
+GYM-008,Good Things Take Time,Gym Motivation,PACK-GYM-MOTIVATION,Fitness,assets/catalogue/clean/GYM-008.png,,
+GYM-009,Keep Going,Gym Motivation,PACK-GYM-MOTIVATION,Fitness,assets/catalogue/clean/GYM-009.png,,
+GYM-010,Discipline Creates Freedom,Gym Motivation,PACK-GYM-MOTIVATION,Fitness,assets/catalogue/clean/GYM-010.png,,
+GYM-011,1% Better Every Day,Gym Motivation,PACK-GYM-MOTIVATION,Fitness,assets/catalogue/clean/GYM-011.png,,
+GYM-012,Workout Good Food Good Sleep,Gym Motivation,PACK-GYM-MOTIVATION,Fitness,assets/catalogue/clean/GYM-012.png,,
+GYM-013,Less Scrolling More Lifting,Gym Motivation,PACK-GYM-MOTIVATION,Fitness,assets/catalogue/clean/GYM-013.png,,
+GYM-014,Progress Not Perfection,Gym Motivation,PACK-GYM-MOTIVATION,Fitness,assets/catalogue/clean/GYM-014.png,,
+GYM-015,Just One More Set,Gym Motivation,PACK-GYM-MOTIVATION,Fitness,assets/catalogue/clean/GYM-015.png,,
+GYM-016,A Stronger Me Is Coming,Gym Motivation,PACK-GYM-MOTIVATION,Fitness,assets/catalogue/clean/GYM-016.png,,
+FIT-001,Discipline Beats Motivation,Anime Fitness,PACK-ANIME-FITNESS,Fitness,assets/catalogue/clean/FIT-001.png,,
+FIT-002,No Excuses,Anime Fitness,PACK-ANIME-FITNESS,Fitness,assets/catalogue/clean/FIT-002.png,,
+FIT-003,Better Than Yesterday,Anime Fitness,PACK-ANIME-FITNESS,Fitness,assets/catalogue/clean/FIT-003.png,,
+FIT-004,Hydrate Lift Repeat,Anime Fitness,PACK-ANIME-FITNESS,Fitness,assets/catalogue/clean/FIT-004.png,,
+FIT-005,Small Steps Big Results,Anime Fitness,PACK-ANIME-FITNESS,Fitness,assets/catalogue/clean/FIT-005.png,,
+FIT-006,Pain Builds Character,Anime Fitness,PACK-ANIME-FITNESS,Fitness,assets/catalogue/clean/FIT-006.png,,
+FIT-007,Rest Recharge Get Stronger,Anime Fitness,PACK-ANIME-FITNESS,Fitness,assets/catalogue/clean/FIT-007.png,,
+FIT-008,Good Things Take Time,Anime Fitness,PACK-ANIME-FITNESS,Fitness,assets/catalogue/clean/FIT-008.png,,
+FIT-009,Keep Going,Anime Fitness,PACK-ANIME-FITNESS,Fitness,assets/catalogue/clean/FIT-009.png,,
+FIT-010,Discipline Creates Freedom,Anime Fitness,PACK-ANIME-FITNESS,Fitness,assets/catalogue/clean/FIT-010.png,,
+FIT-011,1% Better Every Day,Anime Fitness,PACK-ANIME-FITNESS,Fitness,assets/catalogue/clean/FIT-011.png,,
+FIT-012,Workout Good Food Good Sleep,Anime Fitness,PACK-ANIME-FITNESS,Fitness,assets/catalogue/clean/FIT-012.png,,
+FIT-013,Less Scrolling More Lifting,Anime Fitness,PACK-ANIME-FITNESS,Fitness,assets/catalogue/clean/FIT-013.png,,
+FIT-014,Progress Not Perfection,Anime Fitness,PACK-ANIME-FITNESS,Fitness,assets/catalogue/clean/FIT-014.png,,
+FIT-015,Be a Stronger You,Anime Fitness,PACK-ANIME-FITNESS,Fitness,assets/catalogue/clean/FIT-015.png,,
+FIT-016,A Stronger Me Is Coming,Anime Fitness,PACK-ANIME-FITNESS,Fitness,assets/catalogue/clean/FIT-016.png,,
+FOOD-001,Apple,Healthy Food,PACK-HEALTHY-FOOD,Healthy Food,assets/catalogue/clean/FOOD-001.png,,
+FOOD-002,Banana,Healthy Food,PACK-HEALTHY-FOOD,Healthy Food,assets/catalogue/clean/FOOD-002.png,,
+FOOD-003,Carrot,Healthy Food,PACK-HEALTHY-FOOD,Healthy Food,assets/catalogue/clean/FOOD-003.png,,
+FOOD-004,Spinach,Healthy Food,PACK-HEALTHY-FOOD,Healthy Food,assets/catalogue/clean/FOOD-004.png,,
+FOOD-005,Almonds,Healthy Food,PACK-HEALTHY-FOOD,Healthy Food,assets/catalogue/clean/FOOD-005.png,,
+FOOD-006,Walnuts,Healthy Food,PACK-HEALTHY-FOOD,Healthy Food,assets/catalogue/clean/FOOD-006.png,,
+FOOD-007,Oats,Healthy Food,PACK-HEALTHY-FOOD,Healthy Food,assets/catalogue/clean/FOOD-007.png,,
+FOOD-008,Yogurt,Healthy Food,PACK-HEALTHY-FOOD,Healthy Food,assets/catalogue/clean/FOOD-008.png,,
+FOOD-009,Lentils,Healthy Food,PACK-HEALTHY-FOOD,Healthy Food,assets/catalogue/clean/FOOD-009.png,,
+FOOD-010,Broccoli,Healthy Food,PACK-HEALTHY-FOOD,Healthy Food,assets/catalogue/clean/FOOD-010.png,,
+FOOD-011,Orange,Healthy Food,PACK-HEALTHY-FOOD,Healthy Food,assets/catalogue/clean/FOOD-011.png,,
+FOOD-012,Tomato,Healthy Food,PACK-HEALTHY-FOOD,Healthy Food,assets/catalogue/clean/FOOD-012.png,,
+TECH-001,Engineer Superpower,Engineer Quotes,PACK-ENGINEER-QUOTES,Engineering / Coding,assets/catalogue/clean/TECH-001.png,,
+TECH-002,Programmers Attract Bugs,Engineer Quotes,PACK-ENGINEER-QUOTES,Engineering / Coding,assets/catalogue/clean/TECH-002.png,,
+TECH-003,Creative Minds,Engineer Quotes,PACK-ENGINEER-QUOTES,Engineering / Coding,assets/catalogue/clean/TECH-003.png,,
+TECH-004,Tired Engineering Student,Engineer Quotes,PACK-ENGINEER-QUOTES,Engineering / Coding,assets/catalogue/clean/TECH-004.png,,
+TECH-005,You Cannot Resist Me,Engineer Quotes,PACK-ENGINEER-QUOTES,Engineering / Coding,assets/catalogue/clean/TECH-005.png,,
+TECH-006,CTRL Z in Real Life,Engineer Quotes,PACK-ENGINEER-QUOTES,Engineering / Coding,assets/catalogue/clean/TECH-006.png,,
+TECH-007,CSS to My HTML,Engineer Quotes,PACK-ENGINEER-QUOTES,Engineering / Coding,assets/catalogue/clean/TECH-007.png,,
+TECH-008,Engineer Helmet,Engineer Quotes,PACK-ENGINEER-QUOTES,Engineering / Coding,assets/catalogue/clean/TECH-008.png,,
+TECH-009,Solving Problems,Engineer Quotes,PACK-ENGINEER-QUOTES,Engineering / Coding,assets/catalogue/clean/TECH-009.png,,
+TECH-010,I Am an Engineer,Engineer Quotes,PACK-ENGINEER-QUOTES,Engineering / Coding,assets/catalogue/clean/TECH-010.png,,
+TECH-011,Idiot Proof,Engineer Quotes,PACK-ENGINEER-QUOTES,Engineering / Coding,assets/catalogue/clean/TECH-011.png,,
+TECH-012,Without Users No Errors,Engineer Quotes,PACK-ENGINEER-QUOTES,Engineering / Coding,assets/catalogue/clean/TECH-012.png,,
+TECH-013,Born Creative Forced to Code,Engineer Quotes,PACK-ENGINEER-QUOTES,Engineering / Coding,assets/catalogue/clean/TECH-013.png,,
+TECH-014,I Know HTML,Engineer Quotes,PACK-ENGINEER-QUOTES,Engineering / Coding,assets/catalogue/clean/TECH-014.png,,
+TECH-015,Eat Sleep Engineering Repeat,Engineer Quotes,PACK-ENGINEER-QUOTES,Engineering / Coding,assets/catalogue/clean/TECH-015.png,,
+TECH-016,Hello World,Engineer Quotes,PACK-ENGINEER-QUOTES,Engineering / Coding,assets/catalogue/clean/TECH-016.png,,
+MEME-001,What Goes Around,Ultimate Memes Vol. 1,PACK-ULTIMATE-MEMES-1,Memes,assets/catalogue/clean/MEME-001.png,,
+MEME-002,I Know HTML,Ultimate Memes Vol. 1,PACK-ULTIMATE-MEMES-1,Memes,assets/catalogue/clean/MEME-002.png,,
+MEME-003,Bazinga,Ultimate Memes Vol. 1,PACK-ULTIMATE-MEMES-1,Memes,assets/catalogue/clean/MEME-003.png,,
+MEME-004,Caution,Ultimate Memes Vol. 1,PACK-ULTIMATE-MEMES-1,Memes,assets/catalogue/clean/MEME-004.png,,
+MEME-005,Verified,Ultimate Memes Vol. 1,PACK-ULTIMATE-MEMES-1,Memes,assets/catalogue/clean/MEME-005.png,,
+MEME-006,Wanted,Ultimate Memes Vol. 1,PACK-ULTIMATE-MEMES-1,Memes,assets/catalogue/clean/MEME-006.png,,
+MEME-007,Too Tired,Ultimate Memes Vol. 1,PACK-ULTIMATE-MEMES-1,Memes,assets/catalogue/clean/MEME-007.png,,
+MEME-008,Say My Name,Ultimate Memes Vol. 1,PACK-ULTIMATE-MEMES-1,Memes,assets/catalogue/clean/MEME-008.png,,
+MEME-009,999 Aura,Ultimate Memes Vol. 1,PACK-ULTIMATE-MEMES-1,Memes,assets/catalogue/clean/MEME-009.png,,
+MEME-010,1000 Aura,Ultimate Memes Vol. 1,PACK-ULTIMATE-MEMES-1,Memes,assets/catalogue/clean/MEME-010.png,,
+MEME-011,I Know Nothing,Ultimate Memes Vol. 1,PACK-ULTIMATE-MEMES-1,Memes,assets/catalogue/clean/MEME-011.png,,
+MEME-012,Ah Shit Here We Go Again,Ultimate Memes Vol. 1,PACK-ULTIMATE-MEMES-1,Memes,assets/catalogue/clean/MEME-012.png,,
+MEME-013,Sab Moh Maya Hai,Ultimate Memes Vol. 1,PACK-ULTIMATE-MEMES-1,Memes,assets/catalogue/clean/MEME-013.png,,
+MEME-014,Bad Decisions,Ultimate Memes Vol. 1,PACK-ULTIMATE-MEMES-1,Memes,assets/catalogue/clean/MEME-014.png,,
+MEME-015,I Saw That,Ultimate Memes Vol. 1,PACK-ULTIMATE-MEMES-1,Memes,assets/catalogue/clean/MEME-015.png,,
+MEME-016,Stronger Tomorrow,Ultimate Memes Vol. 1,PACK-ULTIMATE-MEMES-1,Memes,assets/catalogue/clean/MEME-016.png,,
+MEME-017,Fate Luck,Ultimate Memes Vol. 2,PACK-ULTIMATE-MEMES-2,Memes,assets/catalogue/clean/MEME-017.png,,
+MEME-018,Thinking Outside the Box,Ultimate Memes Vol. 2,PACK-ULTIMATE-MEMES-2,Memes,assets/catalogue/clean/MEME-018.png,,
+MEME-019,Outside the Box,Ultimate Memes Vol. 2,PACK-ULTIMATE-MEMES-2,Memes,assets/catalogue/clean/MEME-019.png,,
+MEME-020,What the Duck,Ultimate Memes Vol. 2,PACK-ULTIMATE-MEMES-2,Memes,assets/catalogue/clean/MEME-020.png,,
+MEME-021,Some People Need a High Five,Ultimate Memes Vol. 2,PACK-ULTIMATE-MEMES-2,Memes,assets/catalogue/clean/MEME-021.png,,
+MEME-022,100% Tolerance,Ultimate Memes Vol. 2,PACK-ULTIMATE-MEMES-2,Memes,assets/catalogue/clean/MEME-022.png,,
+MEME-023,My Patience,Ultimate Memes Vol. 2,PACK-ULTIMATE-MEMES-2,Memes,assets/catalogue/clean/MEME-023.png,,
+MEME-024,Remember When I Asked,Ultimate Memes Vol. 2,PACK-ULTIMATE-MEMES-2,Memes,assets/catalogue/clean/MEME-024.png,,
+SASS-001,Dead Tired,Kawaii & Sassy Vol. 1,PACK-KAWAII-SASSY-1,Cute / Relatable,assets/catalogue/clean/SASS-001.png,,
+SASS-002,Hugger,Kawaii & Sassy Vol. 1,PACK-KAWAII-SASSY-1,Cute / Relatable,assets/catalogue/clean/SASS-002.png,,
+SASS-003,Seriously Not Today,Kawaii & Sassy Vol. 1,PACK-KAWAII-SASSY-1,Cute / Relatable,assets/catalogue/clean/SASS-003.png,,
+SASS-004,Nope Not Today,Kawaii & Sassy Vol. 1,PACK-KAWAII-SASSY-1,Cute / Relatable,assets/catalogue/clean/SASS-004.png,,
+SASS-005,Catch You Later,Kawaii & Sassy Vol. 1,PACK-KAWAII-SASSY-1,Cute / Relatable,assets/catalogue/clean/SASS-005.png,,
+SASS-006,Sleepy Panda,Kawaii & Sassy Vol. 1,PACK-KAWAII-SASSY-1,Cute / Relatable,assets/catalogue/clean/SASS-006.png,,
+SASS-007,Too Hot to Handle,Kawaii & Sassy Vol. 1,PACK-KAWAII-SASSY-1,Cute / Relatable,assets/catalogue/clean/SASS-007.png,,
+SASS-008,Do Not Disturb,Kawaii & Sassy Vol. 1,PACK-KAWAII-SASSY-1,Cute / Relatable,assets/catalogue/clean/SASS-008.png,,
+SASS-009,Nap Goals,Kawaii & Sassy Vol. 1,PACK-KAWAII-SASSY-1,Cute / Relatable,assets/catalogue/clean/SASS-009.png,,
+SASS-010,Do Not Drink,Kawaii & Sassy Vol. 1,PACK-KAWAII-SASSY-1,Cute / Relatable,assets/catalogue/clean/SASS-010.png,,
+SASS-011,Coffee Panda,Kawaii & Sassy Vol. 1,PACK-KAWAII-SASSY-1,Cute / Relatable,assets/catalogue/clean/SASS-011.png,,
+SASS-012,Avocado Mood,Kawaii & Sassy Vol. 1,PACK-KAWAII-SASSY-1,Cute / Relatable,assets/catalogue/clean/SASS-012.png,,
+SASS-013,Books Before People,Kawaii & Sassy Vol. 1,PACK-KAWAII-SASSY-1,Cute / Relatable,assets/catalogue/clean/SASS-013.png,,
+SASS-014,Serial Delivery,Kawaii & Sassy Vol. 1,PACK-KAWAII-SASSY-1,Cute / Relatable,assets/catalogue/clean/SASS-014.png,,
+SASS-015,Too Much Going On,Kawaii & Sassy Vol. 1,PACK-KAWAII-SASSY-1,Cute / Relatable,assets/catalogue/clean/SASS-015.png,,
+SASS-016,Too Spicy for You,Kawaii & Sassy Vol. 1,PACK-KAWAII-SASSY-1,Cute / Relatable,assets/catalogue/clean/SASS-016.png,,
+SASS-017,Cheesy and Proud,Kawaii & Sassy Vol. 2,PACK-KAWAII-SASSY-2,Cute / Relatable,assets/catalogue/clean/SASS-017.png,,
+SASS-018,Flaky but Fabulous,Kawaii & Sassy Vol. 2,PACK-KAWAII-SASSY-2,Cute / Relatable,assets/catalogue/clean/SASS-018.png,,
+SASS-019,Cool Lemon,Kawaii & Sassy Vol. 2,PACK-KAWAII-SASSY-2,Cute / Relatable,assets/catalogue/clean/SASS-019.png,,
+SASS-020,Cupcake Mood,Kawaii & Sassy Vol. 2,PACK-KAWAII-SASSY-2,Cute / Relatable,assets/catalogue/clean/SASS-020.png,,
+SASS-021,Too Sweet,Kawaii & Sassy Vol. 2,PACK-KAWAII-SASSY-2,Cute / Relatable,assets/catalogue/clean/SASS-021.png,,
+SASS-022,Slow Morning,Kawaii & Sassy Vol. 2,PACK-KAWAII-SASSY-2,Cute / Relatable,assets/catalogue/clean/SASS-022.png,,
+SASS-023,Rest Mood,Kawaii & Sassy Vol. 2,PACK-KAWAII-SASSY-2,Cute / Relatable,assets/catalogue/clean/SASS-023.png,,
+SASS-024,Not Today Cat,Kawaii & Sassy Vol. 2,PACK-KAWAII-SASSY-2,Cute / Relatable,assets/catalogue/clean/SASS-024.png,,
+SASS-025,Avocado,Kawaii & Sassy Vol. 2,PACK-KAWAII-SASSY-2,Cute / Relatable,assets/catalogue/clean/SASS-025.png,,
+SASS-026,Too Sweet Donut,Kawaii & Sassy Vol. 2,PACK-KAWAII-SASSY-2,Cute / Relatable,assets/catalogue/clean/SASS-026.png,,
+SASS-027,Slow Morning Cat,Kawaii & Sassy Vol. 2,PACK-KAWAII-SASSY-2,Cute / Relatable,assets/catalogue/clean/SASS-027.png,,
+SASS-028,Rest Fox,Kawaii & Sassy Vol. 2,PACK-KAWAII-SASSY-2,Cute / Relatable,assets/catalogue/clean/SASS-028.png,,
+SASS-029,Coffee Time Panda,Kawaii & Sassy Vol. 2,PACK-KAWAII-SASSY-2,Cute / Relatable,assets/catalogue/clean/SASS-029.png,,
+SASS-030,Nope Panda,Kawaii & Sassy Vol. 2,PACK-KAWAII-SASSY-2,Cute / Relatable,assets/catalogue/clean/SASS-030.png,,
+LONG-ANIME-ORIGINAL-1,Anime Original Long Sticker Pack · design 1,Anime Original Long Sticker Pack,LONG-ANIME-ORIGINAL,Long Stickers,assets/catalogue/clean/LONG-ANIME-ORIGINAL-1.png,long,4
+LONG-ANIME-ORIGINAL-2,Anime Original Long Sticker Pack · design 2,Anime Original Long Sticker Pack,LONG-ANIME-ORIGINAL,Long Stickers,assets/catalogue/clean/LONG-ANIME-ORIGINAL-2.png,long,4
+LONG-ANIME-ORIGINAL-3,Anime Original Long Sticker Pack · design 3,Anime Original Long Sticker Pack,LONG-ANIME-ORIGINAL,Long Stickers,assets/catalogue/clean/LONG-ANIME-ORIGINAL-3.png,long,4
+LONG-ANIME-ORIGINAL-4,Anime Original Long Sticker Pack · design 4,Anime Original Long Sticker Pack,LONG-ANIME-ORIGINAL,Long Stickers,assets/catalogue/clean/LONG-ANIME-ORIGINAL-4.png,long,4
+LONG-ANIME-VARIANT-1,Anime Variant Long Sticker Pack · design 1,Anime Variant Long Sticker Pack,LONG-ANIME-VARIANT,Long Stickers,assets/catalogue/clean/LONG-ANIME-VARIANT-1.png,long,4
+LONG-ANIME-VARIANT-2,Anime Variant Long Sticker Pack · design 2,Anime Variant Long Sticker Pack,LONG-ANIME-VARIANT,Long Stickers,assets/catalogue/clean/LONG-ANIME-VARIANT-2.png,long,4
+LONG-ANIME-VARIANT-3,Anime Variant Long Sticker Pack · design 3,Anime Variant Long Sticker Pack,LONG-ANIME-VARIANT,Long Stickers,assets/catalogue/clean/LONG-ANIME-VARIANT-3.png,long,4
+LONG-ANIME-VARIANT-4,Anime Variant Long Sticker Pack · design 4,Anime Variant Long Sticker Pack,LONG-ANIME-VARIANT,Long Stickers,assets/catalogue/clean/LONG-ANIME-VARIANT-4.png,long,4
+LONG-MULTI-ANIME-1,Multi Anime Long Sticker Pack · design 1,Multi Anime Long Sticker Pack,LONG-MULTI-ANIME,Long Stickers,assets/catalogue/clean/LONG-MULTI-ANIME-1.png,long,4
+LONG-MULTI-ANIME-2,Multi Anime Long Sticker Pack · design 2,Multi Anime Long Sticker Pack,LONG-MULTI-ANIME,Long Stickers,assets/catalogue/clean/LONG-MULTI-ANIME-2.png,long,4
+LONG-MULTI-ANIME-3,Multi Anime Long Sticker Pack · design 3,Multi Anime Long Sticker Pack,LONG-MULTI-ANIME,Long Stickers,assets/catalogue/clean/LONG-MULTI-ANIME-3.png,long,4
+LONG-MULTI-ANIME-4,Multi Anime Long Sticker Pack · design 4,Multi Anime Long Sticker Pack,LONG-MULTI-ANIME,Long Stickers,assets/catalogue/clean/LONG-MULTI-ANIME-4.png,long,4
+LONG-NARUTO-AKATSUKI-1,Naruto & Akatsuki Long Sticker Pack · design 1,Naruto & Akatsuki Long Sticker Pack,LONG-NARUTO-AKATSUKI,Long Stickers,assets/catalogue/clean/LONG-NARUTO-AKATSUKI-1.png,long,2
+LONG-NARUTO-AKATSUKI-2,Naruto & Akatsuki Long Sticker Pack · design 2,Naruto & Akatsuki Long Sticker Pack,LONG-NARUTO-AKATSUKI,Long Stickers,assets/catalogue/clean/LONG-NARUTO-AKATSUKI-2.png,long,2

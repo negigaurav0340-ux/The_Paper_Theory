@@ -1,3 +1,5 @@
+> Updated instructions: read README-OWNER.md first. It covers password-free editing, complete ZIP export, long stickers and optional online publishing.
+
 # Catalogue and pricing update
 
 - Start at `index.html`; use the new Browse through the catalogue link in the sticker section.

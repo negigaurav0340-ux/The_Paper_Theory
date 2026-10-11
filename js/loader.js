@@ -7,7 +7,7 @@
   const soundButton = document.getElementById('loaderSound');
   const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
   const startedAt = performance.now();
-  const minimumDuration = reducedMotion ? 250 : 3500;
+  const minimumDuration = reducedMotion ? 250 : 700;
   let visualProgress = 0;
   let pageReady = document.readyState === 'complete';
   let audioContext;
@@ -98,5 +98,5 @@
 
   setProgress(4);
   requestAnimationFrame(tick);
-  setTimeout(() => { if (!loader.hidden) finish(); }, 5200);
+  setTimeout(() => { if (!loader.hidden) finish(); }, 1800);
 })();

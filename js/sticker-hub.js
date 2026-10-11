@@ -1,7 +1,7 @@
 (async () => {
   'use strict';
-  await Promise.all([window.TPT_CATALOGUE_READY, window.TPT_PRODUCTS_READY]);
-  const packs = window.STICKER_PACKS || [];
+  await Promise.all([window.TPT_CATALOGUE_READY, window.TPT_PRODUCTS_READY,window.TPT_PACKS_READY]);
+  const packs = (window.STICKER_PACKS || []).filter(p => p.kind!=='long' && window.CATALOGUE.products.some(item => item.id === p.id)).map(p => {const live=window.CATALOGUE.products.find(item=>item.id===p.id);return {...p,name:live.name,description:live.description,theme:live.theme,image:p.image};});
   const catalogue = window.STICKER_CATALOGUE || [];
   const quality = 'assets/stickers/quality-card.svg';
   const track = document.getElementById('stickerPackTrack');
@@ -15,11 +15,11 @@
   const custom = price('PACK-CUSTOM','regular',129), customHolo = price('PACK-CUSTOM','holographic',229), upload = price('PACK-UPLOAD','regular',199);
   document.querySelectorAll('.price-rule').forEach((rule,i) => { const amount=[regular,holo,custom,customHolo,upload][i]; if(rule.querySelector('b')) rule.querySelector('b').textContent=money(amount); });
   const packIntro=document.querySelector('.sticker-pack-head > div > p:last-child');
-  if(packIntro) packIntro.textContent=`Ready-made regular sheets from ${money(regular)}; holographic from ${money(holo)}. Mix your own catalogue codes from ${money(custom)} regular or ${money(customHolo)} holographic, or supply your artwork from ${money(upload)} per sheet. Select 4 × 4 one-inch, 3 × 4 two-inch, or 2 × 3 three-inch designs.`;
+  if(packIntro) packIntro.textContent=`Ready-made regular sheets from ${money(regular)}; holographic from ${money(holo)}. Mix your own catalogue codes from ${money(custom)} regular or ${money(customHolo)} holographic, or supply your artwork from ${money(upload)} per sheet. Build a custom 4 × 4 sheet of 16 designs in the online editor.`;
   const galleries = new Map(packs.map(p => [p.id, [
-    {image:product(p.id)?.images?.[0] || `assets/lifestyle/${p.slug}.webp`, label:'Laptop preview · illustrative placement'},
-    {image:p.image, label:`${p.name} · full sticker sheet`},
-    ...catalogue.filter(item => item.pack_id === p.id).map(item => ({image:item.image,label:`${item.code} · ${item.name || p.name}`})),
+    {image:p.image, packId:p.id,label:'Original designs · laptop placement preview'},
+    {image:p.image,label:'Full original artwork · exact pack contents'},
+    ...catalogue.filter(item => p.code_list ? p.code_list.includes(item.code) : item.pack_id === p.id).map(item => ({image:item.image,label:`${item.code} · ${item.name || p.name}`})),
     {image:quality,label:'Laminated · tear proof · waterproof · scratch proof'}
   ]]));
   const renderFrame = (visual, index) => {
@@ -27,20 +27,19 @@
     const next = (index + frames.length) % frames.length;
     const frame = frames[next];
     visual.dataset.index = next;
-    visual.querySelector('img').src = frame.image;
-    visual.querySelector('img').alt = frame.label;
+    const picture=visual.querySelector('.pack-picture');picture.replaceChildren();if(frame.packId){const host=document.createElement('div');host.className='laptop-preview';host.dataset.packId=frame.packId;picture.append(host);window.TPTLaptopPreview?.refresh();}else{const image=document.createElement('img');image.src=frame.image;image.alt=frame.label;picture.append(image);}
     visual.querySelector('.visual-note').textContent = frame.label;
     visual.querySelector('.pack-count').textContent = `${next + 1} / ${frames.length}`;
   };
   track.innerHTML = packs.map((p,i) => `<article class="pack-slide" data-pack="${safe(p.id)}">
     <div class="pack-visual" data-pack-carousel="${safe(p.id)}" data-index="0">
-      <img src="${safe(product(p.id)?.images?.[0] || `assets/lifestyle/${p.slug}.webp`)}" alt="Illustrative sticker placement on a laptop for ${safe(p.name)}" loading="${i < 2 ? 'eager' : 'lazy'}" decoding="async">
-      <small class="visual-note">Laptop preview · illustrative placement</small>
+      <div class="pack-picture"><div class="laptop-preview" data-pack-id="${safe(p.id)}"><img src="${safe(p.laptopImage||p.image)}" alt="${safe(p.name)} original stickers on laptop" loading="lazy"></div></div>
+      <small class="visual-note">Laptop preview · original sticker designs</small>
       <div class="pack-image-controls"><button type="button" data-frame="-1" aria-label="Previous design in ${safe(p.name)}">←</button><span class="pack-count">1 / ${galleries.get(p.id).length}</span><button type="button" data-frame="1" aria-label="Next design in ${safe(p.name)}">→</button></div>
     </div>
-    <div class="pack-copy"><p class="eyebrow">${safe(p.theme)} / ${safe(p.codes)}</p><h3>${safe(p.name)}</h3>
+    <div class="pack-copy"><p class="eyebrow">${safe(p.theme)} / ${safe(p.code_list ? p.code_list.length + ' catalogue codes' : p.codes)}</p><h3>${safe(p.name)}</h3>
       <p>${p.count} stickers · ${safe(p.layout)} sheet · use arrows to see each design</p>
-      <div class="pack-prices"><div class="pack-price-item"><del>₹299</del><b>${money(price(p.id,'regular',99))}</b><span>Regular</span></div><div class="pack-price-item"><i>${money(price(p.id,'holographic',199))}</i><span>Holographic · +${money(price(p.id,'holographic',199)-price(p.id,'regular',99))}</span></div></div><label class="pack-finish">Finish <select aria-label="Choose sticker finish"><option value="regular">Regular</option><option value="holo">Holographic</option></select></label>
+      <div class="pack-prices"><div class="pack-price-item"><b>${money(price(p.id,'regular',99))}</b><span>Regular</span></div><div class="pack-price-item">${product(p.id)?.variants.some(v=>/holographic/i.test(v.finish))?`<i>${money(price(p.id,'holographic',199))}</i><span>Holographic · +${money(price(p.id,'holographic',199)-price(p.id,'regular',99))}</span>`:'<span>Regular finish available</span>'}</div></div><label class="pack-finish">Finish <select aria-label="Choose sticker finish"><option value="regular">Regular</option>${product(p.id)?.variants.some(v=>/holographic/i.test(v.finish))?'<option value="holo">Holographic</option>':''}</select></label>
       <div class="pack-actions"><button type="button" data-open-pack="${safe(p.id)}">Choose pack</button><a href="catalogue.html#${safe(p.slug)}">See sticker codes</a><button class="share-pack" type="button" data-share-pack="${safe(p.id)}">Share pack ↗</button></div>
     </div></article>`).join('');
   track.addEventListener('click', event => {
@@ -64,7 +63,7 @@
     if (share) {
       const pack = packs.find(item => item.id === share.dataset.sharePack);
       if (!pack) return;
-      const data = {title:`${pack.name} | The Paper Theory`,text:`${pack.name}: laminated sticker sheet ${money(price(pack.id,'regular',99))} regular, ${money(price(pack.id,'holographic',199))} holographic. Browse the designs.`,url:new URL(`catalogue.html#${pack.slug}`,location.href).href};
+      const data = {title:`${pack.name} | The Paper Theory`,text:`${pack.name}: ${product(pack.id).variants.map(v=>v.finish+' '+(v.price==null?'quote':money(v.price))).join(', ')}. Browse the designs.`,url:new URL(`catalogue.html#${pack.slug}`,location.href).href};
       (async () => {try {if(navigator.share) await navigator.share(data);else {await navigator.clipboard.writeText(data.url);share.textContent='Link copied ✓';setTimeout(()=>share.textContent='Share pack ↗',2500);}} catch {}})();
     }
   });
