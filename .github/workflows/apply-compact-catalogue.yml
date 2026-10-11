@@ -1,0 +1,39 @@
+name: Apply reviewed compact catalogue update
+on:
+  push:
+    branches: [compact-catalogue-update]
+    paths: [.github/workflows/apply-compact-catalogue.yml]
+permissions:
+  contents: write
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - name: Verify and unpack reviewed changes
+        run: |
+          python3 - <<'PYCODE'
+          from pathlib import Path, PurePosixPath
+          import hashlib, zipfile
+          archive=Path('tpt-compact-update.zip')
+          assert hashlib.sha256(archive.read_bytes()).hexdigest() == '30b2e016c5a6676ac40cb178d493d71d0079933d42f8fa5f210945b62096f763'
+          with zipfile.ZipFile(archive) as z:
+              for entry in z.infolist():
+                  p=PurePosixPath(entry.filename)
+                  assert not p.is_absolute() and '..' not in p.parts and '.git' not in p.parts and '.github' not in p.parts
+                  assert (entry.external_attr >> 16) & 0o170000 != 0o120000
+              z.extractall('.')
+          archive.unlink()
+          Path('.github/workflows/apply-compact-catalogue.yml').unlink()
+          PYCODE
+      - name: Build and verify
+        run: |
+          npm run build
+          npm run check
+      - name: Commit reviewed website changes
+        run: |
+          git config user.name 'negigaurav0340-ux'
+          git config user.email 'negigaurav0340-ux@users.noreply.github.com'
+          git add -A
+          git commit -m 'Compact catalogue and improve cart, descriptions and analytics'
+          git push origin HEAD:${{ github.ref_name }}
