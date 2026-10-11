@@ -21,7 +21,7 @@
     name: 'Eren · A4 Anime Light Box',
     theme: 'Attack on Titan',
     images: ['assets/lightbox/lightbox-eren-on.webp', 'assets/lightbox/lightbox-eren-off.webp'],
-    variants: [{ id: 'LIT-EREN-A4', size: 'A4 · 210 × 297 mm', finish: 'Eren · Colour-changing', price: 1199, image: 'assets/lightbox/lightbox-eren-on.webp' }]
+    variants: [{ id: 'LIT-EREN-A4', size: 'A4 · 210 × 297 mm', finish: 'Eren · Colour-changing', price: 999, image: 'assets/lightbox/lightbox-eren-on.webp' }]
   });
 
   const lightBoxDesigns = [
@@ -36,7 +36,7 @@
       name: item.name,
       theme: item.theme,
       images: [`assets/lightbox/lightbox-${item.slug}-on.webp`, `assets/lightbox/lightbox-${item.slug}-off.webp`],
-      variants: [{ id: `${item.id}-A4`, size: 'A4 · 210 × 297 mm', finish: `${item.name.split(' · ')[0]} · Colour-changing`, price: 1199, image: `assets/lightbox/lightbox-${item.slug}-on.webp` }]
+      variants: [{ id: `${item.id}-A4`, size: 'A4 · 210 × 297 mm', finish: `${item.name.split(' · ')[0]} · Colour-changing`, price: 999, image: `assets/lightbox/lightbox-${item.slug}-on.webp` }]
     });
   });
 

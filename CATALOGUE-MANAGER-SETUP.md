@@ -1,3 +1,5 @@
+> Updated instructions: read README-OWNER.md first. It covers password-free editing, complete ZIP export, long stickers and optional online publishing.
+
 # One-time live catalogue setup
 
 This website is a static ZIP with Vercel Functions at `api/catalogue.js` and `api/products.js`. The first lets `catalogue-manager.html` save stickers and Instagram posts. The second lets `product-manager.html` update Light Boxes and all other products, including their names, images, availability, sizes and prices. Both publish changes for every visitor without editing code or uploading a replacement ZIP each time.

@@ -1,3 +1,5 @@
+> Updated instructions: read README-OWNER.md first. It covers password-free editing, complete ZIP export, long stickers and optional online publishing.
+
 # Search launch steps for The Paper Theory
 
 This build has an exact brand name on the home page, WebSite and Organization structured data, canonical URLs, consistent social profile links, robots.txt, descriptive internal links and a sitemap containing the home, catalogue, sticker packs, Light Boxes and About pages. The category and About pages contain readable product information in the initial HTML, visible breadcrumbs and BreadcrumbList markup. Descriptions avoid prices that a manager can later change.

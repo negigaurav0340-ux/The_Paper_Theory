@@ -3,7 +3,6 @@ window.TPT_CATALOGUE_READY = (async () => {
   const published = window.TPT_CATALOGUE_UPDATES || {stickers:[],reels:[]};
   window.TPT_BASE_CATALOGUE = [...(window.STICKER_CATALOGUE || [])];
   let local = {stickers:[],reels:[]};
-  try { local = JSON.parse(localStorage.getItem('tpt-owner-catalogue-v1')) || local; } catch {}
   let live = null;
   if (location.protocol === 'https:' || location.hostname === 'localhost' || location.hostname === '127.0.0.1') {
     try { const response = await fetch('/api/catalogue', {cache:'no-store'}); if (response.ok) live = (await response.json()).data; } catch {}

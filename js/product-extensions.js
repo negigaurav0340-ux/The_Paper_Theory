@@ -4,7 +4,6 @@ window.TPT_PRODUCTS_READY = (async () => {
   window.TPT_BASE_PRODUCTS = structuredClone(base);
   const published = window.TPT_PRODUCT_UPDATES || {upserts:[],hiddenIds:[]};
   let local = {upserts:[],hiddenIds:[]};
-  try { local = JSON.parse(localStorage.getItem('tpt-product-draft-v1')) || local; } catch {}
   let live = null;
   if (location.protocol === 'https:' || location.hostname === 'localhost' || location.hostname === '127.0.0.1') {
     try {
@@ -25,5 +24,6 @@ window.TPT_PRODUCTS_READY = (async () => {
     ...[...overrides.values()].filter(item => !base.some(original => original.id === item.id))
   ];
   window.CATALOGUE.products = merged.filter(item => !hidden.has(item.id));
+  window.CATALOGUE.categories=[...new Set([...window.CATALOGUE.categories,...window.CATALOGUE.products.flatMap(p=>p.categories)])];
   return updates;
 })();

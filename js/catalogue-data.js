@@ -4,1022 +4,1022 @@ window.STICKER_CATALOGUE = [
     "pack": "Anime Classics",
     "pack_id": "PACK-ANIME-01",
     "category": "Anime",
-    "image": "assets/catalogue/anime-classics/ANIME-001.webp"
+    "image": "assets/catalogue/clean/ANIME-001.png"
   },
   {
     "code": "ANIME-002",
     "pack": "Anime Classics",
     "pack_id": "PACK-ANIME-01",
     "category": "Anime",
-    "image": "assets/catalogue/anime-classics/ANIME-002.webp"
+    "image": "assets/catalogue/clean/ANIME-002.png"
   },
   {
     "code": "ANIME-003",
     "pack": "Anime Classics",
     "pack_id": "PACK-ANIME-01",
     "category": "Anime",
-    "image": "assets/catalogue/anime-classics/ANIME-003.webp"
+    "image": "assets/catalogue/clean/ANIME-003.png"
   },
   {
     "code": "ANIME-004",
     "pack": "Anime Classics",
     "pack_id": "PACK-ANIME-01",
     "category": "Anime",
-    "image": "assets/catalogue/anime-classics/ANIME-004.webp"
+    "image": "assets/catalogue/clean/ANIME-004.png"
   },
   {
     "code": "ANIME-005",
     "pack": "Anime Classics",
     "pack_id": "PACK-ANIME-01",
     "category": "Anime",
-    "image": "assets/catalogue/anime-classics/ANIME-005.webp"
+    "image": "assets/catalogue/clean/ANIME-005.png"
   },
   {
     "code": "ANIME-006",
     "pack": "Anime Classics",
     "pack_id": "PACK-ANIME-01",
     "category": "Anime",
-    "image": "assets/catalogue/anime-classics/ANIME-006.webp"
+    "image": "assets/catalogue/clean/ANIME-006.png"
   },
   {
     "code": "ANIME-007",
     "pack": "Anime Classics",
     "pack_id": "PACK-ANIME-01",
     "category": "Anime",
-    "image": "assets/catalogue/anime-classics/ANIME-007.webp"
+    "image": "assets/catalogue/clean/ANIME-007.png"
   },
   {
     "code": "ANIME-008",
     "pack": "Anime Classics",
     "pack_id": "PACK-ANIME-01",
     "category": "Anime",
-    "image": "assets/catalogue/anime-classics/ANIME-008.webp"
+    "image": "assets/catalogue/clean/ANIME-008.png"
   },
   {
     "code": "ANIME-009",
     "pack": "Anime Classics",
     "pack_id": "PACK-ANIME-01",
     "category": "Anime",
-    "image": "assets/catalogue/anime-classics/ANIME-009.webp"
+    "image": "assets/catalogue/clean/ANIME-009.png"
   },
   {
     "code": "ANIME-010",
     "pack": "Anime Classics",
     "pack_id": "PACK-ANIME-01",
     "category": "Anime",
-    "image": "assets/catalogue/anime-classics/ANIME-010.webp"
+    "image": "assets/catalogue/clean/ANIME-010.png"
   },
   {
     "code": "ANIME-011",
     "pack": "Anime Classics",
     "pack_id": "PACK-ANIME-01",
     "category": "Anime",
-    "image": "assets/catalogue/anime-classics/ANIME-011.webp"
+    "image": "assets/catalogue/clean/ANIME-011.png"
   },
   {
     "code": "ANIME-012",
     "pack": "Anime Classics",
     "pack_id": "PACK-ANIME-01",
     "category": "Anime",
-    "image": "assets/catalogue/anime-classics/ANIME-012.webp"
+    "image": "assets/catalogue/clean/ANIME-012.png"
   },
   {
     "code": "ANIME-013",
     "pack": "Anime Heroes",
     "pack_id": "PACK-ANIME-HEROES",
     "category": "Anime",
-    "image": "assets/catalogue/anime-heroes/ANIME-013.webp"
+    "image": "assets/catalogue/clean/ANIME-013.png"
   },
   {
     "code": "ANIME-014",
     "pack": "Anime Heroes",
     "pack_id": "PACK-ANIME-HEROES",
     "category": "Anime",
-    "image": "assets/catalogue/anime-heroes/ANIME-014.webp"
+    "image": "assets/catalogue/clean/ANIME-014.png"
   },
   {
     "code": "ANIME-015",
     "pack": "Anime Heroes",
     "pack_id": "PACK-ANIME-HEROES",
     "category": "Anime",
-    "image": "assets/catalogue/anime-heroes/ANIME-015.webp"
+    "image": "assets/catalogue/clean/ANIME-015.png"
   },
   {
     "code": "ANIME-016",
     "pack": "Anime Heroes",
     "pack_id": "PACK-ANIME-HEROES",
     "category": "Anime",
-    "image": "assets/catalogue/anime-heroes/ANIME-016.webp"
+    "image": "assets/catalogue/clean/ANIME-016.png"
   },
   {
     "code": "ANIME-017",
     "pack": "Anime Heroes",
     "pack_id": "PACK-ANIME-HEROES",
     "category": "Anime",
-    "image": "assets/catalogue/anime-heroes/ANIME-017.webp"
+    "image": "assets/catalogue/clean/ANIME-017.png"
   },
   {
     "code": "ANIME-018",
     "pack": "Anime Heroes",
     "pack_id": "PACK-ANIME-HEROES",
     "category": "Anime",
-    "image": "assets/catalogue/anime-heroes/ANIME-018.webp"
+    "image": "assets/catalogue/clean/ANIME-018.png"
   },
   {
     "code": "ANIME-019",
     "pack": "Anime Heroes",
     "pack_id": "PACK-ANIME-HEROES",
     "category": "Anime",
-    "image": "assets/catalogue/anime-heroes/ANIME-019.webp"
+    "image": "assets/catalogue/clean/ANIME-019.png"
   },
   {
     "code": "ANIME-020",
     "pack": "Anime Heroes",
     "pack_id": "PACK-ANIME-HEROES",
     "category": "Anime",
-    "image": "assets/catalogue/anime-heroes/ANIME-020.webp"
+    "image": "assets/catalogue/clean/ANIME-020.png"
   },
   {
     "code": "ANIME-021",
     "pack": "Anime Heroes",
     "pack_id": "PACK-ANIME-HEROES",
     "category": "Anime",
-    "image": "assets/catalogue/anime-heroes/ANIME-021.webp"
+    "image": "assets/catalogue/clean/ANIME-021.png"
   },
   {
     "code": "ANIME-022",
     "pack": "Anime Heroes",
     "pack_id": "PACK-ANIME-HEROES",
     "category": "Anime",
-    "image": "assets/catalogue/anime-heroes/ANIME-022.webp"
+    "image": "assets/catalogue/clean/ANIME-022.png"
   },
   {
     "code": "ANIME-023",
     "pack": "Anime Heroes",
     "pack_id": "PACK-ANIME-HEROES",
     "category": "Anime",
-    "image": "assets/catalogue/anime-heroes/ANIME-023.webp"
+    "image": "assets/catalogue/clean/ANIME-023.png"
   },
   {
     "code": "ANIME-024",
     "pack": "Anime Heroes",
     "pack_id": "PACK-ANIME-HEROES",
     "category": "Anime",
-    "image": "assets/catalogue/anime-heroes/ANIME-024.webp"
+    "image": "assets/catalogue/clean/ANIME-024.png"
   },
   {
     "code": "AMEME-001",
     "pack": "Anime Meme Pack",
     "pack_id": "PACK-ANIME-MEME",
     "category": "Anime Meme",
-    "image": "assets/catalogue/anime-meme/AMEME-001.webp"
+    "image": "assets/catalogue/clean/AMEME-001.png"
   },
   {
     "code": "AMEME-002",
     "pack": "Anime Meme Pack",
     "pack_id": "PACK-ANIME-MEME",
     "category": "Anime Meme",
-    "image": "assets/catalogue/anime-meme/AMEME-002.webp"
+    "image": "assets/catalogue/clean/AMEME-002.png"
   },
   {
     "code": "AMEME-003",
     "pack": "Anime Meme Pack",
     "pack_id": "PACK-ANIME-MEME",
     "category": "Anime Meme",
-    "image": "assets/catalogue/anime-meme/AMEME-003.webp"
+    "image": "assets/catalogue/clean/AMEME-003.png"
   },
   {
     "code": "AMEME-004",
     "pack": "Anime Meme Pack",
     "pack_id": "PACK-ANIME-MEME",
     "category": "Anime Meme",
-    "image": "assets/catalogue/anime-meme/AMEME-004.webp"
+    "image": "assets/catalogue/clean/AMEME-004.png"
   },
   {
     "code": "AMEME-005",
     "pack": "Anime Meme Pack",
     "pack_id": "PACK-ANIME-MEME",
     "category": "Anime Meme",
-    "image": "assets/catalogue/anime-meme/AMEME-005.webp"
+    "image": "assets/catalogue/clean/AMEME-005.png"
   },
   {
     "code": "AMEME-006",
     "pack": "Anime Meme Pack",
     "pack_id": "PACK-ANIME-MEME",
     "category": "Anime Meme",
-    "image": "assets/catalogue/anime-meme/AMEME-006.webp"
+    "image": "assets/catalogue/clean/AMEME-006.png"
   },
   {
     "code": "AMEME-007",
     "pack": "Anime Meme Pack",
     "pack_id": "PACK-ANIME-MEME",
     "category": "Anime Meme",
-    "image": "assets/catalogue/anime-meme/AMEME-007.webp"
+    "image": "assets/catalogue/clean/AMEME-007.png"
   },
   {
     "code": "AMEME-008",
     "pack": "Anime Meme Pack",
     "pack_id": "PACK-ANIME-MEME",
     "category": "Anime Meme",
-    "image": "assets/catalogue/anime-meme/AMEME-008.webp"
+    "image": "assets/catalogue/clean/AMEME-008.png"
   },
   {
     "code": "AMEME-009",
     "pack": "Anime Meme Pack",
     "pack_id": "PACK-ANIME-MEME",
     "category": "Anime Meme",
-    "image": "assets/catalogue/anime-meme/AMEME-009.webp"
+    "image": "assets/catalogue/clean/AMEME-009.png"
   },
   {
     "code": "AMEME-010",
     "pack": "Anime Meme Pack",
     "pack_id": "PACK-ANIME-MEME",
     "category": "Anime Meme",
-    "image": "assets/catalogue/anime-meme/AMEME-010.webp"
+    "image": "assets/catalogue/clean/AMEME-010.png"
   },
   {
     "code": "AMEME-011",
     "pack": "Anime Meme Pack",
     "pack_id": "PACK-ANIME-MEME",
     "category": "Anime Meme",
-    "image": "assets/catalogue/anime-meme/AMEME-011.webp"
+    "image": "assets/catalogue/clean/AMEME-011.png"
   },
   {
     "code": "AMEME-012",
     "pack": "Anime Meme Pack",
     "pack_id": "PACK-ANIME-MEME",
     "category": "Anime Meme",
-    "image": "assets/catalogue/anime-meme/AMEME-012.webp"
+    "image": "assets/catalogue/clean/AMEME-012.png"
   },
   {
     "code": "AMEME-013",
     "pack": "Anime Meme Pack",
     "pack_id": "PACK-ANIME-MEME",
     "category": "Anime Meme",
-    "image": "assets/catalogue/anime-meme/AMEME-013.webp"
+    "image": "assets/catalogue/clean/AMEME-013.png"
   },
   {
     "code": "AMEME-014",
     "pack": "Anime Meme Pack",
     "pack_id": "PACK-ANIME-MEME",
     "category": "Anime Meme",
-    "image": "assets/catalogue/anime-meme/AMEME-014.webp"
+    "image": "assets/catalogue/clean/AMEME-014.png"
   },
   {
     "code": "AMEME-015",
     "pack": "Anime Meme Pack",
     "pack_id": "PACK-ANIME-MEME",
     "category": "Anime Meme",
-    "image": "assets/catalogue/anime-meme/AMEME-015.webp"
+    "image": "assets/catalogue/clean/AMEME-015.png"
   },
   {
     "code": "AMEME-016",
     "pack": "Anime Meme Pack",
     "pack_id": "PACK-ANIME-MEME",
     "category": "Anime Meme",
-    "image": "assets/catalogue/anime-meme/AMEME-016.webp"
+    "image": "assets/catalogue/clean/AMEME-016.png"
   },
   {
     "code": "FEEL-001",
     "pack": "Feel Good Pack",
     "pack_id": "PACK-FEEL-GOOD",
     "category": "Feel Good",
-    "image": "assets/catalogue/feel-good/FEEL-001.webp"
+    "image": "assets/catalogue/clean/FEEL-001.png"
   },
   {
     "code": "FEEL-002",
     "pack": "Feel Good Pack",
     "pack_id": "PACK-FEEL-GOOD",
     "category": "Feel Good",
-    "image": "assets/catalogue/feel-good/FEEL-002.webp"
+    "image": "assets/catalogue/clean/FEEL-002.png"
   },
   {
     "code": "FEEL-003",
     "pack": "Feel Good Pack",
     "pack_id": "PACK-FEEL-GOOD",
     "category": "Feel Good",
-    "image": "assets/catalogue/feel-good/FEEL-003.webp"
+    "image": "assets/catalogue/clean/FEEL-003.png"
   },
   {
     "code": "FEEL-004",
     "pack": "Feel Good Pack",
     "pack_id": "PACK-FEEL-GOOD",
     "category": "Feel Good",
-    "image": "assets/catalogue/feel-good/FEEL-004.webp"
+    "image": "assets/catalogue/clean/FEEL-004.png"
   },
   {
     "code": "FEEL-005",
     "pack": "Feel Good Pack",
     "pack_id": "PACK-FEEL-GOOD",
     "category": "Feel Good",
-    "image": "assets/catalogue/feel-good/FEEL-005.webp"
+    "image": "assets/catalogue/clean/FEEL-005.png"
   },
   {
     "code": "FEEL-006",
     "pack": "Feel Good Pack",
     "pack_id": "PACK-FEEL-GOOD",
     "category": "Feel Good",
-    "image": "assets/catalogue/feel-good/FEEL-006.webp"
+    "image": "assets/catalogue/clean/FEEL-006.png"
   },
   {
     "code": "FEEL-007",
     "pack": "Feel Good Pack",
     "pack_id": "PACK-FEEL-GOOD",
     "category": "Feel Good",
-    "image": "assets/catalogue/feel-good/FEEL-007.webp"
+    "image": "assets/catalogue/clean/FEEL-007.png"
   },
   {
     "code": "FEEL-008",
     "pack": "Feel Good Pack",
     "pack_id": "PACK-FEEL-GOOD",
     "category": "Feel Good",
-    "image": "assets/catalogue/feel-good/FEEL-008.webp"
+    "image": "assets/catalogue/clean/FEEL-008.png"
   },
   {
     "code": "FEEL-009",
     "pack": "Feel Good Pack",
     "pack_id": "PACK-FEEL-GOOD",
     "category": "Feel Good",
-    "image": "assets/catalogue/feel-good/FEEL-009.webp"
+    "image": "assets/catalogue/clean/FEEL-009.png"
   },
   {
     "code": "FEEL-010",
     "pack": "Feel Good Pack",
     "pack_id": "PACK-FEEL-GOOD",
     "category": "Feel Good",
-    "image": "assets/catalogue/feel-good/FEEL-010.webp"
+    "image": "assets/catalogue/clean/FEEL-010.png"
   },
   {
     "code": "FEEL-011",
     "pack": "Feel Good Pack",
     "pack_id": "PACK-FEEL-GOOD",
     "category": "Feel Good",
-    "image": "assets/catalogue/feel-good/FEEL-011.webp"
+    "image": "assets/catalogue/clean/FEEL-011.png"
   },
   {
     "code": "FEEL-012",
     "pack": "Feel Good Pack",
     "pack_id": "PACK-FEEL-GOOD",
     "category": "Feel Good",
-    "image": "assets/catalogue/feel-good/FEEL-012.webp"
+    "image": "assets/catalogue/clean/FEEL-012.png"
   },
   {
     "code": "FEEL-013",
     "pack": "Feel Good Pack",
     "pack_id": "PACK-FEEL-GOOD",
     "category": "Feel Good",
-    "image": "assets/catalogue/feel-good/FEEL-013.webp"
+    "image": "assets/catalogue/clean/FEEL-013.png"
   },
   {
     "code": "FEEL-014",
     "pack": "Feel Good Pack",
     "pack_id": "PACK-FEEL-GOOD",
     "category": "Feel Good",
-    "image": "assets/catalogue/feel-good/FEEL-014.webp"
+    "image": "assets/catalogue/clean/FEEL-014.png"
   },
   {
     "code": "FEEL-015",
     "pack": "Feel Good Pack",
     "pack_id": "PACK-FEEL-GOOD",
     "category": "Feel Good",
-    "image": "assets/catalogue/feel-good/FEEL-015.webp"
+    "image": "assets/catalogue/clean/FEEL-015.png"
   },
   {
     "code": "FEEL-016",
     "pack": "Feel Good Pack",
     "pack_id": "PACK-FEEL-GOOD",
     "category": "Feel Good",
-    "image": "assets/catalogue/feel-good/FEEL-016.webp"
+    "image": "assets/catalogue/clean/FEEL-016.png"
   },
   {
     "code": "MOTU-001",
     "pack": "Team Motu Pack",
     "pack_id": "PACK-TEAM-MOTU",
     "category": "Motu vs Bheem",
-    "image": "assets/catalogue/team-motu/MOTU-001.webp"
+    "image": "assets/catalogue/clean/MOTU-001.png"
   },
   {
     "code": "MOTU-002",
     "pack": "Team Motu Pack",
     "pack_id": "PACK-TEAM-MOTU",
     "category": "Motu vs Bheem",
-    "image": "assets/catalogue/team-motu/MOTU-002.webp"
+    "image": "assets/catalogue/clean/MOTU-002.png"
   },
   {
     "code": "MOTU-003",
     "pack": "Team Motu Pack",
     "pack_id": "PACK-TEAM-MOTU",
     "category": "Motu vs Bheem",
-    "image": "assets/catalogue/team-motu/MOTU-003.webp"
+    "image": "assets/catalogue/clean/MOTU-003.png"
   },
   {
     "code": "MOTU-004",
     "pack": "Team Motu Pack",
     "pack_id": "PACK-TEAM-MOTU",
     "category": "Motu vs Bheem",
-    "image": "assets/catalogue/team-motu/MOTU-004.webp"
+    "image": "assets/catalogue/clean/MOTU-004.png"
   },
   {
     "code": "MOTU-005",
     "pack": "Team Motu Pack",
     "pack_id": "PACK-TEAM-MOTU",
     "category": "Motu vs Bheem",
-    "image": "assets/catalogue/team-motu/MOTU-005.webp"
+    "image": "assets/catalogue/clean/MOTU-005.png"
   },
   {
     "code": "MOTU-006",
     "pack": "Team Motu Pack",
     "pack_id": "PACK-TEAM-MOTU",
     "category": "Motu vs Bheem",
-    "image": "assets/catalogue/team-motu/MOTU-006.webp"
+    "image": "assets/catalogue/clean/MOTU-006.png"
   },
   {
     "code": "MOTU-007",
     "pack": "Team Motu Pack",
     "pack_id": "PACK-TEAM-MOTU",
     "category": "Motu vs Bheem",
-    "image": "assets/catalogue/team-motu/MOTU-007.webp"
+    "image": "assets/catalogue/clean/MOTU-007.png"
   },
   {
     "code": "MOTU-008",
     "pack": "Team Motu Pack",
     "pack_id": "PACK-TEAM-MOTU",
     "category": "Motu vs Bheem",
-    "image": "assets/catalogue/team-motu/MOTU-008.webp"
+    "image": "assets/catalogue/clean/MOTU-008.png"
   },
   {
     "code": "MOTU-009",
     "pack": "Team Motu Pack",
     "pack_id": "PACK-TEAM-MOTU",
     "category": "Motu vs Bheem",
-    "image": "assets/catalogue/team-motu/MOTU-009.webp"
+    "image": "assets/catalogue/clean/MOTU-009.png"
   },
   {
     "code": "MOTU-010",
     "pack": "Team Motu Pack",
     "pack_id": "PACK-TEAM-MOTU",
     "category": "Motu vs Bheem",
-    "image": "assets/catalogue/team-motu/MOTU-010.webp"
+    "image": "assets/catalogue/clean/MOTU-010.png"
   },
   {
     "code": "MOTU-011",
     "pack": "Team Motu Pack",
     "pack_id": "PACK-TEAM-MOTU",
     "category": "Motu vs Bheem",
-    "image": "assets/catalogue/team-motu/MOTU-011.webp"
+    "image": "assets/catalogue/clean/MOTU-011.png"
   },
   {
     "code": "MOTU-012",
     "pack": "Team Motu Pack",
     "pack_id": "PACK-TEAM-MOTU",
     "category": "Motu vs Bheem",
-    "image": "assets/catalogue/team-motu/MOTU-012.webp"
+    "image": "assets/catalogue/clean/MOTU-012.png"
   },
   {
     "code": "MOTU-013",
     "pack": "Team Motu Pack",
     "pack_id": "PACK-TEAM-MOTU",
     "category": "Motu vs Bheem",
-    "image": "assets/catalogue/team-motu/MOTU-013.webp"
+    "image": "assets/catalogue/clean/MOTU-013.png"
   },
   {
     "code": "MOTU-014",
     "pack": "Team Motu Pack",
     "pack_id": "PACK-TEAM-MOTU",
     "category": "Motu vs Bheem",
-    "image": "assets/catalogue/team-motu/MOTU-014.webp"
+    "image": "assets/catalogue/clean/MOTU-014.png"
   },
   {
     "code": "MOTU-015",
     "pack": "Team Motu Pack",
     "pack_id": "PACK-TEAM-MOTU",
     "category": "Motu vs Bheem",
-    "image": "assets/catalogue/team-motu/MOTU-015.webp"
+    "image": "assets/catalogue/clean/MOTU-015.png"
   },
   {
     "code": "MOTU-016",
     "pack": "Team Motu Pack",
     "pack_id": "PACK-TEAM-MOTU",
     "category": "Motu vs Bheem",
-    "image": "assets/catalogue/team-motu/MOTU-016.webp"
+    "image": "assets/catalogue/clean/MOTU-016.png"
   },
   {
     "code": "BHEEM-001",
     "pack": "Team Bheem Pack",
     "pack_id": "PACK-TEAM-BHEEM",
     "category": "Motu vs Bheem",
-    "image": "assets/catalogue/team-bheem/BHEEM-001.webp"
+    "image": "assets/catalogue/clean/BHEEM-001.png"
   },
   {
     "code": "BHEEM-002",
     "pack": "Team Bheem Pack",
     "pack_id": "PACK-TEAM-BHEEM",
     "category": "Motu vs Bheem",
-    "image": "assets/catalogue/team-bheem/BHEEM-002.webp"
+    "image": "assets/catalogue/clean/BHEEM-002.png"
   },
   {
     "code": "BHEEM-003",
     "pack": "Team Bheem Pack",
     "pack_id": "PACK-TEAM-BHEEM",
     "category": "Motu vs Bheem",
-    "image": "assets/catalogue/team-bheem/BHEEM-003.webp"
+    "image": "assets/catalogue/clean/BHEEM-003.png"
   },
   {
     "code": "BHEEM-004",
     "pack": "Team Bheem Pack",
     "pack_id": "PACK-TEAM-BHEEM",
     "category": "Motu vs Bheem",
-    "image": "assets/catalogue/team-bheem/BHEEM-004.webp"
+    "image": "assets/catalogue/clean/BHEEM-004.png"
   },
   {
     "code": "BHEEM-005",
     "pack": "Team Bheem Pack",
     "pack_id": "PACK-TEAM-BHEEM",
     "category": "Motu vs Bheem",
-    "image": "assets/catalogue/team-bheem/BHEEM-005.webp"
+    "image": "assets/catalogue/clean/BHEEM-005.png"
   },
   {
     "code": "BHEEM-006",
     "pack": "Team Bheem Pack",
     "pack_id": "PACK-TEAM-BHEEM",
     "category": "Motu vs Bheem",
-    "image": "assets/catalogue/team-bheem/BHEEM-006.webp"
+    "image": "assets/catalogue/clean/BHEEM-006.png"
   },
   {
     "code": "BHEEM-007",
     "pack": "Team Bheem Pack",
     "pack_id": "PACK-TEAM-BHEEM",
     "category": "Motu vs Bheem",
-    "image": "assets/catalogue/team-bheem/BHEEM-007.webp"
+    "image": "assets/catalogue/clean/BHEEM-007.png"
   },
   {
     "code": "BHEEM-008",
     "pack": "Team Bheem Pack",
     "pack_id": "PACK-TEAM-BHEEM",
     "category": "Motu vs Bheem",
-    "image": "assets/catalogue/team-bheem/BHEEM-008.webp"
+    "image": "assets/catalogue/clean/BHEEM-008.png"
   },
   {
     "code": "BHEEM-009",
     "pack": "Team Bheem Pack",
     "pack_id": "PACK-TEAM-BHEEM",
     "category": "Motu vs Bheem",
-    "image": "assets/catalogue/team-bheem/BHEEM-009.webp"
+    "image": "assets/catalogue/clean/BHEEM-009.png"
   },
   {
     "code": "BHEEM-010",
     "pack": "Team Bheem Pack",
     "pack_id": "PACK-TEAM-BHEEM",
     "category": "Motu vs Bheem",
-    "image": "assets/catalogue/team-bheem/BHEEM-010.webp"
+    "image": "assets/catalogue/clean/BHEEM-010.png"
   },
   {
     "code": "BHEEM-011",
     "pack": "Team Bheem Pack",
     "pack_id": "PACK-TEAM-BHEEM",
     "category": "Motu vs Bheem",
-    "image": "assets/catalogue/team-bheem/BHEEM-011.webp"
+    "image": "assets/catalogue/clean/BHEEM-011.png"
   },
   {
     "code": "BHEEM-012",
     "pack": "Team Bheem Pack",
     "pack_id": "PACK-TEAM-BHEEM",
     "category": "Motu vs Bheem",
-    "image": "assets/catalogue/team-bheem/BHEEM-012.webp"
+    "image": "assets/catalogue/clean/BHEEM-012.png"
   },
   {
     "code": "BHEEM-013",
     "pack": "Team Bheem Pack",
     "pack_id": "PACK-TEAM-BHEEM",
     "category": "Motu vs Bheem",
-    "image": "assets/catalogue/team-bheem/BHEEM-013.webp"
+    "image": "assets/catalogue/clean/BHEEM-013.png"
   },
   {
     "code": "BHEEM-014",
     "pack": "Team Bheem Pack",
     "pack_id": "PACK-TEAM-BHEEM",
     "category": "Motu vs Bheem",
-    "image": "assets/catalogue/team-bheem/BHEEM-014.webp"
+    "image": "assets/catalogue/clean/BHEEM-014.png"
   },
   {
     "code": "BHEEM-015",
     "pack": "Team Bheem Pack",
     "pack_id": "PACK-TEAM-BHEEM",
     "category": "Motu vs Bheem",
-    "image": "assets/catalogue/team-bheem/BHEEM-015.webp"
+    "image": "assets/catalogue/clean/BHEEM-015.png"
   },
   {
     "code": "BHEEM-016",
     "pack": "Team Bheem Pack",
     "pack_id": "PACK-TEAM-BHEEM",
     "category": "Motu vs Bheem",
-    "image": "assets/catalogue/team-bheem/BHEEM-016.webp"
+    "image": "assets/catalogue/clean/BHEEM-016.png"
   },
   {
     "code": "DIWALI-001",
     "pack": "Diwali Devotional Pack",
     "pack_id": "PACK-DIWALI-01",
     "category": "Diwali",
-    "image": "assets/catalogue/diwali-01/DIWALI-001.webp"
+    "image": "assets/catalogue/clean/DIWALI-001.png"
   },
   {
     "code": "DIWALI-002",
     "pack": "Diwali Devotional Pack",
     "pack_id": "PACK-DIWALI-01",
     "category": "Diwali",
-    "image": "assets/catalogue/diwali-01/DIWALI-002.webp"
+    "image": "assets/catalogue/clean/DIWALI-002.png"
   },
   {
     "code": "DIWALI-003",
     "pack": "Diwali Devotional Pack",
     "pack_id": "PACK-DIWALI-01",
     "category": "Diwali",
-    "image": "assets/catalogue/diwali-01/DIWALI-003.webp"
+    "image": "assets/catalogue/clean/DIWALI-003.png"
   },
   {
     "code": "DIWALI-004",
     "pack": "Diwali Devotional Pack",
     "pack_id": "PACK-DIWALI-01",
     "category": "Diwali",
-    "image": "assets/catalogue/diwali-01/DIWALI-004.webp"
+    "image": "assets/catalogue/clean/DIWALI-004.png"
   },
   {
     "code": "DIWALI-005",
     "pack": "Diwali Devotional Pack",
     "pack_id": "PACK-DIWALI-01",
     "category": "Diwali",
-    "image": "assets/catalogue/diwali-01/DIWALI-005.webp"
+    "image": "assets/catalogue/clean/DIWALI-005.png"
   },
   {
     "code": "DIWALI-006",
     "pack": "Diwali Devotional Pack",
     "pack_id": "PACK-DIWALI-01",
     "category": "Diwali",
-    "image": "assets/catalogue/diwali-01/DIWALI-006.webp"
+    "image": "assets/catalogue/clean/DIWALI-006.png"
   },
   {
     "code": "DIWALI-007",
     "pack": "Diwali Devotional Pack",
     "pack_id": "PACK-DIWALI-01",
     "category": "Diwali",
-    "image": "assets/catalogue/diwali-01/DIWALI-007.webp"
+    "image": "assets/catalogue/clean/DIWALI-007.png"
   },
   {
     "code": "DIWALI-008",
     "pack": "Diwali Devotional Pack",
     "pack_id": "PACK-DIWALI-01",
     "category": "Diwali",
-    "image": "assets/catalogue/diwali-01/DIWALI-008.webp"
+    "image": "assets/catalogue/clean/DIWALI-008.png"
   },
   {
     "code": "DIWALI-009",
     "pack": "Diwali Devotional Pack",
     "pack_id": "PACK-DIWALI-01",
     "category": "Diwali",
-    "image": "assets/catalogue/diwali-01/DIWALI-009.webp"
+    "image": "assets/catalogue/clean/DIWALI-009.png"
   },
   {
     "code": "DIWALI-010",
     "pack": "Diwali Devotional Pack",
     "pack_id": "PACK-DIWALI-01",
     "category": "Diwali",
-    "image": "assets/catalogue/diwali-01/DIWALI-010.webp"
+    "image": "assets/catalogue/clean/DIWALI-010.png"
   },
   {
     "code": "DIWALI-011",
     "pack": "Diwali Devotional Pack",
     "pack_id": "PACK-DIWALI-01",
     "category": "Diwali",
-    "image": "assets/catalogue/diwali-01/DIWALI-011.webp"
+    "image": "assets/catalogue/clean/DIWALI-011.png"
   },
   {
     "code": "DIWALI-012",
     "pack": "Diwali Devotional Pack",
     "pack_id": "PACK-DIWALI-01",
     "category": "Diwali",
-    "image": "assets/catalogue/diwali-01/DIWALI-012.webp"
+    "image": "assets/catalogue/clean/DIWALI-012.png"
   },
   {
     "code": "DIWALI-013",
     "pack": "Diwali Festive Pack",
     "pack_id": "PACK-DIWALI-02",
     "category": "Diwali",
-    "image": "assets/catalogue/diwali-02/DIWALI-013.webp"
+    "image": "assets/catalogue/clean/DIWALI-013.png"
   },
   {
     "code": "DIWALI-014",
     "pack": "Diwali Festive Pack",
     "pack_id": "PACK-DIWALI-02",
     "category": "Diwali",
-    "image": "assets/catalogue/diwali-02/DIWALI-014.webp"
+    "image": "assets/catalogue/clean/DIWALI-014.png"
   },
   {
     "code": "DIWALI-015",
     "pack": "Diwali Festive Pack",
     "pack_id": "PACK-DIWALI-02",
     "category": "Diwali",
-    "image": "assets/catalogue/diwali-02/DIWALI-015.webp"
+    "image": "assets/catalogue/clean/DIWALI-015.png"
   },
   {
     "code": "DIWALI-016",
     "pack": "Diwali Festive Pack",
     "pack_id": "PACK-DIWALI-02",
     "category": "Diwali",
-    "image": "assets/catalogue/diwali-02/DIWALI-016.webp"
+    "image": "assets/catalogue/clean/DIWALI-016.png"
   },
   {
     "code": "DIWALI-017",
     "pack": "Diwali Festive Pack",
     "pack_id": "PACK-DIWALI-02",
     "category": "Diwali",
-    "image": "assets/catalogue/diwali-02/DIWALI-017.webp"
+    "image": "assets/catalogue/clean/DIWALI-017.png"
   },
   {
     "code": "DIWALI-018",
     "pack": "Diwali Festive Pack",
     "pack_id": "PACK-DIWALI-02",
     "category": "Diwali",
-    "image": "assets/catalogue/diwali-02/DIWALI-018.webp"
+    "image": "assets/catalogue/clean/DIWALI-018.png"
   },
   {
     "code": "DIWALI-019",
     "pack": "Diwali Festive Pack",
     "pack_id": "PACK-DIWALI-02",
     "category": "Diwali",
-    "image": "assets/catalogue/diwali-02/DIWALI-019.webp"
+    "image": "assets/catalogue/clean/DIWALI-019.png"
   },
   {
     "code": "DIWALI-020",
     "pack": "Diwali Festive Pack",
     "pack_id": "PACK-DIWALI-02",
     "category": "Diwali",
-    "image": "assets/catalogue/diwali-02/DIWALI-020.webp"
+    "image": "assets/catalogue/clean/DIWALI-020.png"
   },
   {
     "code": "DIWALI-021",
     "pack": "Diwali Festive Pack",
     "pack_id": "PACK-DIWALI-02",
     "category": "Diwali",
-    "image": "assets/catalogue/diwali-02/DIWALI-021.webp"
+    "image": "assets/catalogue/clean/DIWALI-021.png"
   },
   {
     "code": "DIWALI-022",
     "pack": "Diwali Festive Pack",
     "pack_id": "PACK-DIWALI-02",
     "category": "Diwali",
-    "image": "assets/catalogue/diwali-02/DIWALI-022.webp"
+    "image": "assets/catalogue/clean/DIWALI-022.png"
   },
   {
     "code": "DIWALI-023",
     "pack": "Diwali Festive Pack",
     "pack_id": "PACK-DIWALI-02",
     "category": "Diwali",
-    "image": "assets/catalogue/diwali-02/DIWALI-023.webp"
+    "image": "assets/catalogue/clean/DIWALI-023.png"
   },
   {
     "code": "DIWALI-024",
     "pack": "Diwali Festive Pack",
     "pack_id": "PACK-DIWALI-02",
     "category": "Diwali",
-    "image": "assets/catalogue/diwali-02/DIWALI-024.webp"
+    "image": "assets/catalogue/clean/DIWALI-024.png"
   },
   {
     "code": "CUTE-001",
     "pack": "Cute Mood Pack",
     "pack_id": "PACK-CUTE-MOOD",
     "category": "Cute / Relatable",
-    "image": "assets/catalogue/cute-mood/CUTE-001.webp"
+    "image": "assets/catalogue/clean/CUTE-001.png"
   },
   {
     "code": "CUTE-002",
     "pack": "Cute Mood Pack",
     "pack_id": "PACK-CUTE-MOOD",
     "category": "Cute / Relatable",
-    "image": "assets/catalogue/cute-mood/CUTE-002.webp"
+    "image": "assets/catalogue/clean/CUTE-002.png"
   },
   {
     "code": "CUTE-003",
     "pack": "Cute Mood Pack",
     "pack_id": "PACK-CUTE-MOOD",
     "category": "Cute / Relatable",
-    "image": "assets/catalogue/cute-mood/CUTE-003.webp"
+    "image": "assets/catalogue/clean/CUTE-003.png"
   },
   {
     "code": "CUTE-004",
     "pack": "Cute Mood Pack",
     "pack_id": "PACK-CUTE-MOOD",
     "category": "Cute / Relatable",
-    "image": "assets/catalogue/cute-mood/CUTE-004.webp"
+    "image": "assets/catalogue/clean/CUTE-004.png"
   },
   {
     "code": "CUTE-005",
     "pack": "Cute Mood Pack",
     "pack_id": "PACK-CUTE-MOOD",
     "category": "Cute / Relatable",
-    "image": "assets/catalogue/cute-mood/CUTE-005.webp"
+    "image": "assets/catalogue/clean/CUTE-005.png"
   },
   {
     "code": "CUTE-006",
     "pack": "Cute Mood Pack",
     "pack_id": "PACK-CUTE-MOOD",
     "category": "Cute / Relatable",
-    "image": "assets/catalogue/cute-mood/CUTE-006.webp"
+    "image": "assets/catalogue/clean/CUTE-006.png"
   },
   {
     "code": "CUTE-007",
     "pack": "Cute Mood Pack",
     "pack_id": "PACK-CUTE-MOOD",
     "category": "Cute / Relatable",
-    "image": "assets/catalogue/cute-mood/CUTE-007.webp"
+    "image": "assets/catalogue/clean/CUTE-007.png"
   },
   {
     "code": "CUTE-008",
     "pack": "Cute Mood Pack",
     "pack_id": "PACK-CUTE-MOOD",
     "category": "Cute / Relatable",
-    "image": "assets/catalogue/cute-mood/CUTE-008.webp"
+    "image": "assets/catalogue/clean/CUTE-008.png"
   },
   {
     "code": "CUTE-009",
     "pack": "Cute Mood Pack",
     "pack_id": "PACK-CUTE-MOOD",
     "category": "Cute / Relatable",
-    "image": "assets/catalogue/cute-mood/CUTE-009.webp"
+    "image": "assets/catalogue/clean/CUTE-009.png"
   },
   {
     "code": "CUTE-010",
     "pack": "Cute Mood Pack",
     "pack_id": "PACK-CUTE-MOOD",
     "category": "Cute / Relatable",
-    "image": "assets/catalogue/cute-mood/CUTE-010.webp"
+    "image": "assets/catalogue/clean/CUTE-010.png"
   },
   {
     "code": "CUTE-011",
     "pack": "Cute Mood Pack",
     "pack_id": "PACK-CUTE-MOOD",
     "category": "Cute / Relatable",
-    "image": "assets/catalogue/cute-mood/CUTE-011.webp"
+    "image": "assets/catalogue/clean/CUTE-011.png"
   },
   {
     "code": "CUTE-012",
     "pack": "Cute Mood Pack",
     "pack_id": "PACK-CUTE-MOOD",
     "category": "Cute / Relatable",
-    "image": "assets/catalogue/cute-mood/CUTE-012.webp"
+    "image": "assets/catalogue/clean/CUTE-012.png"
   },
   {
     "code": "CUTE-013",
     "pack": "Cute Mood Pack",
     "pack_id": "PACK-CUTE-MOOD",
     "category": "Cute / Relatable",
-    "image": "assets/catalogue/cute-mood/CUTE-013.webp"
+    "image": "assets/catalogue/clean/CUTE-013.png"
   },
   {
     "code": "CUTE-014",
     "pack": "Cute Mood Pack",
     "pack_id": "PACK-CUTE-MOOD",
     "category": "Cute / Relatable",
-    "image": "assets/catalogue/cute-mood/CUTE-014.webp"
+    "image": "assets/catalogue/clean/CUTE-014.png"
   },
   {
     "code": "CUTE-015",
     "pack": "Cute Mood Pack",
     "pack_id": "PACK-CUTE-MOOD",
     "category": "Cute / Relatable",
-    "image": "assets/catalogue/cute-mood/CUTE-015.webp"
+    "image": "assets/catalogue/clean/CUTE-015.png"
   },
   {
     "code": "CUTE-016",
     "pack": "Cute Mood Pack",
     "pack_id": "PACK-CUTE-MOOD",
     "category": "Cute / Relatable",
-    "image": "assets/catalogue/cute-mood/CUTE-016.webp"
+    "image": "assets/catalogue/clean/CUTE-016.png"
   },
   {
     "code": "ENG-001",
     "pack": "Engineering & Campus Pack",
     "pack_id": "PACK-ENG-01",
     "category": "Engineering / Coding",
-    "image": "assets/catalogue/engineering-campus/ENG-001.webp"
+    "image": "assets/catalogue/clean/ENG-001.png"
   },
   {
     "code": "ENG-002",
     "pack": "Engineering & Campus Pack",
     "pack_id": "PACK-ENG-01",
     "category": "Engineering / Coding",
-    "image": "assets/catalogue/engineering-campus/ENG-002.webp"
+    "image": "assets/catalogue/clean/ENG-002.png"
   },
   {
     "code": "ENG-003",
     "pack": "Engineering & Campus Pack",
     "pack_id": "PACK-ENG-01",
     "category": "Engineering / Coding",
-    "image": "assets/catalogue/engineering-campus/ENG-003.webp"
+    "image": "assets/catalogue/clean/ENG-003.png"
   },
   {
     "code": "ENG-004",
     "pack": "Engineering & Campus Pack",
     "pack_id": "PACK-ENG-01",
     "category": "Engineering / Coding",
-    "image": "assets/catalogue/engineering-campus/ENG-004.webp"
+    "image": "assets/catalogue/clean/ENG-004.png"
   },
   {
     "code": "ENG-005",
     "pack": "Engineering & Campus Pack",
     "pack_id": "PACK-ENG-01",
     "category": "Engineering / Coding",
-    "image": "assets/catalogue/engineering-campus/ENG-005.webp"
+    "image": "assets/catalogue/clean/ENG-005.png"
   },
   {
     "code": "ENG-006",
     "pack": "Engineering & Campus Pack",
     "pack_id": "PACK-ENG-01",
     "category": "Engineering / Coding",
-    "image": "assets/catalogue/engineering-campus/ENG-006.webp"
+    "image": "assets/catalogue/clean/ENG-006.png"
   },
   {
     "code": "ENG-007",
     "pack": "Engineering & Campus Pack",
     "pack_id": "PACK-ENG-01",
     "category": "Engineering / Coding",
-    "image": "assets/catalogue/engineering-campus/ENG-007.webp"
+    "image": "assets/catalogue/clean/ENG-007.png"
   },
   {
     "code": "ENG-008",
     "pack": "Engineering & Campus Pack",
     "pack_id": "PACK-ENG-01",
     "category": "Engineering / Coding",
-    "image": "assets/catalogue/engineering-campus/ENG-008.webp"
+    "image": "assets/catalogue/clean/ENG-008.png"
   },
   {
     "code": "ENG-009",
     "pack": "Engineering & Campus Pack",
     "pack_id": "PACK-ENG-01",
     "category": "Engineering / Coding",
-    "image": "assets/catalogue/engineering-campus/ENG-009.webp"
+    "image": "assets/catalogue/clean/ENG-009.png"
   },
   {
     "code": "ENG-010",
     "pack": "Engineering & Campus Pack",
     "pack_id": "PACK-ENG-01",
     "category": "Engineering / Coding",
-    "image": "assets/catalogue/engineering-campus/ENG-010.webp"
+    "image": "assets/catalogue/clean/ENG-010.png"
   },
   {
     "code": "ENG-011",
     "pack": "Engineering & Campus Pack",
     "pack_id": "PACK-ENG-01",
     "category": "Engineering / Coding",
-    "image": "assets/catalogue/engineering-campus/ENG-011.webp"
+    "image": "assets/catalogue/clean/ENG-011.png"
   },
   {
     "code": "ENG-012",
     "pack": "Engineering & Campus Pack",
     "pack_id": "PACK-ENG-01",
     "category": "Engineering / Coding",
-    "image": "assets/catalogue/engineering-campus/ENG-012.webp"
+    "image": "assets/catalogue/clean/ENG-012.png"
   },
   {
     "code": "FRIEND-001",
     "pack": "Friendship Pack",
     "pack_id": "PACK-FRIEND-01",
     "category": "Friendship",
-    "image": "assets/catalogue/friendship/FRIEND-001.webp"
+    "image": "assets/catalogue/clean/FRIEND-001.png"
   },
   {
     "code": "FRIEND-002",
     "pack": "Friendship Pack",
     "pack_id": "PACK-FRIEND-01",
     "category": "Friendship",
-    "image": "assets/catalogue/friendship/FRIEND-002.webp"
+    "image": "assets/catalogue/clean/FRIEND-002.png"
   },
   {
     "code": "FRIEND-003",
     "pack": "Friendship Pack",
     "pack_id": "PACK-FRIEND-01",
     "category": "Friendship",
-    "image": "assets/catalogue/friendship/FRIEND-003.webp"
+    "image": "assets/catalogue/clean/FRIEND-003.png"
   },
   {
     "code": "FRIEND-004",
     "pack": "Friendship Pack",
     "pack_id": "PACK-FRIEND-01",
     "category": "Friendship",
-    "image": "assets/catalogue/friendship/FRIEND-004.webp"
+    "image": "assets/catalogue/clean/FRIEND-004.png"
   },
   {
     "code": "FRIEND-005",
     "pack": "Friendship Pack",
     "pack_id": "PACK-FRIEND-01",
     "category": "Friendship",
-    "image": "assets/catalogue/friendship/FRIEND-005.webp"
+    "image": "assets/catalogue/clean/FRIEND-005.png"
   },
   {
     "code": "FRIEND-006",
     "pack": "Friendship Pack",
     "pack_id": "PACK-FRIEND-01",
     "category": "Friendship",
-    "image": "assets/catalogue/friendship/FRIEND-006.webp"
+    "image": "assets/catalogue/clean/FRIEND-006.png"
   },
   {
     "code": "FOX-001",
@@ -1116,5 +1116,1057 @@ window.STICKER_CATALOGUE = [
     "pack_id": "PACK-NEW-ORIGINALS",
     "category": "Friendship",
     "image": "assets/stickers/fox-friends.webp"
+  },
+  {
+    "code": "GYM-001",
+    "name": "Discipline Beats Motivation",
+    "pack": "Gym Motivation",
+    "pack_id": "PACK-GYM-MOTIVATION",
+    "category": "Fitness",
+    "image": "assets/catalogue/clean/GYM-001.png"
+  },
+  {
+    "code": "GYM-002",
+    "name": "No Excuses",
+    "pack": "Gym Motivation",
+    "pack_id": "PACK-GYM-MOTIVATION",
+    "category": "Fitness",
+    "image": "assets/catalogue/clean/GYM-002.png"
+  },
+  {
+    "code": "GYM-003",
+    "name": "Better Than Yesterday",
+    "pack": "Gym Motivation",
+    "pack_id": "PACK-GYM-MOTIVATION",
+    "category": "Fitness",
+    "image": "assets/catalogue/clean/GYM-003.png"
+  },
+  {
+    "code": "GYM-004",
+    "name": "Hydrate Lift Repeat",
+    "pack": "Gym Motivation",
+    "pack_id": "PACK-GYM-MOTIVATION",
+    "category": "Fitness",
+    "image": "assets/catalogue/clean/GYM-004.png"
+  },
+  {
+    "code": "GYM-005",
+    "name": "Small Steps Big Results",
+    "pack": "Gym Motivation",
+    "pack_id": "PACK-GYM-MOTIVATION",
+    "category": "Fitness",
+    "image": "assets/catalogue/clean/GYM-005.png"
+  },
+  {
+    "code": "GYM-006",
+    "name": "Pain Builds Character",
+    "pack": "Gym Motivation",
+    "pack_id": "PACK-GYM-MOTIVATION",
+    "category": "Fitness",
+    "image": "assets/catalogue/clean/GYM-006.png"
+  },
+  {
+    "code": "GYM-007",
+    "name": "Rest Recharge Get Stronger",
+    "pack": "Gym Motivation",
+    "pack_id": "PACK-GYM-MOTIVATION",
+    "category": "Fitness",
+    "image": "assets/catalogue/clean/GYM-007.png"
+  },
+  {
+    "code": "GYM-008",
+    "name": "Good Things Take Time",
+    "pack": "Gym Motivation",
+    "pack_id": "PACK-GYM-MOTIVATION",
+    "category": "Fitness",
+    "image": "assets/catalogue/clean/GYM-008.png"
+  },
+  {
+    "code": "GYM-009",
+    "name": "Keep Going",
+    "pack": "Gym Motivation",
+    "pack_id": "PACK-GYM-MOTIVATION",
+    "category": "Fitness",
+    "image": "assets/catalogue/clean/GYM-009.png"
+  },
+  {
+    "code": "GYM-010",
+    "name": "Discipline Creates Freedom",
+    "pack": "Gym Motivation",
+    "pack_id": "PACK-GYM-MOTIVATION",
+    "category": "Fitness",
+    "image": "assets/catalogue/clean/GYM-010.png"
+  },
+  {
+    "code": "GYM-011",
+    "name": "1% Better Every Day",
+    "pack": "Gym Motivation",
+    "pack_id": "PACK-GYM-MOTIVATION",
+    "category": "Fitness",
+    "image": "assets/catalogue/clean/GYM-011.png"
+  },
+  {
+    "code": "GYM-012",
+    "name": "Workout Good Food Good Sleep",
+    "pack": "Gym Motivation",
+    "pack_id": "PACK-GYM-MOTIVATION",
+    "category": "Fitness",
+    "image": "assets/catalogue/clean/GYM-012.png"
+  },
+  {
+    "code": "GYM-013",
+    "name": "Less Scrolling More Lifting",
+    "pack": "Gym Motivation",
+    "pack_id": "PACK-GYM-MOTIVATION",
+    "category": "Fitness",
+    "image": "assets/catalogue/clean/GYM-013.png"
+  },
+  {
+    "code": "GYM-014",
+    "name": "Progress Not Perfection",
+    "pack": "Gym Motivation",
+    "pack_id": "PACK-GYM-MOTIVATION",
+    "category": "Fitness",
+    "image": "assets/catalogue/clean/GYM-014.png"
+  },
+  {
+    "code": "GYM-015",
+    "name": "Just One More Set",
+    "pack": "Gym Motivation",
+    "pack_id": "PACK-GYM-MOTIVATION",
+    "category": "Fitness",
+    "image": "assets/catalogue/clean/GYM-015.png"
+  },
+  {
+    "code": "GYM-016",
+    "name": "A Stronger Me Is Coming",
+    "pack": "Gym Motivation",
+    "pack_id": "PACK-GYM-MOTIVATION",
+    "category": "Fitness",
+    "image": "assets/catalogue/clean/GYM-016.png"
+  },
+  {
+    "code": "FIT-001",
+    "name": "Discipline Beats Motivation",
+    "pack": "Anime Fitness",
+    "pack_id": "PACK-ANIME-FITNESS",
+    "category": "Fitness",
+    "image": "assets/catalogue/clean/FIT-001.png"
+  },
+  {
+    "code": "FIT-002",
+    "name": "No Excuses",
+    "pack": "Anime Fitness",
+    "pack_id": "PACK-ANIME-FITNESS",
+    "category": "Fitness",
+    "image": "assets/catalogue/clean/FIT-002.png"
+  },
+  {
+    "code": "FIT-003",
+    "name": "Better Than Yesterday",
+    "pack": "Anime Fitness",
+    "pack_id": "PACK-ANIME-FITNESS",
+    "category": "Fitness",
+    "image": "assets/catalogue/clean/FIT-003.png"
+  },
+  {
+    "code": "FIT-004",
+    "name": "Hydrate Lift Repeat",
+    "pack": "Anime Fitness",
+    "pack_id": "PACK-ANIME-FITNESS",
+    "category": "Fitness",
+    "image": "assets/catalogue/clean/FIT-004.png"
+  },
+  {
+    "code": "FIT-005",
+    "name": "Small Steps Big Results",
+    "pack": "Anime Fitness",
+    "pack_id": "PACK-ANIME-FITNESS",
+    "category": "Fitness",
+    "image": "assets/catalogue/clean/FIT-005.png"
+  },
+  {
+    "code": "FIT-006",
+    "name": "Pain Builds Character",
+    "pack": "Anime Fitness",
+    "pack_id": "PACK-ANIME-FITNESS",
+    "category": "Fitness",
+    "image": "assets/catalogue/clean/FIT-006.png"
+  },
+  {
+    "code": "FIT-007",
+    "name": "Rest Recharge Get Stronger",
+    "pack": "Anime Fitness",
+    "pack_id": "PACK-ANIME-FITNESS",
+    "category": "Fitness",
+    "image": "assets/catalogue/clean/FIT-007.png"
+  },
+  {
+    "code": "FIT-008",
+    "name": "Good Things Take Time",
+    "pack": "Anime Fitness",
+    "pack_id": "PACK-ANIME-FITNESS",
+    "category": "Fitness",
+    "image": "assets/catalogue/clean/FIT-008.png"
+  },
+  {
+    "code": "FIT-009",
+    "name": "Keep Going",
+    "pack": "Anime Fitness",
+    "pack_id": "PACK-ANIME-FITNESS",
+    "category": "Fitness",
+    "image": "assets/catalogue/clean/FIT-009.png"
+  },
+  {
+    "code": "FIT-010",
+    "name": "Discipline Creates Freedom",
+    "pack": "Anime Fitness",
+    "pack_id": "PACK-ANIME-FITNESS",
+    "category": "Fitness",
+    "image": "assets/catalogue/clean/FIT-010.png"
+  },
+  {
+    "code": "FIT-011",
+    "name": "1% Better Every Day",
+    "pack": "Anime Fitness",
+    "pack_id": "PACK-ANIME-FITNESS",
+    "category": "Fitness",
+    "image": "assets/catalogue/clean/FIT-011.png"
+  },
+  {
+    "code": "FIT-012",
+    "name": "Workout Good Food Good Sleep",
+    "pack": "Anime Fitness",
+    "pack_id": "PACK-ANIME-FITNESS",
+    "category": "Fitness",
+    "image": "assets/catalogue/clean/FIT-012.png"
+  },
+  {
+    "code": "FIT-013",
+    "name": "Less Scrolling More Lifting",
+    "pack": "Anime Fitness",
+    "pack_id": "PACK-ANIME-FITNESS",
+    "category": "Fitness",
+    "image": "assets/catalogue/clean/FIT-013.png"
+  },
+  {
+    "code": "FIT-014",
+    "name": "Progress Not Perfection",
+    "pack": "Anime Fitness",
+    "pack_id": "PACK-ANIME-FITNESS",
+    "category": "Fitness",
+    "image": "assets/catalogue/clean/FIT-014.png"
+  },
+  {
+    "code": "FIT-015",
+    "name": "Be a Stronger You",
+    "pack": "Anime Fitness",
+    "pack_id": "PACK-ANIME-FITNESS",
+    "category": "Fitness",
+    "image": "assets/catalogue/clean/FIT-015.png"
+  },
+  {
+    "code": "FIT-016",
+    "name": "A Stronger Me Is Coming",
+    "pack": "Anime Fitness",
+    "pack_id": "PACK-ANIME-FITNESS",
+    "category": "Fitness",
+    "image": "assets/catalogue/clean/FIT-016.png"
+  },
+  {
+    "code": "FOOD-001",
+    "name": "Apple",
+    "pack": "Healthy Food",
+    "pack_id": "PACK-HEALTHY-FOOD",
+    "category": "Healthy Food",
+    "image": "assets/catalogue/clean/FOOD-001.png"
+  },
+  {
+    "code": "FOOD-002",
+    "name": "Banana",
+    "pack": "Healthy Food",
+    "pack_id": "PACK-HEALTHY-FOOD",
+    "category": "Healthy Food",
+    "image": "assets/catalogue/clean/FOOD-002.png"
+  },
+  {
+    "code": "FOOD-003",
+    "name": "Carrot",
+    "pack": "Healthy Food",
+    "pack_id": "PACK-HEALTHY-FOOD",
+    "category": "Healthy Food",
+    "image": "assets/catalogue/clean/FOOD-003.png"
+  },
+  {
+    "code": "FOOD-004",
+    "name": "Spinach",
+    "pack": "Healthy Food",
+    "pack_id": "PACK-HEALTHY-FOOD",
+    "category": "Healthy Food",
+    "image": "assets/catalogue/clean/FOOD-004.png"
+  },
+  {
+    "code": "FOOD-005",
+    "name": "Almonds",
+    "pack": "Healthy Food",
+    "pack_id": "PACK-HEALTHY-FOOD",
+    "category": "Healthy Food",
+    "image": "assets/catalogue/clean/FOOD-005.png"
+  },
+  {
+    "code": "FOOD-006",
+    "name": "Walnuts",
+    "pack": "Healthy Food",
+    "pack_id": "PACK-HEALTHY-FOOD",
+    "category": "Healthy Food",
+    "image": "assets/catalogue/clean/FOOD-006.png"
+  },
+  {
+    "code": "FOOD-007",
+    "name": "Oats",
+    "pack": "Healthy Food",
+    "pack_id": "PACK-HEALTHY-FOOD",
+    "category": "Healthy Food",
+    "image": "assets/catalogue/clean/FOOD-007.png"
+  },
+  {
+    "code": "FOOD-008",
+    "name": "Yogurt",
+    "pack": "Healthy Food",
+    "pack_id": "PACK-HEALTHY-FOOD",
+    "category": "Healthy Food",
+    "image": "assets/catalogue/clean/FOOD-008.png"
+  },
+  {
+    "code": "FOOD-009",
+    "name": "Lentils",
+    "pack": "Healthy Food",
+    "pack_id": "PACK-HEALTHY-FOOD",
+    "category": "Healthy Food",
+    "image": "assets/catalogue/clean/FOOD-009.png"
+  },
+  {
+    "code": "FOOD-010",
+    "name": "Broccoli",
+    "pack": "Healthy Food",
+    "pack_id": "PACK-HEALTHY-FOOD",
+    "category": "Healthy Food",
+    "image": "assets/catalogue/clean/FOOD-010.png"
+  },
+  {
+    "code": "FOOD-011",
+    "name": "Orange",
+    "pack": "Healthy Food",
+    "pack_id": "PACK-HEALTHY-FOOD",
+    "category": "Healthy Food",
+    "image": "assets/catalogue/clean/FOOD-011.png"
+  },
+  {
+    "code": "FOOD-012",
+    "name": "Tomato",
+    "pack": "Healthy Food",
+    "pack_id": "PACK-HEALTHY-FOOD",
+    "category": "Healthy Food",
+    "image": "assets/catalogue/clean/FOOD-012.png"
+  },
+  {
+    "code": "TECH-001",
+    "name": "Engineer Superpower",
+    "pack": "Engineer Quotes",
+    "pack_id": "PACK-ENGINEER-QUOTES",
+    "category": "Engineering / Coding",
+    "image": "assets/catalogue/clean/TECH-001.png"
+  },
+  {
+    "code": "TECH-002",
+    "name": "Programmers Attract Bugs",
+    "pack": "Engineer Quotes",
+    "pack_id": "PACK-ENGINEER-QUOTES",
+    "category": "Engineering / Coding",
+    "image": "assets/catalogue/clean/TECH-002.png"
+  },
+  {
+    "code": "TECH-003",
+    "name": "Creative Minds",
+    "pack": "Engineer Quotes",
+    "pack_id": "PACK-ENGINEER-QUOTES",
+    "category": "Engineering / Coding",
+    "image": "assets/catalogue/clean/TECH-003.png"
+  },
+  {
+    "code": "TECH-004",
+    "name": "Tired Engineering Student",
+    "pack": "Engineer Quotes",
+    "pack_id": "PACK-ENGINEER-QUOTES",
+    "category": "Engineering / Coding",
+    "image": "assets/catalogue/clean/TECH-004.png"
+  },
+  {
+    "code": "TECH-005",
+    "name": "You Cannot Resist Me",
+    "pack": "Engineer Quotes",
+    "pack_id": "PACK-ENGINEER-QUOTES",
+    "category": "Engineering / Coding",
+    "image": "assets/catalogue/clean/TECH-005.png"
+  },
+  {
+    "code": "TECH-006",
+    "name": "CTRL Z in Real Life",
+    "pack": "Engineer Quotes",
+    "pack_id": "PACK-ENGINEER-QUOTES",
+    "category": "Engineering / Coding",
+    "image": "assets/catalogue/clean/TECH-006.png"
+  },
+  {
+    "code": "TECH-007",
+    "name": "CSS to My HTML",
+    "pack": "Engineer Quotes",
+    "pack_id": "PACK-ENGINEER-QUOTES",
+    "category": "Engineering / Coding",
+    "image": "assets/catalogue/clean/TECH-007.png"
+  },
+  {
+    "code": "TECH-008",
+    "name": "Engineer Helmet",
+    "pack": "Engineer Quotes",
+    "pack_id": "PACK-ENGINEER-QUOTES",
+    "category": "Engineering / Coding",
+    "image": "assets/catalogue/clean/TECH-008.png"
+  },
+  {
+    "code": "TECH-009",
+    "name": "Solving Problems",
+    "pack": "Engineer Quotes",
+    "pack_id": "PACK-ENGINEER-QUOTES",
+    "category": "Engineering / Coding",
+    "image": "assets/catalogue/clean/TECH-009.png"
+  },
+  {
+    "code": "TECH-010",
+    "name": "I Am an Engineer",
+    "pack": "Engineer Quotes",
+    "pack_id": "PACK-ENGINEER-QUOTES",
+    "category": "Engineering / Coding",
+    "image": "assets/catalogue/clean/TECH-010.png"
+  },
+  {
+    "code": "TECH-011",
+    "name": "Idiot Proof",
+    "pack": "Engineer Quotes",
+    "pack_id": "PACK-ENGINEER-QUOTES",
+    "category": "Engineering / Coding",
+    "image": "assets/catalogue/clean/TECH-011.png"
+  },
+  {
+    "code": "TECH-012",
+    "name": "Without Users No Errors",
+    "pack": "Engineer Quotes",
+    "pack_id": "PACK-ENGINEER-QUOTES",
+    "category": "Engineering / Coding",
+    "image": "assets/catalogue/clean/TECH-012.png"
+  },
+  {
+    "code": "TECH-013",
+    "name": "Born Creative Forced to Code",
+    "pack": "Engineer Quotes",
+    "pack_id": "PACK-ENGINEER-QUOTES",
+    "category": "Engineering / Coding",
+    "image": "assets/catalogue/clean/TECH-013.png"
+  },
+  {
+    "code": "TECH-014",
+    "name": "I Know HTML",
+    "pack": "Engineer Quotes",
+    "pack_id": "PACK-ENGINEER-QUOTES",
+    "category": "Engineering / Coding",
+    "image": "assets/catalogue/clean/TECH-014.png"
+  },
+  {
+    "code": "TECH-015",
+    "name": "Eat Sleep Engineering Repeat",
+    "pack": "Engineer Quotes",
+    "pack_id": "PACK-ENGINEER-QUOTES",
+    "category": "Engineering / Coding",
+    "image": "assets/catalogue/clean/TECH-015.png"
+  },
+  {
+    "code": "TECH-016",
+    "name": "Hello World",
+    "pack": "Engineer Quotes",
+    "pack_id": "PACK-ENGINEER-QUOTES",
+    "category": "Engineering / Coding",
+    "image": "assets/catalogue/clean/TECH-016.png"
+  },
+  {
+    "code": "MEME-001",
+    "name": "What Goes Around",
+    "pack": "Ultimate Memes Vol. 1",
+    "pack_id": "PACK-ULTIMATE-MEMES-1",
+    "category": "Memes",
+    "image": "assets/catalogue/clean/MEME-001.png"
+  },
+  {
+    "code": "MEME-002",
+    "name": "I Know HTML",
+    "pack": "Ultimate Memes Vol. 1",
+    "pack_id": "PACK-ULTIMATE-MEMES-1",
+    "category": "Memes",
+    "image": "assets/catalogue/clean/MEME-002.png"
+  },
+  {
+    "code": "MEME-003",
+    "name": "Bazinga",
+    "pack": "Ultimate Memes Vol. 1",
+    "pack_id": "PACK-ULTIMATE-MEMES-1",
+    "category": "Memes",
+    "image": "assets/catalogue/clean/MEME-003.png"
+  },
+  {
+    "code": "MEME-004",
+    "name": "Caution",
+    "pack": "Ultimate Memes Vol. 1",
+    "pack_id": "PACK-ULTIMATE-MEMES-1",
+    "category": "Memes",
+    "image": "assets/catalogue/clean/MEME-004.png"
+  },
+  {
+    "code": "MEME-005",
+    "name": "Verified",
+    "pack": "Ultimate Memes Vol. 1",
+    "pack_id": "PACK-ULTIMATE-MEMES-1",
+    "category": "Memes",
+    "image": "assets/catalogue/clean/MEME-005.png"
+  },
+  {
+    "code": "MEME-006",
+    "name": "Wanted",
+    "pack": "Ultimate Memes Vol. 1",
+    "pack_id": "PACK-ULTIMATE-MEMES-1",
+    "category": "Memes",
+    "image": "assets/catalogue/clean/MEME-006.png"
+  },
+  {
+    "code": "MEME-007",
+    "name": "Too Tired",
+    "pack": "Ultimate Memes Vol. 1",
+    "pack_id": "PACK-ULTIMATE-MEMES-1",
+    "category": "Memes",
+    "image": "assets/catalogue/clean/MEME-007.png"
+  },
+  {
+    "code": "MEME-008",
+    "name": "Say My Name",
+    "pack": "Ultimate Memes Vol. 1",
+    "pack_id": "PACK-ULTIMATE-MEMES-1",
+    "category": "Memes",
+    "image": "assets/catalogue/clean/MEME-008.png"
+  },
+  {
+    "code": "MEME-009",
+    "name": "999 Aura",
+    "pack": "Ultimate Memes Vol. 1",
+    "pack_id": "PACK-ULTIMATE-MEMES-1",
+    "category": "Memes",
+    "image": "assets/catalogue/clean/MEME-009.png"
+  },
+  {
+    "code": "MEME-010",
+    "name": "1000 Aura",
+    "pack": "Ultimate Memes Vol. 1",
+    "pack_id": "PACK-ULTIMATE-MEMES-1",
+    "category": "Memes",
+    "image": "assets/catalogue/clean/MEME-010.png"
+  },
+  {
+    "code": "MEME-011",
+    "name": "I Know Nothing",
+    "pack": "Ultimate Memes Vol. 1",
+    "pack_id": "PACK-ULTIMATE-MEMES-1",
+    "category": "Memes",
+    "image": "assets/catalogue/clean/MEME-011.png"
+  },
+  {
+    "code": "MEME-012",
+    "name": "Ah Shit Here We Go Again",
+    "pack": "Ultimate Memes Vol. 1",
+    "pack_id": "PACK-ULTIMATE-MEMES-1",
+    "category": "Memes",
+    "image": "assets/catalogue/clean/MEME-012.png"
+  },
+  {
+    "code": "MEME-013",
+    "name": "Sab Moh Maya Hai",
+    "pack": "Ultimate Memes Vol. 1",
+    "pack_id": "PACK-ULTIMATE-MEMES-1",
+    "category": "Memes",
+    "image": "assets/catalogue/clean/MEME-013.png"
+  },
+  {
+    "code": "MEME-014",
+    "name": "Bad Decisions",
+    "pack": "Ultimate Memes Vol. 1",
+    "pack_id": "PACK-ULTIMATE-MEMES-1",
+    "category": "Memes",
+    "image": "assets/catalogue/clean/MEME-014.png"
+  },
+  {
+    "code": "MEME-015",
+    "name": "I Saw That",
+    "pack": "Ultimate Memes Vol. 1",
+    "pack_id": "PACK-ULTIMATE-MEMES-1",
+    "category": "Memes",
+    "image": "assets/catalogue/clean/MEME-015.png"
+  },
+  {
+    "code": "MEME-016",
+    "name": "Stronger Tomorrow",
+    "pack": "Ultimate Memes Vol. 1",
+    "pack_id": "PACK-ULTIMATE-MEMES-1",
+    "category": "Memes",
+    "image": "assets/catalogue/clean/MEME-016.png"
+  },
+  {
+    "code": "MEME-017",
+    "name": "Fate Luck",
+    "pack": "Ultimate Memes Vol. 2",
+    "pack_id": "PACK-ULTIMATE-MEMES-2",
+    "category": "Memes",
+    "image": "assets/catalogue/clean/MEME-017.png"
+  },
+  {
+    "code": "MEME-018",
+    "name": "Thinking Outside the Box",
+    "pack": "Ultimate Memes Vol. 2",
+    "pack_id": "PACK-ULTIMATE-MEMES-2",
+    "category": "Memes",
+    "image": "assets/catalogue/clean/MEME-018.png"
+  },
+  {
+    "code": "MEME-019",
+    "name": "Outside the Box",
+    "pack": "Ultimate Memes Vol. 2",
+    "pack_id": "PACK-ULTIMATE-MEMES-2",
+    "category": "Memes",
+    "image": "assets/catalogue/clean/MEME-019.png"
+  },
+  {
+    "code": "MEME-020",
+    "name": "What the Duck",
+    "pack": "Ultimate Memes Vol. 2",
+    "pack_id": "PACK-ULTIMATE-MEMES-2",
+    "category": "Memes",
+    "image": "assets/catalogue/clean/MEME-020.png"
+  },
+  {
+    "code": "MEME-021",
+    "name": "Some People Need a High Five",
+    "pack": "Ultimate Memes Vol. 2",
+    "pack_id": "PACK-ULTIMATE-MEMES-2",
+    "category": "Memes",
+    "image": "assets/catalogue/clean/MEME-021.png"
+  },
+  {
+    "code": "MEME-022",
+    "name": "100% Tolerance",
+    "pack": "Ultimate Memes Vol. 2",
+    "pack_id": "PACK-ULTIMATE-MEMES-2",
+    "category": "Memes",
+    "image": "assets/catalogue/clean/MEME-022.png"
+  },
+  {
+    "code": "MEME-023",
+    "name": "My Patience",
+    "pack": "Ultimate Memes Vol. 2",
+    "pack_id": "PACK-ULTIMATE-MEMES-2",
+    "category": "Memes",
+    "image": "assets/catalogue/clean/MEME-023.png"
+  },
+  {
+    "code": "MEME-024",
+    "name": "Remember When I Asked",
+    "pack": "Ultimate Memes Vol. 2",
+    "pack_id": "PACK-ULTIMATE-MEMES-2",
+    "category": "Memes",
+    "image": "assets/catalogue/clean/MEME-024.png"
+  },
+  {
+    "code": "SASS-001",
+    "name": "Dead Tired",
+    "pack": "Kawaii & Sassy Vol. 1",
+    "pack_id": "PACK-KAWAII-SASSY-1",
+    "category": "Cute / Relatable",
+    "image": "assets/catalogue/clean/SASS-001.png"
+  },
+  {
+    "code": "SASS-002",
+    "name": "Hugger",
+    "pack": "Kawaii & Sassy Vol. 1",
+    "pack_id": "PACK-KAWAII-SASSY-1",
+    "category": "Cute / Relatable",
+    "image": "assets/catalogue/clean/SASS-002.png"
+  },
+  {
+    "code": "SASS-003",
+    "name": "Seriously Not Today",
+    "pack": "Kawaii & Sassy Vol. 1",
+    "pack_id": "PACK-KAWAII-SASSY-1",
+    "category": "Cute / Relatable",
+    "image": "assets/catalogue/clean/SASS-003.png"
+  },
+  {
+    "code": "SASS-004",
+    "name": "Nope Not Today",
+    "pack": "Kawaii & Sassy Vol. 1",
+    "pack_id": "PACK-KAWAII-SASSY-1",
+    "category": "Cute / Relatable",
+    "image": "assets/catalogue/clean/SASS-004.png"
+  },
+  {
+    "code": "SASS-005",
+    "name": "Catch You Later",
+    "pack": "Kawaii & Sassy Vol. 1",
+    "pack_id": "PACK-KAWAII-SASSY-1",
+    "category": "Cute / Relatable",
+    "image": "assets/catalogue/clean/SASS-005.png"
+  },
+  {
+    "code": "SASS-006",
+    "name": "Sleepy Panda",
+    "pack": "Kawaii & Sassy Vol. 1",
+    "pack_id": "PACK-KAWAII-SASSY-1",
+    "category": "Cute / Relatable",
+    "image": "assets/catalogue/clean/SASS-006.png"
+  },
+  {
+    "code": "SASS-007",
+    "name": "Too Hot to Handle",
+    "pack": "Kawaii & Sassy Vol. 1",
+    "pack_id": "PACK-KAWAII-SASSY-1",
+    "category": "Cute / Relatable",
+    "image": "assets/catalogue/clean/SASS-007.png"
+  },
+  {
+    "code": "SASS-008",
+    "name": "Do Not Disturb",
+    "pack": "Kawaii & Sassy Vol. 1",
+    "pack_id": "PACK-KAWAII-SASSY-1",
+    "category": "Cute / Relatable",
+    "image": "assets/catalogue/clean/SASS-008.png"
+  },
+  {
+    "code": "SASS-009",
+    "name": "Nap Goals",
+    "pack": "Kawaii & Sassy Vol. 1",
+    "pack_id": "PACK-KAWAII-SASSY-1",
+    "category": "Cute / Relatable",
+    "image": "assets/catalogue/clean/SASS-009.png"
+  },
+  {
+    "code": "SASS-010",
+    "name": "Do Not Drink",
+    "pack": "Kawaii & Sassy Vol. 1",
+    "pack_id": "PACK-KAWAII-SASSY-1",
+    "category": "Cute / Relatable",
+    "image": "assets/catalogue/clean/SASS-010.png"
+  },
+  {
+    "code": "SASS-011",
+    "name": "Coffee Panda",
+    "pack": "Kawaii & Sassy Vol. 1",
+    "pack_id": "PACK-KAWAII-SASSY-1",
+    "category": "Cute / Relatable",
+    "image": "assets/catalogue/clean/SASS-011.png"
+  },
+  {
+    "code": "SASS-012",
+    "name": "Avocado Mood",
+    "pack": "Kawaii & Sassy Vol. 1",
+    "pack_id": "PACK-KAWAII-SASSY-1",
+    "category": "Cute / Relatable",
+    "image": "assets/catalogue/clean/SASS-012.png"
+  },
+  {
+    "code": "SASS-013",
+    "name": "Books Before People",
+    "pack": "Kawaii & Sassy Vol. 1",
+    "pack_id": "PACK-KAWAII-SASSY-1",
+    "category": "Cute / Relatable",
+    "image": "assets/catalogue/clean/SASS-013.png"
+  },
+  {
+    "code": "SASS-014",
+    "name": "Serial Delivery",
+    "pack": "Kawaii & Sassy Vol. 1",
+    "pack_id": "PACK-KAWAII-SASSY-1",
+    "category": "Cute / Relatable",
+    "image": "assets/catalogue/clean/SASS-014.png"
+  },
+  {
+    "code": "SASS-015",
+    "name": "Too Much Going On",
+    "pack": "Kawaii & Sassy Vol. 1",
+    "pack_id": "PACK-KAWAII-SASSY-1",
+    "category": "Cute / Relatable",
+    "image": "assets/catalogue/clean/SASS-015.png"
+  },
+  {
+    "code": "SASS-016",
+    "name": "Too Spicy for You",
+    "pack": "Kawaii & Sassy Vol. 1",
+    "pack_id": "PACK-KAWAII-SASSY-1",
+    "category": "Cute / Relatable",
+    "image": "assets/catalogue/clean/SASS-016.png"
+  },
+  {
+    "code": "SASS-017",
+    "name": "Cheesy and Proud",
+    "pack": "Kawaii & Sassy Vol. 2",
+    "pack_id": "PACK-KAWAII-SASSY-2",
+    "category": "Cute / Relatable",
+    "image": "assets/catalogue/clean/SASS-017.png"
+  },
+  {
+    "code": "SASS-018",
+    "name": "Flaky but Fabulous",
+    "pack": "Kawaii & Sassy Vol. 2",
+    "pack_id": "PACK-KAWAII-SASSY-2",
+    "category": "Cute / Relatable",
+    "image": "assets/catalogue/clean/SASS-018.png"
+  },
+  {
+    "code": "SASS-019",
+    "name": "Cool Lemon",
+    "pack": "Kawaii & Sassy Vol. 2",
+    "pack_id": "PACK-KAWAII-SASSY-2",
+    "category": "Cute / Relatable",
+    "image": "assets/catalogue/clean/SASS-019.png"
+  },
+  {
+    "code": "SASS-020",
+    "name": "Cupcake Mood",
+    "pack": "Kawaii & Sassy Vol. 2",
+    "pack_id": "PACK-KAWAII-SASSY-2",
+    "category": "Cute / Relatable",
+    "image": "assets/catalogue/clean/SASS-020.png"
+  },
+  {
+    "code": "SASS-021",
+    "name": "Too Sweet",
+    "pack": "Kawaii & Sassy Vol. 2",
+    "pack_id": "PACK-KAWAII-SASSY-2",
+    "category": "Cute / Relatable",
+    "image": "assets/catalogue/clean/SASS-021.png"
+  },
+  {
+    "code": "SASS-022",
+    "name": "Slow Morning",
+    "pack": "Kawaii & Sassy Vol. 2",
+    "pack_id": "PACK-KAWAII-SASSY-2",
+    "category": "Cute / Relatable",
+    "image": "assets/catalogue/clean/SASS-022.png"
+  },
+  {
+    "code": "SASS-023",
+    "name": "Rest Mood",
+    "pack": "Kawaii & Sassy Vol. 2",
+    "pack_id": "PACK-KAWAII-SASSY-2",
+    "category": "Cute / Relatable",
+    "image": "assets/catalogue/clean/SASS-023.png"
+  },
+  {
+    "code": "SASS-024",
+    "name": "Not Today Cat",
+    "pack": "Kawaii & Sassy Vol. 2",
+    "pack_id": "PACK-KAWAII-SASSY-2",
+    "category": "Cute / Relatable",
+    "image": "assets/catalogue/clean/SASS-024.png"
+  },
+  {
+    "code": "SASS-025",
+    "name": "Avocado",
+    "pack": "Kawaii & Sassy Vol. 2",
+    "pack_id": "PACK-KAWAII-SASSY-2",
+    "category": "Cute / Relatable",
+    "image": "assets/catalogue/clean/SASS-025.png"
+  },
+  {
+    "code": "SASS-026",
+    "name": "Too Sweet Donut",
+    "pack": "Kawaii & Sassy Vol. 2",
+    "pack_id": "PACK-KAWAII-SASSY-2",
+    "category": "Cute / Relatable",
+    "image": "assets/catalogue/clean/SASS-026.png"
+  },
+  {
+    "code": "SASS-027",
+    "name": "Slow Morning Cat",
+    "pack": "Kawaii & Sassy Vol. 2",
+    "pack_id": "PACK-KAWAII-SASSY-2",
+    "category": "Cute / Relatable",
+    "image": "assets/catalogue/clean/SASS-027.png"
+  },
+  {
+    "code": "SASS-028",
+    "name": "Rest Fox",
+    "pack": "Kawaii & Sassy Vol. 2",
+    "pack_id": "PACK-KAWAII-SASSY-2",
+    "category": "Cute / Relatable",
+    "image": "assets/catalogue/clean/SASS-028.png"
+  },
+  {
+    "code": "SASS-029",
+    "name": "Coffee Time Panda",
+    "pack": "Kawaii & Sassy Vol. 2",
+    "pack_id": "PACK-KAWAII-SASSY-2",
+    "category": "Cute / Relatable",
+    "image": "assets/catalogue/clean/SASS-029.png"
+  },
+  {
+    "code": "SASS-030",
+    "name": "Nope Panda",
+    "pack": "Kawaii & Sassy Vol. 2",
+    "pack_id": "PACK-KAWAII-SASSY-2",
+    "category": "Cute / Relatable",
+    "image": "assets/catalogue/clean/SASS-030.png"
+  },
+  {
+    "code": "LONG-ANIME-ORIGINAL-1",
+    "name": "Anime Original Long Sticker Pack · design 1",
+    "pack": "Anime Original Long Sticker Pack",
+    "pack_id": "LONG-ANIME-ORIGINAL",
+    "category": "Long Stickers",
+    "image": "assets/catalogue/clean/LONG-ANIME-ORIGINAL-1.png",
+    "kind": "long",
+    "sheet_count": 4
+  },
+  {
+    "code": "LONG-ANIME-ORIGINAL-2",
+    "name": "Anime Original Long Sticker Pack · design 2",
+    "pack": "Anime Original Long Sticker Pack",
+    "pack_id": "LONG-ANIME-ORIGINAL",
+    "category": "Long Stickers",
+    "image": "assets/catalogue/clean/LONG-ANIME-ORIGINAL-2.png",
+    "kind": "long",
+    "sheet_count": 4
+  },
+  {
+    "code": "LONG-ANIME-ORIGINAL-3",
+    "name": "Anime Original Long Sticker Pack · design 3",
+    "pack": "Anime Original Long Sticker Pack",
+    "pack_id": "LONG-ANIME-ORIGINAL",
+    "category": "Long Stickers",
+    "image": "assets/catalogue/clean/LONG-ANIME-ORIGINAL-3.png",
+    "kind": "long",
+    "sheet_count": 4
+  },
+  {
+    "code": "LONG-ANIME-ORIGINAL-4",
+    "name": "Anime Original Long Sticker Pack · design 4",
+    "pack": "Anime Original Long Sticker Pack",
+    "pack_id": "LONG-ANIME-ORIGINAL",
+    "category": "Long Stickers",
+    "image": "assets/catalogue/clean/LONG-ANIME-ORIGINAL-4.png",
+    "kind": "long",
+    "sheet_count": 4
+  },
+  {
+    "code": "LONG-ANIME-VARIANT-1",
+    "name": "Anime Variant Long Sticker Pack · design 1",
+    "pack": "Anime Variant Long Sticker Pack",
+    "pack_id": "LONG-ANIME-VARIANT",
+    "category": "Long Stickers",
+    "image": "assets/catalogue/clean/LONG-ANIME-VARIANT-1.png",
+    "kind": "long",
+    "sheet_count": 4
+  },
+  {
+    "code": "LONG-ANIME-VARIANT-2",
+    "name": "Anime Variant Long Sticker Pack · design 2",
+    "pack": "Anime Variant Long Sticker Pack",
+    "pack_id": "LONG-ANIME-VARIANT",
+    "category": "Long Stickers",
+    "image": "assets/catalogue/clean/LONG-ANIME-VARIANT-2.png",
+    "kind": "long",
+    "sheet_count": 4
+  },
+  {
+    "code": "LONG-ANIME-VARIANT-3",
+    "name": "Anime Variant Long Sticker Pack · design 3",
+    "pack": "Anime Variant Long Sticker Pack",
+    "pack_id": "LONG-ANIME-VARIANT",
+    "category": "Long Stickers",
+    "image": "assets/catalogue/clean/LONG-ANIME-VARIANT-3.png",
+    "kind": "long",
+    "sheet_count": 4
+  },
+  {
+    "code": "LONG-ANIME-VARIANT-4",
+    "name": "Anime Variant Long Sticker Pack · design 4",
+    "pack": "Anime Variant Long Sticker Pack",
+    "pack_id": "LONG-ANIME-VARIANT",
+    "category": "Long Stickers",
+    "image": "assets/catalogue/clean/LONG-ANIME-VARIANT-4.png",
+    "kind": "long",
+    "sheet_count": 4
+  },
+  {
+    "code": "LONG-MULTI-ANIME-1",
+    "name": "Multi Anime Long Sticker Pack · design 1",
+    "pack": "Multi Anime Long Sticker Pack",
+    "pack_id": "LONG-MULTI-ANIME",
+    "category": "Long Stickers",
+    "image": "assets/catalogue/clean/LONG-MULTI-ANIME-1.png",
+    "kind": "long",
+    "sheet_count": 4
+  },
+  {
+    "code": "LONG-MULTI-ANIME-2",
+    "name": "Multi Anime Long Sticker Pack · design 2",
+    "pack": "Multi Anime Long Sticker Pack",
+    "pack_id": "LONG-MULTI-ANIME",
+    "category": "Long Stickers",
+    "image": "assets/catalogue/clean/LONG-MULTI-ANIME-2.png",
+    "kind": "long",
+    "sheet_count": 4
+  },
+  {
+    "code": "LONG-MULTI-ANIME-3",
+    "name": "Multi Anime Long Sticker Pack · design 3",
+    "pack": "Multi Anime Long Sticker Pack",
+    "pack_id": "LONG-MULTI-ANIME",
+    "category": "Long Stickers",
+    "image": "assets/catalogue/clean/LONG-MULTI-ANIME-3.png",
+    "kind": "long",
+    "sheet_count": 4
+  },
+  {
+    "code": "LONG-MULTI-ANIME-4",
+    "name": "Multi Anime Long Sticker Pack · design 4",
+    "pack": "Multi Anime Long Sticker Pack",
+    "pack_id": "LONG-MULTI-ANIME",
+    "category": "Long Stickers",
+    "image": "assets/catalogue/clean/LONG-MULTI-ANIME-4.png",
+    "kind": "long",
+    "sheet_count": 4
+  },
+  {
+    "code": "LONG-NARUTO-AKATSUKI-1",
+    "name": "Naruto & Akatsuki Long Sticker Pack · design 1",
+    "pack": "Naruto & Akatsuki Long Sticker Pack",
+    "pack_id": "LONG-NARUTO-AKATSUKI",
+    "category": "Long Stickers",
+    "image": "assets/catalogue/clean/LONG-NARUTO-AKATSUKI-1.png",
+    "kind": "long",
+    "sheet_count": 2
+  },
+  {
+    "code": "LONG-NARUTO-AKATSUKI-2",
+    "name": "Naruto & Akatsuki Long Sticker Pack · design 2",
+    "pack": "Naruto & Akatsuki Long Sticker Pack",
+    "pack_id": "LONG-NARUTO-AKATSUKI",
+    "category": "Long Stickers",
+    "image": "assets/catalogue/clean/LONG-NARUTO-AKATSUKI-2.png",
+    "kind": "long",
+    "sheet_count": 2
   }
 ];

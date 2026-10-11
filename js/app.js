@@ -1,6 +1,6 @@
 (async () => {
   'use strict';
-  await Promise.all([window.TPT_CATALOGUE_READY,window.TPT_PRODUCTS_READY]);
+  await Promise.all([window.TPT_CATALOGUE_READY,window.TPT_PRODUCTS_READY,window.TPT_SETTINGS_READY,window.TPT_PACKS_READY]);
   const catalogue = window.CATALOGUE;
   const products = catalogue.products;
   for (const product of products) {
@@ -11,7 +11,7 @@
   const byId = id => products.find(product => product.id === id);
   const money = value => value == null ? 'Quote after review' : `₹${Number(value).toLocaleString('en-IN')}`;
   const escapeHtml = value => String(value ?? '').replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
-  const priceMarkup = (price, product) => { const old = price === 99 && product?.id?.startsWith('PACK-') ? 299 : price === 1199 && product?.categories?.includes('Light Boxes') ? 2599 : Number.isFinite(price) ? price * 2 + 99 : null; return `${old ? `<del class="old-price" aria-label="Earlier price ${money(old)}">${money(old)}</del>` : ''}${money(price)}`; };
+  const priceMarkup = price => money(price);
   const magnetDesign = card => { const select = card.querySelector('[data-magnet-design]'); return select ? select.options[select.selectedIndex]?.textContent || '' : ''; };
   const safeParse = (key, fallback) => { try { return JSON.parse(localStorage.getItem(key)) ?? fallback; } catch { return fallback; } };
   let cart = safeParse('tpt-cart-v4', []);
@@ -69,6 +69,9 @@
     return optimised[image] || image;
   }
   function imageMarkup(product, image, alt = product.name) {
+    if(product.categories.includes('Long Stickers') && image){const count=Number(product.variants[0].size.match(/^\d+/)?.[0])||4;return `<div class="laptop-preview" data-strip-source="${escapeHtml(image)}" data-strip-count="${count}"><img src="${escapeHtml(image)}" alt="${escapeHtml(alt)} original complete artwork" loading="lazy"></div>`;}
+
+    const sheet=(window.STICKER_PACKS||[]).find(p=>p.id===product.id&&p.kind!=='long'&&p.code_list?.length);if(sheet)return `<div class="laptop-preview" data-pack-id="${escapeHtml(sheet.id)}"><img src="${escapeHtml(sheet.image)}" alt="${escapeHtml(product.name)} original artwork" loading="lazy"></div>`;
     return image ? `<img src="${fastImage(image)}" alt="${alt}" loading="lazy" decoding="async" onerror="this.parentElement.innerHTML='<div class=&quot;unpictured&quot;><span>✦</span><small>Product image unavailable</small></div>'">` : '<div class="unpictured"><span>✦</span><small>Custom piece · image confirmed with your request</small></div>';
   }
   function optionMarkup(values, selected) {
@@ -78,7 +81,7 @@
     return applicableVariants(product)[0] || product.variants[0];
   }
   function canBuyDirectly(product) {
-    const buyable = ['Sticker Packs','Holographic Packs','Suncatcher Stickers','Memoroids','Light Boxes'];
+    const buyable = ['Long Stickers','Sticker Packs','Holographic Packs','Suncatcher Stickers','Memoroids','Light Boxes'];
     return product.status === 'order' && product.categories.some(category => buyable.includes(category));
   }
   function cardMarkup(product) {
@@ -184,7 +187,7 @@
       $('#detailCustom')?.addEventListener('click', () => { dialog.close(); routeCustom(product, product.designNames?.[designIndex] || ''); });
     }
     const main = dialog.querySelector('.detail-media>img'); if (main) main.classList.add('detail-main');
-    dialog.querySelectorAll('[data-thumb]').forEach(button => button.addEventListener('click', () => { const media = dialog.querySelector('.detail-media'); media.querySelector('video')?.remove(); const image = media.querySelector('.detail-main') || document.createElement('img'); image.className = 'detail-main'; image.src = button.dataset.thumb; if (product.designNames) designIndex = images.findIndex(src => fastImage(src) === button.dataset.thumb); image.alt = product.name; media.prepend(image); }));
+    dialog.querySelectorAll('[data-thumb]').forEach(button => button.addEventListener('click', () => { const media = dialog.querySelector('.detail-media'); media.querySelector('video')?.remove();media.querySelector('.laptop-preview')?.remove(); const image = media.querySelector('.detail-main') || document.createElement('img'); image.className = 'detail-main'; image.src = button.dataset.thumb; if (product.designNames) designIndex = images.findIndex(src => fastImage(src) === button.dataset.thumb); image.alt = product.name; media.prepend(image); }));
     $('#detailSize').addEventListener('change', () => syncDetail('size')); $('#detailFinish').addEventListener('change', () => syncDetail('finish')); syncDetail(); dialog.showModal();
   }
 
@@ -281,7 +284,8 @@
   $('#continueWa').addEventListener('click', event => { if (!cart.length) { event.preventDefault(); toast('Your bag is empty'); } });
 
   const heroSlides = [
-    { image:'assets/lightbox/lightbox-eren-on.webp', label:'FLAGSHIP · A4 · ₹1,199', title:'Eren Light Box.', link:'#lightboxExperience', text:'Experience Eren ↗', design:'eren' },
+    {image:'assets/sticker-packs/anime-heroes-laptop.webp',label:'ORIGINAL STICKERS · FROM ₹99',title:'Your fandom. On your laptop.',link:'#stickerPacks',text:'Explore sticker packs ↗'},
+    { image:'assets/lightbox/lightbox-eren-on.webp', label:'FLAGSHIP · A4 · ₹999', title:'Eren Light Box.', link:'#lightboxExperience', text:'Experience Eren ↗', design:'eren' },
     { image:'assets/lightbox/lightbox-goku-on.webp', label:'FLAGSHIP · REMOTE INCLUDED', title:'Goku Light Box.', link:'#lightboxExperience', text:'Experience Goku ↗', design:'goku' },
     { image:'assets/lightbox/lightbox-luffy-on.webp', label:'FLAGSHIP · COLOUR-CHANGING', title:'Luffy Light Box.', link:'#lightboxExperience', text:'Experience Luffy ↗', design:'luffy' },
     { image:'assets/products/suncatcher-design-collection.webp', label:'SUNLIGHT, REIMAGINED', title:'A little window magic.', link:'#shop', text:'Explore suncatchers ↗', category:'Suncatcher Stickers' },
@@ -289,7 +293,7 @@
     { image:'assets/products/joey-how-you-doin.jpg', label:'FAVOURITE MOMENTS, FRAMED', title:'Your fridge, but happier.', link:'#shop', text:'Shop photo magnets ↗', category:'Fridge Magnets' },
     { image:'assets/products/acrylic-magnetic-display-mockup.webp', label:'A4 / MAGNETIC / ₹399', title:'Art that takes up space.', link:'#shop', text:'See acrylic displays ↗', category:'Acrylic Posters' }
   ]; let heroIndex = 0, heroPaused = matchMedia('(prefers-reduced-motion: reduce)').matches;
-  function renderHero() { const slide = heroSlides[heroIndex], photo = $('#heroPhoto'), link = $('#heroLink'); photo.classList.remove('swap'); void photo.offsetWidth; photo.src = slide.image; photo.classList.add('swap'); photo.alt = slide.title; $('#heroLabel').textContent = slide.label; $('#heroTitle').textContent = slide.title; link.textContent = slide.text; link.href = slide.link; if (slide.category) link.dataset.category = slide.category; else delete link.dataset.category; if (slide.design) link.dataset.heroDesign = slide.design; else delete link.dataset.heroDesign; $('#heroIndex').textContent = `${String(heroIndex + 1).padStart(2,'0')} / ${String(heroSlides.length).padStart(2,'0')}`; $('#heroPause').textContent = heroPaused ? '▶' : 'Ⅱ'; $('#heroPause').setAttribute('aria-label', heroPaused ? 'Play carousel' : 'Pause carousel'); }
+  function renderHero() { const slide = heroSlides[heroIndex], photo = $('#heroPhoto'), link = $('#heroLink'); photo.classList.remove('swap'); void photo.offsetWidth; photo.src = slide.image;const prior=photo.parentElement.querySelector('.hero-laptop');if(prior)prior.remove();photo.hidden=Boolean(slide.packId);if(slide.packId){const host=document.createElement('div');host.className='laptop-preview hero-laptop';host.dataset.packId=slide.packId;photo.before(host);window.TPTLaptopPreview?.refresh();} photo.classList.add('swap'); photo.alt = slide.title; $('#heroLabel').textContent = slide.label; $('#heroTitle').textContent = slide.title; link.textContent = slide.text; link.href = slide.link; if (slide.category) link.dataset.category = slide.category; else delete link.dataset.category; if (slide.design) link.dataset.heroDesign = slide.design; else delete link.dataset.heroDesign; $('#heroIndex').textContent = `${String(heroIndex + 1).padStart(2,'0')} / ${String(heroSlides.length).padStart(2,'0')}`; $('#heroPause').textContent = heroPaused ? '▶' : 'Ⅱ'; $('#heroPause').setAttribute('aria-label', heroPaused ? 'Play carousel' : 'Pause carousel'); }
   function moveHero(delta) { heroIndex = (heroIndex + delta + heroSlides.length) % heroSlides.length; renderHero(); }
   $('#heroPrev').addEventListener('click', () => moveHero(-1)); $('#heroNext').addEventListener('click', () => moveHero(1)); $('#heroPause').addEventListener('click', () => { heroPaused = !heroPaused; renderHero(); }); setInterval(() => { if (!heroPaused) moveHero(1); }, 5500);
   const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -314,12 +318,29 @@
   const themes = [...new Set(products.map(product => product.theme))].sort(); $('#fandom').insertAdjacentHTML('beforeend', themes.map(theme => `<option>${theme}</option>`).join(''));
   window.TPTStore = { addProduct, byId, openCart: () => { renderCart(); cartDialog.showModal(); }, toast, renderProducts, setCategory: category => { state.category = category; renderCategories(); renderProducts(); location.hash = 'shop'; } };
   createFallingMagic(); renderCategories(); renderProducts(); updateCartCount(); renderHero(); watchReveals();
+  const requestedProduct = new URLSearchParams(location.search).get('product');
+  if (requestedProduct && byId(requestedProduct)) openProduct(byId(requestedProduct));
   const sheetsParam = new URLSearchParams(location.search).get('stickerSheets');
   if (sheetsParam) {
     try {
-      const sheets = JSON.parse(sheetsParam), known = new Set((window.STICKER_CATALOGUE || []).map(item => item.code)), product = byId('PACK-CUSTOM');
-      if (!Array.isArray(sheets) || !sheets.length || sheets.length > 100 || !sheets.every(sheet => [6,12,16].includes(sheet.codes?.length) && ['regular','holo'].includes(sheet.finish) && new Set(sheet.codes).size === sheet.codes.length && sheet.codes.every(code => known.has(code)))) throw Error('Invalid sheet selection');
-      sheets.forEach(sheet => { const variant = product.variants.find(v => v.id === `${sheet.finish === 'holo' ? 'HOLO' : 'REG'}-${sheet.codes.length}`); addProduct(product, variant, 1, sheet.codes.join(', ')); });
+      const sheets = JSON.parse(sheetsParam), designs = window.STICKER_CATALOGUE || [];
+      if (!Array.isArray(sheets) || !sheets.length || sheets.length > 100) throw Error('Invalid sheets');
+      const orders=sheets.map(sheet=>{
+        if(!Array.isArray(sheet.codes)||new Set(sheet.codes).size!==sheet.codes.length)throw Error('Invalid codes');
+        const items=sheet.codes.map(code=>designs.find(s=>s.code===code));
+        if(items.some(x=>!x))throw Error('Unknown code');
+        let product,variant;
+        if(sheet.kind==='long'){
+          const pack=(window.STICKER_PACKS||[]).find(p=>p.id===sheet.packId&&p.kind==='long');
+          if(!pack||sheet.finish!=='regular'||sheet.codes.length!==pack.count||!sheet.codes.every(c=>pack.code_list.includes(c)))throw Error('Invalid long pack');
+          product=byId(pack.id);variant=product?.variants[0];
+        }else{
+          if(sheet.codes.length!==16||items.some(x=>x.kind==='long')||!['regular','holo'].includes(sheet.finish))throw Error('Invalid regular sheet');
+          product=byId('PACK-CUSTOM');variant=product?.variants.find(v=>v.id===`${sheet.finish==='holo'?'HOLO':'REG'}-16`);
+        }
+        if(!product||!variant)throw Error('Unavailable sheet');return {product,variant,selection:sheet.codes.join(', ')};
+      });
+      orders.forEach(order=>addProduct(order.product,order.variant,1,order.selection));
       renderCart(); cartDialog.showModal();
     } catch (error) { toast('Could not add those sheets. Please choose designs again.'); }
     history.replaceState(null, '', location.pathname + location.hash);

@@ -1,3 +1,8 @@
 User-agent: *
 Allow: /
+Disallow: /api/
+Disallow: /owner.html
+Disallow: /admin.html
+Disallow: /catalogue-manager.html
+Disallow: /product-manager.html
 Sitemap: https://thepapertheory.in/sitemap.xml

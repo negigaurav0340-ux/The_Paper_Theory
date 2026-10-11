@@ -131,6 +131,7 @@
       data=next;saveLocal();render();$('#backupStatus').textContent='Backup restored. Enter password and publish.';
     }catch(error){$('#backupStatus').textContent=error.message;}
   });
-  $('#connectionStatus').textContent=window.TPT_LIVE_PRODUCTS?'Live connection ready · enter password to save':'Preview mode · configure live API once';
+  $('#connectionStatus').textContent=window.TPT_LIVE_PRODUCTS?'Live connection ready · enter password to save':'File mode · no password needed · download backup to publish';
   render();
+  const requested=new URLSearchParams(location.search).get('edit');if(requested){const p=current().find(p=>p.id===requested);if(p)openEditor(p);}
 })();

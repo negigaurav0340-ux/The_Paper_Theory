@@ -1,0 +1,9 @@
+{
+  "name": "the-paper-theory",
+  "version": "3.0.0",
+  "private": true,
+  "scripts": {
+    "build": "node scripts/build-seo.cjs",
+    "check": "node scripts/verify.cjs && node scripts/verify-publish.cjs && node scripts/verify-owner.cjs"
+  }
+}
