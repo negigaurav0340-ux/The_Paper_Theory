@@ -1,0 +1,49 @@
+name: Prepare reviewed website release
+on:
+  push:
+    branches: [website-laptop-editor-update]
+    paths: [.github/workflows/prepare-reviewed-website.yml]
+permissions:
+  contents: write
+concurrency:
+  group: reviewed-website-release
+  cancel-in-progress: false
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out the temporary release branch
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          ref: website-laptop-editor-update
+          fetch-depth: 1
+      - name: Verify and unpack the reviewed website
+        shell: python
+        run: |
+          import hashlib, pathlib, zipfile, io, stat
+          root = pathlib.Path.cwd()
+          parts = [root / f"tpt-release.part-{i:02d}" for i in range(11)]
+          archive = b"".join(p.read_bytes() for p in parts)
+          expected = "e06a12f189a4bf68fb7061861238f75745c3820edea58a9c1bdc8f50579f01da"
+          assert hashlib.sha256(archive).hexdigest() == expected, "Archive checksum mismatch"
+          with zipfile.ZipFile(io.BytesIO(archive)) as bundle:
+              for entry in bundle.infolist():
+                  path = pathlib.PurePosixPath(entry.filename)
+                  assert not path.is_absolute() and ".." not in path.parts
+                  assert path.parts and path.parts[0] not in (".git", ".github")
+                  assert not stat.S_ISLNK(entry.external_attr >> 16)
+              bundle.extractall(root)
+          for p in parts:
+              p.unlink()
+      - name: Build and verify the release
+        run: |
+          npm run build
+          npm run check
+      - name: Commit the verified website to the temporary branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add --all
+          git commit -m "Publish laptop previews and connected sticker sheet editor"
+          git push origin HEAD:website-laptop-editor-update
