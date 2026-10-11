@@ -1,7 +1,7 @@
 const fs=require('node:fs'),path=require('node:path'),vm=require('node:vm'),assert=require('node:assert/strict');
 const root=path.resolve(__dirname,'..'),c={window:{},structuredClone};vm.createContext(c);for(const f of ['products.js','lightbox-data.js','product-updates.js','site-settings.js','sticker-packs-data.js'])vm.runInContext(fs.readFileSync(path.join(root,'js',f),'utf8'),c);
 const all=c.window.CATALOGUE.products,ids=new Set();for(const p of all){assert(!ids.has(p.id),'Duplicate product ID');ids.add(p.id);for(const src of p.images)if(src.startsWith('assets/'))assert(fs.existsSync(path.join(root,src)),'Missing '+src);}
-const long=all.filter(p=>p.categories.includes('Long Stickers'));assert.equal(long.length,4);for(const p of long){assert.equal(p.variants.length,1);assert.equal(p.variants[0].price,99);assert(/(?:4 stickers · 6|2 stickers · 10) × 2 inches each/.test(p.variants[0].size));}
+const long=all.filter(p=>p.categories.some(c=>c.endsWith('Long Stickers')));assert.equal(long.length,4);for(const p of long){assert.equal(p.variants.length,1);assert.equal(p.variants[0].price,99);assert(/(?:4 stickers · 6|2 stickers · 10) × 2 inches each/.test(p.variants[0].size));}
 for(const p of long){const source=fs.readFileSync(path.join(root,'products',p.id.toLowerCase()+'.html'),'utf8');const schema=JSON.parse(source.match(/<script id="productSchema" type="application\/ld\+json">([\s\S]*?)<\/script>/)[1]);assert.equal(schema['@graph'][0].offers[0].price,99);assert(source.includes(p.variants[0].size));}
 const productApi=require('../api/products')._test,settingsApi=require('../api/settings')._test;
 for(const p of long)assert.equal(productApi.validate({upserts:[p],hiddenIds:[]}).upserts[0].variants[0].price,99);

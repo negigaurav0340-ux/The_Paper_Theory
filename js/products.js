@@ -7,7 +7,6 @@ window.CATALOGUE = {
   "categories": [
     "All",
     "Sticker Packs",
-    "Long Stickers",
     "Holographic Packs",
     "Light Boxes",
     "Suncatcher Stickers",
@@ -17,18 +16,20 @@ window.CATALOGUE = {
     "Acrylic Posters",
     "Shadow Boxes",
     "Original Designs",
-    "Custom Packages / Bundles"
+    "Custom Packages / Bundles",
+    "Large Long Stickers",
+    "Extra Large Long Stickers"
   ],
   "products": [
     {
       "id": "LONG-ANIME-ORIGINAL",
-      "name": "Anime Original Long Sticker Pack",
+      "name": "Anime Original Large Long Sticker Pack",
       "categories": [
-        "Long Stickers",
-        "Sticker Packs"
+        "Sticker Packs",
+        "Large Long Stickers"
       ],
       "theme": "Anime",
-      "description": "4 long anime stickers, each 6 × 2 inches, for ₹99 per complete pack. The full original artwork is shown alongside an illustrative laptop placement preview. Choose this exact pack; check the measured flat surface before ordering.",
+      "description": "Large long format. 4 long anime stickers, each 6 × 2 inches, for ₹99 per complete pack. The full original artwork is shown alongside an illustrative laptop placement preview. Choose this exact pack; check the measured flat surface before ordering.",
       "images": [
         "assets/long-stickers/anime-original.webp"
       ],
@@ -44,17 +45,18 @@ window.CATALOGUE = {
       "status": "order",
       "unit": "4 long stickers per pack",
       "application": "Apply to a clean, dry, flat surface. Measure the space first.",
-      "care": "Wipe gently; avoid scrubbing the cut edges."
+      "care": "Wipe gently; avoid scrubbing the cut edges.",
+      "longFormat": "Large"
     },
     {
       "id": "LONG-ANIME-VARIANT",
-      "name": "Anime Variant Long Sticker Pack",
+      "name": "Anime Variant Large Long Sticker Pack",
       "categories": [
-        "Long Stickers",
-        "Sticker Packs"
+        "Sticker Packs",
+        "Large Long Stickers"
       ],
       "theme": "Anime",
-      "description": "4 long anime stickers, each 6 × 2 inches, for ₹99 per complete pack. The full original artwork is shown alongside an illustrative laptop placement preview. Choose this exact pack; check the measured flat surface before ordering.",
+      "description": "Large long format. 4 long anime stickers, each 6 × 2 inches, for ₹99 per complete pack. The full original artwork is shown alongside an illustrative laptop placement preview. Choose this exact pack; check the measured flat surface before ordering.",
       "images": [
         "assets/long-stickers/anime-variant.webp"
       ],
@@ -70,17 +72,18 @@ window.CATALOGUE = {
       "status": "order",
       "unit": "4 long stickers per pack",
       "application": "Apply to a clean, dry, flat surface. Measure the space first.",
-      "care": "Wipe gently; avoid scrubbing the cut edges."
+      "care": "Wipe gently; avoid scrubbing the cut edges.",
+      "longFormat": "Large"
     },
     {
       "id": "LONG-MULTI-ANIME",
-      "name": "Multi Anime Long Sticker Pack",
+      "name": "Multi Anime Large Long Sticker Pack",
       "categories": [
-        "Long Stickers",
-        "Sticker Packs"
+        "Sticker Packs",
+        "Large Long Stickers"
       ],
       "theme": "Anime",
-      "description": "4 long anime stickers, each 6 × 2 inches, for ₹99 per complete pack. The full original artwork is shown alongside an illustrative laptop placement preview. Choose this exact pack; check the measured flat surface before ordering.",
+      "description": "Large long format. 4 long anime stickers, each 6 × 2 inches, for ₹99 per complete pack. The full original artwork is shown alongside an illustrative laptop placement preview. Choose this exact pack; check the measured flat surface before ordering.",
       "images": [
         "assets/long-stickers/multi-anime.webp"
       ],
@@ -96,17 +99,18 @@ window.CATALOGUE = {
       "status": "order",
       "unit": "4 long stickers per pack",
       "application": "Apply to a clean, dry, flat surface. Measure the space first.",
-      "care": "Wipe gently; avoid scrubbing the cut edges."
+      "care": "Wipe gently; avoid scrubbing the cut edges.",
+      "longFormat": "Large"
     },
     {
       "id": "LONG-NARUTO-AKATSUKI",
-      "name": "Naruto & Akatsuki Long Sticker Pack",
+      "name": "Naruto & Akatsuki Extra Large Long Sticker Pack",
       "categories": [
-        "Long Stickers",
-        "Sticker Packs"
+        "Sticker Packs",
+        "Extra Large Long Stickers"
       ],
       "theme": "Anime",
-      "description": "2 long anime stickers, each 10 × 2 inches, for ₹99 per complete pack. The full original artwork is shown alongside an illustrative laptop placement preview. Choose this exact pack; check the measured flat surface before ordering.",
+      "description": "Extra Large long format. 2 long anime stickers, each 10 × 2 inches, for ₹99 per complete pack. The full original artwork is shown alongside an illustrative laptop placement preview. Choose this exact pack; check the measured flat surface before ordering.",
       "images": [
         "assets/long-stickers/naruto-akatsuki.webp"
       ],
@@ -122,7 +126,8 @@ window.CATALOGUE = {
       "status": "order",
       "unit": "2 long stickers per pack",
       "application": "Apply to a clean, dry, flat surface. Measure the space first.",
-      "care": "Wipe gently; avoid scrubbing the cut edges."
+      "care": "Wipe gently; avoid scrubbing the cut edges.",
+      "longFormat": "Extra Large"
     },
     {
       "id": "PACK-ANIME-01",
@@ -573,7 +578,7 @@ window.CATALOGUE = {
         "Custom Packages / Bundles"
       ],
       "theme": "Custom Mix",
-      "description": "Select as many catalogue designs as you like, then choose a sheet: 4 × 4 (16 at 1 inch), 3 × 4 (12 at 2 inches), or 2 × 3 (6 at 3 inches). Each mixed sheet is ₹129 regular or ₹229 holographic.",
+      "description": "Choose 16 one-inch stickers (4 × 4), 12 two-inch stickers (3 × 4), or 6 three-inch stickers (2 × 3) from the catalogue. Every regular laminated sheet is ₹99; holographic finish is ₹199.",
       "images": [
         "assets/lifestyle/anime-classics.webp",
         "assets/lifestyle/anime-meme.webp"
@@ -583,49 +588,49 @@ window.CATALOGUE = {
           "id": "REG-6",
           "size": "6 stickers · 2 × 3 · 3 inches sheet",
           "finish": "Regular laminated · custom mix",
-          "price": 129,
+          "price": 99,
           "image": "assets/lifestyle/anime-classics.webp"
         },
         {
           "id": "HOLO-6",
           "size": "6 stickers · 2 × 3 · 3 inches sheet",
           "finish": "Holographic · custom mix",
-          "price": 229,
+          "price": 199,
           "image": "assets/lifestyle/anime-classics.webp"
         },
         {
           "id": "REG-12",
           "size": "12 stickers · 3 × 4 · 2 inches sheet",
           "finish": "Regular laminated · custom mix",
-          "price": 129,
+          "price": 99,
           "image": "assets/lifestyle/anime-classics.webp"
         },
         {
           "id": "HOLO-12",
           "size": "12 stickers · 3 × 4 · 2 inches sheet",
           "finish": "Holographic · custom mix",
-          "price": 229,
+          "price": 199,
           "image": "assets/lifestyle/anime-classics.webp"
         },
         {
           "id": "REG-16",
           "size": "16 stickers · 4 × 4 · 1 inch sheet",
           "finish": "Regular laminated · custom mix",
-          "price": 129,
+          "price": 99,
           "image": "assets/lifestyle/anime-classics.webp"
         },
         {
           "id": "HOLO-16",
           "size": "16 stickers · 4 × 4 · 1 inch sheet",
           "finish": "Holographic · custom mix",
-          "price": 229,
+          "price": 199,
           "image": "assets/lifestyle/anime-classics.webp"
         }
       ],
       "unit": "1 custom sheet",
       "status": "order",
       "requiresSelection": true,
-      "selectionPrompt": "Enter sticker codes, e.g. ANIME-001, MOTU-004, ENG-002",
+      "selectionPrompt": "Choose 6, 12 or 16 different regular catalogue codes to match your sheet size.",
       "quality": "Laminated waterproof sticker pack with a scratch-resistant surface and residue-free removal from suitable clean, smooth surfaces.",
       "application": "Select up to 16 different catalogue codes per sheet. You can build as many sheets as you want.",
       "care": "Wipe clean gently. Avoid prolonged heat and aggressive abrasion."
@@ -1107,25 +1112,36 @@ window.CATALOGUE = {
     },
     {
       "id": "LIT-001",
-      "name": "After Dark · Light Boxes",
+      "name": "Eren · A4 Anime Light Box",
       "categories": [
         "Light Boxes"
       ],
-      "theme": "Custom",
-      "description": "A future collection of illuminated display pieces. Ask us about the launch; no date has been announced.",
-      "images": [],
+      "theme": "Attack on Titan",
+      "description": "Artwork by day and a colour-changing centrepiece after dark. A real A4 display with built-in lighting and remote controller included.",
+      "images": [
+        "assets/lightbox/lightbox-eren-on.webp",
+        "assets/lightbox/lightbox-eren-off.webp"
+      ],
       "variants": [
         {
-          "id": "quote",
-          "size": "Size to discuss",
-          "finish": "Light box",
-          "price": null
+          "id": "LIT-EREN-A4",
+          "size": "A4 · 210 × 297 mm",
+          "finish": "Eren · Colour-changing",
+          "price": 999,
+          "image": "assets/lightbox/lightbox-eren-on.webp"
         }
       ],
-      "unit": "Scope to confirm",
-      "status": "soon",
-      "application": "Share your idea in the custom form below.",
-      "care": "Final care guidance will be confirmed for your chosen product."
+      "unit": "1 A4 Light Box · remote included",
+      "status": "order",
+      "application": "Place on a stable indoor surface. Use the included remote to change colours and lighting modes. Power connection details are confirmed with the order.",
+      "care": "Handle carefully, keep away from moisture, clean with a soft dry microfibre cloth, avoid harsh chemicals and disconnect power before cleaning.",
+      "video": "assets/lightbox/lightbox-demo.mp4",
+      "contents": [
+        "A4 Light Box",
+        "Built-in colour-changing lighting",
+        "Remote controller"
+      ],
+      "quality": "A4 format · 210 × 297 mm. Real product footage is shown in the Light Box showcase."
     },
     {
       "id": "BND-002",
@@ -1452,13 +1468,79 @@ window.CATALOGUE = {
         "16 separately cut stickers",
         "Regular ₹99 · Holographic ₹199"
       ]
+    },
+    {
+      "categories": [
+        "Light Boxes"
+      ],
+      "description": "Artwork by day and a colour-changing centrepiece after dark. A real A4 display with built-in lighting and remote controller included.",
+      "video": "assets/lightbox/lightbox-demo.mp4",
+      "unit": "1 A4 Light Box · remote included",
+      "contents": [
+        "A4 Light Box",
+        "Built-in colour-changing lighting",
+        "Remote controller"
+      ],
+      "status": "order",
+      "application": "Place on a stable indoor surface. Use the included remote to change colours and lighting modes. Power connection details are confirmed with the order.",
+      "care": "Handle carefully, keep away from moisture, clean with a soft dry microfibre cloth, avoid harsh chemicals and disconnect power before cleaning.",
+      "quality": "A4 format · 210 × 297 mm. Real product footage is shown in the Light Box showcase.",
+      "id": "LIT-GOKU",
+      "name": "Goku · A4 Anime Light Box",
+      "theme": "Dragon Ball",
+      "images": [
+        "assets/lightbox/lightbox-goku-on.webp",
+        "assets/lightbox/lightbox-goku-off.webp"
+      ],
+      "variants": [
+        {
+          "id": "LIT-GOKU-A4",
+          "size": "A4 · 210 × 297 mm",
+          "finish": "Goku · Colour-changing",
+          "price": 999,
+          "image": "assets/lightbox/lightbox-goku-on.webp"
+        }
+      ]
+    },
+    {
+      "categories": [
+        "Light Boxes"
+      ],
+      "description": "Artwork by day and a colour-changing centrepiece after dark. A real A4 display with built-in lighting and remote controller included.",
+      "video": "assets/lightbox/lightbox-demo.mp4",
+      "unit": "1 A4 Light Box · remote included",
+      "contents": [
+        "A4 Light Box",
+        "Built-in colour-changing lighting",
+        "Remote controller"
+      ],
+      "status": "order",
+      "application": "Place on a stable indoor surface. Use the included remote to change colours and lighting modes. Power connection details are confirmed with the order.",
+      "care": "Handle carefully, keep away from moisture, clean with a soft dry microfibre cloth, avoid harsh chemicals and disconnect power before cleaning.",
+      "quality": "A4 format · 210 × 297 mm. Real product footage is shown in the Light Box showcase.",
+      "id": "LIT-LUFFY",
+      "name": "Luffy · A4 Anime Light Box",
+      "theme": "One Piece",
+      "images": [
+        "assets/lightbox/lightbox-luffy-on.webp",
+        "assets/lightbox/lightbox-luffy-off.webp"
+      ],
+      "variants": [
+        {
+          "id": "LIT-LUFFY-A4",
+          "size": "A4 · 210 × 297 mm",
+          "finish": "Luffy · Colour-changing",
+          "price": 999,
+          "image": "assets/lightbox/lightbox-luffy-on.webp"
+        }
+      ]
     }
   ],
   "freeShippingThreshold": 699,
   "stickerPricing": {
     "presetRegular": 99,
     "presetHolographic": 149,
-    "customRegular": 129,
+    "customRegular": 99,
     "customHolographic": 179,
     "sizes": [
       "16 stickers · 4 × 4",
