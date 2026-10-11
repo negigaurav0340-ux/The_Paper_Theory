@@ -63,6 +63,7 @@
 
   function chooseDesign(key) {
     design = key; const item = designs[key];
+    const purchaseHost=document.querySelector('.lightbox-copy');if(purchaseHost){purchaseHost.dataset.productId=item.productId;purchaseHost.dataset.variantId=item.variant;window.TPTStore.syncPurchaseCounters();}
     $('#lightOff').src = item.off; $('#lightOn').src = item.on; $('#lightboxDesign').value = item.variant;
     const product=catalogue.products.find(p=>p.id===item.productId);
     if(product){$('#lightboxTitle').textContent=product.name;$('.lightbox-price').innerHTML=`${product.variants?.[0]?.price == null ? 'Quote' : '₹'+product.variants[0].price.toLocaleString('en-IN')} <small>complete Light Box</small>`;}

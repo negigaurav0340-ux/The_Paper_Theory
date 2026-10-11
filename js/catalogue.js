@@ -9,11 +9,11 @@ const capacity=()=>layout.value==='long4'?4:layout.value==='long2'?2:Number(layo
 const longMode=()=>layout.value.startsWith('long');
 const eligible=s=>longMode()?s.kind==='long'&&s.sheet_count===capacity():s.kind!=='long';
 selected=selected.filter(c=>eligible(byCode.get(c))).slice(0,capacity());if(longMode()&&selected.length)selected=selected.filter(c=>byCode.get(c).pack_id===byCode.get(selected[0]).pack_id);
-const price=()=>longMode()?99:window.CATALOGUE.products.find(p=>p.id==='PACK-CUSTOM')?.variants.find(v=>v.id===`${finish.value==='holo'?'HOLO':'REG'}-${capacity()}`)?.price??99;
+const price=()=>longMode()?(finish.value==='holo'?199:99):window.CATALOGUE.products.find(p=>p.id==='PACK-CUSTOM')?.variants.find(v=>v.id===`${finish.value==='holo'?'HOLO':'REG'}-${capacity()}`)?.price??99;
 const complete=()=>selected.length===capacity();
 function persist(){try{localStorage.setItem(key,JSON.stringify({layout:layout.value,finish:finish.value,codes:selected}));}catch{$('editorStatus').textContent='Browser storage unavailable; keep this page open.';}}
 function update(){
- if(longMode())finish.value='regular';finish.disabled=longMode();
+ finish.disabled=false;
  $('selectedCount').textContent=selected.length;$('selectionHint').textContent=complete()?'Sheet complete · ready to add to bag':`Choose ${capacity()-selected.length} more matching design(s)`;
  $('sheetSummary').textContent=`${capacity()} ${longMode()?'long ':''}stickers per sheet · ₹${price()} · ${selected.length} selected.`;
  $('shopSelection').disabled=!complete();$('downloadSheet').disabled=!complete();$('printSheet').disabled=!complete();
@@ -26,7 +26,7 @@ function render(){
  const query=$('catalogueSearch').value.trim().toLowerCase(),items=catalogue.filter(s=>eligible(s)&&(filter==='All'||s.category===filter)&&(!query||`${s.code} ${s.name||''} ${s.pack} ${s.category}`.toLowerCase().includes(query)));
  $('catalogueResultCount').textContent=`${items.length} compatible designs`;
  const groups=[...new Set(items.map(s=>s.pack_id))];
- $('catalogueRoot').innerHTML=groups.map(id=>{const p=packs.find(p=>p.id===id),list=items.filter(s=>s.pack_id===id),slug=p?.slug||id;return `<section class="pack-section" id="${safe(slug)}"><div class="pack-head"><div><p>${safe(list[0].category)}</p><h2>${safe(p?.name||list[0].pack)}</h2></div><b>${list.length} designs</b></div>${longMode()?`<p>${capacity()===4?'Large':'Extra Large'} · exact ${capacity()}-sticker sheet · ₹99 <button class="pack-select" data-exact-pack="${safe(id)}">Use this complete long sheet</button></p>`:''}<div class="grid">${list.map(s=>`<label class="sticker"><input type="checkbox" value="${safe(s.code)}" aria-label="Select ${safe(s.code)}"><img src="${safe(s.image)}" alt="${safe(s.name||s.code)}" loading="lazy"><span class="code">${safe(s.code)}<small>${safe(s.name||s.category)}</small></span></label>`).join('')}</div></section>`;}).join('')||'<p>No matching designs. Try another search or sheet type.</p>';
+ $('catalogueRoot').innerHTML=groups.map(id=>{const p=packs.find(p=>p.id===id),list=items.filter(s=>s.pack_id===id),slug=p?.slug||id;return `<section class="pack-section" id="${safe(slug)}"><div class="pack-head"><div><p>${safe(list[0].category)}</p><h2>${safe(p?.name||list[0].pack)}</h2></div><b>${list.length} designs</b></div>${longMode()?`<p>${capacity()===4?'Large':'Extra Large'} · exact ${capacity()}-sticker sheet · ₹99 <button class="pack-select" data-exact-pack="${safe(id)}">Use this complete long sheet</button></p>`:''}<div class="grid">${list.map(s=>`<label class="sticker"><input type="checkbox" value="${safe(s.code)}" aria-label="Select ${safe(s.code)}"><img src="${safe(s.image)}" alt="${safe(s.name||s.code)}" loading="lazy"><span class="sticker-name">${safe(s.name||s.category)}<small class="code">${safe(s.code)}</small></span></label>`).join('')}</div></section>`;}).join('')||'<p>No matching designs. Try another search or sheet type.</p>';
  update();
 }
 function renderFilters(){const groups=[...new Set(catalogue.filter(eligible).map(s=>s.category))];$('catalogueFilters').innerHTML=['All',...groups].map(s=>`<button data-filter="${safe(s)}" class="${s===filter?'active':''}" aria-pressed="${s===filter}">${safe(s)}</button>`).join('');}

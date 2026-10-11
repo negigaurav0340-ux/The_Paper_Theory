@@ -26,10 +26,11 @@ window.CATALOGUE = {
       "name": "Anime Original Large Long Sticker Pack",
       "categories": [
         "Sticker Packs",
-        "Large Long Stickers"
+        "Large Long Stickers",
+        "Holographic Packs"
       ],
       "theme": "Anime",
-      "description": "4 Large long laminated vinyl stickers, 6 × 2 inches each. Complete matching anime artwork on one sheet for ₹99. Waterproof with a scratch-resistant finish; apply to clean, smooth surfaces.",
+      "description": "4 Large long laminated vinyl stickers, 6 × 2 inches each. Complete matching anime artwork on one sheet for ₹99 regular or ₹199 holographic. Waterproof with a scratch-resistant finish; apply to clean, smooth surfaces.",
       "images": [
         "assets/long-stickers/anime-original.webp"
       ],
@@ -39,6 +40,13 @@ window.CATALOGUE = {
           "size": "4 stickers · 6 × 2 inches each",
           "finish": "Regular",
           "price": 99,
+          "image": "assets/long-stickers/anime-original.webp"
+        },
+        {
+          "id": "HOLO",
+          "size": "4 stickers · 6 × 2 inches each",
+          "finish": "Holographic",
+          "price": 199,
           "image": "assets/long-stickers/anime-original.webp"
         }
       ],
@@ -54,10 +62,11 @@ window.CATALOGUE = {
       "name": "Anime Variant Large Long Sticker Pack",
       "categories": [
         "Sticker Packs",
-        "Large Long Stickers"
+        "Large Long Stickers",
+        "Holographic Packs"
       ],
       "theme": "Anime",
-      "description": "4 Large long laminated vinyl stickers, 6 × 2 inches each. Complete matching anime artwork on one sheet for ₹99. Waterproof with a scratch-resistant finish; apply to clean, smooth surfaces.",
+      "description": "4 Large long laminated vinyl stickers, 6 × 2 inches each. Complete matching anime artwork on one sheet for ₹99 regular or ₹199 holographic. Waterproof with a scratch-resistant finish; apply to clean, smooth surfaces.",
       "images": [
         "assets/long-stickers/anime-variant.webp"
       ],
@@ -67,6 +76,13 @@ window.CATALOGUE = {
           "size": "4 stickers · 6 × 2 inches each",
           "finish": "Regular",
           "price": 99,
+          "image": "assets/long-stickers/anime-variant.webp"
+        },
+        {
+          "id": "HOLO",
+          "size": "4 stickers · 6 × 2 inches each",
+          "finish": "Holographic",
+          "price": 199,
           "image": "assets/long-stickers/anime-variant.webp"
         }
       ],
@@ -82,10 +98,11 @@ window.CATALOGUE = {
       "name": "Multi Anime Large Long Sticker Pack",
       "categories": [
         "Sticker Packs",
-        "Large Long Stickers"
+        "Large Long Stickers",
+        "Holographic Packs"
       ],
       "theme": "Anime",
-      "description": "4 Large long laminated vinyl stickers, 6 × 2 inches each. Complete matching anime artwork on one sheet for ₹99. Waterproof with a scratch-resistant finish; apply to clean, smooth surfaces.",
+      "description": "4 Large long laminated vinyl stickers, 6 × 2 inches each. Complete matching anime artwork on one sheet for ₹99 regular or ₹199 holographic. Waterproof with a scratch-resistant finish; apply to clean, smooth surfaces.",
       "images": [
         "assets/long-stickers/multi-anime.webp"
       ],
@@ -95,6 +112,13 @@ window.CATALOGUE = {
           "size": "4 stickers · 6 × 2 inches each",
           "finish": "Regular",
           "price": 99,
+          "image": "assets/long-stickers/multi-anime.webp"
+        },
+        {
+          "id": "HOLO",
+          "size": "4 stickers · 6 × 2 inches each",
+          "finish": "Holographic",
+          "price": 199,
           "image": "assets/long-stickers/multi-anime.webp"
         }
       ],
@@ -110,10 +134,11 @@ window.CATALOGUE = {
       "name": "Naruto & Akatsuki Extra Large Long Sticker Pack",
       "categories": [
         "Sticker Packs",
-        "Extra Large Long Stickers"
+        "Extra Large Long Stickers",
+        "Holographic Packs"
       ],
       "theme": "Anime",
-      "description": "2 Extra Large long laminated vinyl stickers, 10 × 2 inches each. Complete matching anime artwork on one sheet for ₹99. Waterproof with a scratch-resistant finish; apply to clean, smooth surfaces.",
+      "description": "2 Extra Large long laminated vinyl stickers, 10 × 2 inches each. Complete matching anime artwork on one sheet for ₹99 regular or ₹199 holographic. Waterproof with a scratch-resistant finish; apply to clean, smooth surfaces.",
       "images": [
         "assets/long-stickers/naruto-akatsuki.webp"
       ],
@@ -123,6 +148,13 @@ window.CATALOGUE = {
           "size": "2 stickers · 10 × 2 inches each",
           "finish": "Regular",
           "price": 99,
+          "image": "assets/long-stickers/naruto-akatsuki.webp"
+        },
+        {
+          "id": "HOLO",
+          "size": "2 stickers · 10 × 2 inches each",
+          "finish": "Holographic",
+          "price": 199,
           "image": "assets/long-stickers/naruto-akatsuki.webp"
         }
       ],
