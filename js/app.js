@@ -31,8 +31,16 @@
   }
   function toast(message) {
     const node = $('#toast'); node.textContent = message; node.classList.add('show');
-    clearTimeout(toast.timer); toast.timer = setTimeout(() => node.classList.remove('show'), 2600);
+    clearTimeout(toast.timer); toast.timer = setTimeout(() => node.classList.remove('show'), 4500);
   }
+  const quantityMarkup = () => '<div class="purchase-quantity" aria-label="Quantity"><button type="button" data-purchase-step="-1" aria-label="Decrease quantity">−</button><output aria-live="polite">1</output><button type="button" data-purchase-step="1" aria-label="Increase quantity">+</button></div>';
+  const haptic = () => { try { navigator.vibrate?.(18); } catch {} };
+  document.addEventListener('click', event => {
+    const button=event.target.closest('[data-purchase-step]');if(!button)return;
+    const output=button.closest('.purchase-quantity').querySelector('output');
+    output.value=String(Math.max(1,Math.min(99,Number(output.value||output.textContent)+Number(button.dataset.purchaseStep))));output.textContent=output.value;haptic();
+  });
+  const purchaseQuantity = host => Number(host?.querySelector('.purchase-quantity output')?.value || host?.querySelector('.purchase-quantity output')?.textContent || 1);
   function productCategory(product) {
     if (state.category === 'All') return product.categories[0];
     return product.categories.includes(state.category) ? state.category : product.categories[0];
@@ -96,7 +104,7 @@
       <div class="card-photo"><button class="image-button" data-view="${product.id}" aria-label="View ${product.name}">${imageMarkup(product, image)}</button><span class="badge ${category.includes('Holographic') ? 'holo' : ''}">${status}</span><button class="save ${favourites.has(product.id) ? 'saved' : ''}" data-save="${product.id}" aria-label="${favourites.has(product.id) ? 'Remove from' : 'Save to'} favourites">${favourites.has(product.id) ? '♥' : '♡'}</button></div>
       <div class="card-info"><p class="eyebrow">${product.theme} / ${product.id}</p><h3><button data-view="${product.id}">${product.name}</button></h3><p class="brief">${product.description}</p>
       ${product.designNames ? `<div class="magnet-carousel-controls"><button type="button" data-magnet-prev>←</button><span data-magnet-index>1 / ${product.images.length}</span><button type="button" data-magnet-next>→</button></div><select class="magnet-design" data-magnet-design aria-label="Magnet design">${product.designNames.map((name,i)=>`<option value="${i}">${name}</option>`).join('')}</select>` : ''}<div class="variant-controls"><label>Size<select data-size>${optionMarkup(sizes, variant?.size)}</select></label><label>Finish<select data-finish>${optionMarkup(finishes, variant?.finish)}</select></label></div>
-      <div class="card-bottom"><strong data-price>${priceMarkup(variant?.price, product)}</strong><span>${product.status === 'soon' ? '<button class="add" data-custom="' + product.id + '">Ask about launch</button>' : product.requiresSelection ? '<button class="add" data-view="' + product.id + '">Choose codes</button>' : !canBuyDirectly(product) || variant?.price == null ? '<button class="add" data-custom="' + product.id + '">' + (product.status === 'enquire' ? 'Enquire' : 'Request quote') + '</button>' : '<button class="add" data-add="' + product.id + '">Add to bag</button>'}</span></div><small>${product.unit}</small></div></article>`;
+      ${canBuyDirectly(product)&&!product.requiresSelection?quantityMarkup():''}<div class="card-bottom"><strong data-price>${priceMarkup(variant?.price, product)}</strong><span>${product.status === 'soon' ? '<button class="add" data-custom="' + product.id + '">Ask about launch</button>' : product.requiresSelection ? '<button class="add" data-view="' + product.id + '">Choose codes</button>' : !canBuyDirectly(product) || variant?.price == null ? '<button class="add" data-custom="' + product.id + '">' + (product.status === 'enquire' ? 'Enquire' : 'Request quote') + '</button>' : '<button class="add" data-add="' + product.id + '">Add to bag</button>'}</span></div><small>${product.unit}</small></div></article>`;
   }
   function renderProducts() {
     const list = filteredProducts(); grid.innerHTML = list.map(cardMarkup).join('');
@@ -124,8 +132,13 @@
     const existing = cart.find(item => item.key === key && item.type === 'product');
     if (existing) existing.quantity += quantity;
     else cart.push({ type: 'product', key, productId: product.id, variantId: variant.id, quantity, selection });
-    saveState(); updateCartCount(); toast(`${product.name} added to your bag`);
-    window.TPTAnalytics?.track('add_to_cart', { productId: product.id, variantId: variant.id });
+    saveState(); updateCartCount(); haptic(); toast(`${quantity} × ${product.name} added to your bag`);
+    const card=grid.querySelector(`[data-id="${product.id}"]`),button=card?.querySelector('[data-add]');
+    if(button){button.textContent='✓ Added';clearTimeout(button.feedbackTimer);button.feedbackTimer=setTimeout(()=>button.textContent='Add to bag',2500);}
+    const detailFeedback=$('#detailFeedback');if(detailFeedback)detailFeedback.textContent=`✓ ${quantity} × ${product.name} added to your bag.`;
+    const feedback=$('#purchaseFeedback');if(feedback)feedback.textContent=`✓ ${quantity} added. Your bag now has ${cart.reduce((n,i)=>n+i.quantity,0)} items.`;
+    $('#openCart')?.classList.add('bag-updated');setTimeout(()=>$('#openCart')?.classList.remove('bag-updated'),1200);
+    window.TPTAnalytics?.track('add_to_cart', { productId: product.id, variantId: variant.id, itemCount:quantity, value:(variant.price||0)*quantity });
   }
   function routeCustom(product, design = '') {
     $('#customType').value = product.categories[0]; updateCustomSelectors();
@@ -143,7 +156,7 @@
     const view = event.target.closest('[data-view]'); if (view) { const card = view.closest('.card'); openProduct(byId(view.dataset.view), card?.querySelector('[data-magnet-design]')?.selectedIndex || 0); return; }
     const card = event.target.closest('.card'); if (!card) return;
     const product = byId(card.dataset.id); const variant = selectVariant(card);
-    if (event.target.closest('[data-add]')) addProduct(product, variant);
+    if (event.target.closest('[data-add]')) addProduct(product, variant, purchaseQuantity(card));
     if (event.target.closest('[data-custom]')) routeCustom(product, magnetDesign(card));
   });
   categoryHost.addEventListener('click', event => { const button = event.target.closest('[data-category]'); if (!button) return; state.category = button.dataset.category; renderCategories(); renderProducts(); });
@@ -162,7 +175,7 @@
     currentProduct = product; const variant = product.variants[0]; const images = product.images || [];
     const recent = safeParse('tpt-recent-v1', []).filter(id => id !== product.id); recent.unshift(product.id); localStorage.setItem('tpt-recent-v1', JSON.stringify(recent.slice(0, 8)));
     window.TPTAnalytics?.track('product_view', { productId: product.id });
-    $('#productDetail').innerHTML = `<div class="detail-layout"><div class="detail-media">${imageMarkup(product, product.designNames ? images[designIndex] : variant.image || images[0])}<div class="thumbs">${images.map((image, index) => `<button data-thumb="${fastImage(image)}" aria-label="Show image ${index + 1}"><img src="${fastImage(image)}" alt="" loading="lazy" decoding="async"></button>`).join('')}${product.video ? `<button data-video="${product.video}">▶ Product video</button>` : ''}</div></div><div class="detail-info"><p class="eyebrow">${product.theme} / ${product.id}</p><h2>${product.name}</h2><p>${product.description}</p><div class="variant-controls"><label>Size<select id="detailSize">${optionMarkup([...new Set(product.variants.map(v => v.size))], variant.size)}</select></label><label>Finish<select id="detailFinish">${optionMarkup([...new Set(product.variants.map(v => v.finish))], variant.finish)}</select></label></div><div class="card-bottom"><strong id="detailPrice">${priceMarkup(variant.price, product)}</strong><span id="detailAction"></span></div>${product.contents ? `<h4>Inside this package</h4><p>${product.contents.join(' · ')}</p>` : ''}${product.requiresUpload ? `<h4>Your artwork</h4><label class="selection-field"><span>Paste a shareable Drive link to your original designs. Or <a href="#custom" onclick="document.getElementById('productDialog').close()">use the custom request form</a> to select a local file. Original artwork is shared separately.</span><input id="detailArtwork" type="url" placeholder="https://drive.google.com/..."></label>` : ''}${product.requiresSelection ? `<h4>Sticker codes</h4><label class="selection-field"><span>Choose from <a href="catalogue.html" target="_blank">the catalogue</a></span><textarea id="detailSelection" rows="3" placeholder="${product.selectionPrompt || 'Enter selected codes'}"></textarea></label>` : ''}${product.quality ? `<h4>Quality</h4><p>${product.quality}</p>` : ''}<h4>How to use or display</h4><p>${product.application}</p><h4>Care</h4><p>${product.care}</p><p class="fine">${product.unit} · Select your exact variant before adding.</p></div></div>`;
+    $('#productDetail').innerHTML = `<div class="detail-layout"><div class="detail-media">${imageMarkup(product, product.designNames ? images[designIndex] : variant.image || images[0])}<div class="thumbs">${images.map((image, index) => `<button data-thumb="${fastImage(image)}" aria-label="Show image ${index + 1}"><img src="${fastImage(image)}" alt="" loading="lazy" decoding="async"></button>`).join('')}${product.video ? `<button data-video="${product.video}">▶ Product video</button>` : ''}</div></div><div class="detail-info"><p class="eyebrow">${product.theme} / ${product.id}</p><h2>${product.name}</h2><p>${product.description}</p><div class="variant-controls"><label>Size<select id="detailSize">${optionMarkup([...new Set(product.variants.map(v => v.size))], variant.size)}</select></label><label>Finish<select id="detailFinish">${optionMarkup([...new Set(product.variants.map(v => v.finish))], variant.finish)}</select></label></div><div class="card-bottom"><strong id="detailPrice">${priceMarkup(variant.price, product)}</strong>${quantityMarkup()}<span id="detailAction"></span></div><p id="detailFeedback" role="status"></p>${product.contents ? `<h4>Inside this package</h4><p>${product.contents.join(' · ')}</p>` : ''}${product.requiresUpload ? `<h4>Your artwork</h4><label class="selection-field"><span>Paste a shareable Drive link to your original designs. Or <a href="#custom" onclick="document.getElementById('productDialog').close()">use the custom request form</a> to select a local file. Original artwork is shared separately.</span><input id="detailArtwork" type="url" placeholder="https://drive.google.com/..."></label>` : ''}${product.requiresSelection ? `<h4>Sticker codes</h4><label class="selection-field"><span>Choose from <a href="catalogue.html" target="_blank">the catalogue</a></span><textarea id="detailSelection" rows="3" placeholder="${product.selectionPrompt || 'Enter selected codes'}"></textarea></label>` : ''}${product.quality ? `<h4>Quality</h4><p>${product.quality}</p>` : ''}<h4>How to use or display</h4><p>${product.application}</p><h4>Care</h4><p>${product.care}</p><p class="fine">${product.unit} · Select your exact variant before adding.</p></div></div>`;
     function syncDetail(prefer = 'size') {
       const size = $('#detailSize').value, finish = $('#detailFinish').value;
       let selected = product.variants.find(v => v.size === size && v.finish === finish);
@@ -182,8 +195,8 @@
         }
         return codes.join(', ');
       };
-      $('#detailAdd')?.addEventListener('click', () => { const selection = checkedSelection(); if (selection === null) return; addProduct(product, selected, 1, selection); });
-      $('#detailBuy')?.addEventListener('click', () => { const selection = checkedSelection(); if (selection === null) return; addProduct(product, selected, 1, selection); window.TPTAnalytics?.track('buy_now_clicked', { productId: product.id, variantId: selected.id }); dialog.close(); renderCart(); cartDialog.showModal(); });
+      $('#detailAdd')?.addEventListener('click', () => { const selection = checkedSelection(); if (selection === null) return; addProduct(product, selected, purchaseQuantity(dialog), selection); });
+      $('#detailBuy')?.addEventListener('click', () => { const selection = checkedSelection(); if (selection === null) return; addProduct(product, selected, purchaseQuantity(dialog), selection); window.TPTAnalytics?.track('buy_now_clicked', { productId: product.id, variantId: selected.id }); dialog.close(); renderCart(); cartDialog.showModal(); });
       $('#detailCustom')?.addEventListener('click', () => { dialog.close(); routeCustom(product, product.designNames?.[designIndex] || ''); });
     }
     const main = dialog.querySelector('.detail-media>img'); if (main) main.classList.add('detail-main');
@@ -210,7 +223,7 @@
   $('#openCart').addEventListener('click', () => { renderCart(); cartDialog.showModal(); });
   $('#cartItems').addEventListener('click', event => {
     const remove = event.target.closest('[data-remove]'); if (remove) cart = cart.filter(item => item.key !== remove.dataset.remove);
-    const qty = event.target.closest('[data-qty]'); if (qty) { const item = cart.find(entry => entry.key === qty.dataset.qty); item.quantity = Math.max(1, item.quantity + Number(qty.dataset.delta)); }
+    const qty = event.target.closest('[data-qty]'); if (qty) { const item = cart.find(entry => entry.key === qty.dataset.qty); item.quantity = Math.max(1, Math.min(99, item.quantity + Number(qty.dataset.delta))); haptic(); }
     saveState(); updateCartCount(); renderCart();
   });
   function buildWhatsApp() {
@@ -277,11 +290,12 @@
     const customer = collectCustomer(), addressError = validateCustomer(customer); $('#addressError').textContent = addressError;
     if (addressError) { toast(addressError); return; }
     const button = event.currentTarget, label = button.textContent; button.disabled = true; button.textContent = 'Creating PDF…';
-    try { window.TPTAnalytics?.track('checkout_started', { itemCount: cart.length }); await window.createOrderPdf(cart, products, customer); toast('Order PDF downloaded'); }
+    try { window.TPTAnalytics?.track('checkout_started', checkoutDetail(customer)); await window.createOrderPdf(cart, products, customer); toast('Order PDF downloaded'); }
     catch (error) { console.error(error); toast('PDF could not be created. Please try again.'); }
     finally { button.disabled = false; button.textContent = label; }
   });
-  $('#continueWa').addEventListener('click', event => { if (!cart.length) { event.preventDefault(); toast('Your bag is empty'); } });
+  function checkoutDetail(customer){return {itemCount:cart.reduce((n,i)=>n+i.quantity,0),productIds:[...new Set(cart.filter(i=>i.type==='product').map(i=>i.productId))],value:cart.reduce((n,i)=>n+(byId(i.productId)?.variants.find(v=>v.id===i.variantId)?.price||0)*i.quantity,0),deliveryCity:customer.city,deliveryRegion:customer.state,deliveryCountry:customer.country};}
+  $('#continueWa').addEventListener('click', event => { if (!cart.length) { event.preventDefault(); toast('Your bag is empty'); return; } const customer=collectCustomer();window.TPTAnalytics?.track('whatsapp_clicked',{...checkoutDetail(validateCustomer(customer)?{}:customer),surface:'checkout'}); });
 
   const heroSlides = [
     {image:'assets/sticker-packs/anime-heroes-laptop.webp',label:'ORIGINAL STICKERS · FROM ₹99',title:'Your fandom. On your laptop.',link:'#stickerPacks',text:'Explore sticker packs ↗'},
@@ -316,7 +330,7 @@
     document.querySelector('.hero').addEventListener('pointerleave', () => { showcase.style.setProperty('--tilt-x', '0deg'); showcase.style.setProperty('--tilt-y', '0deg'); });
   }
   const themes = [...new Set(products.map(product => product.theme))].sort(); $('#fandom').insertAdjacentHTML('beforeend', themes.map(theme => `<option>${theme}</option>`).join(''));
-  window.TPTStore = { addProduct, byId, openCart: () => { renderCart(); cartDialog.showModal(); }, toast, renderProducts, setCategory: category => { state.category = category; renderCategories(); renderProducts(); location.hash = 'shop'; } };
+  window.TPTStore = { addProduct, byId, openCart: () => { renderCart(); cartDialog.showModal(); }, toast, purchaseQuantity, renderProducts, setCategory: category => { state.category = category; renderCategories(); renderProducts(); location.hash = 'shop'; } };
   createFallingMagic(); renderCategories(); renderProducts(); updateCartCount(); renderHero(); watchReveals();
   const requestedProduct = new URLSearchParams(location.search).get('product');
   if (requestedProduct && byId(requestedProduct)) openProduct(byId(requestedProduct));

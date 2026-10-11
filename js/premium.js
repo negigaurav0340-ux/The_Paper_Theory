@@ -11,26 +11,7 @@
     blockSelectors: ['#cartDialog','#customForm']
   });
 
-  const analyticsKey = 'tpt-analytics-v1';
-  const sessionKey = 'tpt-session-v1';
-  const sessionId = sessionStorage.getItem(sessionKey) || (crypto.randomUUID?.() || `session-${Date.now()}-${Math.random().toString(36).slice(2)}`);
-  sessionStorage.setItem(sessionKey, sessionId);
-  const params = new URLSearchParams(location.search);
-  const source = params.get('utm_source') || (document.referrer ? new URL(document.referrer).hostname : 'direct');
-  const firstSource = localStorage.getItem('tpt-first-source-v1') || source;
-  localStorage.setItem('tpt-first-source-v1', firstSource);
-  function track(name, detail = {}) {
-    const events = safeParse(analyticsKey, []);
-    events.push({ name, time: new Date().toISOString(), sessionId, source, firstSource, path: location.pathname, device: innerWidth < 700 ? 'mobile' : innerWidth < 1024 ? 'tablet' : 'desktop', ...detail });
-    localStorage.setItem(analyticsKey, JSON.stringify(events.slice(-5000)));
-    window.dispatchEvent(new CustomEvent('tpt:analytics', { detail: events.at(-1) }));
-    if(location.protocol==='https:'||location.hostname==='localhost'){
-      const {sessionId,source,firstSource,path,device,productId,variantId,itemCount}=events.at(-1);
-      fetch('/api/analytics',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({name,sessionId,source,firstSource,path,device,productId,variantId,itemCount}),keepalive:true}).catch(()=>{});
-    }
-  }
-  window.TPTAnalytics = { track };
-  track('page_view');
+  const track=(name,detail={})=>window.TPTAnalytics?.track(name,detail);
 
   const designs = {
     eren: { productId: 'LIT-001', variant: 'LIT-EREN-A4', label: 'Eren', off: 'assets/lightbox/lightbox-eren-off.webp', on: 'assets/lightbox/lightbox-eren-on.webp' },
@@ -63,7 +44,7 @@
       if(node.nodeValue.includes('₹1,199') && !node.parentElement?.closest('.lightbox-price'))node.nodeValue=node.nodeValue.replaceAll('₹1,199',label);
     }
   }
-  track('product_view', { productId: current().productId, variantId: current().variant, surface: 'lightbox_showcase' });
+
   const comparison = $('#lightCompare');
   let dragging = false, sliderStarted = false;
   function setSplit(clientX) {
@@ -91,7 +72,7 @@
     track('product_view', { productId: item.productId, variantId: item.variant, surface: 'design_selector' });
   }
   $$('[data-light-design]').forEach(button => button.addEventListener('click', () => chooseDesign(button.dataset.lightDesign)));
-  $('#lightboxDesign')?.addEventListener('change', event => chooseDesign(Object.keys(designs).find(key => designs[key].variant === event.target.value) || 'eren'));
+  $('#lightboxDesign')?.addEventListener('change', event => {chooseDesign(Object.keys(designs).find(key => designs[key].variant === event.target.value) || 'eren');$('#designDropdown').open=false;});
   chooseDesign('eren');
 
   const flagshipTrack = $('#flagshipTrack');
@@ -116,8 +97,8 @@
     const selected = current(), product = catalogue.products.find(item => item.id === selected.productId);
     return { product, variant: product.variants.find(item => item.id === selected.variant) };
   }
-  $('#lightboxAdd')?.addEventListener('click', () => { const { product, variant } = selectedLightbox(); window.TPTStore.addProduct(product, variant); });
-  $('#lightboxBuyNow')?.addEventListener('click', () => { const { product, variant } = selectedLightbox(); window.TPTStore.addProduct(product, variant); track('buy_now_clicked', { productId: product.id, variantId: variant.id }); window.TPTStore.openCart(); });
+  $('#lightboxAdd')?.addEventListener('click', () => { const { product, variant } = selectedLightbox(); window.TPTStore.addProduct(product, variant, window.TPTStore.purchaseQuantity(document.querySelector('.lightbox-copy') || document.querySelector('#designDropdown').parentElement)); });
+  $('#lightboxBuyNow')?.addEventListener('click', () => { const { product, variant } = selectedLightbox(); window.TPTStore.addProduct(product, variant, window.TPTStore.purchaseQuantity(document.querySelector('.lightbox-copy') || document.querySelector('#designDropdown').parentElement)); track('buy_now_clicked', { productId: product.id, variantId: variant.id }); window.TPTStore.openCart(); });
   $('#lightboxPinCheck')?.addEventListener('click', () => { const pin = $('#lightboxPin').value.trim(); $('#lightboxPinResult').textContent = /^\d{6}$/.test(pin) ? 'PIN noted. Exact dispatch and courier timing will be confirmed before payment.' : 'Enter a valid 6-digit PIN code.'; if (/^\d{6}$/.test(pin)) track('delivery_checked', { productId: current().productId }); });
   $('#lightboxShare')?.addEventListener('click', async () => { const data = { title: `${current().label} A4 Anime Light Box · The Paper Theory`, text: `${current().label} A4 colour-changing Light Box · ${currentPrice()==null?'ask for price':'₹'+currentPrice().toLocaleString('en-IN')} · remote included`, url: location.href.split('#')[0] + '#lightboxExperience' }; try { if (navigator.share) await navigator.share(data); else { await navigator.clipboard.writeText(data.url); window.TPTStore.toast('Light Box link copied'); } track('product_shared', { productId: current().productId, design }); } catch {} });
   $('#lightboxSave')?.addEventListener('click', event => { const saved = new Set(safeParse('tpt-favourites-v4', [])), id = current().productId, add = !saved.has(id); add ? saved.add(id) : saved.delete(id); localStorage.setItem('tpt-favourites-v4', JSON.stringify([...saved])); event.currentTarget.textContent = add ? '♥' : '♡'; event.currentTarget.classList.toggle('saved', add); if (add) track('wishlist_added', { productId: id }); });

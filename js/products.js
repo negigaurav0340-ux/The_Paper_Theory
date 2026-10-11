@@ -29,7 +29,7 @@ window.CATALOGUE = {
         "Large Long Stickers"
       ],
       "theme": "Anime",
-      "description": "Large long format. 4 long anime stickers, each 6 × 2 inches, for ₹99 per complete pack. The full original artwork is shown alongside an illustrative laptop placement preview. Choose this exact pack; check the measured flat surface before ordering.",
+      "description": "4 Large long laminated vinyl stickers, 6 × 2 inches each. Complete matching anime artwork on one sheet for ₹99. Waterproof with a scratch-resistant finish; apply to clean, smooth surfaces.",
       "images": [
         "assets/long-stickers/anime-original.webp"
       ],
@@ -43,10 +43,11 @@ window.CATALOGUE = {
         }
       ],
       "status": "order",
-      "unit": "4 long stickers per pack",
+      "unit": "One complete sticker sheet",
       "application": "Apply to a clean, dry, flat surface. Measure the space first.",
-      "care": "Wipe gently; avoid scrubbing the cut edges.",
-      "longFormat": "Large"
+      "care": "Clean gently with a damp cloth. Avoid abrasive cleaners, prolonged soaking and high heat.",
+      "longFormat": "Large",
+      "quality": "Laminated vinyl · waterproof · scratch-resistant. Removal depends on the surface and condition."
     },
     {
       "id": "LONG-ANIME-VARIANT",
@@ -56,7 +57,7 @@ window.CATALOGUE = {
         "Large Long Stickers"
       ],
       "theme": "Anime",
-      "description": "Large long format. 4 long anime stickers, each 6 × 2 inches, for ₹99 per complete pack. The full original artwork is shown alongside an illustrative laptop placement preview. Choose this exact pack; check the measured flat surface before ordering.",
+      "description": "4 Large long laminated vinyl stickers, 6 × 2 inches each. Complete matching anime artwork on one sheet for ₹99. Waterproof with a scratch-resistant finish; apply to clean, smooth surfaces.",
       "images": [
         "assets/long-stickers/anime-variant.webp"
       ],
@@ -70,10 +71,11 @@ window.CATALOGUE = {
         }
       ],
       "status": "order",
-      "unit": "4 long stickers per pack",
+      "unit": "One complete sticker sheet",
       "application": "Apply to a clean, dry, flat surface. Measure the space first.",
-      "care": "Wipe gently; avoid scrubbing the cut edges.",
-      "longFormat": "Large"
+      "care": "Clean gently with a damp cloth. Avoid abrasive cleaners, prolonged soaking and high heat.",
+      "longFormat": "Large",
+      "quality": "Laminated vinyl · waterproof · scratch-resistant. Removal depends on the surface and condition."
     },
     {
       "id": "LONG-MULTI-ANIME",
@@ -83,7 +85,7 @@ window.CATALOGUE = {
         "Large Long Stickers"
       ],
       "theme": "Anime",
-      "description": "Large long format. 4 long anime stickers, each 6 × 2 inches, for ₹99 per complete pack. The full original artwork is shown alongside an illustrative laptop placement preview. Choose this exact pack; check the measured flat surface before ordering.",
+      "description": "4 Large long laminated vinyl stickers, 6 × 2 inches each. Complete matching anime artwork on one sheet for ₹99. Waterproof with a scratch-resistant finish; apply to clean, smooth surfaces.",
       "images": [
         "assets/long-stickers/multi-anime.webp"
       ],
@@ -97,10 +99,11 @@ window.CATALOGUE = {
         }
       ],
       "status": "order",
-      "unit": "4 long stickers per pack",
+      "unit": "One complete sticker sheet",
       "application": "Apply to a clean, dry, flat surface. Measure the space first.",
-      "care": "Wipe gently; avoid scrubbing the cut edges.",
-      "longFormat": "Large"
+      "care": "Clean gently with a damp cloth. Avoid abrasive cleaners, prolonged soaking and high heat.",
+      "longFormat": "Large",
+      "quality": "Laminated vinyl · waterproof · scratch-resistant. Removal depends on the surface and condition."
     },
     {
       "id": "LONG-NARUTO-AKATSUKI",
@@ -110,7 +113,7 @@ window.CATALOGUE = {
         "Extra Large Long Stickers"
       ],
       "theme": "Anime",
-      "description": "Extra Large long format. 2 long anime stickers, each 10 × 2 inches, for ₹99 per complete pack. The full original artwork is shown alongside an illustrative laptop placement preview. Choose this exact pack; check the measured flat surface before ordering.",
+      "description": "2 Extra Large long laminated vinyl stickers, 10 × 2 inches each. Complete matching anime artwork on one sheet for ₹99. Waterproof with a scratch-resistant finish; apply to clean, smooth surfaces.",
       "images": [
         "assets/long-stickers/naruto-akatsuki.webp"
       ],
@@ -124,10 +127,11 @@ window.CATALOGUE = {
         }
       ],
       "status": "order",
-      "unit": "2 long stickers per pack",
+      "unit": "One complete sticker sheet",
       "application": "Apply to a clean, dry, flat surface. Measure the space first.",
-      "care": "Wipe gently; avoid scrubbing the cut edges.",
-      "longFormat": "Extra Large"
+      "care": "Clean gently with a damp cloth. Avoid abrasive cleaners, prolonged soaking and high heat.",
+      "longFormat": "Extra Large",
+      "quality": "Laminated vinyl · waterproof · scratch-resistant. Removal depends on the surface and condition."
     },
     {
       "id": "PACK-ANIME-01",
@@ -137,7 +141,7 @@ window.CATALOGUE = {
         "Holographic Packs"
       ],
       "theme": "Anime",
-      "description": "12 classic anime sticker designs from the original store collection, bundled into one clean sheet. Includes ANIME-001–ANIME-012. Every preset sheet is ₹99 regular or ₹199 holographic.",
+      "description": "12 2-inch laminated vinyl stickers on a 3 × 4 sheet. Anime designs for laptops, notebooks and smooth surfaces. ₹99 regular or ₹199 holographic. Waterproof with a scratch-resistant finish.",
       "images": [
         "assets/lifestyle/anime-classics.webp",
         "assets/lifestyle/anime-classics.webp"
@@ -158,11 +162,11 @@ window.CATALOGUE = {
           "image": "assets/lifestyle/anime-classics.webp"
         }
       ],
-      "unit": "1 sheet · 12 stickers",
+      "unit": "One complete sticker sheet",
       "status": "order",
-      "quality": "Laminated waterproof sticker pack with a scratch-resistant surface and residue-free removal from suitable clean, smooth surfaces.",
+      "quality": "Laminated vinyl · waterproof · scratch-resistant. Removal depends on the surface and condition.",
       "application": "Peel and apply to a clean, dry, smooth surface such as a laptop, bottle, journal, storage case or similar suitable surface.",
-      "care": "Wipe clean gently. For longest life, avoid repeated harsh abrasion, prolonged heat and soaking around exposed edges.",
+      "care": "Clean gently with a damp cloth. Avoid abrasive cleaners, prolonged soaking and high heat.",
       "contents": [
         "12 coordinated stickers",
         "Catalogue codes ANIME-001–ANIME-012",
@@ -177,7 +181,7 @@ window.CATALOGUE = {
         "Holographic Packs"
       ],
       "theme": "Anime",
-      "description": "12 coordinated anime stickers in a ready-made sheet. Includes ANIME-013–ANIME-024. Every preset sheet is ₹99 regular or ₹199 holographic.",
+      "description": "12 2-inch laminated vinyl stickers on a 3 × 4 sheet. Anime designs for laptops, notebooks and smooth surfaces. ₹99 regular or ₹199 holographic. Waterproof with a scratch-resistant finish.",
       "images": [
         "assets/lifestyle/anime-heroes.webp",
         "assets/lifestyle/anime-heroes.webp"
@@ -198,11 +202,11 @@ window.CATALOGUE = {
           "image": "assets/lifestyle/anime-heroes.webp"
         }
       ],
-      "unit": "1 sheet · 12 stickers",
+      "unit": "One complete sticker sheet",
       "status": "order",
-      "quality": "Laminated waterproof sticker pack with a scratch-resistant surface and residue-free removal from suitable clean, smooth surfaces.",
+      "quality": "Laminated vinyl · waterproof · scratch-resistant. Removal depends on the surface and condition.",
       "application": "Peel and apply to a clean, dry, smooth surface such as a laptop, bottle, journal, storage case or similar suitable surface.",
-      "care": "Wipe clean gently. For longest life, avoid repeated harsh abrasion, prolonged heat and soaking around exposed edges.",
+      "care": "Clean gently with a damp cloth. Avoid abrasive cleaners, prolonged soaking and high heat.",
       "contents": [
         "12 coordinated stickers",
         "Catalogue codes ANIME-013–ANIME-024",
@@ -217,7 +221,7 @@ window.CATALOGUE = {
         "Holographic Packs"
       ],
       "theme": "Anime Meme",
-      "description": "16 coordinated anime meme stickers in a ready-made sheet. Includes AMEME-001–AMEME-016. Every preset sheet is ₹99 regular or ₹199 holographic.",
+      "description": "16 1-inch laminated vinyl stickers on a 4 × 4 sheet. Anime Meme designs for laptops, notebooks and smooth surfaces. ₹99 regular or ₹199 holographic. Waterproof with a scratch-resistant finish.",
       "images": [
         "assets/lifestyle/anime-meme.webp",
         "assets/lifestyle/anime-meme.webp"
@@ -238,11 +242,11 @@ window.CATALOGUE = {
           "image": "assets/lifestyle/anime-meme.webp"
         }
       ],
-      "unit": "1 sheet · 16 stickers",
+      "unit": "One complete sticker sheet",
       "status": "order",
-      "quality": "Laminated waterproof sticker pack with a scratch-resistant surface and residue-free removal from suitable clean, smooth surfaces.",
+      "quality": "Laminated vinyl · waterproof · scratch-resistant. Removal depends on the surface and condition.",
       "application": "Peel and apply to a clean, dry, smooth surface such as a laptop, bottle, journal, storage case or similar suitable surface.",
-      "care": "Wipe clean gently. For longest life, avoid repeated harsh abrasion, prolonged heat and soaking around exposed edges.",
+      "care": "Clean gently with a damp cloth. Avoid abrasive cleaners, prolonged soaking and high heat.",
       "contents": [
         "16 coordinated stickers",
         "Catalogue codes AMEME-001–AMEME-016",
@@ -257,7 +261,7 @@ window.CATALOGUE = {
         "Holographic Packs"
       ],
       "theme": "Feel Good",
-      "description": "16 coordinated feel good stickers in a ready-made sheet. Includes FEEL-001–FEEL-016. Every preset sheet is ₹99 regular or ₹199 holographic.",
+      "description": "16 1-inch laminated vinyl stickers on a 4 × 4 sheet. Feel Good designs for laptops, notebooks and smooth surfaces. ₹99 regular or ₹199 holographic. Waterproof with a scratch-resistant finish.",
       "images": [
         "assets/lifestyle/feel-good.webp",
         "assets/lifestyle/feel-good.webp"
@@ -278,11 +282,11 @@ window.CATALOGUE = {
           "image": "assets/lifestyle/feel-good.webp"
         }
       ],
-      "unit": "1 sheet · 16 stickers",
+      "unit": "One complete sticker sheet",
       "status": "order",
-      "quality": "Laminated waterproof sticker pack with a scratch-resistant surface and residue-free removal from suitable clean, smooth surfaces.",
+      "quality": "Laminated vinyl · waterproof · scratch-resistant. Removal depends on the surface and condition.",
       "application": "Peel and apply to a clean, dry, smooth surface such as a laptop, bottle, journal, storage case or similar suitable surface.",
-      "care": "Wipe clean gently. For longest life, avoid repeated harsh abrasion, prolonged heat and soaking around exposed edges.",
+      "care": "Clean gently with a damp cloth. Avoid abrasive cleaners, prolonged soaking and high heat.",
       "contents": [
         "16 coordinated stickers",
         "Catalogue codes FEEL-001–FEEL-016",
@@ -297,7 +301,7 @@ window.CATALOGUE = {
         "Holographic Packs"
       ],
       "theme": "Motu vs Bheem",
-      "description": "16 coordinated motu vs bheem stickers in a ready-made sheet. Includes MOTU-001–MOTU-016. Every preset sheet is ₹99 regular or ₹199 holographic.",
+      "description": "16 1-inch laminated vinyl stickers on a 4 × 4 sheet. Motu vs Bheem designs for laptops, notebooks and smooth surfaces. ₹99 regular or ₹199 holographic. Waterproof with a scratch-resistant finish.",
       "images": [
         "assets/lifestyle/team-motu.webp",
         "assets/lifestyle/team-motu.webp"
@@ -318,11 +322,11 @@ window.CATALOGUE = {
           "image": "assets/lifestyle/team-motu.webp"
         }
       ],
-      "unit": "1 sheet · 16 stickers",
+      "unit": "One complete sticker sheet",
       "status": "order",
-      "quality": "Laminated waterproof sticker pack with a scratch-resistant surface and residue-free removal from suitable clean, smooth surfaces.",
+      "quality": "Laminated vinyl · waterproof · scratch-resistant. Removal depends on the surface and condition.",
       "application": "Peel and apply to a clean, dry, smooth surface such as a laptop, bottle, journal, storage case or similar suitable surface.",
-      "care": "Wipe clean gently. For longest life, avoid repeated harsh abrasion, prolonged heat and soaking around exposed edges.",
+      "care": "Clean gently with a damp cloth. Avoid abrasive cleaners, prolonged soaking and high heat.",
       "contents": [
         "16 coordinated stickers",
         "Catalogue codes MOTU-001–MOTU-016",
@@ -337,7 +341,7 @@ window.CATALOGUE = {
         "Holographic Packs"
       ],
       "theme": "Motu vs Bheem",
-      "description": "16 coordinated motu vs bheem stickers in a ready-made sheet. Includes BHEEM-001–BHEEM-016. Every preset sheet is ₹99 regular or ₹199 holographic.",
+      "description": "16 1-inch laminated vinyl stickers on a 4 × 4 sheet. Motu vs Bheem designs for laptops, notebooks and smooth surfaces. ₹99 regular or ₹199 holographic. Waterproof with a scratch-resistant finish.",
       "images": [
         "assets/lifestyle/team-bheem.webp",
         "assets/lifestyle/team-bheem.webp"
@@ -358,11 +362,11 @@ window.CATALOGUE = {
           "image": "assets/lifestyle/team-bheem.webp"
         }
       ],
-      "unit": "1 sheet · 16 stickers",
+      "unit": "One complete sticker sheet",
       "status": "order",
-      "quality": "Laminated waterproof sticker pack with a scratch-resistant surface and residue-free removal from suitable clean, smooth surfaces.",
+      "quality": "Laminated vinyl · waterproof · scratch-resistant. Removal depends on the surface and condition.",
       "application": "Peel and apply to a clean, dry, smooth surface such as a laptop, bottle, journal, storage case or similar suitable surface.",
-      "care": "Wipe clean gently. For longest life, avoid repeated harsh abrasion, prolonged heat and soaking around exposed edges.",
+      "care": "Clean gently with a damp cloth. Avoid abrasive cleaners, prolonged soaking and high heat.",
       "contents": [
         "16 coordinated stickers",
         "Catalogue codes BHEEM-001–BHEEM-016",
@@ -377,7 +381,7 @@ window.CATALOGUE = {
         "Holographic Packs"
       ],
       "theme": "Diwali",
-      "description": "12 coordinated diwali stickers in a ready-made sheet. Includes DIWALI-001–DIWALI-012. Every preset sheet is ₹99 regular or ₹199 holographic.",
+      "description": "12 2-inch laminated vinyl stickers on a 3 × 4 sheet. Diwali designs for laptops, notebooks and smooth surfaces. ₹99 regular or ₹199 holographic. Waterproof with a scratch-resistant finish.",
       "images": [
         "assets/lifestyle/diwali-01.webp",
         "assets/lifestyle/diwali-01.webp"
@@ -398,11 +402,11 @@ window.CATALOGUE = {
           "image": "assets/lifestyle/diwali-01.webp"
         }
       ],
-      "unit": "1 sheet · 12 stickers",
+      "unit": "One complete sticker sheet",
       "status": "order",
-      "quality": "Laminated waterproof sticker pack with a scratch-resistant surface and residue-free removal from suitable clean, smooth surfaces.",
+      "quality": "Laminated vinyl · waterproof · scratch-resistant. Removal depends on the surface and condition.",
       "application": "Peel and apply to a clean, dry, smooth surface such as a laptop, bottle, journal, storage case or similar suitable surface.",
-      "care": "Wipe clean gently. For longest life, avoid repeated harsh abrasion, prolonged heat and soaking around exposed edges.",
+      "care": "Clean gently with a damp cloth. Avoid abrasive cleaners, prolonged soaking and high heat.",
       "contents": [
         "12 coordinated stickers",
         "Catalogue codes DIWALI-001–DIWALI-012",
@@ -417,7 +421,7 @@ window.CATALOGUE = {
         "Holographic Packs"
       ],
       "theme": "Diwali",
-      "description": "12 coordinated diwali stickers in a ready-made sheet. Includes DIWALI-013–DIWALI-024. Every preset sheet is ₹99 regular or ₹199 holographic.",
+      "description": "12 2-inch laminated vinyl stickers on a 3 × 4 sheet. Diwali designs for laptops, notebooks and smooth surfaces. ₹99 regular or ₹199 holographic. Waterproof with a scratch-resistant finish.",
       "images": [
         "assets/sticker-packs/diwali-02-laptop.webp",
         "assets/sticker-packs/diwali-02-laptop.webp"
@@ -438,11 +442,11 @@ window.CATALOGUE = {
           "image": "assets/sticker-packs/diwali-02-laptop.webp"
         }
       ],
-      "unit": "1 sheet · 12 stickers",
+      "unit": "One complete sticker sheet",
       "status": "order",
-      "quality": "Laminated waterproof sticker pack with a scratch-resistant surface and residue-free removal from suitable clean, smooth surfaces.",
+      "quality": "Laminated vinyl · waterproof · scratch-resistant. Removal depends on the surface and condition.",
       "application": "Peel and apply to a clean, dry, smooth surface such as a laptop, bottle, journal, storage case or similar suitable surface.",
-      "care": "Wipe clean gently. For longest life, avoid repeated harsh abrasion, prolonged heat and soaking around exposed edges.",
+      "care": "Clean gently with a damp cloth. Avoid abrasive cleaners, prolonged soaking and high heat.",
       "contents": [
         "12 coordinated stickers",
         "Catalogue codes DIWALI-013–DIWALI-024",
@@ -457,7 +461,7 @@ window.CATALOGUE = {
         "Holographic Packs"
       ],
       "theme": "Cute / Relatable",
-      "description": "16 coordinated cute / relatable stickers in a ready-made sheet. Includes CUTE-001–CUTE-016. Every preset sheet is ₹99 regular or ₹199 holographic.",
+      "description": "16 1-inch laminated vinyl stickers on a 4 × 4 sheet. Cute / Relatable designs for laptops, notebooks and smooth surfaces. ₹99 regular or ₹199 holographic. Waterproof with a scratch-resistant finish.",
       "images": [
         "assets/lifestyle/cute-mood.webp",
         "assets/lifestyle/cute-mood.webp"
@@ -478,11 +482,11 @@ window.CATALOGUE = {
           "image": "assets/lifestyle/cute-mood.webp"
         }
       ],
-      "unit": "1 sheet · 16 stickers",
+      "unit": "One complete sticker sheet",
       "status": "order",
-      "quality": "Laminated waterproof sticker pack with a scratch-resistant surface and residue-free removal from suitable clean, smooth surfaces.",
+      "quality": "Laminated vinyl · waterproof · scratch-resistant. Removal depends on the surface and condition.",
       "application": "Peel and apply to a clean, dry, smooth surface such as a laptop, bottle, journal, storage case or similar suitable surface.",
-      "care": "Wipe clean gently. For longest life, avoid repeated harsh abrasion, prolonged heat and soaking around exposed edges.",
+      "care": "Clean gently with a damp cloth. Avoid abrasive cleaners, prolonged soaking and high heat.",
       "contents": [
         "16 coordinated stickers",
         "Catalogue codes CUTE-001–CUTE-016",
@@ -497,7 +501,7 @@ window.CATALOGUE = {
         "Holographic Packs"
       ],
       "theme": "Engineering / Coding",
-      "description": "12 coding, engineering and campus-humour stickers for laptops, bottles and notebooks. Includes ENG-001–ENG-012. Every preset sheet is ₹99 regular or ₹199 holographic.",
+      "description": "12 2-inch laminated vinyl stickers on a 3 × 4 sheet. Engineering / Coding designs for laptops, notebooks and smooth surfaces. ₹99 regular or ₹199 holographic. Waterproof with a scratch-resistant finish.",
       "images": [
         "assets/lifestyle/engineering-campus.webp",
         "assets/lifestyle/engineering-campus.webp"
@@ -518,11 +522,11 @@ window.CATALOGUE = {
           "image": "assets/lifestyle/engineering-campus.webp"
         }
       ],
-      "unit": "1 sheet · 12 stickers",
+      "unit": "One complete sticker sheet",
       "status": "order",
-      "quality": "Laminated waterproof sticker pack with a scratch-resistant surface and residue-free removal from suitable clean, smooth surfaces.",
+      "quality": "Laminated vinyl · waterproof · scratch-resistant. Removal depends on the surface and condition.",
       "application": "Peel and apply to a clean, dry, smooth surface such as a laptop, bottle, journal, storage case or similar suitable surface.",
-      "care": "Wipe clean gently. For longest life, avoid repeated harsh abrasion, prolonged heat and soaking around exposed edges.",
+      "care": "Clean gently with a damp cloth. Avoid abrasive cleaners, prolonged soaking and high heat.",
       "contents": [
         "12 coordinated stickers",
         "Catalogue codes ENG-001–ENG-012",
@@ -537,7 +541,7 @@ window.CATALOGUE = {
         "Holographic Packs"
       ],
       "theme": "Friendship",
-      "description": "6 friendship and best-friend stickers in a compact mini pack. Includes FRIEND-001–FRIEND-006. Every preset sheet is ₹99 regular or ₹199 holographic.",
+      "description": "6 3-inch laminated vinyl stickers on a 2 × 3 sheet. Friendship designs for laptops, notebooks and smooth surfaces. ₹99 regular or ₹199 holographic. Waterproof with a scratch-resistant finish.",
       "images": [
         "assets/lifestyle/friendship.webp",
         "assets/lifestyle/friendship.webp"
@@ -558,11 +562,11 @@ window.CATALOGUE = {
           "image": "assets/lifestyle/friendship.webp"
         }
       ],
-      "unit": "1 sheet · 6 stickers",
+      "unit": "One complete sticker sheet",
       "status": "order",
-      "quality": "Laminated waterproof sticker pack with a scratch-resistant surface and residue-free removal from suitable clean, smooth surfaces.",
+      "quality": "Laminated vinyl · waterproof · scratch-resistant. Removal depends on the surface and condition.",
       "application": "Peel and apply to a clean, dry, smooth surface such as a laptop, bottle, journal, storage case or similar suitable surface.",
-      "care": "Wipe clean gently. For longest life, avoid repeated harsh abrasion, prolonged heat and soaking around exposed edges.",
+      "care": "Clean gently with a damp cloth. Avoid abrasive cleaners, prolonged soaking and high heat.",
       "contents": [
         "6 coordinated stickers",
         "Catalogue codes FRIEND-001–FRIEND-006",
@@ -1173,7 +1177,7 @@ window.CATALOGUE = {
         "Holographic Packs"
       ],
       "theme": "Fitness",
-      "description": "16 laminated vinyl stickers featuring gym motivation, for laptops, bottles and notebooks. Regular ₹99; holographic finish +₹100.",
+      "description": "16 1-inch laminated vinyl stickers on a 4 × 4 sheet. Fitness designs for laptops, notebooks and smooth surfaces. ₹99 regular or ₹199 holographic. Waterproof with a scratch-resistant finish.",
       "images": [
         "assets/sticker-packs/gym-motivation.webp"
       ],
@@ -1193,11 +1197,11 @@ window.CATALOGUE = {
           "image": "assets/sticker-packs/gym-motivation.webp"
         }
       ],
-      "unit": "1 sheet · 16 stickers",
+      "unit": "One complete sticker sheet",
       "status": "order",
-      "quality": "Laminated waterproof sticker pack with a scratch-resistant surface and residue-free removal from suitable clean, smooth surfaces.",
+      "quality": "Laminated vinyl · waterproof · scratch-resistant. Removal depends on the surface and condition.",
       "application": "Peel and apply to a clean, dry, smooth surface such as a laptop, bottle, journal, storage case or similar suitable surface.",
-      "care": "Wipe clean gently. For longest life, avoid repeated harsh abrasion, prolonged heat and soaking around exposed edges.",
+      "care": "Clean gently with a damp cloth. Avoid abrasive cleaners, prolonged soaking and high heat.",
       "contents": [
         "16 separately cut stickers",
         "Regular ₹99 · Holographic ₹199"
@@ -1211,7 +1215,7 @@ window.CATALOGUE = {
         "Holographic Packs"
       ],
       "theme": "Fitness",
-      "description": "16 laminated vinyl stickers featuring anime fitness, for laptops, bottles and notebooks. Regular ₹99; holographic finish +₹100.",
+      "description": "16 1-inch laminated vinyl stickers on a 4 × 4 sheet. Fitness designs for laptops, notebooks and smooth surfaces. ₹99 regular or ₹199 holographic. Waterproof with a scratch-resistant finish.",
       "images": [
         "assets/sticker-packs/anime-fitness.webp"
       ],
@@ -1231,11 +1235,11 @@ window.CATALOGUE = {
           "image": "assets/sticker-packs/anime-fitness.webp"
         }
       ],
-      "unit": "1 sheet · 16 stickers",
+      "unit": "One complete sticker sheet",
       "status": "order",
-      "quality": "Laminated waterproof sticker pack with a scratch-resistant surface and residue-free removal from suitable clean, smooth surfaces.",
+      "quality": "Laminated vinyl · waterproof · scratch-resistant. Removal depends on the surface and condition.",
       "application": "Peel and apply to a clean, dry, smooth surface such as a laptop, bottle, journal, storage case or similar suitable surface.",
-      "care": "Wipe clean gently. For longest life, avoid repeated harsh abrasion, prolonged heat and soaking around exposed edges.",
+      "care": "Clean gently with a damp cloth. Avoid abrasive cleaners, prolonged soaking and high heat.",
       "contents": [
         "16 separately cut stickers",
         "Regular ₹99 · Holographic ₹199"
@@ -1249,7 +1253,7 @@ window.CATALOGUE = {
         "Holographic Packs"
       ],
       "theme": "Healthy Food",
-      "description": "12 laminated vinyl stickers featuring healthy food, for laptops, bottles and notebooks. Regular ₹99; holographic finish +₹100.",
+      "description": "12 2-inch laminated vinyl stickers on a 3 × 4 sheet. Healthy Food designs for laptops, notebooks and smooth surfaces. ₹99 regular or ₹199 holographic. Waterproof with a scratch-resistant finish.",
       "images": [
         "assets/sticker-packs/healthy-food.webp"
       ],
@@ -1269,11 +1273,11 @@ window.CATALOGUE = {
           "image": "assets/sticker-packs/healthy-food.webp"
         }
       ],
-      "unit": "1 sheet · 12 stickers",
+      "unit": "One complete sticker sheet",
       "status": "order",
-      "quality": "Laminated waterproof sticker pack with a scratch-resistant surface and residue-free removal from suitable clean, smooth surfaces.",
+      "quality": "Laminated vinyl · waterproof · scratch-resistant. Removal depends on the surface and condition.",
       "application": "Peel and apply to a clean, dry, smooth surface such as a laptop, bottle, journal, storage case or similar suitable surface.",
-      "care": "Wipe clean gently. For longest life, avoid repeated harsh abrasion, prolonged heat and soaking around exposed edges.",
+      "care": "Clean gently with a damp cloth. Avoid abrasive cleaners, prolonged soaking and high heat.",
       "contents": [
         "12 separately cut stickers",
         "Regular ₹99 · Holographic ₹199"
@@ -1287,7 +1291,7 @@ window.CATALOGUE = {
         "Holographic Packs"
       ],
       "theme": "Engineering / Coding",
-      "description": "16 laminated vinyl stickers featuring engineer quotes, for laptops, bottles and notebooks. Regular ₹99; holographic finish +₹100.",
+      "description": "16 1-inch laminated vinyl stickers on a 4 × 4 sheet. Engineering / Coding designs for laptops, notebooks and smooth surfaces. ₹99 regular or ₹199 holographic. Waterproof with a scratch-resistant finish.",
       "images": [
         "assets/sticker-packs/engineer-quotes.webp"
       ],
@@ -1307,11 +1311,11 @@ window.CATALOGUE = {
           "image": "assets/sticker-packs/engineer-quotes.webp"
         }
       ],
-      "unit": "1 sheet · 16 stickers",
+      "unit": "One complete sticker sheet",
       "status": "order",
-      "quality": "Laminated waterproof sticker pack with a scratch-resistant surface and residue-free removal from suitable clean, smooth surfaces.",
+      "quality": "Laminated vinyl · waterproof · scratch-resistant. Removal depends on the surface and condition.",
       "application": "Peel and apply to a clean, dry, smooth surface such as a laptop, bottle, journal, storage case or similar suitable surface.",
-      "care": "Wipe clean gently. For longest life, avoid repeated harsh abrasion, prolonged heat and soaking around exposed edges.",
+      "care": "Clean gently with a damp cloth. Avoid abrasive cleaners, prolonged soaking and high heat.",
       "contents": [
         "16 separately cut stickers",
         "Regular ₹99 · Holographic ₹199"
@@ -1325,7 +1329,7 @@ window.CATALOGUE = {
         "Holographic Packs"
       ],
       "theme": "Memes",
-      "description": "16 laminated vinyl stickers featuring ultimate memes, for laptops, bottles and notebooks. Regular ₹99; holographic finish +₹100.",
+      "description": "16 1-inch laminated vinyl stickers on a 4 × 4 sheet. Memes designs for laptops, notebooks and smooth surfaces. ₹99 regular or ₹199 holographic. Waterproof with a scratch-resistant finish.",
       "images": [
         "assets/sticker-packs/ultimate-memes-1.webp"
       ],
@@ -1345,11 +1349,11 @@ window.CATALOGUE = {
           "image": "assets/sticker-packs/ultimate-memes-1.webp"
         }
       ],
-      "unit": "1 sheet · 16 stickers",
+      "unit": "One complete sticker sheet",
       "status": "order",
-      "quality": "Laminated waterproof sticker pack with a scratch-resistant surface and residue-free removal from suitable clean, smooth surfaces.",
+      "quality": "Laminated vinyl · waterproof · scratch-resistant. Removal depends on the surface and condition.",
       "application": "Peel and apply to a clean, dry, smooth surface such as a laptop, bottle, journal, storage case or similar suitable surface.",
-      "care": "Wipe clean gently. For longest life, avoid repeated harsh abrasion, prolonged heat and soaking around exposed edges.",
+      "care": "Clean gently with a damp cloth. Avoid abrasive cleaners, prolonged soaking and high heat.",
       "contents": [
         "16 separately cut stickers",
         "Regular ₹99 · Holographic ₹199"
@@ -1363,7 +1367,7 @@ window.CATALOGUE = {
         "Holographic Packs"
       ],
       "theme": "Memes",
-      "description": "16 laminated vinyl stickers featuring ultimate memes, for laptops, bottles and notebooks. Regular ₹99; holographic finish +₹100.",
+      "description": "16 1-inch laminated vinyl stickers on a 4 × 4 sheet. Memes designs for laptops, notebooks and smooth surfaces. ₹99 regular or ₹199 holographic. Waterproof with a scratch-resistant finish.",
       "images": [
         "assets/sticker-packs/ultimate-memes-2.webp"
       ],
@@ -1383,11 +1387,11 @@ window.CATALOGUE = {
           "image": "assets/sticker-packs/ultimate-memes-2.webp"
         }
       ],
-      "unit": "1 sheet · 16 stickers",
+      "unit": "One complete sticker sheet",
       "status": "order",
-      "quality": "Laminated waterproof sticker pack with a scratch-resistant surface and residue-free removal from suitable clean, smooth surfaces.",
+      "quality": "Laminated vinyl · waterproof · scratch-resistant. Removal depends on the surface and condition.",
       "application": "Peel and apply to a clean, dry, smooth surface such as a laptop, bottle, journal, storage case or similar suitable surface.",
-      "care": "Wipe clean gently. For longest life, avoid repeated harsh abrasion, prolonged heat and soaking around exposed edges.",
+      "care": "Clean gently with a damp cloth. Avoid abrasive cleaners, prolonged soaking and high heat.",
       "contents": [
         "16 separately cut stickers",
         "Regular ₹99 · Holographic ₹199"
@@ -1401,7 +1405,7 @@ window.CATALOGUE = {
         "Holographic Packs"
       ],
       "theme": "Cute / Relatable",
-      "description": "16 laminated vinyl stickers featuring kawaii & sassy, for laptops, bottles and notebooks. Regular ₹99; holographic finish +₹100.",
+      "description": "16 1-inch laminated vinyl stickers on a 4 × 4 sheet. Cute / Relatable designs for laptops, notebooks and smooth surfaces. ₹99 regular or ₹199 holographic. Waterproof with a scratch-resistant finish.",
       "images": [
         "assets/sticker-packs/kawaii-sassy-1.webp"
       ],
@@ -1421,11 +1425,11 @@ window.CATALOGUE = {
           "image": "assets/sticker-packs/kawaii-sassy-1.webp"
         }
       ],
-      "unit": "1 sheet · 16 stickers",
+      "unit": "One complete sticker sheet",
       "status": "order",
-      "quality": "Laminated waterproof sticker pack with a scratch-resistant surface and residue-free removal from suitable clean, smooth surfaces.",
+      "quality": "Laminated vinyl · waterproof · scratch-resistant. Removal depends on the surface and condition.",
       "application": "Peel and apply to a clean, dry, smooth surface such as a laptop, bottle, journal, storage case or similar suitable surface.",
-      "care": "Wipe clean gently. For longest life, avoid repeated harsh abrasion, prolonged heat and soaking around exposed edges.",
+      "care": "Clean gently with a damp cloth. Avoid abrasive cleaners, prolonged soaking and high heat.",
       "contents": [
         "16 separately cut stickers",
         "Regular ₹99 · Holographic ₹199"
@@ -1439,7 +1443,7 @@ window.CATALOGUE = {
         "Holographic Packs"
       ],
       "theme": "Cute / Relatable",
-      "description": "16 laminated vinyl stickers featuring kawaii & sassy, for laptops, bottles and notebooks. Regular ₹99; holographic finish +₹100.",
+      "description": "16 1-inch laminated vinyl stickers on a 4 × 4 sheet. Cute / Relatable designs for laptops, notebooks and smooth surfaces. ₹99 regular or ₹199 holographic. Waterproof with a scratch-resistant finish.",
       "images": [
         "assets/sticker-packs/kawaii-sassy-2.webp"
       ],
@@ -1459,11 +1463,11 @@ window.CATALOGUE = {
           "image": "assets/sticker-packs/kawaii-sassy-2.webp"
         }
       ],
-      "unit": "1 sheet · 16 stickers",
+      "unit": "One complete sticker sheet",
       "status": "order",
-      "quality": "Laminated waterproof sticker pack with a scratch-resistant surface and residue-free removal from suitable clean, smooth surfaces.",
+      "quality": "Laminated vinyl · waterproof · scratch-resistant. Removal depends on the surface and condition.",
       "application": "Peel and apply to a clean, dry, smooth surface such as a laptop, bottle, journal, storage case or similar suitable surface.",
-      "care": "Wipe clean gently. For longest life, avoid repeated harsh abrasion, prolonged heat and soaking around exposed edges.",
+      "care": "Clean gently with a damp cloth. Avoid abrasive cleaners, prolonged soaking and high heat.",
       "contents": [
         "16 separately cut stickers",
         "Regular ₹99 · Holographic ₹199"

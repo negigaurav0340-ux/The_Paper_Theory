@@ -45,6 +45,7 @@
 <script defer src="js/site-settings.js"></script><script defer src="js/site-content.js"></script>
 <script defer src="js/app.js">
 </script>
+<script defer src="js/analytics-page.js"></script>
 <script defer src="js/premium.js">
 </script>
 <script defer src="js/sticker-hub.js"></script>
@@ -258,7 +259,6 @@
 <button id="clearFilters" class="button dark">Clear filters</button>
 </div>
 </section>
-<section class="catalogue-after-shop section" aria-label="Browse the sticker catalogue"><div><p class="eyebrow">CREATE A SHEET YOUR WAY</p><h2>Every design in one place.</h2><p>Filter by collection, choose your favourites, then select the sheet size and finish.</p></div><div class="catalogue-cta"><a href="catalogue.html">Browse through the catalogue ↗</a></div></section>
 <section class="section sticker-format-guide" id="stickerPacks"><p class="eyebrow">STICKER SHEETS · ₹99</p><h2>Your designs. Your size.</h2><p>Choose 16 one-inch stickers (4 × 4), 12 two-inch stickers (3 × 4), or 6 three-inch stickers (2 × 3). Every regular sheet is ₹99; holographic finish adds ₹100.</p><a class="button dark" href="catalogue.html">Build your sticker sheet ↗</a></section>
 <section class="new-drops" id="new-arrivals"><div class="drop-heading"><p class="drop-kicker">FRESH DESIGNS · THE PAPER THEORY</p><h2>A little more you. On everything.</h2><p>Fitness, food, engineering, memes and everyday moods. Pick your next laminated vinyl sticker pack.</p><a href="catalogue.html">Browse all sticker codes ↗</a></div><div class="drop-grid"><article class="drop-card"><a href="products/gym-motivation.html"><div class="laptop-preview" data-pack-id="PACK-GYM-MOTIVATION"><img src="assets/sticker-packs/gym-motivation.webp" alt="Gym Motivation complete 16-sticker sheet" width="1200" height="1600" loading="lazy" decoding="async"></div><span>Fitness</span><h3>Gym Motivation</h3></a><p>16 stickers · ₹99 regular</p><a class="drop-secondary" href="products/gym-motivation.html">View pack ↗</a></article><article class="drop-card"><a href="products/anime-fitness.html"><div class="laptop-preview" data-pack-id="PACK-ANIME-FITNESS"><img src="assets/sticker-packs/anime-fitness.webp" alt="Anime Fitness complete 16-sticker sheet" width="1200" height="1600" loading="lazy" decoding="async"></div><span>Fitness</span><h3>Anime Fitness</h3></a><p>16 stickers · ₹99 regular</p><a class="drop-secondary" href="products/anime-fitness.html">View pack ↗</a></article><article class="drop-card"><a href="products/healthy-food.html"><div class="laptop-preview" data-pack-id="PACK-HEALTHY-FOOD"><img src="assets/sticker-packs/healthy-food.webp" alt="Healthy Food complete 12-sticker sheet" width="1200" height="1600" loading="lazy" decoding="async"></div><span>Healthy Food</span><h3>Healthy Food</h3></a><p>12 stickers · ₹99 regular</p><a class="drop-secondary" href="products/healthy-food.html">View pack ↗</a></article><article class="drop-card"><a href="products/engineer-quotes.html"><div class="laptop-preview" data-pack-id="PACK-ENGINEER-QUOTES"><img src="assets/sticker-packs/engineer-quotes.webp" alt="Engineer Quotes complete 16-sticker sheet" width="1200" height="1600" loading="lazy" decoding="async"></div><span>Engineering / Coding</span><h3>Engineer Quotes</h3></a><p>16 stickers · ₹99 regular</p><a class="drop-secondary" href="products/engineer-quotes.html">View pack ↗</a></article><article class="drop-card"><a href="products/ultimate-memes-1.html"><div class="laptop-preview" data-pack-id="PACK-ULTIMATE-MEMES-1"><img src="assets/sticker-packs/ultimate-memes-1.webp" alt="Ultimate Memes Vol. 1 complete 16-sticker sheet" width="1200" height="1600" loading="lazy" decoding="async"></div><span>Memes</span><h3>Ultimate Memes Vol. 1</h3></a><p>16 stickers · ₹99 regular</p><a class="drop-secondary" href="products/ultimate-memes-1.html">View pack ↗</a></article><article class="drop-card"><a href="products/ultimate-memes-2.html"><div class="laptop-preview" data-pack-id="PACK-ULTIMATE-MEMES-2"><img src="assets/sticker-packs/ultimate-memes-2.webp" alt="Ultimate Memes Vol. 2 complete 16-sticker sheet" width="1200" height="1600" loading="lazy" decoding="async"></div><span>Memes</span><h3>Ultimate Memes Vol. 2</h3></a><p>16 stickers · ₹99 regular</p><a class="drop-secondary" href="products/ultimate-memes-2.html">View pack ↗</a></article><article class="drop-card"><a href="products/kawaii-sassy-1.html"><div class="laptop-preview" data-pack-id="PACK-KAWAII-SASSY-1"><img src="assets/sticker-packs/kawaii-sassy-1.webp" alt="Kawaii &amp; Sassy Vol. 1 complete 16-sticker sheet" width="1200" height="1600" loading="lazy" decoding="async"></div><span>Cute / Relatable</span><h3>Kawaii &amp; Sassy Vol. 1</h3></a><p>16 stickers · ₹99 regular</p><a class="drop-secondary" href="products/kawaii-sassy-1.html">View pack ↗</a></article><article class="drop-card"><a href="products/kawaii-sassy-2.html"><div class="laptop-preview" data-pack-id="PACK-KAWAII-SASSY-2"><img src="assets/sticker-packs/kawaii-sassy-2.webp" alt="Kawaii &amp; Sassy Vol. 2 complete 16-sticker sheet" width="1200" height="1600" loading="lazy" decoding="async"></div><span>Cute / Relatable</span><h3>Kawaii &amp; Sassy Vol. 2</h3></a><p>16 stickers · ₹99 regular</p><a class="drop-secondary" href="products/kawaii-sassy-2.html">View pack ↗</a></article></div></section>
 <section class="sunshine section" id="sunshine">
@@ -359,12 +359,13 @@
 <span>
 <b>READY</b>To display</span>
 </div>
-      <label class="lightbox-select">Choose design<select id="lightboxDesign">
+      <details class="design-dropdown" id="designDropdown"><summary>Choose a design <span aria-hidden="true">＋</span></summary><label class="lightbox-select"><span class="sr-only">Light Box design</span><select id="lightboxDesign" size="3">
 <option value="LIT-EREN-A4">Eren — Attack on Titan</option>
 <option value="LIT-GOKU-A4">Goku — Dragon Ball</option>
 <option value="LIT-LUFFY-A4">Luffy — One Piece</option>
 </select>
-</label>
+</label></details>
+<div class="purchase-quantity" aria-label="Light Box quantity"><button type="button" data-purchase-step="-1" aria-label="Decrease Light Box quantity">−</button><output aria-live="polite">1</output><button type="button" data-purchase-step="1" aria-label="Increase Light Box quantity">+</button></div><p id="purchaseFeedback" class="purchase-feedback" role="status"></p>
       <div class="lightbox-actions">
 <button class="button dark" id="lightboxBuyNow">BUY NOW</button>
 <button class="button light-outline" id="lightboxAdd">ADD TO BAG</button>
@@ -615,7 +616,7 @@
 <a href="#help">Shipping, care & ordering</a>
 <a href="#custom">Made for you</a>
 </div>
-</footer>
+<p class="fine" style="padding:12px;text-align:center">Anonymous usage analytics includes approximate visitor locations and checkout city, state and country. Names, phone numbers and street addresses are excluded from analytics.</p></footer>
 <dialog id="productDialog">
 <button class="dialog-close" data-close="productDialog" aria-label="Close product">×</button>
 <div id="productDetail">
