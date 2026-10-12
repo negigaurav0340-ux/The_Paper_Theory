@@ -189,7 +189,7 @@
     const view = event.target.closest('[data-view]'); if (view) { const card = view.closest('.card'); openProduct(byId(view.dataset.view), card?.querySelector('[data-magnet-design]')?.selectedIndex || 0); return; }
     const card = event.target.closest('.card'); if (!card) return;
     const product = byId(card.dataset.id); const variant = selectVariant(card);
-    if (event.target.closest('[data-add]')) { if(product.id==='POL-001'){openProduct(product,0,true);return;}const photos=photoSelection(card,product,variant);if(photos!==null)addProduct(product,variant,1,photos); }
+    if (event.target.closest('[data-add]')) { if(product.id==='POL-001'){openProduct(product,0,true,variant.id);return;}const photos=photoSelection(card,product,variant);if(photos!==null)addProduct(product,variant,1,photos); }
     if (event.target.closest('[data-custom]')) routeCustom(product, magnetDesign(card));
   });
   categoryHost.addEventListener('click', event => { const button = event.target.closest('[data-category]'); if (!button) return; state.category = button.dataset.category; renderCategories(); renderProducts(); });
@@ -204,8 +204,8 @@
   $('#favFilter').addEventListener('click', event => { state.savedOnly = !state.savedOnly; event.currentTarget.setAttribute('aria-pressed', state.savedOnly); renderProducts(); });
   $('#clearFilters').addEventListener('click', () => { state = { category: 'All', query: '', fandom: '', sort: 'featured', savedOnly: false }; $('#search').value = ''; $('#fandom').value = ''; $('#sort').value = 'featured'; $('#favFilter').setAttribute('aria-pressed', 'false'); renderCategories(); renderProducts(); });
 
-  function openProduct(product, designIndex = 0, startOrder = false) {
-    currentProduct = product; const variant = product.variants[0]; const images = product.images || [];
+  function openProduct(product, designIndex = 0, startOrder = false, variantId = null) {
+    currentProduct = product; const variant = product.variants.find(v=>v.id===variantId)||product.variants[0]; const images = product.images || [];
     const recent = safeParse('tpt-recent-v1', []).filter(id => id !== product.id); recent.unshift(product.id); localStorage.setItem('tpt-recent-v1', JSON.stringify(recent.slice(0, 8)));
     window.TPTAnalytics?.track('product_view', { productId: product.id });
     dialog.dataset.productId=product.id;dialog.dataset.variantId=variant.id;
