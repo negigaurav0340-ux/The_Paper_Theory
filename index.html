@@ -648,11 +648,11 @@
 </label>
 <label>Landmark (optional)<input id="customerLandmark" maxlength="160">
 </label>
-<div class="form-row">
-<label>City / Town<input id="customerCity" maxlength="100" autocomplete="address-level2" required>
-</label>
-<label>Country<select id="customerCountry" autocomplete="country-name" required><option>India</option></select></label><label>District<input id="customerDistrict" maxlength="100" required></label><label>State / Territory<select id="customerState" autocomplete="address-level1" required></select><input id="customerStateOther" placeholder="State / Province / Region" maxlength="100" autocomplete="address-level1" hidden>
-</label>
+<label>City / Town<input id="customerCity" maxlength="100" autocomplete="address-level2" required></label>
+<div class="delivery-location-fields">
+<label>Country<select id="customerCountry" autocomplete="country-name" required><option>India</option></select></label>
+<label>State / Territory<select id="customerState" autocomplete="address-level1" required></select><input id="customerStateOther" placeholder="State / Province / Region" maxlength="100" autocomplete="address-level1" hidden></label>
+<label>District<input id="customerDistrict" maxlength="100" required></label>
 </div>
 <div class="form-row">
 <label>PIN / Postal code<input id="customerPin" inputmode="numeric" pattern="[0-9]{6}" maxlength="12" autocomplete="postal-code" required>
