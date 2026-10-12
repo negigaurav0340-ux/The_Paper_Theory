@@ -1,7 +1,7 @@
 (() => {
   'use strict';
   const clean = value => String(value ?? '').normalize('NFKD').replace(/[^\x20-\x7E]/g, ' ');
-  window.createOrderPdf = async function createOrderPdf(cart, products, customer = {}) {
+  window.createOrderPdf = async function createOrderPdf(cart, products, customer = {}, options = {}) {
     if (!window.PDFLib) throw new Error('PDF engine unavailable');
     const { PDFDocument, StandardFonts, rgb, PDFName, PDFString } = window.PDFLib;
     const pdf = await PDFDocument.create();
@@ -54,7 +54,7 @@
         customer.house ? `House / Flat / Building: ${customer.house}` : '',
         customer.street ? `Street / Area / Locality: ${customer.street}` : '',
         customer.landmark ? `Landmark: ${customer.landmark}` : '',
-        [customer.city, customer.state, customer.pin ? `PIN ${customer.pin}` : ''].filter(Boolean).join(', '),
+        [customer.city, customer.district, customer.state, customer.pin ? `PIN ${customer.pin}` : ''].filter(Boolean).join(', '),
         customer.country ? `Country: ${customer.country}` : ''
       ].filter(Boolean);
       for (const entry of deliveryLines) {
@@ -96,6 +96,6 @@
     page.drawRectangle({x:left,y:H-top-104,width:right-left,height:104,color:colours.ink}); text(page,'NEXT STEP',left+15,top+14,8,bold,colours.orange); text(page,'Send this PDF and original reference files in your WhatsApp order conversation.',left+15,top+34,8,regular,colours.white); text(page,'WhatsApp: +91 82195 78050',left+15,top+54,8,bold,colours.white); text(page,'Instagram: @thepapertheory.in',left+265,top+54,8,bold,colours.white); text(page,'Email: thepapertheory.in@gmail.com',left+15,top+74,8,bold,colours.white); text(page,'YouTube: @the_papertheory',left+265,top+74,8,bold,colours.white);
     links.forEach((refs, linkedPage) => linkedPage.node.set(PDFName.of('Annots'), pdf.context.obj(refs)));
     pdf.setTitle(`The Paper Theory Order ${orderId}`); pdf.setAuthor('The Paper Theory'); pdf.setSubject('Order enquiry summary');
-    const bytes = await pdf.save(); const blob = new Blob([bytes], {type:'application/pdf'}); const url = URL.createObjectURL(blob), anchor = document.createElement('a'); anchor.href = url; anchor.download = `the-paper-theory-${orderId}.pdf`; document.body.appendChild(anchor); anchor.click(); anchor.remove(); setTimeout(() => URL.revokeObjectURL(url), 1500);
+    const bytes = await pdf.save(); let binary='';for(let i=0;i<bytes.length;i+=8192)binary+=String.fromCharCode(...bytes.subarray(i,i+8192));const base64=btoa(binary);if(options.download===false)return {base64,orderId}; const blob = new Blob([bytes], {type:'application/pdf'}); const url = URL.createObjectURL(blob), anchor = document.createElement('a'); anchor.href = url; anchor.download = `the-paper-theory-${orderId}.pdf`; document.body.appendChild(anchor); anchor.click(); anchor.remove(); setTimeout(() => URL.revokeObjectURL(url), 1500);
   };
 })();

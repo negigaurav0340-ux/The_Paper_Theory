@@ -30,7 +30,7 @@ window.CATALOGUE = {
         "Individual Stickers"
       ],
       "theme": "Your Choice",
-      "description": "Choose individual catalogue stickers at ₹10 each. Every regular laminated sticker is 2 inches, the same size as the designs on our 3 × 4 sheets. Repeat any regular design and pay only for the sticker quantity you choose.",
+      "description": "Choose individual catalogue stickers at ₹10 each, unlaminated. Optional lamination adds ₹15 per sticker (₹25 total). Each sticker is 2 inches, like our 3 × 4 sheet designs. Repeat any regular design.",
       "images": [
         "assets/stickers/single-sticker-order.svg"
       ],
@@ -38,12 +38,19 @@ window.CATALOGUE = {
         {
           "id": "REG-ONE",
           "size": "1 sticker · 2 inches",
-          "finish": "Regular laminated",
+          "finish": "Unlaminated",
           "price": 10,
+          "image": "assets/stickers/single-sticker-order.svg"
+        },
+        {
+          "id": "LAM-ONE",
+          "size": "1 sticker · 2 inches",
+          "finish": "Laminated (+₹15 per sticker)",
+          "price": 25,
           "image": "assets/stickers/single-sticker-order.svg"
         }
       ],
-      "unit": "₹10 per individual sticker",
+      "unit": "₹10 per sticker · optional lamination +₹15 each",
       "status": "order",
       "requiresSelection": true,
       "selectionPrompt": "Enter one regular catalogue code, or use the catalogue to choose several designs and quantities.",
@@ -962,20 +969,14 @@ window.CATALOGUE = {
     },
     {
       "id": "MAG-001",
-      "name": "Photo Fridge Magnet · Choose Your Design",
+      "name": "Custom Photo Fridge Magnet",
       "categories": [
         "Fridge Magnets"
       ],
       "theme": "Photo Magnets",
-      "description": "Choose a design or request your own photo. Available in 3 × 4 or 4 × 5 inches, each with Plain or Bubble finish.",
+      "description": "Custom photo fridge magnets. Choose 3 × 4 inches at ₹249 or 4 × 5 inches at ₹359, with Plain or Bubble finish. Share your own photo in the order conversation.",
       "images": [
-        "assets/products/friends-monica-collage.jpg",
-        "assets/products/friends-ross-collage.jpg",
-        "assets/products/rachel-no-uterus.jpg",
-        "assets/products/chandler-bong.jpg",
-        "assets/products/monica-seven.jpg",
-        "assets/products/phoebe-regina.jpg",
-        "assets/products/joey-how-you-doin.jpg"
+        "assets/products/custom-magnet-sizes.svg"
       ],
       "variants": [
         {
@@ -983,44 +984,35 @@ window.CATALOGUE = {
           "size": "3 × 4 inches",
           "finish": "Plain",
           "price": 249,
-          "image": "assets/products/friends-monica-collage.jpg"
+          "image": "assets/products/custom-magnet-sizes.svg"
         },
         {
           "id": "3-4-bubble",
           "size": "3 × 4 inches",
           "finish": "Bubble",
           "price": 249,
-          "image": "assets/products/friends-monica-collage.jpg"
+          "image": "assets/products/custom-magnet-sizes.svg"
         },
         {
           "id": "4-5-plain",
           "size": "4 × 5 inches",
           "finish": "Plain",
           "price": 359,
-          "image": "assets/products/friends-monica-collage.jpg"
+          "image": "assets/products/custom-magnet-sizes.svg"
         },
         {
           "id": "4-5-bubble",
           "size": "4 × 5 inches",
           "finish": "Bubble",
           "price": 359,
-          "image": "assets/products/friends-monica-collage.jpg"
+          "image": "assets/products/custom-magnet-sizes.svg"
         }
       ],
       "unit": "1 acrylic photo magnet",
       "status": "enquire",
       "application": "Place on a suitable magnetic metal surface. Check that the mounting holds securely before letting go. Stands shown in photos are not confirmed as included.",
       "care": "Use a soft cloth. Avoid abrasive cleaners, impact and moisture around the print.",
-      "drive": "",
-      "designNames": [
-        "Photo Fridge Magnet · Choose Your Design",
-        "Ross · The One with the Frame",
-        "Rachel · No Uterus, No Opinion",
-        "Chandler · Miss Chanandler Bong",
-        "Monica · Seven!",
-        "Phoebe · Regina Phalange",
-        "Joey · How You Doin?"
-      ]
+      "drive": ""
     },
     {
       "id": "ACR-001",

@@ -26,6 +26,7 @@
   const cartDialog = $('#cartDialog');
 
   function saveState() {
+    orderPdfLink='';orderPdfSignature='';
     localStorage.setItem('tpt-cart-v4', JSON.stringify(cart));
     localStorage.setItem('tpt-favourites-v4', JSON.stringify([...favourites]));
   }
@@ -264,6 +265,8 @@
     const qty = event.target.closest('[data-qty]'); if (qty) { const item = cart.find(entry => entry.key === qty.dataset.qty); item.quantity = Math.max(0, Math.min(99, item.quantity + Number(qty.dataset.delta))); if(!item.quantity)cart=cart.filter(i=>i!==item); haptic(); }
     saveState(); updateCartCount(); syncPurchaseCounters(); renderCart();
   });
+  let orderPdfLink='',orderPdfSignature='';
+  document.querySelector('.customer').addEventListener('input',()=>{orderPdfLink='';orderPdfSignature='';});
   function buildWhatsApp() {
     const lines = [`Hi The Paper Theory! I'd like to enquire about this order:`];
     cart.forEach(item => {
@@ -272,9 +275,10 @@
     });
     const subtotal = cart.reduce((sum, item) => { if (item.type !== 'product') return sum; const product = byId(item.productId), variant = product?.variants.find(v => v.id === item.variantId); return sum + (variant?.price || 0) * item.quantity; }, 0);
     const customer = collectCustomer();
-    const address = [customer.house, customer.street, customer.landmark, customer.city, customer.state, customer.pin, customer.country].filter(Boolean).join(', ');
+    const address = [customer.house, customer.street, customer.landmark, customer.city, customer.district, customer.state, customer.pin, customer.country].filter(Boolean).join(', ');
     if (customer.name || address) lines.push('', `Delivery: ${customer.name || ''}${customer.phone ? ` · ${customer.phone}` : ''}`, address);
-    lines.push('', $('#customerCountry').value==='India'&&subtotal >= catalogue.freeShippingThreshold ? `Free shipping applies: product subtotal is ${money(subtotal)}.` : 'Shipping will be calculated at order confirmation using my delivery PIN code.', 'Please confirm availability, shipping and payment details. I will share any required original reference files here.');
+    if(orderPdfLink)lines.push('', 'Order PDF (link expires after 7 days): '+orderPdfLink);
+    lines.push('', $('#customerCountry').value==='India'&&subtotal >= catalogue.freeShippingThreshold ? `Free shipping applies: product subtotal is ${money(subtotal)}.` : 'Shipping will be calculated at order confirmation using my delivery PIN code.', 'Please confirm availability, shipping and payment details. I will share original photos/reference files and any extra customisation details in this WhatsApp chat.');
     return `https://wa.me/${catalogue.whatsapp}?text=${encodeURIComponent(lines.join('\n'))}`;
   }
 
@@ -314,11 +318,11 @@
     return {
       name: $('#customerName').value.trim(), phone: $('#customerPhone').value.trim(), email: $('#customerEmail').value.trim(),
       house: $('#customerHouse').value.trim(), street: $('#customerStreet').value.trim(), landmark: $('#customerLandmark').value.trim(),
-      city: $('#customerCity').value.trim(), state: window.TPTCheckout?.stateValue()||$('#customerState').value.trim(), pin: $('#customerPin').value.trim(), country: $('#customerCountry').value.trim()
+      city: $('#customerCity').value.trim(), district: $('#customerDistrict').value.trim(), state: window.TPTCheckout?.stateValue()||$('#customerState').value.trim(), pin: $('#customerPin').value.trim(), country: $('#customerCountry').value.trim()
     };
   }
   function validateCustomer(customer) {
-    const required = ['name','phone','house','street','city','state','pin','country'];
+    const required = ['name','phone','house','street','city','district','state','pin','country'];
     const missing = required.filter(key => !customer[key]);
     if (missing.length) return 'Please complete the required delivery fields.';
     if(!/^[+\d ()-]{7,20}$/.test(customer.phone))return 'Please enter a valid phone number with country code.';
@@ -336,7 +340,7 @@
     finally { button.disabled = false; button.textContent = label; }
   });
   function checkoutDetail(customer){return {itemCount:cart.reduce((n,i)=>n+i.quantity,0),productIds:[...new Set(cart.filter(i=>i.type==='product').map(i=>i.productId))],value:cart.reduce((n,i)=>n+(byId(i.productId)?.variants.find(v=>v.id===i.variantId)?.price||0)*i.quantity,0),deliveryCity:customer.city,deliveryRegion:customer.state,deliveryCountry:customer.country};}
-  $('#continueWa').addEventListener('click', event => { if (!cart.length) { event.preventDefault(); toast('Your bag is empty'); return; } const customer=collectCustomer(),error=validateCustomer(customer);if(error){event.preventDefault();$('#addressError').textContent=error;window.TPTCheckout?.setStep(2);toast(error);return;}window.TPTAnalytics?.track('whatsapp_clicked',{...checkoutDetail(validateCustomer(customer)?{}:customer),surface:'checkout'}); });
+  $('#continueWa').addEventListener('click', async event => { if (!cart.length) { event.preventDefault(); toast('Your bag is empty'); return; } const customer=collectCustomer(),error=validateCustomer(customer);if(error){event.preventDefault();$('#addressError').textContent=error;window.TPTCheckout?.setStep(2);toast(error);return;}event.preventDefault();const signature=JSON.stringify({cart,customer});if(orderPdfLink&&orderPdfSignature===signature){window.open(buildWhatsApp(),'_blank');return;}const popup=window.open('about:blank','_blank');const link=$('#continueWa');link.textContent='Preparing order PDF…';try{const pdf=await window.createOrderPdf(cart,products,customer,{download:false});const response=await fetch('/api/order-pdf',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({pdf:pdf.base64})}),result=await response.json();if(!response.ok)throw Error(result.error||'PDF sharing unavailable');orderPdfLink=location.origin+result.path;orderPdfSignature=signature;link.href=buildWhatsApp();if(popup)popup.location.href=link.href;else{toast('PDF ready. Click Confirm order again to open WhatsApp.');}window.TPTAnalytics?.track('whatsapp_clicked',{...checkoutDetail(customer),surface:'checkout'});}catch(error){popup?.close();toast('Could not create the PDF link. Please retry, or download the PDF and send it manually.');}finally{link.textContent='Confirm order on WhatsApp ↗';} });
 
   const heroSlides = [
     {image:'assets/sticker-packs/anime-heroes-laptop.webp',label:'ORIGINAL STICKERS · FROM ₹99',title:'Your fandom. On your laptop.',link:'#stickerPacks',text:'Explore sticker packs ↗'},
@@ -386,7 +390,7 @@
         const items=sheet.codes.map(code=>designs.find(s=>s.code===code));
         if(items.some(x=>!x))throw Error('Unknown code');
         let product,variant;
-        if(sheet.kind==='individual'){if(sheet.finish!=='regular'||items.some(x=>x.kind==='long'))throw Error('Individual stickers use regular designs');product=byId('PACK-SINGLE');variant=product?.variants.find(v=>v.id==='REG-ONE');if(!product||!variant)throw Error('Unavailable individual stickers');const counts=new Map();sheet.codes.forEach(c=>counts.set(c,(counts.get(c)||0)+1));return [...counts].map(([code,quantity])=>({product,variant,quantity,selection:code}));}
+        if(sheet.kind==='individual'){if(!['regular','laminated'].includes(sheet.finish)||items.some(x=>x.kind==='long'))throw Error('Individual stickers use regular designs');product=byId('PACK-SINGLE');variant=product?.variants.find(v=>v.id===(sheet.finish==='laminated'?'LAM-ONE':'REG-ONE'));if(!product||!variant)throw Error('Unavailable individual stickers');const counts=new Map();sheet.codes.forEach(c=>counts.set(c,(counts.get(c)||0)+1));return [...counts].map(([code,quantity])=>({product,variant,quantity,selection:code}));}
         if(sheet.kind==='long'){
           const pack=(window.STICKER_PACKS||[]).find(p=>p.id===sheet.packId&&p.kind==='long');
           if(!pack||!['regular','holo'].includes(sheet.finish)||sheet.codes.length!==pack.count||!sheet.codes.every(c=>pack.code_list.includes(c)))throw Error('Invalid long pack');
