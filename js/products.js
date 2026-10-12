@@ -969,13 +969,20 @@ window.CATALOGUE = {
     },
     {
       "id": "MAG-001",
-      "name": "Custom Photo Fridge Magnet",
+      "name": "Custom Photo Fridge Magnet with Stand",
       "categories": [
         "Fridge Magnets"
       ],
       "theme": "Photo Magnets",
-      "description": "Custom photo fridge magnets. Choose 3 × 4 inches at ₹249 or 4 × 5 inches at ₹359, with Plain or Bubble finish. Share your own photo in the order conversation.",
+      "description": "Your photo, made into a fridge magnet with a stand. Choose 3 × 4 inches at ₹249 or 4 × 5 inches at ₹359, with Plain or Bubble finish. Carousel photos show display examples, not fixed design choices. Share your own photo when ordering.",
       "images": [
+        "assets/products/friends-monica-collage.jpg",
+        "assets/products/friends-ross-collage.jpg",
+        "assets/products/rachel-no-uterus.jpg",
+        "assets/products/chandler-bong.jpg",
+        "assets/products/monica-seven.jpg",
+        "assets/products/phoebe-regina.jpg",
+        "assets/products/joey-how-you-doin.jpg",
         "assets/products/custom-magnet-sizes.svg"
       ],
       "variants": [
@@ -984,35 +991,36 @@ window.CATALOGUE = {
           "size": "3 × 4 inches",
           "finish": "Plain",
           "price": 249,
-          "image": "assets/products/custom-magnet-sizes.svg"
+          "image": "assets/products/friends-monica-collage.jpg"
         },
         {
           "id": "3-4-bubble",
           "size": "3 × 4 inches",
           "finish": "Bubble",
           "price": 249,
-          "image": "assets/products/custom-magnet-sizes.svg"
+          "image": "assets/products/friends-monica-collage.jpg"
         },
         {
           "id": "4-5-plain",
           "size": "4 × 5 inches",
           "finish": "Plain",
           "price": 359,
-          "image": "assets/products/custom-magnet-sizes.svg"
+          "image": "assets/products/friends-monica-collage.jpg"
         },
         {
           "id": "4-5-bubble",
           "size": "4 × 5 inches",
           "finish": "Bubble",
           "price": 359,
-          "image": "assets/products/custom-magnet-sizes.svg"
+          "image": "assets/products/friends-monica-collage.jpg"
         }
       ],
-      "unit": "1 acrylic photo magnet",
+      "unit": "1 custom photo fridge magnet with stand",
       "status": "enquire",
-      "application": "Place on a suitable magnetic metal surface. Check that the mounting holds securely before letting go. Stands shown in photos are not confirmed as included.",
+      "application": "Display on a suitable magnetic metal surface or use the included stand on a stable shelf or desk.",
       "care": "Use a soft cloth. Avoid abrasive cleaners, impact and moisture around the print.",
-      "drive": ""
+      "drive": "",
+      "displayGallery": true
     },
     {
       "id": "ACR-001",
