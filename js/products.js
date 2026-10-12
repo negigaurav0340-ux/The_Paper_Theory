@@ -18,9 +18,38 @@ window.CATALOGUE = {
     "Original Designs",
     "Custom Packages / Bundles",
     "Large Long Stickers",
-    "Extra Large Long Stickers"
+    "Extra Large Long Stickers",
+    "Individual Stickers"
   ],
   "products": [
+    {
+      "id": "PACK-SINGLE",
+      "name": "Make your custom order",
+      "categories": [
+        "Sticker Packs",
+        "Individual Stickers"
+      ],
+      "theme": "Your Choice",
+      "description": "Choose individual catalogue stickers at ₹10 each. Every regular laminated sticker is 2 inches, the same size as the designs on our 3 × 4 sheets. Repeat any regular design and pay only for the sticker quantity you choose.",
+      "images": [
+        "assets/stickers/single-sticker-order.svg"
+      ],
+      "variants": [
+        {
+          "id": "REG-ONE",
+          "size": "1 sticker · 2 inches",
+          "finish": "Regular laminated",
+          "price": 10,
+          "image": "assets/stickers/single-sticker-order.svg"
+        }
+      ],
+      "unit": "₹10 per individual sticker",
+      "status": "order",
+      "requiresSelection": true,
+      "selectionPrompt": "Enter one regular catalogue code, or use the catalogue to choose several designs and quantities.",
+      "application": "Apply to a clean, dry, smooth surface.",
+      "care": "Wipe gently; avoid abrasive cleaners and high heat."
+    },
     {
       "id": "LONG-ANIME-ORIGINAL",
       "name": "Anime Original Large Long Sticker Pack",

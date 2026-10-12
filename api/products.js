@@ -2,7 +2,7 @@ const crypto = require('node:crypto');
 const path = 'js/product-updates.js';
 const code = /^[A-Z0-9-]{3,32}$/;
 const variantCode = /^[A-Za-z0-9-]{2,40}$/;
-const image = /^(?:data:image\/(?:webp|png|jpeg);base64,[A-Za-z0-9+/=]+|assets\/[A-Za-z0-9_./-]+\.(?:webp|png|jpe?g))$/;
+const image = /^(?:data:image\/(?:webp|png|jpeg);base64,[A-Za-z0-9+/=]+|assets\/[A-Za-z0-9_./-]+\.(?:webp|png|jpe?g|svg))$/;
 const text = (value,max=2000) => typeof value === 'string' && value.length > 0 && value.length <= max;
 function config() {
   const repo=process.env.CATALOGUE_REPO || '', token=process.env.CATALOGUE_GITHUB_TOKEN, password=process.env.CATALOGUE_ADMIN_PASSWORD;
