@@ -1,0 +1,39 @@
+name: Apply reviewed order and review photo update
+on:
+  push:
+    branches: [order-photo-update]
+    paths: [.github/workflows/apply-order-photo.yml]
+permissions:
+  contents: write
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - name: Verify and unpack reviewed changes
+        run: |
+          python3 - <<'PYCODE'
+          from pathlib import Path, PurePosixPath
+          import hashlib, zipfile
+          archive=Path('tpt-order-upgrade.zip')
+          assert hashlib.sha256(archive.read_bytes()).hexdigest() == '7b30e07e1e9b4e6bc75c5dfa60028c6f97571fa18c0e783bd539c123eeaac69b'
+          with zipfile.ZipFile(archive) as z:
+              for entry in z.infolist():
+                  p=PurePosixPath(entry.filename)
+                  assert not p.is_absolute() and '..' not in p.parts and '.git' not in p.parts and '.github' not in p.parts
+                  assert (entry.external_attr >> 16) & 0o170000 != 0o120000
+              z.extractall('.')
+          archive.unlink()
+          Path('.github/workflows/apply-order-photo.yml').unlink()
+          PYCODE
+      - name: Build and verify
+        run: |
+          npm run build
+          npm run check
+      - name: Commit reviewed website changes
+        run: |
+          git config user.name 'negigaurav0340-ux'
+          git config user.email 'negigaurav0340-ux@users.noreply.github.com'
+          git add -A
+          git commit -m 'Add sticker lamination, custom magnets, review photos and order PDF links'
+          git push origin HEAD:${{ github.ref_name }}
