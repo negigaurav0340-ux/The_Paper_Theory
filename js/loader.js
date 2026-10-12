@@ -7,9 +7,9 @@
   const soundButton = document.getElementById('loaderSound');
   const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
   const startedAt = performance.now();
-  const minimumDuration = reducedMotion ? 250 : 700;
+  const minimumDuration = 0;
   let visualProgress = 0;
-  let pageReady = document.readyState === 'complete';
+  let pageReady = document.readyState !== 'loading';
   let audioContext;
   let soundPlayed = false;
 
@@ -76,7 +76,7 @@
     if (!event.target.closest('#loaderSound') && soundButton?.getAttribute('aria-pressed') === 'true') paperSpark();
   }, { once: true });
 
-  addEventListener('load', () => { pageReady = true; }, { once: true });
+  addEventListener('DOMContentLoaded', () => { pageReady = true; }, { once: true });
 
   function finish() {
     setProgress(100);
@@ -85,18 +85,18 @@
     setTimeout(() => {
       loader.hidden = true;
       loader.setAttribute('aria-hidden', 'true');
-    }, reducedMotion ? 80 : 780);
+    }, 80);
   }
 
   function tick(now) {
     const elapsed = now - startedAt;
     const target = pageReady ? 100 : Math.min(92, 8 + elapsed / 27);
     setProgress(visualProgress + (target - visualProgress) * 0.085);
-    if (pageReady && elapsed >= minimumDuration && visualProgress > 98.5) finish();
+    if (pageReady && elapsed >= minimumDuration && visualProgress > 75) finish();
     else requestAnimationFrame(tick);
   }
 
   setProgress(4);
   requestAnimationFrame(tick);
-  setTimeout(() => { if (!loader.hidden) finish(); }, 1800);
+  setTimeout(() => { if (!loader.hidden) finish(); }, 450);
 })();

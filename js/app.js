@@ -135,7 +135,7 @@
       <div class="card-photo"><button class="image-button" data-view="${product.id}" aria-label="View ${product.name}">${imageMarkup(product, image)}</button><span class="badge ${category.includes('Holographic') ? 'holo' : ''}">${status}</span><button class="save ${favourites.has(product.id) ? 'saved' : ''}" data-save="${product.id}" aria-label="${favourites.has(product.id) ? 'Remove from' : 'Save to'} favourites">${favourites.has(product.id) ? '♥' : '♡'}</button></div>
       <div class="card-info"><p class="eyebrow">${product.theme} / ${product.id}</p><h3><button data-view="${product.id}">${product.name}</button></h3><p class="brief">${product.description}</p>
       ${product.designNames ? `<div class="magnet-carousel-controls"><button type="button" data-magnet-prev>←</button><span data-magnet-index>1 / ${product.images.length}</span><button type="button" data-magnet-next>→</button></div><select class="magnet-design" data-magnet-design aria-label="Magnet design">${product.designNames.map((name,i)=>`<option value="${i}">${name}</option>`).join('')}</select>` : ''}<div class="variant-controls"><label>Size<select data-size>${optionMarkup(sizes, variant?.size)}</select></label><label>Finish<select data-finish>${optionMarkup(finishes, variant?.finish)}</select></label></div>
-      ${product.id==='POL-001'?photoFields():''}${canBuyDirectly(product)&&!product.requiresSelection?quantityMarkup():''}<div class="card-bottom"><strong data-price>${priceMarkup(variant?.price, product)}</strong><span>${product.status === 'soon' ? '<button class="add" data-custom="' + product.id + '">Ask about launch</button>' : product.requiresSelection ? '<button class="add" data-view="' + product.id + '">Choose codes</button>' : !canBuyDirectly(product) || variant?.price == null ? '<button class="add" data-custom="' + product.id + '">' + (product.status === 'enquire' ? 'Enquire' : 'Request quote') + '</button>' : '<button class="add" data-add="' + product.id + '">Add to bag</button>'}</span></div><small>${product.unit}</small></div></article>`;
+      ${canBuyDirectly(product)&&!product.requiresSelection?quantityMarkup():''}<div class="card-bottom"><strong data-price>${priceMarkup(variant?.price, product)}</strong><span>${product.status === 'soon' ? '<button class="add" data-custom="' + product.id + '">Ask about launch</button>' : product.requiresSelection ? '<button class="add" data-view="' + product.id + '">Choose codes</button>' : !canBuyDirectly(product) || variant?.price == null ? '<button class="add" data-custom="' + product.id + '">' + (product.status === 'enquire' ? 'Enquire' : 'Request quote') + '</button>' : '<button class="add" data-add="' + product.id + '">Add to bag</button>'}</span></div><small>${product.unit}</small><button type="button" class="review-link" data-product-review="${product.id}">Customer reviews</button></div></article>`;
   }
   function renderProducts() {
     const list = filteredProducts(); grid.innerHTML = list.map(cardMarkup).join('');
@@ -185,10 +185,11 @@
   grid.addEventListener('change', event => { const card = event.target.closest('.card'); if (card) { selectVariant(card, event.target.hasAttribute('data-finish') ? 'finish' : 'size'); if (card.querySelector('[data-magnet-design]')) { const index = Number(card.querySelector('[data-magnet-design]').value); card.querySelector('.card-photo img').src = fastImage(byId(card.dataset.id).images[index]); card.querySelector('[data-magnet-index]').textContent = `${index+1} / ${byId(card.dataset.id).images.length}`; } } });
   grid.addEventListener('click', event => {
     const save = event.target.closest('[data-save]'); if (save) { const id = save.dataset.save; const added = !favourites.has(id); added ? favourites.add(id) : favourites.delete(id); saveState(); renderProducts(); if (added) window.TPTAnalytics?.track('wishlist_added', { productId: id }); return; }
+    const review = event.target.closest('[data-product-review]');if(review){openProduct(byId(review.dataset.productReview));document.querySelector('#detailReviews')?.scrollIntoView({behavior:'smooth'});return;}
     const view = event.target.closest('[data-view]'); if (view) { const card = view.closest('.card'); openProduct(byId(view.dataset.view), card?.querySelector('[data-magnet-design]')?.selectedIndex || 0); return; }
     const card = event.target.closest('.card'); if (!card) return;
     const product = byId(card.dataset.id); const variant = selectVariant(card);
-    if (event.target.closest('[data-add]')) { const photos=photoSelection(card,product,variant);if(photos!==null)addProduct(product,variant,1,photos); }
+    if (event.target.closest('[data-add]')) { if(product.id==='POL-001'){openProduct(product,0,true,variant.id);return;}const photos=photoSelection(card,product,variant);if(photos!==null)addProduct(product,variant,1,photos); }
     if (event.target.closest('[data-custom]')) routeCustom(product, magnetDesign(card));
   });
   categoryHost.addEventListener('click', event => { const button = event.target.closest('[data-category]'); if (!button) return; state.category = button.dataset.category; renderCategories(); renderProducts(); });
@@ -203,12 +204,12 @@
   $('#favFilter').addEventListener('click', event => { state.savedOnly = !state.savedOnly; event.currentTarget.setAttribute('aria-pressed', state.savedOnly); renderProducts(); });
   $('#clearFilters').addEventListener('click', () => { state = { category: 'All', query: '', fandom: '', sort: 'featured', savedOnly: false }; $('#search').value = ''; $('#fandom').value = ''; $('#sort').value = 'featured'; $('#favFilter').setAttribute('aria-pressed', 'false'); renderCategories(); renderProducts(); });
 
-  function openProduct(product, designIndex = 0) {
-    currentProduct = product; const variant = product.variants[0]; const images = product.images || [];
+  function openProduct(product, designIndex = 0, startOrder = false, variantId = null) {
+    currentProduct = product; const variant = product.variants.find(v=>v.id===variantId)||product.variants[0]; const images = product.images || [];
     const recent = safeParse('tpt-recent-v1', []).filter(id => id !== product.id); recent.unshift(product.id); localStorage.setItem('tpt-recent-v1', JSON.stringify(recent.slice(0, 8)));
     window.TPTAnalytics?.track('product_view', { productId: product.id });
     dialog.dataset.productId=product.id;dialog.dataset.variantId=variant.id;
-    $('#productDetail').innerHTML = `<div class="detail-layout"><div class="detail-media">${imageMarkup(product, product.designNames ? images[designIndex] : variant.image || images[0])}<div class="thumbs">${images.map((image, index) => `<button data-thumb="${fastImage(image)}" aria-label="Show image ${index + 1}"><img src="${fastImage(image)}" alt="" loading="lazy" decoding="async"></button>`).join('')}${product.video ? `<button data-video="${product.video}">▶ Product video</button>` : ''}</div></div><div class="detail-info"><p class="eyebrow">${product.theme} / ${product.id}</p><h2>${product.name}</h2><p>${product.description}</p><div class="variant-controls"><label>Size<select id="detailSize">${optionMarkup([...new Set(product.variants.map(v => v.size))], variant.size)}</select></label><label>Finish<select id="detailFinish">${optionMarkup([...new Set(product.variants.map(v => v.finish))], variant.finish)}</select></label></div><div class="card-bottom"><strong id="detailPrice">${priceMarkup(variant.price, product)}</strong>${quantityMarkup()}<span id="detailAction"></span></div><p id="detailFeedback" role="status"></p>${product.id==='POL-001'?photoFields():''}${product.contents ? `<h4>Inside this package</h4><p>${product.contents.join(' · ')}</p>` : ''}${product.requiresUpload ? `<h4>Your artwork</h4><label class="selection-field"><span>Paste a shareable Drive link to your original designs. Or <a href="#custom" onclick="document.getElementById('productDialog').close()">use the custom request form</a> to select a local file. Original artwork is shared separately.</span><input id="detailArtwork" type="url" placeholder="https://drive.google.com/..."></label>` : ''}${product.requiresSelection ? `<h4>Sticker codes</h4><label class="selection-field"><span>Choose from <a href="catalogue.html" target="_blank">the catalogue</a></span><textarea id="detailSelection" rows="3" placeholder="${product.selectionPrompt || 'Enter selected codes'}"></textarea></label>` : ''}${product.quality ? `<h4>Quality</h4><p>${product.quality}</p>` : ''}<h4>How to use or display</h4><p>${product.application}</p><h4>Care</h4><p>${product.care}</p><p class="fine">${product.unit} · Select your exact variant before adding.</p></div></div>`;
+    $('#productDetail').innerHTML = `<div class="detail-layout"><div class="detail-media">${imageMarkup(product, product.designNames ? images[designIndex] : variant.image || images[0])}<div class="thumbs">${images.map((image, index) => `<button data-thumb="${fastImage(image)}" aria-label="Show image ${index + 1}"><img src="${fastImage(image)}" alt="" loading="lazy" decoding="async"></button>`).join('')}${product.video ? `<button data-video="${product.video}">▶ Product video</button>` : ''}</div></div><div class="detail-info"><p class="eyebrow">${product.theme} / ${product.id}</p><h2>${product.name}</h2><p>${product.description}</p><div class="variant-controls"><label>Size<select id="detailSize">${optionMarkup([...new Set(product.variants.map(v => v.size))], variant.size)}</select></label><label>Finish<select id="detailFinish">${optionMarkup([...new Set(product.variants.map(v => v.finish))], variant.finish)}</select></label></div><div class="card-bottom"><strong id="detailPrice">${priceMarkup(variant.price, product)}</strong>${quantityMarkup()}<span id="detailAction"></span></div><p id="detailFeedback" role="status"></p>${product.id==='POL-001'?'<div id="photoOrderStep" class="photo-order-step" '+(startOrder?'':'hidden')+'>'+photoFields()+'</div>':''}${product.contents ? `<h4>Inside this package</h4><p>${product.contents.join(' · ')}</p>` : ''}${product.requiresUpload ? `<h4>Your artwork</h4><label class="selection-field"><span>Paste a shareable Drive link to your original designs. Or <a href="#custom" onclick="document.getElementById('productDialog').close()">use the custom request form</a> to select a local file. Original artwork is shared separately.</span><input id="detailArtwork" type="url" placeholder="https://drive.google.com/..."></label>` : ''}${product.requiresSelection ? `<h4>Sticker codes</h4><label class="selection-field"><span>Choose from <a href="catalogue.html" target="_blank">the catalogue</a></span><textarea id="detailSelection" rows="3" placeholder="${product.selectionPrompt || 'Enter selected codes'}"></textarea></label>` : ''}${product.quality ? `<h4>Quality</h4><p>${product.quality}</p>` : ''}<h4>How to use or display</h4><p>${product.application}</p><h4>Care</h4><p>${product.care}</p><p class="fine">${product.unit} · Select your exact variant before adding.</p><section class="product-reviews" id="detailReviews"></section></div></div>`;
     function syncDetail(prefer = 'size') {
       const size = $('#detailSize').value, finish = $('#detailFinish').value;
       let selected = product.variants.find(v => v.size === size && v.finish === finish);
@@ -229,13 +230,13 @@
         }
         return codes.join(', ');
       };
-      $('#detailAdd')?.addEventListener('click', () => { const selection = product.id==='POL-001'?photoSelection(dialog,product,selected):checkedSelection(); if (selection === null) return; addProduct(product, selected, purchaseQuantity(dialog), selection); });
-      $('#detailBuy')?.addEventListener('click', () => { const selection = product.id==='POL-001'?photoSelection(dialog,product,selected):checkedSelection(); if (selection === null) return; addProduct(product, selected, purchaseQuantity(dialog), selection); window.TPTAnalytics?.track('buy_now_clicked', { productId: product.id, variantId: selected.id }); dialog.close(); renderCart(); cartDialog.showModal(); });
+      $('#detailAdd')?.addEventListener('click', () => { if(product.id==='POL-001'&&$('#photoOrderStep').hidden){$('#photoOrderStep').hidden=false;$('#photoOrderStep').scrollIntoView({behavior:'smooth'});$('#photoOrderStep input').focus();return;}const selection = product.id==='POL-001'?photoSelection(dialog,product,selected):checkedSelection(); if (selection === null) return; addProduct(product, selected, purchaseQuantity(dialog), selection); });
+      $('#detailBuy')?.addEventListener('click', () => { if(product.id==='POL-001'&&$('#photoOrderStep').hidden){$('#photoOrderStep').hidden=false;$('#photoOrderStep').scrollIntoView({behavior:'smooth'});$('#photoOrderStep input').focus();return;}const selection = product.id==='POL-001'?photoSelection(dialog,product,selected):checkedSelection(); if (selection === null) return; addProduct(product, selected, purchaseQuantity(dialog), selection); window.TPTAnalytics?.track('buy_now_clicked', { productId: product.id, variantId: selected.id }); dialog.close(); window.TPTCheckout?.reset();renderCart(); cartDialog.showModal(); });
       $('#detailCustom')?.addEventListener('click', () => { dialog.close(); routeCustom(product, product.designNames?.[designIndex] || ''); });
     }
     const main = dialog.querySelector('.detail-media>img'); if (main) main.classList.add('detail-main');
     dialog.querySelectorAll('[data-thumb]').forEach(button => button.addEventListener('click', () => { const media = dialog.querySelector('.detail-media'); media.querySelector('video')?.remove();media.querySelector('.laptop-preview')?.remove(); const image = media.querySelector('.detail-main') || document.createElement('img'); image.className = 'detail-main'; image.src = button.dataset.thumb; if (product.designNames) designIndex = images.findIndex(src => fastImage(src) === button.dataset.thumb); image.alt = product.name; media.prepend(image); }));
-    $('#detailSize').addEventListener('change', () => syncDetail('size')); $('#detailFinish').addEventListener('change', () => syncDetail('finish')); syncDetail(); dialog.showModal();
+    $('#detailSize').addEventListener('change', () => syncDetail('size')); $('#detailFinish').addEventListener('change', () => syncDetail('finish')); syncDetail(); window.TPTReviews?.mount($('#detailReviews'),product.id);dialog.showModal();
   }
 
   function cartLine(item) {
@@ -246,15 +247,15 @@
   function renderCart() {
     $('#cartItems').innerHTML = cart.length ? cart.map(cartLine).join('') : '<div class="empty"><h3>Your bag is waiting.</h3><p>Add a product or custom request to begin.</p></div>';
     const subtotal = cart.reduce((sum, item) => { if (item.type !== 'product') return sum; const product = byId(item.productId), variant = product?.variants.find(v => v.id === item.variantId); return sum + (variant?.price || 0) * item.quantity; }, 0);
-    const freeShipping = subtotal >= catalogue.freeShippingThreshold;
+    const freeShipping = $('#customerCountry').value==='India'&&subtotal >= catalogue.freeShippingThreshold;
     $('#cartTotal').textContent = money(subtotal);
     $('#shippingStatus').textContent = freeShipping ? 'FREE' : 'Calculated at confirmation';
-    $('#shippingNote').textContent = freeShipping ? `You unlocked free shipping on product subtotals of ₹${catalogue.freeShippingThreshold}.` : `Add ${money(catalogue.freeShippingThreshold - subtotal)} more for free shipping. Otherwise shipping is calculated from your PIN code at order confirmation.`;
+    $('#shippingNote').textContent = $('#customerCountry').value!=='India'?'International availability and shipping are confirmed separately before payment.':freeShipping ? `You unlocked free shipping on product subtotals of ₹${catalogue.freeShippingThreshold}.` : `Add ${money(catalogue.freeShippingThreshold - subtotal)} more for free shipping. Otherwise shipping is calculated from your PIN code at order confirmation.`;
     $('#payableRow').hidden = !freeShipping; $('#payableTotal').textContent = money(subtotal);
     $('#downloadPdf').disabled = cart.length === 0; $('#continueWa').setAttribute('aria-disabled', cart.length === 0); $('#continueWa').href = buildWhatsApp();
   }
   function updateCartCount() { $('#cartCount').textContent = cart.reduce((sum, item) => sum + Number(item.quantity || 1), 0); }
-  $('#openCart').addEventListener('click', () => { renderCart(); cartDialog.showModal(); });
+  $('#openCart').addEventListener('click', () => { window.TPTCheckout?.reset();renderCart(); cartDialog.showModal(); });
   $('#cartItems').addEventListener('click', event => {
     const remove = event.target.closest('[data-remove]'); if (remove) cart = cart.filter(item => item.key !== remove.dataset.remove);
     const qty = event.target.closest('[data-qty]'); if (qty) { const item = cart.find(entry => entry.key === qty.dataset.qty); item.quantity = Math.max(0, Math.min(99, item.quantity + Number(qty.dataset.delta))); if(!item.quantity)cart=cart.filter(i=>i!==item); haptic(); }
@@ -270,7 +271,7 @@
     const customer = collectCustomer();
     const address = [customer.house, customer.street, customer.landmark, customer.city, customer.state, customer.pin, customer.country].filter(Boolean).join(', ');
     if (customer.name || address) lines.push('', `Delivery: ${customer.name || ''}${customer.phone ? ` · ${customer.phone}` : ''}`, address);
-    lines.push('', subtotal >= catalogue.freeShippingThreshold ? `Free shipping applies: product subtotal is ${money(subtotal)}.` : 'Shipping will be calculated at order confirmation using my delivery PIN code.', 'Custom work is confirmed separately. I will send the order PDF and original reference files here.');
+    lines.push('', $('#customerCountry').value==='India'&&subtotal >= catalogue.freeShippingThreshold ? `Free shipping applies: product subtotal is ${money(subtotal)}.` : 'Shipping will be calculated at order confirmation using my delivery PIN code.', 'Please confirm availability, shipping and payment details. I will share any required original reference files here.');
     return `https://wa.me/${catalogue.whatsapp}?text=${encodeURIComponent(lines.join('\n'))}`;
   }
 
@@ -310,14 +311,17 @@
     return {
       name: $('#customerName').value.trim(), phone: $('#customerPhone').value.trim(), email: $('#customerEmail').value.trim(),
       house: $('#customerHouse').value.trim(), street: $('#customerStreet').value.trim(), landmark: $('#customerLandmark').value.trim(),
-      city: $('#customerCity').value.trim(), state: $('#customerState').value.trim(), pin: $('#customerPin').value.trim(), country: $('#customerCountry').value.trim()
+      city: $('#customerCity').value.trim(), state: window.TPTCheckout?.stateValue()||$('#customerState').value.trim(), pin: $('#customerPin').value.trim(), country: $('#customerCountry').value.trim()
     };
   }
   function validateCustomer(customer) {
     const required = ['name','phone','house','street','city','state','pin','country'];
     const missing = required.filter(key => !customer[key]);
-    if (missing.length) return 'Please complete every required delivery-address field before downloading the PDF.';
-    if (!/^\d{6}$/.test(customer.pin)) return 'Please enter a valid 6-digit Indian PIN code.';
+    if (missing.length) return 'Please complete the required delivery fields.';
+    if(!/^[+\d ()-]{7,20}$/.test(customer.phone))return 'Please enter a valid phone number with country code.';
+    if(customer.email&&!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(customer.email))return 'Please enter a valid email address, or leave it blank.';
+    if (customer.country==='India'&&!/^\d{6}$/.test(customer.pin)) return 'Please enter a valid 6-digit Indian PIN code.';
+    if(customer.country!=='India'&&!/^[A-Za-z0-9 -]{3,12}$/.test(customer.pin))return 'Please enter a valid postal code.';
     return '';
   }
   $('#downloadPdf').addEventListener('click', async event => {
@@ -329,7 +333,7 @@
     finally { button.disabled = false; button.textContent = label; }
   });
   function checkoutDetail(customer){return {itemCount:cart.reduce((n,i)=>n+i.quantity,0),productIds:[...new Set(cart.filter(i=>i.type==='product').map(i=>i.productId))],value:cart.reduce((n,i)=>n+(byId(i.productId)?.variants.find(v=>v.id===i.variantId)?.price||0)*i.quantity,0),deliveryCity:customer.city,deliveryRegion:customer.state,deliveryCountry:customer.country};}
-  $('#continueWa').addEventListener('click', event => { if (!cart.length) { event.preventDefault(); toast('Your bag is empty'); return; } const customer=collectCustomer();window.TPTAnalytics?.track('whatsapp_clicked',{...checkoutDetail(validateCustomer(customer)?{}:customer),surface:'checkout'}); });
+  $('#continueWa').addEventListener('click', event => { if (!cart.length) { event.preventDefault(); toast('Your bag is empty'); return; } const customer=collectCustomer(),error=validateCustomer(customer);if(error){event.preventDefault();$('#addressError').textContent=error;window.TPTCheckout?.setStep(2);toast(error);return;}window.TPTAnalytics?.track('whatsapp_clicked',{...checkoutDetail(validateCustomer(customer)?{}:customer),surface:'checkout'}); });
 
   const heroSlides = [
     {image:'assets/sticker-packs/anime-heroes-laptop.webp',label:'ORIGINAL STICKERS · FROM ₹99',title:'Your fandom. On your laptop.',link:'#stickerPacks',text:'Explore sticker packs ↗'},
@@ -364,7 +368,7 @@
     document.querySelector('.hero').addEventListener('pointerleave', () => { showcase.style.setProperty('--tilt-x', '0deg'); showcase.style.setProperty('--tilt-y', '0deg'); });
   }
   const themes = [...new Set(products.map(product => product.theme))].sort(); $('#fandom').insertAdjacentHTML('beforeend', themes.map(theme => `<option>${theme}</option>`).join(''));
-  window.TPTStore = { addProduct, byId, openCart: () => { renderCart(); cartDialog.showModal(); }, toast, purchaseQuantity, syncPurchaseCounters, renderProducts, setCategory: category => { state.category = category; renderCategories(); renderProducts(); location.hash = 'shop'; } };
+  window.TPTStore = { addProduct, byId, openCart: () => { window.TPTCheckout?.reset();renderCart(); cartDialog.showModal(); }, toast, purchaseQuantity, syncPurchaseCounters, renderCart, collectCustomer, validateCustomer, buildWhatsApp, renderProducts, setCategory: category => { state.category = category; renderCategories(); renderProducts(); location.hash = 'shop'; } };
   createFallingMagic(); renderCategories(); renderProducts(); updateCartCount(); renderHero(); watchReveals();
   const requestedProduct = new URLSearchParams(location.search).get('product');
   if (requestedProduct && byId(requestedProduct)) openProduct(byId(requestedProduct));
@@ -389,7 +393,7 @@
         if(!product||!variant)throw Error('Unavailable sheet');return {product,variant,selection:sheet.codes.join(', ')};
       });
       orders.forEach(order=>addProduct(order.product,order.variant,1,order.selection));
-      renderCart(); cartDialog.showModal();
+      window.TPTCheckout?.reset();renderCart(); cartDialog.showModal();
     } catch (error) { toast('Could not add those sheets. Please choose designs again.'); }
     history.replaceState(null, '', location.pathname + location.hash);
   }

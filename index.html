@@ -52,7 +52,7 @@
 <script defer src="js/instagram-reels.js"></script>
 <link rel="stylesheet" href="collection-update.css">
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="The Paper Theory sticker packs and Goku anime Light Box">
-<link rel="stylesheet" href="owner-update.css"></head>
+<link rel="stylesheet" href="owner-update.css"><link rel="stylesheet" href="checkout.css"></head>
 <body class="is-loading">
 <div class="site-loader" id="siteLoader" role="status" aria-live="polite" aria-label="The Paper Theory is loading">
 <div class="loader-aurora" aria-hidden="true">
@@ -406,7 +406,7 @@
 <figcaption>ACTUAL PRODUCT FOOTAGE · MUTED</figcaption>
 </figure>
 </div>
-  <div class="room-preview section" id="roomPreview">
+  <section id="lightboxCustomerReviews" class="product-reviews section" data-review-product="LIT-001"></section><div class="room-preview section" id="roomPreview">
 <div class="room-copy">
 <p class="eyebrow">IMAGINE IT IN YOUR SPACE</p>
 <h2>Room lights<br>
@@ -448,7 +448,7 @@
 </article>
 <article>
 <b>REAL REVIEWS ONLY</b>
-<p>Be the first to review this product. No placeholder or invented customer reviews are displayed.</p>
+<p>Read and add anonymous customer reviews on each product. Submissions are moderated; no invented reviews are shown.</p>
 </article>
 </div>
 </div>
@@ -612,7 +612,7 @@
 <div class="footer-bottom">
 <span>© 2026 The Paper Theory</span>
 <a href="light-boxes.html">Light Boxes</a>
-<a href="about.html">About The Paper Theory</a>
+<a href="about.html">About The Paper Theory</a><a href="ordering-guide.html">How to order</a>
 <a href="#help">Shipping, care & ordering</a>
 <a href="#custom">Made for you</a>
 </div>
@@ -627,16 +627,16 @@
 <h2>Your bag.</h2>
 <button class="dialog-close" data-close="cartDialog" aria-label="Close bag">×</button>
 </div>
-<div id="cartItems">
+<p id="checkoutProgress" class="checkout-progress" role="status">1 · Review your bag</p><div id="cartItems">
 </div>
 <div class="customer">
 <details open>
 <summary>Complete delivery address</summary>
-<p class="fine">Required for the downloadable order PDF.</p>
-<div class="form-row">
+<p class="fine">Choose your country first, then enter your delivery details. Your address is shared only when you continue on WhatsApp.</p>
+<label>Country<select id="customerCountry" autocomplete="country-name" required><option>India</option></select></label><p id="countryNote" class="fine"></p><div class="form-row">
 <label>Full name<input id="customerName" maxlength="100" autocomplete="name" required>
 </label>
-<label>Phone number<input id="customerPhone" type="tel" maxlength="15" autocomplete="tel" inputmode="tel" required>
+<label>Phone number<input id="customerPhone" type="tel" maxlength="20" autocomplete="tel" inputmode="tel" required>
 </label>
 </div>
 <label>Email address<input id="customerEmail" type="email" maxlength="160" autocomplete="email">
@@ -651,20 +651,19 @@
 <div class="form-row">
 <label>City / Town<input id="customerCity" maxlength="100" autocomplete="address-level2" required>
 </label>
-<label>State<input id="customerState" maxlength="100" autocomplete="address-level1" required>
+<label>State / Territory<select id="customerState" autocomplete="address-level1" required></select><input id="customerStateOther" placeholder="State / Province / Region" maxlength="100" autocomplete="address-level1" hidden>
 </label>
 </div>
 <div class="form-row">
-<label>PIN code<input id="customerPin" inputmode="numeric" pattern="[0-9]{6}" maxlength="6" autocomplete="postal-code" required>
+<label>PIN / Postal code<input id="customerPin" inputmode="numeric" pattern="[0-9]{6}" maxlength="12" autocomplete="postal-code" required>
 </label>
-<label>Country<input id="customerCountry" maxlength="80" autocomplete="country-name" value="India" required>
-</label>
+
 </div>
 <p id="addressError" class="address-error" role="alert">
 </p>
 </details>
 </div>
-<div class="cart-summary">
+<section class="checkout-confirm"><h3>Check your delivery address</h3><p id="checkoutAddressPreview"></p><p class="fine">Your WhatsApp message contains this address and your bag. Shipping and payment are confirmed in the conversation.</p></section><div class="cart-summary">
 <div>
 <span>Product subtotal</span>
 <b id="cartTotal">₹0</b>
@@ -678,10 +677,10 @@
 <b id="payableTotal">₹0</b>
 </div>
 <p id="shippingNote">Free shipping unlocks at ₹699. Custom requests are quoted separately.</p>
-<button id="downloadPdf" class="button dark">Download Order PDF ↓</button>
-<a id="continueWa" class="button green" target="_blank" rel="noopener">Continue on WhatsApp ↗</a>
-<p class="fine">The PDF includes the complete delivery address. Send it with original reference files in your order conversation. Nothing is sent automatically.</p>
-</div>
+<button id="downloadPdf" class="button dark">Download order PDF (optional) ↓</button>
+<a id="continueWa" class="button green" target="_blank" rel="noopener">Confirm order on WhatsApp ↗</a>
+<p class="fine checkout-sharing-note">WhatsApp opens an order message for you to review and send. No payment is taken here. Photos selected locally still need to be sent as original files.</p>
+</div><div class="checkout-actions"><button id="checkoutBack" type="button" class="button light" hidden>← Back</button><button id="checkoutNext" type="button" class="button dark">Continue to delivery →</button></div>
 </dialog>
 <div class="mobile-buy" id="mobileBuy" aria-hidden="true">
 <div>
@@ -698,5 +697,5 @@
 </dialog>
 <div id="toast" role="status" aria-live="polite">
 </div>
-<script defer src="js/laptop-previews.js"></script><script defer src="js/long-cards.js"></script><script defer src="js/new-arrivals.js"></script></body>
+<script defer src="js/laptop-previews.js"></script><script defer src="js/long-cards.js"></script><script defer src="js/new-arrivals.js"></script><script defer src="js/reviews.js"></script><script defer src="js/checkout.js"></script></body>
 </html>
