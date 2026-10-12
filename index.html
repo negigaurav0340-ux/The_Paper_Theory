@@ -632,8 +632,8 @@
 <div class="customer">
 <details open>
 <summary>Complete delivery address</summary>
-<p class="fine">Choose your country first, then enter your delivery details. Your address is shared only when you continue on WhatsApp.</p>
-<label>Country<select id="customerCountry" autocomplete="country-name" required><option>India</option></select></label><p id="countryNote" class="fine"></p><div class="form-row">
+<p class="fine">Choose your country first, then enter your delivery details. Your address is included in your order PDF when you confirm on WhatsApp. The private, unlisted PDF link expires after seven days; share it only with the store.</p>
+<div class="form-row">
 <label>Full name<input id="customerName" maxlength="100" autocomplete="name" required>
 </label>
 <label>Phone number<input id="customerPhone" type="tel" maxlength="20" autocomplete="tel" inputmode="tel" required>
@@ -651,14 +651,14 @@
 <div class="form-row">
 <label>City / Town<input id="customerCity" maxlength="100" autocomplete="address-level2" required>
 </label>
-<label>State / Territory<select id="customerState" autocomplete="address-level1" required></select><input id="customerStateOther" placeholder="State / Province / Region" maxlength="100" autocomplete="address-level1" hidden>
+<label>Country<select id="customerCountry" autocomplete="country-name" required><option>India</option></select></label><label>District<input id="customerDistrict" maxlength="100" required></label><label>State / Territory<select id="customerState" autocomplete="address-level1" required></select><input id="customerStateOther" placeholder="State / Province / Region" maxlength="100" autocomplete="address-level1" hidden>
 </label>
 </div>
 <div class="form-row">
 <label>PIN / Postal code<input id="customerPin" inputmode="numeric" pattern="[0-9]{6}" maxlength="12" autocomplete="postal-code" required>
 </label>
 
-</div>
+</div><p id="countryNote" class="fine"></p>
 <p id="addressError" class="address-error" role="alert">
 </p>
 </details>
