@@ -1,12 +1,12 @@
 const crypto=require('node:crypto');
 const HASH='tpt:reviews:v1', INDEX='tpt:review-index:v1';
-const known=require('../review-products.json');
+const known=require('../review-products.json'),groups=require('../review-groups.json');
 const auth=(given,expected)=>typeof given==='string'&&given.length<513&&crypto.timingSafeEqual(crypto.createHash('sha256').update(given).digest(),crypto.createHash('sha256').update(expected).digest());
 function validate(input){
  if(!input||JSON.stringify(input).length>4000||!known.includes(input.productId)||!Number.isInteger(input.rating)||input.rating<1||input.rating>5||typeof input.text!=='string'||input.text.trim().length<10||input.text.length>1200||input.website||input.consent!==true)throw Error('Choose a product, rating and 10–1,200 characters. Confirm anonymous publication.');
  return {productId:input.productId,rating:input.rating,text:input.text.trim().replace(/[\u0000-\u0008]/g,''),author:'Anonymous'};
 }
-const publicReview=r=>({id:r.id,productId:r.productId,rating:r.rating,text:r.text,author:'Anonymous',createdAt:r.createdAt,edited:Boolean(r.edited)});
+const publicReview=r=>({id:r.id,productId:r.productId,rating:r.rating,text:r.text,author:'Anonymous',createdAt:r.createdAt,edited:Boolean(r.edited),productName:groups[r.productId]?.name||r.productId,group:groups[r.productId]?.group||'Other'});
 module.exports=async(req,res)=>{
  const url=process.env.UPSTASH_REDIS_REST_URL||process.env.KV_REST_API_URL,token=process.env.UPSTASH_REDIS_REST_TOKEN||process.env.KV_REST_API_TOKEN,password=process.env.CATALOGUE_ADMIN_PASSWORD;
  res.setHeader('Cache-Control','no-store');
@@ -16,9 +16,9 @@ module.exports=async(req,res)=>{
   const manage=req.query?.manage==='1';
   if((manage||req.method==='PATCH')&&!auth(req.headers['x-catalogue-secret'],password))return res.status(401).json({error:'Incorrect owner password'});
   if(req.method==='GET'){
-   const ids=await command(['ZREVRANGE',!manage&&req.query.productId?INDEX+':'+req.query.productId:INDEX,0,499]);const values=ids.length?await command(['HMGET',HASH,...ids]):[];
+   const ids=await command(['ZREVRANGE',INDEX,0,499]);const values=ids.length?await command(['HMGET',HASH,...ids]):[];
    const reviews=values.filter(Boolean).map(v=>typeof v==='string'?JSON.parse(v):v);
-   return res.status(200).json({configured:true,reviews:manage?reviews:reviews.filter(r=>r.status==='approved'&&(!req.query.productId||r.productId===req.query.productId)).map(publicReview)});
+   const group=groups[req.query.productId]?.group;return res.status(200).json({configured:true,group:group||'All products',reviews:manage?reviews:reviews.filter(r=>r.status==='approved'&&(!req.query.productId||groups[r.productId]?.group===group)).map(publicReview)});
   }
   const host=req.headers['x-forwarded-host']||req.headers.host,origin=req.headers.origin;
   if(origin&&new URL(origin).host!==host)return res.status(403).json({error:'Use the review form on this website.'});

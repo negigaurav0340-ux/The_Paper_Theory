@@ -14,8 +14,8 @@
   const priceMarkup = price => money(price);
   const magnetDesign = card => { const select = card.querySelector('[data-magnet-design]'); return select ? select.options[select.selectedIndex]?.textContent || '' : ''; };
   const safeParse = (key, fallback) => { try { return JSON.parse(localStorage.getItem(key)) ?? fallback; } catch { return fallback; } };
-  let cart = safeParse('tpt-cart-v4', []);
-  let favourites = new Set(safeParse('tpt-favourites-v4', []));
+  let cart = window.TPTCartUtils.normalize(safeParse('tpt-cart-v4', []),products);
+  const savedFavourites=safeParse('tpt-favourites-v4',[]);let favourites = new Set(Array.isArray(savedFavourites)?savedFavourites:[]);
   let state = { category: 'All', query: '', fandom: '', sort: 'featured', savedOnly: false };
   let currentProduct = null;
   let selectedUpload = null;
@@ -209,7 +209,7 @@
     const recent = safeParse('tpt-recent-v1', []).filter(id => id !== product.id); recent.unshift(product.id); localStorage.setItem('tpt-recent-v1', JSON.stringify(recent.slice(0, 8)));
     window.TPTAnalytics?.track('product_view', { productId: product.id });
     dialog.dataset.productId=product.id;dialog.dataset.variantId=variant.id;
-    $('#productDetail').innerHTML = `<div class="detail-layout"><div class="detail-media">${imageMarkup(product, product.designNames ? images[designIndex] : variant.image || images[0])}<div class="thumbs">${images.map((image, index) => `<button data-thumb="${fastImage(image)}" aria-label="Show image ${index + 1}"><img src="${fastImage(image)}" alt="" loading="lazy" decoding="async"></button>`).join('')}${product.video ? `<button data-video="${product.video}">▶ Product video</button>` : ''}</div></div><div class="detail-info"><p class="eyebrow">${product.theme} / ${product.id}</p><h2>${product.name}</h2><p>${product.description}</p><div class="variant-controls"><label>Size<select id="detailSize">${optionMarkup([...new Set(product.variants.map(v => v.size))], variant.size)}</select></label><label>Finish<select id="detailFinish">${optionMarkup([...new Set(product.variants.map(v => v.finish))], variant.finish)}</select></label></div><div class="card-bottom"><strong id="detailPrice">${priceMarkup(variant.price, product)}</strong>${quantityMarkup()}<span id="detailAction"></span></div><p id="detailFeedback" role="status"></p>${product.id==='POL-001'?'<div id="photoOrderStep" class="photo-order-step" '+(startOrder?'':'hidden')+'>'+photoFields()+'</div>':''}${product.contents ? `<h4>Inside this package</h4><p>${product.contents.join(' · ')}</p>` : ''}${product.requiresUpload ? `<h4>Your artwork</h4><label class="selection-field"><span>Paste a shareable Drive link to your original designs. Or <a href="#custom" onclick="document.getElementById('productDialog').close()">use the custom request form</a> to select a local file. Original artwork is shared separately.</span><input id="detailArtwork" type="url" placeholder="https://drive.google.com/..."></label>` : ''}${product.requiresSelection ? `<h4>Sticker codes</h4><label class="selection-field"><span>Choose from <a href="catalogue.html" target="_blank">the catalogue</a></span><textarea id="detailSelection" rows="3" placeholder="${product.selectionPrompt || 'Enter selected codes'}"></textarea></label>` : ''}${product.quality ? `<h4>Quality</h4><p>${product.quality}</p>` : ''}<h4>How to use or display</h4><p>${product.application}</p><h4>Care</h4><p>${product.care}</p><p class="fine">${product.unit} · Select your exact variant before adding.</p><section class="product-reviews" id="detailReviews"></section></div></div>`;
+    $('#productDetail').innerHTML = `<div class="detail-layout"><div class="detail-media">${imageMarkup(product, product.designNames ? images[designIndex] : variant.image || images[0])}<div class="thumbs">${images.map((image, index) => `<button data-thumb="${fastImage(image)}" aria-label="Show image ${index + 1}"><img src="${fastImage(image)}" alt="" loading="lazy" decoding="async"></button>`).join('')}${product.video ? `<button data-video="${product.video}">▶ Product video</button>` : ''}</div></div><div class="detail-info"><p class="eyebrow">${product.theme} / ${product.id}</p><h2>${product.name}</h2><p>${product.description}</p><div class="variant-controls"><label>Size<select id="detailSize">${optionMarkup([...new Set(product.variants.map(v => v.size))], variant.size)}</select></label><label>Finish<select id="detailFinish">${optionMarkup([...new Set(product.variants.map(v => v.finish))], variant.finish)}</select></label></div><div class="card-bottom"><strong id="detailPrice">${priceMarkup(variant.price, product)}</strong>${quantityMarkup()}<span id="detailAction"></span></div><p id="detailFeedback" role="status"></p>${product.id==='POL-001'?'<div id="photoOrderStep" class="photo-order-step" '+(startOrder?'':'hidden')+'>'+photoFields()+'</div>':''}${product.contents ? `<h4>Inside this package</h4><p>${product.contents.join(' · ')}</p>` : ''}${product.requiresUpload ? `<h4>Your artwork</h4><label class="selection-field"><span>Paste a shareable Drive link to your original designs. Or <a href="#custom" onclick="document.getElementById('productDialog').close()">use the custom request form</a> to select a local file. Original artwork is shared separately.</span><input id="detailArtwork" type="url" placeholder="https://drive.google.com/..."></label>` : ''}${product.requiresSelection ? `<h4>Sticker codes</h4><label class="selection-field"><span>Choose from <a href="${product.id==='PACK-SINGLE'?'catalogue.html?format=individual':'catalogue.html'}" target="_blank">the catalogue</a></span><textarea id="detailSelection" rows="3" placeholder="${product.selectionPrompt || 'Enter selected codes'}"></textarea></label>` : ''}${product.quality ? `<h4>Quality</h4><p>${product.quality}</p>` : ''}<h4>How to use or display</h4><p>${product.application}</p><h4>Care</h4><p>${product.care}</p><p class="fine">${product.unit} · Select your exact variant before adding.</p><section class="product-reviews" id="detailReviews"></section></div></div>`;
     function syncDetail(prefer = 'size') {
       const size = $('#detailSize').value, finish = $('#detailFinish').value;
       let selected = product.variants.find(v => v.size === size && v.finish === finish);
@@ -225,8 +225,8 @@
         const codes = ($('#detailSelection')?.value || '').toUpperCase().split(/[\s,;]+/).filter(Boolean);
         const expected = Number(selected.size.match(/^\d+/)?.[0]);
         const known = new Set((window.STICKER_CATALOGUE || []).filter(item=>item.kind!=='long').map(item => item.code));
-        if (codes.length !== expected || new Set(codes).size !== codes.length || codes.some(code => !known.has(code))) {
-          toast(`Choose ${expected} different valid catalogue codes`); return null;
+        if (codes.length !== expected || codes.some(code => !known.has(code))) {
+          toast(`Choose ${expected} valid catalogue codes; repeats are welcome`); return null;
         }
         return codes.join(', ');
       };
@@ -242,9 +242,12 @@
   function cartLine(item) {
     if (item.type === 'custom') return `<article class="cart-item"><div class="unpictured"><span>✦</span></div><div><h3>${item.name}</h3><p>Custom · ${item.productType} · ${item.size} · ${item.finish} · Qty ${item.quantity}</p><p>Quote after review${item.fileName ? ` · Local reference: ${item.fileName}` : ''}</p><div class="quantity"><button class="remove" data-remove="${item.key}">Remove</button></div></div></article>`;
     const product = byId(item.productId), variant = product?.variants.find(v => v.id === item.variantId); if (!product || !variant) return '';
-    return `<article class="cart-item">${variant.image ? `<img src="${variant.image}" alt="">` : '<div class="unpictured"><span>✦</span></div>'}<div><h3>${product.name}</h3><p>${product.id} · ${variant.size} · ${variant.finish}</p>${item.selection ? `<p>Selected designs: ${escapeHtml(item.selection)}</p>` : ''}<p>${money(variant.price)} each · <b>${money(variant.price * item.quantity)}</b></p><div class="quantity"><button data-qty="${item.key}" data-delta="-1" aria-label="Decrease quantity">−</button><span>${item.quantity}</span><button data-qty="${item.key}" data-delta="1" aria-label="Increase quantity">+</button><button class="remove" data-remove="${item.key}">Remove</button></div></div></article>`;
+    const chosen=product.id==='PACK-SINGLE'?(window.STICKER_CATALOGUE||[]).find(d=>d.code===item.selection):null,image=chosen?.image||variant.image;
+    return `<article class="cart-item">${image ? `<img src="${image}" alt="">` : '<div class="unpictured"><span>✦</span></div>'}<div><h3>${product.name}</h3><p>${product.id} · ${variant.size} · ${variant.finish}</p>${item.selection ? `<p>${chosen?'Sticker: '+escapeHtml(chosen.name||chosen.category)+' · ':'Selected designs: '}${escapeHtml(item.selection)}</p>` : ''}<p>${money(variant.price)} each · <b>${money(variant.price * item.quantity)}</b></p><div class="quantity"><button data-qty="${item.key}" data-delta="-1" aria-label="Decrease quantity">−</button><span>${item.quantity}</span><button data-qty="${item.key}" data-delta="1" aria-label="Increase quantity">+</button><button class="remove" data-remove="${item.key}">Remove</button></div></div></article>`;
   }
   function renderCart() {
+    cart=window.TPTCartUtils.normalize(cart,products);saveState();updateCartCount();if(!cart.length)window.TPTCheckout?.setStep(1);
+    $('#checkoutNext').disabled=!cart.length;
     $('#cartItems').innerHTML = cart.length ? cart.map(cartLine).join('') : '<div class="empty"><h3>Your bag is waiting.</h3><p>Add a product or custom request to begin.</p></div>';
     const subtotal = cart.reduce((sum, item) => { if (item.type !== 'product') return sum; const product = byId(item.productId), variant = product?.variants.find(v => v.id === item.variantId); return sum + (variant?.price || 0) * item.quantity; }, 0);
     const freeShipping = $('#customerCountry').value==='India'&&subtotal >= catalogue.freeShippingThreshold;
@@ -254,10 +257,10 @@
     $('#payableRow').hidden = !freeShipping; $('#payableTotal').textContent = money(subtotal);
     $('#downloadPdf').disabled = cart.length === 0; $('#continueWa').setAttribute('aria-disabled', cart.length === 0); $('#continueWa').href = buildWhatsApp();
   }
-  function updateCartCount() { $('#cartCount').textContent = cart.reduce((sum, item) => sum + Number(item.quantity || 1), 0); }
+  function updateCartCount() { cart=window.TPTCartUtils.normalize(cart,products);const count=cart.reduce((sum,item)=>sum+item.quantity,0);$('#cartCount').textContent=count;if($('#checkoutNext'))$('#checkoutNext').disabled=count===0;if(!count){$('#purchaseFeedback').textContent='';$('#openCart').classList.remove('bag-updated');} }
   $('#openCart').addEventListener('click', () => { window.TPTCheckout?.reset();renderCart(); cartDialog.showModal(); });
   $('#cartItems').addEventListener('click', event => {
-    const remove = event.target.closest('[data-remove]'); if (remove) cart = cart.filter(item => item.key !== remove.dataset.remove);
+    const remove = event.target.closest('[data-remove]'); if (remove) {cart = cart.filter(item => item.key !== remove.dataset.remove);toast('Item removed from your bag');}
     const qty = event.target.closest('[data-qty]'); if (qty) { const item = cart.find(entry => entry.key === qty.dataset.qty); item.quantity = Math.max(0, Math.min(99, item.quantity + Number(qty.dataset.delta))); if(!item.quantity)cart=cart.filter(i=>i!==item); haptic(); }
     saveState(); updateCartCount(); syncPurchaseCounters(); renderCart();
   });
@@ -368,8 +371,9 @@
     document.querySelector('.hero').addEventListener('pointerleave', () => { showcase.style.setProperty('--tilt-x', '0deg'); showcase.style.setProperty('--tilt-y', '0deg'); });
   }
   const themes = [...new Set(products.map(product => product.theme))].sort(); $('#fandom').insertAdjacentHTML('beforeend', themes.map(theme => `<option>${theme}</option>`).join(''));
-  window.TPTStore = { addProduct, byId, openCart: () => { window.TPTCheckout?.reset();renderCart(); cartDialog.showModal(); }, toast, purchaseQuantity, syncPurchaseCounters, renderCart, collectCustomer, validateCustomer, buildWhatsApp, renderProducts, setCategory: category => { state.category = category; renderCategories(); renderProducts(); location.hash = 'shop'; } };
-  createFallingMagic(); renderCategories(); renderProducts(); updateCartCount(); renderHero(); watchReveals();
+  window.TPTStore = { addProduct, byId, openCart: () => { window.TPTCheckout?.reset();renderCart(); cartDialog.showModal(); }, toast, purchaseQuantity, syncPurchaseCounters, renderCart, collectCustomer, validateCustomer, buildWhatsApp, getItemCount:()=>window.TPTCartUtils.normalize(cart,products).reduce((n,i)=>n+i.quantity,0), renderProducts, setCategory: category => { state.category = category; renderCategories(); renderProducts(); location.hash = 'shop'; } };
+  saveState();createFallingMagic(); renderCategories(); renderProducts(); updateCartCount(); renderHero(); watchReveals();
+  window.addEventListener('storage',event=>{if(event.key==='tpt-cart-v4'){cart=window.TPTCartUtils.normalize(safeParse('tpt-cart-v4',[]),products);updateCartCount();syncPurchaseCounters();if(cartDialog.open)renderCart();}});
   const requestedProduct = new URLSearchParams(location.search).get('product');
   if (requestedProduct && byId(requestedProduct)) openProduct(byId(requestedProduct));
   const sheetsParam = new URLSearchParams(location.search).get('stickerSheets');
@@ -377,11 +381,12 @@
     try {
       const sheets = JSON.parse(sheetsParam), designs = window.STICKER_CATALOGUE || [];
       if (!Array.isArray(sheets) || !sheets.length || sheets.length > 100) throw Error('Invalid sheets');
-      const orders=sheets.map(sheet=>{
-        if(!Array.isArray(sheet.codes)||new Set(sheet.codes).size!==sheet.codes.length)throw Error('Invalid codes');
+      const orders=sheets.flatMap(sheet=>{
+        if(!Array.isArray(sheet.codes)||!sheet.codes.length||sheet.codes.length>99)throw Error('Invalid codes');
         const items=sheet.codes.map(code=>designs.find(s=>s.code===code));
         if(items.some(x=>!x))throw Error('Unknown code');
         let product,variant;
+        if(sheet.kind==='individual'){if(sheet.finish!=='regular'||items.some(x=>x.kind==='long'))throw Error('Individual stickers use regular designs');product=byId('PACK-SINGLE');variant=product?.variants.find(v=>v.id==='REG-ONE');if(!product||!variant)throw Error('Unavailable individual stickers');const counts=new Map();sheet.codes.forEach(c=>counts.set(c,(counts.get(c)||0)+1));return [...counts].map(([code,quantity])=>({product,variant,quantity,selection:code}));}
         if(sheet.kind==='long'){
           const pack=(window.STICKER_PACKS||[]).find(p=>p.id===sheet.packId&&p.kind==='long');
           if(!pack||!['regular','holo'].includes(sheet.finish)||sheet.codes.length!==pack.count||!sheet.codes.every(c=>pack.code_list.includes(c)))throw Error('Invalid long pack');
@@ -392,7 +397,7 @@
         }
         if(!product||!variant)throw Error('Unavailable sheet');return {product,variant,selection:sheet.codes.join(', ')};
       });
-      orders.forEach(order=>addProduct(order.product,order.variant,1,order.selection));
+      orders.forEach(order=>addProduct(order.product,order.variant,order.quantity||1,order.selection));
       window.TPTCheckout?.reset();renderCart(); cartDialog.showModal();
     } catch (error) { toast('Could not add those sheets. Please choose designs again.'); }
     history.replaceState(null, '', location.pathname + location.hash);
@@ -402,7 +407,7 @@
   if (chosenCodes) {
     const codes = chosenCodes.toUpperCase().split(',').map(code => code.trim()).filter(Boolean);
     const known = new Set((window.STICKER_CATALOGUE || []).filter(item=>item.kind!=='long').map(item => item.code));
-    if ([6, 12, 16].includes(codes.length) && new Set(codes).size === codes.length && codes.every(code => known.has(code))) {
+    if ([6, 12, 16].includes(codes.length) && codes.every(code => known.has(code))) {
       openProduct(byId('PACK-CUSTOM'));
       $('#detailSize').value = byId('PACK-CUSTOM').variants.find(v => v.id === `REG-${codes.length}`)?.size;
       $('#detailSize').dispatchEvent(new Event('change'));
