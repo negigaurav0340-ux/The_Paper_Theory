@@ -4,7 +4,7 @@ await Promise.all([window.TPT_CATALOGUE_READY,window.TPT_PRODUCTS_READY,window.T
 const catalogue=window.STICKER_CATALOGUE||[],packs=window.STICKER_PACKS||[],byCode=new Map(catalogue.map(s=>[s.code,s]));
 const $=id=>document.getElementById(id),safe=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const layout=$('sheetLayout'),finish=$('sheetFinish'),key='tpt-sheet-editor-v2';let selected=[],filter='All';
-try{const draft=JSON.parse(localStorage.getItem(key));if(draft){layout.value=['16','12','6','long4','long2','individual'].includes(draft.layout)?draft.layout:'16';finish.value=draft.finish==='holo'?'holo':'regular';selected=(draft.codes||[]).filter(c=>byCode.has(c));}else{selected=(JSON.parse(localStorage.getItem('tpt-selected-sticker-codes'))||[]).filter(c=>byCode.has(c)).slice(0,16);}}catch{}
+try{const draft=JSON.parse(localStorage.getItem(key));if(draft){layout.value=['16','12','6','long4','long2','individual'].includes(draft.layout)?draft.layout:'16';finish.value=draft.finish==='holo'?'holo':'regular';selected=(draft.codes||[]).filter(c=>byCode.has(c));}else{layout.value='16';selected=(JSON.parse(localStorage.getItem('tpt-selected-sticker-codes'))||[]).filter(c=>byCode.has(c)).slice(0,16);}}catch{}
 const individual=()=>layout.value==='individual';
 const capacity=()=>individual()?99:layout.value==='long4'?4:layout.value==='long2'?2:Number(layout.value);
 const longMode=()=>layout.value.startsWith('long');
@@ -14,7 +14,7 @@ const price=()=>individual()?selected.length*10:longMode()?(finish.value==='holo
 const complete=()=>individual()?selected.length>0:selected.length===capacity();
 function persist(){try{localStorage.setItem(key,JSON.stringify({layout:layout.value,finish:finish.value,codes:selected}));}catch{$('editorStatus').textContent='Browser storage unavailable; keep this page open.';}}
 function update(){
- if(individual())finish.value='regular';finish.disabled=individual();
+ if(individual())finish.value='regular';finish.disabled=individual();if(finish.options){finish.options[0].textContent=individual()?'Regular laminated · ₹10 each':'Regular laminated · ₹99';finish.options[1].hidden=individual();}
  $('shopSelection').textContent=individual()?'Add stickers to bag ↗':'Add sheet to bag ↗';
  $('selectedCount').textContent=selected.length;$('selectionHint').textContent=individual()?`${selected.length} × ₹10 · ₹${price()} total`:complete()?'Sheet complete · ready to add to bag':`Choose ${capacity()-selected.length} more sticker(s) · repeats welcome`;
  $('sheetSummary').textContent=individual()?`Individual 2-inch stickers · ₹10 each · ${selected.length} chosen · ₹${price()} total`:`${capacity()} ${longMode()?'long ':''}stickers per sheet · ₹${price()} · ${selected.length} selected.`;
