@@ -88,7 +88,7 @@
     page.drawLine({ start:{x:left,y:H-top}, end:{x:right,y:H-top}, thickness:1, color:colours.line }); top += 18;
     text(page, `PRODUCT SUBTOTAL: Rs. ${subtotal.toLocaleString('en-IN')}`, left, top, 13, bold); top += 22;
     const freeShippingThreshold = window.CATALOGUE?.freeShippingThreshold || 699;
-    const freeShipping = subtotal >= freeShippingThreshold;
+    const freeShipping = customer.country === 'India' && subtotal >= freeShippingThreshold;
     text(page, freeShipping ? `SHIPPING: FREE - product subtotal reached Rs. ${freeShippingThreshold}.` : `SHIPPING: Calculated at order confirmation using the delivery PIN code. Free from Rs. ${freeShippingThreshold}.`, left, top, 8, regular, freeShipping ? colours.blue : colours.muted); top += 14;
     if (cart.some(item => item.type === 'custom')) { text(page, 'CUSTOM WORK: Final quote confirmed after artwork review.', left, top, 8, regular, colours.muted); top += 14; }
     text(page, freeShipping ? `PAYABLE PRODUCT TOTAL: Rs. ${subtotal.toLocaleString('en-IN')}${cart.some(item => item.type === 'custom') ? ' + approved custom quote' : ''}.` : 'Final payable total is confirmed after shipping and any custom quotes.', left, top, 8, bold, colours.orange); top += 14;

@@ -14,7 +14,7 @@
       ]
     },
     {
-      "source": "/(owner|catalogue-manager|product-manager|admin).html",
+      "source": "/(owner|catalogue-manager|product-manager|review-manager|admin).html",
       "headers": [
         {
           "key": "X-Robots-Tag",
