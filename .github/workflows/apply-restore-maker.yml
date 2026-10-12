@@ -1,0 +1,39 @@
+name: Restore reviewed sheet maker and magnet gallery
+on:
+  push:
+    branches: [restore-maker-update]
+    paths: [.github/workflows/apply-restore-maker.yml]
+permissions:
+  contents: write
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - name: Verify and unpack reviewed changes
+        run: |
+          python3 - <<'PYCODE'
+          from pathlib import Path, PurePosixPath
+          import hashlib, zipfile
+          archive=Path('tpt-restore-update.zip')
+          assert hashlib.sha256(archive.read_bytes()).hexdigest() == 'c8e050fd99aa2809652b1d6cdba4422a986363e0b588f7278ac1def6325e5b71'
+          with zipfile.ZipFile(archive) as z:
+              for entry in z.infolist():
+                  p=PurePosixPath(entry.filename)
+                  assert not p.is_absolute() and '..' not in p.parts and '.git' not in p.parts and '.github' not in p.parts
+                  assert (entry.external_attr >> 16) & 0o170000 != 0o120000
+              z.extractall('.')
+          archive.unlink()
+          Path('.github/workflows/apply-restore-maker.yml').unlink()
+          PYCODE
+      - name: Build and verify
+        run: |
+          npm run build
+          npm run check
+      - name: Commit reviewed website changes
+        run: |
+          git config user.name 'negigaurav0340-ux'
+          git config user.email 'negigaurav0340-ux@users.noreply.github.com'
+          git add -A
+          git commit -m 'Restore custom magnet display gallery, sheet maker and delivery field order'
+          git push origin HEAD:${{ github.ref_name }}
