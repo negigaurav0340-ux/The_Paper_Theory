@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en-IN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Orders · The Paper Theory</title><link rel="icon" href="assets/logo.jpg"><link rel="stylesheet" href="backoffice.css"><script defer src="js/backoffice.js"></script><script defer src="js/orders-panel.js"></script></head>
+<body>
+<header class="bo-header"><a class="bo-brand" href="index.html"><img src="assets/logo.jpg" alt="" width="34" height="34">THE PAPER THEORY</a><nav class="bo-nav" aria-label="Owner tools"><a href="orders.html" aria-current="page">Orders</a><a href="inventory.html">Inventory</a><a href="admin.html">Analytics</a><a href="owner.html">Store editor</a></nav></header>
+<main>
+<p class="eyebrow">Order desk</p><h1>Orders</h1>
+<p class="lede">Every order placed on the website lands here and in your inbox. Confirm it to email the customer their order details and the payment request.</p>
+
+<form id="signin" class="signin"><label>Owner password<input id="password" type="password" autocomplete="current-password" placeholder="The CATALOGUE_ADMIN_PASSWORD you set in Vercel"></label><button class="dark" type="submit">Open orders</button></form>
+<p id="status" class="status-line" role="status" aria-live="polite"></p>
+<div id="alerts" class="alerts"></div>
+
+<section id="single" hidden></section>
+
+<div id="app" hidden>
+<div class="kpis"><div class="kpi hot"><span>Need your reply</span><strong id="kNew">0</strong><small>New orders to confirm</small></div><div class="kpi"><span>Awaiting payment</span><strong id="kAwait">0</strong><small id="kAwaitValue"></small></div><div class="kpi"><span>Paid, to ship</span><strong id="kPaid">0</strong><small>Pack and dispatch</small></div><div class="kpi"><span>Revenue, 30 days</span><strong id="kRevenue">₹0</strong><small id="kRevenueNote">Paid orders only</small></div></div>
+
+<div class="tabs" role="tablist"><button role="tab" data-tab="orders" aria-selected="true">Orders <span class="count" id="cOrders">0</span></button><button role="tab" data-tab="add" aria-selected="false">Add an order</button><button role="tab" data-tab="payment" aria-selected="false">Payment &amp; email</button><button role="tab" data-tab="emails" aria-selected="false">Visitor emails <span class="count" id="cLeads">0</span></button></div>
+
+<section data-panel="orders">
+<div class="row" style="margin-top:14px"><label style="flex:1;min-width:220px">Search<input id="search" type="search" placeholder="Order number, name, phone, email or city"></label><button id="refresh" type="button">Refresh</button><button id="exportOrders" type="button">Export CSV</button></div>
+<div id="filters" class="chips" role="group" aria-label="Filter by status"></div>
+<div id="list"></div>
+</section>
+
+<section data-panel="add" hidden>
+<form id="addForm" class="card"><h2>Add an order you took elsewhere</h2><p class="hint">For orders from WhatsApp, Instagram or in person, so your panel and revenue stay complete. No email is sent.</p>
+<div class="grid4" style="margin-top:14px"><label>Where it came from<select name="channel"><option>WhatsApp</option><option>Instagram</option><option>In person</option><option>Phone</option><option>Other</option></select></label><label>Order date<input name="date" type="date" required></label><label>Status<select name="status"><option value="paid">Paid</option><option value="new">New (not confirmed)</option><option value="awaiting_payment">Awaiting payment</option><option value="shipped">Shipped</option><option value="delivered">Delivered</option></select></label><label>Payment reference<input name="reference" maxlength="120" placeholder="Optional"></label></div>
+<div class="grid4" style="margin-top:12px"><label>Customer name<input name="name" maxlength="100" required></label><label>Phone<input name="phone" maxlength="20" inputmode="tel"></label><label>Email<input name="email" type="email" maxlength="160"></label><label>City<input name="city" maxlength="100"></label></div>
+<label style="margin-top:12px">Delivery address<input name="street" maxlength="300" placeholder="Optional"></label>
+<p class="block-title">Items</p><div id="itemRows" class="item-rows"></div><button id="addItem" type="button" style="margin-top:8px">+ Add another item</button>
+<div class="grid4" style="margin-top:14px"><label>Shipping charged (₹)<input name="shipping" type="number" min="0" step="1" value="0"></label><label style="grid-column:span 3">Note<input name="note" maxlength="1000" placeholder="Optional"></label></div>
+<div class="row" style="margin-top:16px"><button class="primary" type="submit">Add order</button><span id="addTotal" class="muted"></span></div><p id="addStatus" class="status-line" role="status"></p></form>
+</section>
+
+<section data-panel="payment" hidden>
+<form id="payForm" class="card"><h2>Payment details shown to customers</h2><p class="hint">These go into the email a customer receives when you confirm their order.</p>
+<div class="order-cols"><div><label>UPI ID<input name="upiId" maxlength="80" placeholder="yourname@bank" autocomplete="off"><small>Shown as text under the QR code so customers can also type it.</small></label><label style="margin-top:12px">Name on the UPI account<input name="payeeName" maxlength="80" placeholder="So the customer can check they are paying the right person"></label><label style="margin-top:12px">Payment instructions<textarea name="instructions" maxlength="600" placeholder="Leave empty to use: After paying, reply to this email with the payment screenshot or UPI reference and mention your order number."></textarea></label></div>
+<div><label>Payment QR code<input id="qrFile" type="file" accept="image/png,image/jpeg"><small>Upload the QR image from your UPI app. It is attached inside every payment email.</small></label><img id="qrPreview" class="qr-preview" alt="Current payment QR code" hidden style="margin-top:10px"><button id="qrRemove" type="button" class="quiet" hidden>Remove QR code</button></div></div>
+<div class="row" style="margin-top:16px"><button class="primary" type="submit">Save payment details</button></div><p id="payStatus" class="status-line" role="status"></p></form>
+<div class="card"><h2>Order emails</h2><p id="mailState"></p><div class="row"><button id="testMail" type="button">Send a test email to my inbox</button></div><p id="mailStatus" class="status-line" role="status"></p>
+<details style="margin-top:10px"><summary><b>How to switch on emails from thepapertheory.in@gmail.com</b></summary><ol class="steps"><li>Sign in to that Gmail account and turn on 2-Step Verification (Google Account → Security).</li><li>Open <b>myaccount.google.com/apppasswords</b>, create an app password named “Website orders” and copy the 16 letters.</li><li>In Vercel → your project → Settings → Environment Variables, add <code>MAIL_APP_PASSWORD</code> with those 16 letters. Never paste it into a chat, a file or this page.</li><li>Redeploy once, then press “Send a test email”.</li></ol><p class="hint">Optional variables: <code>MAIL_USER</code> (sending address, defaults to thepapertheory.in@gmail.com) and <code>ORDER_ALERT_EMAIL</code> (where alerts go, defaults to the same inbox).</p></details></div>
+</section>
+
+<section data-panel="emails" hidden>
+<div class="card"><h2>Emails people gave you</h2><p class="hint">A website cannot see a visitor’s email address unless they type it. This list holds everyone who placed an order or signed up for new-drop emails in the footer. Anonymous visits are in Analytics.</p>
+<div class="row" style="margin-top:12px"><label style="flex:1;min-width:200px">Search<input id="leadSearch" type="search" placeholder="Email, name or city"></label><label>Show<select id="leadType"><option value="">Everyone</option><option value="customer">Customers</option><option value="subscriber">Subscribers only</option></select></label><button id="copyLeads" type="button">Copy emails</button><button id="exportLeads" type="button">Export CSV</button></div>
+<div class="table-wrap" style="margin-top:12px"><table><thead><tr><th>Email</th><th>Type</th><th>Name</th><th>City</th><th class="num">Orders</th><th>Came from</th><th>First seen</th><th>Last seen</th></tr></thead><tbody id="leadRows"></tbody></table></div><p id="leadStatus" class="status-line" role="status"></p></div>
+</section>
+</div>
+<p class="footnote">Customer details are shown only after you enter the owner password or open an order from its alert email. Keep both private.</p>
+</main></body></html>

@@ -37,7 +37,7 @@ cataloguePage=cataloguePage.replace(/<script id="catalogueSchema" type="applicat
 fs.writeFileSync(path.join(root,'catalogue.html'),cataloguePage);
 console.log('Generated '+products.length+' product pages and '+pages.length+' sitemap entries.');
 // Make source exports portable even where API/source routes are not served as static files.
-function walk(dir){return fs.readdirSync(dir,{withFileTypes:true}).flatMap(e=>e.isDirectory()?walk(path.join(dir,e.name)):[path.join(dir,e.name)]);}
+function walk(dir){return fs.readdirSync(dir,{withFileTypes:true}).filter(e=>!['.git','.vercel','node_modules'].includes(e.name)).flatMap(e=>e.isDirectory()?walk(path.join(dir,e.name)):[path.join(dir,e.name)]);}
 const files=walk(root).map(f=>path.relative(root,f).replace(/\\/g,'/')).filter(f=>!['owner-export-source.json','website-files.json'].includes(f)&&!f.endsWith('.zip'));
 const sources={};for(const f of files.filter(f=>/\.(html|css|js|cjs|json|md|txt|xml|csv)$/.test(f)))sources[f]=fs.readFileSync(path.join(root,f),'utf8');
 fs.writeFileSync(path.join(root,'owner-export-source.json'),JSON.stringify(sources));

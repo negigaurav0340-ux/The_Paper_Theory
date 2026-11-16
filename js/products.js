@@ -1599,6 +1599,158 @@ window.CATALOGUE = {
           "image": "assets/lightbox/lightbox-luffy-on.webp"
         }
       ]
+    },
+    {
+      "id": "PACK-CUTE-GHOST",
+      "name": "Cute Ghost Moods",
+      "categories": [
+        "Sticker Packs",
+        "Holographic Packs"
+      ],
+      "theme": "Cute / Relatable",
+      "description": "12 2-inch laminated vinyl stickers on a 3 × 4 sheet: soft purple-beanie ghost moods: binge nights, bubble tea, naps and comfort food. ₹99 regular or ₹199 holographic. Waterproof with a scratch-resistant finish.",
+      "images": [
+        "assets/sticker-packs/cute-ghost.webp"
+      ],
+      "variants": [
+        {
+          "id": "REG",
+          "size": "12 stickers · 3 × 4 sheet",
+          "finish": "Regular laminated",
+          "price": 99,
+          "image": "assets/sticker-packs/cute-ghost.webp"
+        },
+        {
+          "id": "HOLO",
+          "size": "12 stickers · 3 × 4 sheet",
+          "finish": "Holographic",
+          "price": 199,
+          "image": "assets/sticker-packs/cute-ghost.webp"
+        }
+      ],
+      "unit": "One complete sticker sheet",
+      "status": "order",
+      "quality": "Laminated vinyl · waterproof · scratch-resistant. Removal depends on the surface and condition.",
+      "application": "Peel and apply to a clean, dry, smooth surface such as a laptop, bottle, journal, storage case or similar suitable surface.",
+      "care": "Clean gently with a damp cloth. Avoid abrasive cleaners, prolonged soaking and high heat.",
+      "contents": [
+        "12 separately cut stickers",
+        "Regular ₹99 · Holographic ₹199"
+      ]
+    },
+    {
+      "id": "PACK-CAPYBARA-CALM",
+      "name": "Capybara Calm",
+      "categories": [
+        "Sticker Packs",
+        "Holographic Packs"
+      ],
+      "theme": "Cute / Relatable",
+      "description": "12 2-inch laminated vinyl stickers on a 3 × 4 sheet: calm capybara affirmations for study desks, journals and slow days. ₹99 regular or ₹199 holographic. Waterproof with a scratch-resistant finish.",
+      "images": [
+        "assets/sticker-packs/capybara-calm.webp"
+      ],
+      "variants": [
+        {
+          "id": "REG",
+          "size": "12 stickers · 3 × 4 sheet",
+          "finish": "Regular laminated",
+          "price": 99,
+          "image": "assets/sticker-packs/capybara-calm.webp"
+        },
+        {
+          "id": "HOLO",
+          "size": "12 stickers · 3 × 4 sheet",
+          "finish": "Holographic",
+          "price": 199,
+          "image": "assets/sticker-packs/capybara-calm.webp"
+        }
+      ],
+      "unit": "One complete sticker sheet",
+      "status": "order",
+      "quality": "Laminated vinyl · waterproof · scratch-resistant. Removal depends on the surface and condition.",
+      "application": "Peel and apply to a clean, dry, smooth surface such as a laptop, bottle, journal, storage case or similar suitable surface.",
+      "care": "Clean gently with a damp cloth. Avoid abrasive cleaners, prolonged soaking and high heat.",
+      "contents": [
+        "12 separately cut stickers",
+        "Regular ₹99 · Holographic ₹199"
+      ]
+    },
+    {
+      "id": "PACK-GIRL-WHO-CODES",
+      "name": "Girl Who Codes",
+      "categories": [
+        "Sticker Packs",
+        "Holographic Packs"
+      ],
+      "theme": "Engineering / Coding",
+      "description": "12 2-inch laminated vinyl stickers on a 3 × 4 sheet: pastel coding humour for laptops: retro PCs, error pop-ups and coffee-powered commits. ₹99 regular or ₹199 holographic. Waterproof with a scratch-resistant finish.",
+      "images": [
+        "assets/sticker-packs/girl-who-codes.webp"
+      ],
+      "variants": [
+        {
+          "id": "REG",
+          "size": "12 stickers · 3 × 4 sheet",
+          "finish": "Regular laminated",
+          "price": 99,
+          "image": "assets/sticker-packs/girl-who-codes.webp"
+        },
+        {
+          "id": "HOLO",
+          "size": "12 stickers · 3 × 4 sheet",
+          "finish": "Holographic",
+          "price": 199,
+          "image": "assets/sticker-packs/girl-who-codes.webp"
+        }
+      ],
+      "unit": "One complete sticker sheet",
+      "status": "order",
+      "quality": "Laminated vinyl · waterproof · scratch-resistant. Removal depends on the surface and condition.",
+      "application": "Peel and apply to a clean, dry, smooth surface such as a laptop, bottle, journal, storage case or similar suitable surface.",
+      "care": "Clean gently with a damp cloth. Avoid abrasive cleaners, prolonged soaking and high heat.",
+      "contents": [
+        "12 separately cut stickers",
+        "Regular ₹99 · Holographic ₹199"
+      ]
+    },
+    {
+      "id": "PACK-DEV-LIFE",
+      "name": "Dev Life",
+      "categories": [
+        "Sticker Packs",
+        "Holographic Packs"
+      ],
+      "theme": "Engineering / Coding",
+      "description": "12 2-inch laminated vinyl stickers on a 3 × 4 sheet: neon developer humour: terminal jokes, to-do lists and bugs that never leave. ₹99 regular or ₹199 holographic. Waterproof with a scratch-resistant finish.",
+      "images": [
+        "assets/sticker-packs/dev-life.webp"
+      ],
+      "variants": [
+        {
+          "id": "REG",
+          "size": "12 stickers · 3 × 4 sheet",
+          "finish": "Regular laminated",
+          "price": 99,
+          "image": "assets/sticker-packs/dev-life.webp"
+        },
+        {
+          "id": "HOLO",
+          "size": "12 stickers · 3 × 4 sheet",
+          "finish": "Holographic",
+          "price": 199,
+          "image": "assets/sticker-packs/dev-life.webp"
+        }
+      ],
+      "unit": "One complete sticker sheet",
+      "status": "order",
+      "quality": "Laminated vinyl · waterproof · scratch-resistant. Removal depends on the surface and condition.",
+      "application": "Peel and apply to a clean, dry, smooth surface such as a laptop, bottle, journal, storage case or similar suitable surface.",
+      "care": "Clean gently with a damp cloth. Avoid abrasive cleaners, prolonged soaking and high heat.",
+      "contents": [
+        "12 separately cut stickers",
+        "Regular ₹99 · Holographic ₹199"
+      ]
     }
   ],
   "freeShippingThreshold": 699,

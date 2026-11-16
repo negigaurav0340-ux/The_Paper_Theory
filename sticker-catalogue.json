@@ -2030,6 +2030,390 @@
     "image": "assets/catalogue/clean/SASS-030.png"
   },
   {
+    "code": "GHOST-001",
+    "pack": "Cute Ghost Moods",
+    "pack_id": "PACK-CUTE-GHOST",
+    "category": "Cute / Relatable",
+    "image": "assets/catalogue/clean/GHOST-001.png",
+    "name": "Just One More Episode"
+  },
+  {
+    "code": "GHOST-002",
+    "pack": "Cute Ghost Moods",
+    "pack_id": "PACK-CUTE-GHOST",
+    "category": "Cute / Relatable",
+    "image": "assets/catalogue/clean/GHOST-002.png",
+    "name": "Fuelled by Caffeine & Delusion"
+  },
+  {
+    "code": "GHOST-003",
+    "pack": "Cute Ghost Moods",
+    "pack_id": "PACK-CUTE-GHOST",
+    "category": "Cute / Relatable",
+    "image": "assets/catalogue/clean/GHOST-003.png",
+    "name": "In My Listening Era"
+  },
+  {
+    "code": "GHOST-004",
+    "pack": "Cute Ghost Moods",
+    "pack_id": "PACK-CUTE-GHOST",
+    "category": "Cute / Relatable",
+    "image": "assets/catalogue/clean/GHOST-004.png",
+    "name": "Mentally Overloaded"
+  },
+  {
+    "code": "GHOST-005",
+    "pack": "Cute Ghost Moods",
+    "pack_id": "PACK-CUTE-GHOST",
+    "category": "Cute / Relatable",
+    "image": "assets/catalogue/clean/GHOST-005.png",
+    "name": "Budget? Never Heard of It"
+  },
+  {
+    "code": "GHOST-006",
+    "pack": "Cute Ghost Moods",
+    "pack_id": "PACK-CUTE-GHOST",
+    "category": "Cute / Relatable",
+    "image": "assets/catalogue/clean/GHOST-006.png",
+    "name": "Nap First, Adult Later"
+  },
+  {
+    "code": "GHOST-007",
+    "pack": "Cute Ghost Moods",
+    "pack_id": "PACK-CUTE-GHOST",
+    "category": "Cute / Relatable",
+    "image": "assets/catalogue/clean/GHOST-007.png",
+    "name": "Comfort Food Fixes Everything"
+  },
+  {
+    "code": "GHOST-008",
+    "pack": "Cute Ghost Moods",
+    "pack_id": "PACK-CUTE-GHOST",
+    "category": "Cute / Relatable",
+    "image": "assets/catalogue/clean/GHOST-008.png",
+    "name": "Gaming = My Therapy"
+  },
+  {
+    "code": "GHOST-009",
+    "pack": "Cute Ghost Moods",
+    "pack_id": "PACK-CUTE-GHOST",
+    "category": "Cute / Relatable",
+    "image": "assets/catalogue/clean/GHOST-009.png",
+    "name": "Manifesting Good Things"
+  },
+  {
+    "code": "GHOST-010",
+    "pack": "Cute Ghost Moods",
+    "pack_id": "PACK-CUTE-GHOST",
+    "category": "Cute / Relatable",
+    "image": "assets/catalogue/clean/GHOST-010.png",
+    "name": "Romanticizing My To-Do List"
+  },
+  {
+    "code": "GHOST-011",
+    "pack": "Cute Ghost Moods",
+    "pack_id": "PACK-CUTE-GHOST",
+    "category": "Cute / Relatable",
+    "image": "assets/catalogue/clean/GHOST-011.png",
+    "name": "Collecting Memories Not Things"
+  },
+  {
+    "code": "GHOST-012",
+    "pack": "Cute Ghost Moods",
+    "pack_id": "PACK-CUTE-GHOST",
+    "category": "Cute / Relatable",
+    "image": "assets/catalogue/clean/GHOST-012.png",
+    "name": "It's Okay to Be a Work in Progress"
+  },
+  {
+    "code": "CAPY-001",
+    "pack": "Capybara Calm",
+    "pack_id": "PACK-CAPYBARA-CALM",
+    "category": "Cute / Relatable",
+    "image": "assets/catalogue/clean/CAPY-001.png",
+    "name": "Cozy Focus Mode"
+  },
+  {
+    "code": "CAPY-002",
+    "pack": "Capybara Calm",
+    "pack_id": "PACK-CAPYBARA-CALM",
+    "category": "Cute / Relatable",
+    "image": "assets/catalogue/clean/CAPY-002.png",
+    "name": "Productive(ish)"
+  },
+  {
+    "code": "CAPY-003",
+    "pack": "Capybara Calm",
+    "pack_id": "PACK-CAPYBARA-CALM",
+    "category": "Cute / Relatable",
+    "image": "assets/catalogue/clean/CAPY-003.png",
+    "name": "Chill & Float"
+  },
+  {
+    "code": "CAPY-004",
+    "pack": "Capybara Calm",
+    "pack_id": "PACK-CAPYBARA-CALM",
+    "category": "Cute / Relatable",
+    "image": "assets/catalogue/clean/CAPY-004.png",
+    "name": "More Adventures Please"
+  },
+  {
+    "code": "CAPY-005",
+    "pack": "Capybara Calm",
+    "pack_id": "PACK-CAPYBARA-CALM",
+    "category": "Cute / Relatable",
+    "image": "assets/catalogue/clean/CAPY-005.png",
+    "name": "Be Kind to Yourself"
+  },
+  {
+    "code": "CAPY-006",
+    "pack": "Capybara Calm",
+    "pack_id": "PACK-CAPYBARA-CALM",
+    "category": "Cute / Relatable",
+    "image": "assets/catalogue/clean/CAPY-006.png",
+    "name": "Small Steps Big Progress"
+  },
+  {
+    "code": "CAPY-007",
+    "pack": "Capybara Calm",
+    "pack_id": "PACK-CAPYBARA-CALM",
+    "category": "Cute / Relatable",
+    "image": "assets/catalogue/clean/CAPY-007.png",
+    "name": "Rest Recharge Repeat"
+  },
+  {
+    "code": "CAPY-008",
+    "pack": "Capybara Calm",
+    "pack_id": "PACK-CAPYBARA-CALM",
+    "category": "Cute / Relatable",
+    "image": "assets/catalogue/clean/CAPY-008.png",
+    "name": "Good Vibes Only"
+  },
+  {
+    "code": "CAPY-009",
+    "pack": "Capybara Calm",
+    "pack_id": "PACK-CAPYBARA-CALM",
+    "category": "Cute / Relatable",
+    "image": "assets/catalogue/clean/CAPY-009.png",
+    "name": "Happiness in the Small Things"
+  },
+  {
+    "code": "CAPY-010",
+    "pack": "Capybara Calm",
+    "pack_id": "PACK-CAPYBARA-CALM",
+    "category": "Cute / Relatable",
+    "image": "assets/catalogue/clean/CAPY-010.png",
+    "name": "My Aura is Unmatched"
+  },
+  {
+    "code": "CAPY-011",
+    "pack": "Capybara Calm",
+    "pack_id": "PACK-CAPYBARA-CALM",
+    "category": "Cute / Relatable",
+    "image": "assets/catalogue/clean/CAPY-011.png",
+    "name": "100% Angelic"
+  },
+  {
+    "code": "CAPY-012",
+    "pack": "Capybara Calm",
+    "pack_id": "PACK-CAPYBARA-CALM",
+    "category": "Cute / Relatable",
+    "image": "assets/catalogue/clean/CAPY-012.png",
+    "name": "Just Be Cute"
+  },
+  {
+    "code": "GCODE-001",
+    "pack": "Girl Who Codes",
+    "pack_id": "PACK-GIRL-WHO-CODES",
+    "category": "Engineering / Coding",
+    "image": "assets/catalogue/clean/GCODE-001.png",
+    "name": "Too Cute to Compute"
+  },
+  {
+    "code": "GCODE-002",
+    "pack": "Girl Who Codes",
+    "pack_id": "PACK-GIRL-WHO-CODES",
+    "category": "Engineering / Coding",
+    "image": "assets/catalogue/clean/GCODE-002.png",
+    "name": "One Mental Breakdown Later"
+  },
+  {
+    "code": "GCODE-003",
+    "pack": "Girl Who Codes",
+    "pack_id": "PACK-GIRL-WHO-CODES",
+    "category": "Engineering / Coding",
+    "image": "assets/catalogue/clean/GCODE-003.png",
+    "name": "Girl Who Codes"
+  },
+  {
+    "code": "GCODE-004",
+    "pack": "Girl Who Codes",
+    "pack_id": "PACK-GIRL-WHO-CODES",
+    "category": "Engineering / Coding",
+    "image": "assets/catalogue/clean/GCODE-004.png",
+    "name": "404: Motivation Not Found"
+  },
+  {
+    "code": "GCODE-005",
+    "pack": "Girl Who Codes",
+    "pack_id": "PACK-GIRL-WHO-CODES",
+    "category": "Engineering / Coding",
+    "image": "assets/catalogue/clean/GCODE-005.png",
+    "name": "Ctrl Alt Delulu"
+  },
+  {
+    "code": "GCODE-006",
+    "pack": "Girl Who Codes",
+    "pack_id": "PACK-GIRL-WHO-CODES",
+    "category": "Engineering / Coding",
+    "image": "assets/catalogue/clean/GCODE-006.png",
+    "name": "Eat Sleep Code Repeat"
+  },
+  {
+    "code": "GCODE-007",
+    "pack": "Girl Who Codes",
+    "pack_id": "PACK-GIRL-WHO-CODES",
+    "category": "Engineering / Coding",
+    "image": "assets/catalogue/clean/GCODE-007.png",
+    "name": "It Works on My Machine"
+  },
+  {
+    "code": "GCODE-008",
+    "pack": "Girl Who Codes",
+    "pack_id": "PACK-GIRL-WHO-CODES",
+    "category": "Engineering / Coding",
+    "image": "assets/catalogue/clean/GCODE-008.png",
+    "name": "Debugging My Life"
+  },
+  {
+    "code": "GCODE-009",
+    "pack": "Girl Who Codes",
+    "pack_id": "PACK-GIRL-WHO-CODES",
+    "category": "Engineering / Coding",
+    "image": "assets/catalogue/clean/GCODE-009.png",
+    "name": "Coffee.exe Running"
+  },
+  {
+    "code": "GCODE-010",
+    "pack": "Girl Who Codes",
+    "pack_id": "PACK-GIRL-WHO-CODES",
+    "category": "Engineering / Coding",
+    "image": "assets/catalogue/clean/GCODE-010.png",
+    "name": "Too Many Tabs Open"
+  },
+  {
+    "code": "GCODE-011",
+    "pack": "Girl Who Codes",
+    "pack_id": "PACK-GIRL-WHO-CODES",
+    "category": "Engineering / Coding",
+    "image": "assets/catalogue/clean/GCODE-011.png",
+    "name": "Hello World"
+  },
+  {
+    "code": "GCODE-012",
+    "pack": "Girl Who Codes",
+    "pack_id": "PACK-GIRL-WHO-CODES",
+    "category": "Engineering / Coding",
+    "image": "assets/catalogue/clean/GCODE-012.png",
+    "name": "Commit. Push. Repeat."
+  },
+  {
+    "code": "DEV-001",
+    "pack": "Dev Life",
+    "pack_id": "PACK-DEV-LIFE",
+    "category": "Engineering / Coding",
+    "image": "assets/catalogue/clean/DEV-001.png",
+    "name": "Headphones at Sunset"
+  },
+  {
+    "code": "DEV-002",
+    "pack": "Dev Life",
+    "pack_id": "PACK-DEV-LIFE",
+    "category": "Engineering / Coding",
+    "image": "assets/catalogue/clean/DEV-002.png",
+    "name": "sudo make coffee"
+  },
+  {
+    "code": "DEV-003",
+    "pack": "Dev Life",
+    "pack_id": "PACK-DEV-LIFE",
+    "category": "Engineering / Coding",
+    "image": "assets/catalogue/clean/DEV-003.png",
+    "name": "Hooded Coder"
+  },
+  {
+    "code": "DEV-004",
+    "pack": "Dev Life",
+    "pack_id": "PACK-DEV-LIFE",
+    "category": "Engineering / Coding",
+    "image": "assets/catalogue/clean/DEV-004.png",
+    "name": "Ctrl + Alt + Del My Stress"
+  },
+  {
+    "code": "DEV-005",
+    "pack": "Dev Life",
+    "pack_id": "PACK-DEV-LIFE",
+    "category": "Engineering / Coding",
+    "image": "assets/catalogue/clean/DEV-005.png",
+    "name": "Works on My Machine"
+  },
+  {
+    "code": "DEV-006",
+    "pack": "Dev Life",
+    "pack_id": "PACK-DEV-LIFE",
+    "category": "Engineering / Coding",
+    "image": "assets/catalogue/clean/DEV-006.png",
+    "name": "Code Coffee Debug Repeat"
+  },
+  {
+    "code": "DEV-007",
+    "pack": "Dev Life",
+    "pack_id": "PACK-DEV-LIFE",
+    "category": "Engineering / Coding",
+    "image": "assets/catalogue/clean/DEV-007.png",
+    "name": "Offline (Very Productive)"
+  },
+  {
+    "code": "DEV-008",
+    "pack": "Dev Life",
+    "pack_id": "PACK-DEV-LIFE",
+    "category": "Engineering / Coding",
+    "image": "assets/catalogue/clean/DEV-008.png",
+    "name": "I Investigate Unexpected Features"
+  },
+  {
+    "code": "DEV-009",
+    "pack": "Dev Life",
+    "pack_id": "PACK-DEV-LIFE",
+    "category": "Engineering / Coding",
+    "image": "assets/catalogue/clean/DEV-009.png",
+    "name": "Dev To-Do: Pray"
+  },
+  {
+    "code": "DEV-010",
+    "pack": "Dev Life",
+    "pack_id": "PACK-DEV-LIFE",
+    "category": "Engineering / Coding",
+    "image": "assets/catalogue/clean/DEV-010.png",
+    "name": "Error 404: Motivation Not Found"
+  },
+  {
+    "code": "DEV-011",
+    "pack": "Dev Life",
+    "pack_id": "PACK-DEV-LIFE",
+    "category": "Engineering / Coding",
+    "image": "assets/catalogue/clean/DEV-011.png",
+    "name": "eat(); code(); sleep(); repeat();"
+  },
+  {
+    "code": "DEV-012",
+    "pack": "Dev Life",
+    "pack_id": "PACK-DEV-LIFE",
+    "category": "Engineering / Coding",
+    "image": "assets/catalogue/clean/DEV-012.png",
+    "name": "Same Bug, Different Day"
+  },
+  {
     "code": "LONG-ANIME-ORIGINAL-1",
     "name": "Anime Original Long Sticker Pack · design 1",
     "pack": "Anime Original Long Sticker Pack",

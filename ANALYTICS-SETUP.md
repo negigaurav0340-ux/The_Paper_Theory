@@ -12,4 +12,4 @@ Redeploy. Open `/admin.html`, enter the password and press **Load live data**. T
 
 The public analytics endpoint stores only a random session ID, event name, timestamp, source, page path, device class and product/variant IDs. It does not store names, phone numbers, email addresses, delivery details or IP addresses. A daily hashed IP rate key is used only to limit public event submissions and expires automatically. The dashboard is protected by the manager password; do not put that password in website files.
 
-The current checkout downloads an order PDF and opens WhatsApp. It has no authenticated payment/order backend, so **checkout starts are not paid orders**. Orders and revenue stay zero until a verified order integration is added. Do not treat anonymous session IDs as customer identities.
+Orders now come from the order desk (see `ORDERS-SETUP.md`). The dashboard counts an order when it is placed and counts revenue only when you mark that order as paid in `/orders.html`. Checkout starts and WhatsApp clicks are still enquiries, not orders. Do not treat anonymous session IDs as customer identities; names and contact details live only in the orders panel.

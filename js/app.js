@@ -323,11 +323,11 @@
     };
   }
   function validateCustomer(customer) {
-    const required = ['name','phone','house','street','city','district','state','pin','country'];
+    const required = ['name','phone','email','house','street','city','district','state','pin','country'];
     const missing = required.filter(key => !customer[key]);
-    if (missing.length) return 'Please complete the required delivery fields.';
+    if (missing.length) return missing.length===1&&missing[0]==='email'?'Please enter your email address so we can send your order confirmation and payment details.':'Please complete the required delivery fields.';
     if(!/^[+\d ()-]{7,20}$/.test(customer.phone))return 'Please enter a valid phone number with country code.';
-    if(customer.email&&!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(customer.email))return 'Please enter a valid email address, or leave it blank.';
+    if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(customer.email))return 'Please enter a valid email address.';
     if (customer.country==='India'&&!/^\d{6}$/.test(customer.pin)) return 'Please enter a valid 6-digit Indian PIN code.';
     if(customer.country!=='India'&&!/^[A-Za-z0-9 -]{3,12}$/.test(customer.pin))return 'Please enter a valid postal code.';
     return '';
@@ -376,7 +376,7 @@
     document.querySelector('.hero').addEventListener('pointerleave', () => { showcase.style.setProperty('--tilt-x', '0deg'); showcase.style.setProperty('--tilt-y', '0deg'); });
   }
   const themes = [...new Set(products.map(product => product.theme))].sort(); $('#fandom').insertAdjacentHTML('beforeend', themes.map(theme => `<option>${theme}</option>`).join(''));
-  window.TPTStore = { addProduct, byId, openCart: () => { window.TPTCheckout?.reset();renderCart(); cartDialog.showModal(); }, toast, purchaseQuantity, syncPurchaseCounters, renderCart, collectCustomer, validateCustomer, buildWhatsApp, getItemCount:()=>window.TPTCartUtils.normalize(cart,products).reduce((n,i)=>n+i.quantity,0), renderProducts, setCategory: category => { state.category = category; renderCategories(); renderProducts(); location.hash = 'shop'; } };
+  window.TPTStore = { addProduct, byId, openCart: () => { window.TPTCheckout?.reset();renderCart(); cartDialog.showModal(); }, toast, purchaseQuantity, syncPurchaseCounters, renderCart, collectCustomer, validateCustomer, buildWhatsApp, checkoutDetail, getCart:()=>structuredClone(window.TPTCartUtils.normalize(cart,products)), clearCart:()=>{cart=[];saveState();updateCartCount();syncPurchaseCounters();renderCart();}, getItemCount:()=>window.TPTCartUtils.normalize(cart,products).reduce((n,i)=>n+i.quantity,0), renderProducts, setCategory: category => { state.category = category; renderCategories(); renderProducts(); location.hash = 'shop'; } };
   saveState();createFallingMagic(); renderCategories(); renderProducts(); updateCartCount(); renderHero(); watchReveals();
   window.addEventListener('storage',event=>{if(event.key==='tpt-cart-v4'){cart=window.TPTCartUtils.normalize(safeParse('tpt-cart-v4',[]),products);updateCartCount();syncPurchaseCounters();if(cartDialog.open)renderCart();}});
   const requestedProduct = new URLSearchParams(location.search).get('product');
