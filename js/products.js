@@ -1765,5 +1765,12 @@ window.CATALOGUE = {
       "6 stickers · 2 × 3"
     ],
     "customerArtwork": 199
+  },
+  "bundleOffer": {
+    "quantity": 3,
+    "price": 249,
+    "eligiblePrice": 99,
+    "category": "Sticker Packs",
+    "label": "Any 3 sheets for ₹249"
   }
 };

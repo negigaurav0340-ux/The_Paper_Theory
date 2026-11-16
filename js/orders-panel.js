@@ -32,14 +32,14 @@ ${again ? `<form class="action-box" data-action="paid" data-id="${esc(o.id)}"><h
   }
 
   function card(o, forceOpen) {
-    const c = o.customer, total = o.total ?? o.subtotal;
+    const c = o.customer, total = o.total ?? o.subtotal - (o.discount || 0);
     const mailBits = Object.entries(o.emails || {}).map(([k, v]) => `<li>${esc(k.replace(/([A-Z])/g, ' $1').toLowerCase())}: ${esc(String(v).replace(/ \d{4}-\d\d-\d\dT.*$/, ''))}</li>`).join('');
     const wa = waLink(o, `Hi ${c.name.split(' ')[0]}, this is The Paper Theory about your order ${o.id}.`);
     return `<details class="order" data-order="${esc(o.id)}"${forceOpen || state.open.has(o.id) ? ' open' : ''}>
 <summary><span class="oid">${esc(o.id)}</span><span class="who">${esc(c.name)} <small>· ${esc(c.city || o.channel || '')} · ${esc(when(o.createdAt))}${o.origin === 'manual' ? ' · ' + esc(o.channel || 'manual') : ''}</small></span><span class="amt">${money(total)}${o.total == null ? '<small class="muted"> + shipping</small>' : ''}</span><span class="badge ${esc(o.status)}">${LABEL[o.status] || esc(o.status)}</span></summary>
 <div class="order-body"><div class="order-cols"><div>
 <p class="block-title">Items</p><div class="table-wrap"><table><tbody>${o.items.map(i => `<tr><td><b>${esc(i.name)}</b>${i.option ? `<br><span class="muted small">${esc(i.option)}</span>` : ''}${i.selection ? `<br><span class="muted small wrap">${esc(i.selection)}</span>` : ''}${i.verified === false ? '<br><span class="pill low">Price not matched to catalogue</span>' : ''}</td><td class="num">× ${i.quantity}</td><td class="num">${i.lineTotal == null ? 'Quote' : money(i.lineTotal)}</td></tr>`).join('')}
-<tr><td colspan="2">Subtotal</td><td class="num">${money(o.subtotal)}</td></tr>${o.adjustment ? `<tr><td colspan="2">${esc(o.adjustmentLabel || 'Extra / discount')}</td><td class="num">${money(o.adjustment)}</td></tr>` : ''}
+<tr><td colspan="2">Subtotal</td><td class="num">${money(o.subtotal)}</td></tr>${o.discount ? `<tr><td colspan="2">Bundle saving · ${esc(o.discountLabel || '')}</td><td class="num">−${money(o.discount)}</td></tr>` : ''}${o.adjustment ? `<tr><td colspan="2">${esc(o.adjustmentLabel || 'Extra / discount')}</td><td class="num">${money(o.adjustment)}</td></tr>` : ''}
 <tr><td colspan="2">Shipping</td><td class="num">${o.shipping == null ? 'To confirm' : o.shipping === 0 ? 'Free' : money(o.shipping)}</td></tr><tr class="total"><td colspan="2">Total</td><td class="num">${o.total == null ? 'To confirm' : money(o.total)}</td></tr></tbody></table></div>
 ${o.note ? `<p class="block-title">Customer note</p><p class="wrap">${esc(o.note)}</p>` : ''}${actions(o)}
 </div><div>

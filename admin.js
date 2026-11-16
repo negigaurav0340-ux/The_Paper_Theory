@@ -159,7 +159,7 @@
     const slots = drawHeat(events);
 
     // Recent orders and journeys
-    $('orderFeed').innerHTML = live ? (live.length ? `<div class="table-wrap"><table><thead><tr><th>Order</th><th>Placed</th><th>Customer</th><th>Status</th><th class="num">Total</th></tr></thead><tbody>${live.slice(0, 8).map(o => `<tr><td><b>${esc(o.id)}</b></td><td>${esc(when(o.createdAt))}</td><td>${esc(o.customer.name)}${o.customer.city ? ' · ' + esc(o.customer.city) : ''}</td><td><span class="badge ${esc(o.status)}">${esc(o.status.replace('_', ' '))}</span></td><td class="num">${money(o.total ?? o.subtotal)}</td></tr>`).join('')}</tbody></table></div>` : '<div class="empty">No orders yet. The first one will appear here and in your inbox.</div>') : '<div class="empty">Load live data with the owner password to see your orders here.</div>';
+    $('orderFeed').innerHTML = live ? (live.length ? `<div class="table-wrap"><table><thead><tr><th>Order</th><th>Placed</th><th>Customer</th><th>Status</th><th class="num">Total</th></tr></thead><tbody>${live.slice(0, 8).map(o => `<tr><td><b>${esc(o.id)}</b></td><td>${esc(when(o.createdAt))}</td><td>${esc(o.customer.name)}${o.customer.city ? ' · ' + esc(o.customer.city) : ''}</td><td><span class="badge ${esc(o.status)}">${esc(o.status.replace('_', ' '))}</span></td><td class="num">${money(o.total ?? o.subtotal - (o.discount || 0))}</td></tr>`).join('')}</tbody></table></div>` : '<div class="empty">No orders yet. The first one will appear here and in your inbox.</div>') : '<div class="empty">Load live data with the owner password to see your orders here.</div>';
     const journeys = new Map(); for (const e of events) { if (!e.sessionId) continue; const j = journeys.get(e.sessionId) || { last: e.time, pages: new Set(), source: e.source, device: e.device, steps: new Set() }; if (e.time > j.last) j.last = e.time; if (e.name === 'page_view') j.pages.add(e.path); else j.steps.add(e.name.replaceAll('_', ' ')); journeys.set(e.sessionId, j); }
     $('sessionReport').innerHTML = journeys.size ? `<table><thead><tr><th>Last seen</th><th>Came from</th><th>Device</th><th>Pages</th><th>What they did</th></tr></thead><tbody>${[...journeys.values()].sort((a, b) => b.last.localeCompare(a.last)).slice(0, 40).map(j => `<tr><td>${esc(when(j.last))}</td><td>${esc(j.source || 'direct')}</td><td>${esc(j.device || '')}</td><td class="wrap">${esc([...j.pages].slice(0, 4).join(', ') || '–')}</td><td class="wrap">${esc([...j.steps].slice(0, 6).join(', ') || 'looked around')}</td></tr>`).join('')}</tbody></table>` : '<p class="muted small">No visits in this period.</p>';
 
@@ -196,12 +196,23 @@
   // A fixed checklist from reviewing the storefront; it does not depend on the data above.
   $('checklist').innerHTML = [
     ['Show the shipping charge up front', 'Below ₹699 the shop says shipping is “calculated at confirmation”. Pick a flat rate (for example one price for all of India) and show it in the bag, so the total is known before ordering.'],
-    ['Put dispatch time and your damage policy where buyers decide', 'The ordering guide says dispatch takes 2–4 business days, but the product pages and the bag do not. Add that line there, with a plain sentence on what happens if something arrives damaged.'],
+    ['Done: dispatch time and damage policy are where buyers decide', 'The bag, every product window and every product page now say dispatch usually takes 2–4 business days and what to do if something arrives damaged.', true],
     ['Add real photos and first reviews', 'Photograph printed sheets in hand, on a laptop and on a bottle. Ask your first customers and friends who bought to leave a review with a photo; the review system is already built in.'],
     ['Answer new orders within the hour', 'Orders now reach your inbox with a confirm button. A fast payment email is the difference between a paid order and a forgotten one.'],
-    ['Send people to products, not the homepage', 'Each product has its own page (products/…). Use those links under the matching reel, with utm tags, so visitors land on what they just saw.'],
-    ['Give a reason to order today', 'A bundle, for example any 3 sheets for a set price, lifts order value more than a discount on a single ₹99 sheet, and gets shoppers closer to the ₹699 free-shipping line.']
-  ].map(([title, body]) => `<li><b>${esc(title)}</b>${esc(body)}</li>`).join('');
+    ['Ask every buyer for a review', 'The “order shipped” email now ends with a Leave a review button for the product they bought. A few reviews with photos do more than any banner.'],
+    ['Send people to products, not the homepage', 'Use “Share links” above to make a link to the exact product a reel shows. Visitors land on what they just saw, and you see which post brought them.'],
+    ['Done: a reason to order today', 'Any 3 regular ₹99 sheets now cost ₹249. The bag applies it automatically and nudges shoppers who are one sheet short. Mention it in your posts.', true]
+  ].map(([title, body, done]) => `<li${done ? ' class="done"' : ''}><b>${esc(title)}</b>${esc(body)}</li>`).join('');
+
+  /* ---------- Share-link builder ---------- */
+  (() => {
+    const packs = new Map((window.STICKER_PACKS || []).map(p => [p.id, p.slug])), products = (window.CATALOGUE?.products || []).filter(p => p.status !== 'soon');
+    $('linkProduct').innerHTML = '<option value="">Homepage</option>' + products.map(p => `<option value="${esc(packs.get(p.id) || p.id.toLowerCase())}">${esc(p.name)}</option>`).join('');
+    const build = () => { const page = $('linkProduct').value, campaign = $('linkCampaign').value.trim().toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, ''); $('linkOut').value = `https://thepapertheory.in/${page ? 'products/' + page + '.html' : ''}?utm_source=${$('linkSource').value}&utm_medium=social${campaign ? '&utm_campaign=' + campaign : ''}`; };
+    for (const id of ['linkProduct', 'linkSource', 'linkCampaign']) $(id).addEventListener('input', build);
+    $('linkCopy').addEventListener('click', async () => { try { await navigator.clipboard.writeText($('linkOut').value); setStatus($('linkStatus'), 'Link copied. Paste it in your bio, story or caption.', 'ok'); } catch { setStatus($('linkStatus'), 'Copy is blocked by this browser. Select the link and copy it yourself.', 'error'); } });
+    build();
+  })();
 
   /* ---------- Loading and controls ---------- */
   async function load() {

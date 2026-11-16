@@ -26,6 +26,7 @@ function itemsTable(order) {
   const line = (label, value, bold) => `<tr><td colspan="2" style="padding:6px 0;font-size:14px${bold ? ';font-weight:bold;font-size:16px' : ''}">${label}</td><td align="right" style="padding:6px 0;font-size:14px;white-space:nowrap${bold ? ';font-weight:bold;font-size:16px' : ''}">${value}</td></tr>`;
   return `<table role="presentation" width="100%" cellpadding="0" cellspacing="0">${rows}
 ${line('Product subtotal', money(order.subtotal))}
+${order.discount ? line(e('Bundle saving · ' + order.discountLabel), '−' + money(order.discount)) : ''}
 ${order.adjustment ? line(e(order.adjustmentLabel || 'Custom items / adjustment'), money(order.adjustment)) : ''}
 ${line('Shipping', order.shipping == null ? 'To be confirmed' : order.shipping === 0 ? 'Free' : money(order.shipping))}
 ${line('Total', order.total == null ? 'To be confirmed' : money(order.total), true)}</table>`;
@@ -33,7 +34,7 @@ ${line('Total', order.total == null ? 'To be confirmed' : money(order.total), tr
 
 function itemsPlain(order) {
   return order.items.map(item => `- ${itemLabel(item)}${item.selection ? ' [' + item.selection + ']' : ''} x ${item.quantity} = ${item.lineTotal == null ? 'Quote' : money(item.lineTotal)}`).join('\n') +
-    `\nSubtotal: ${money(order.subtotal)}${order.adjustment ? `\n${order.adjustmentLabel || 'Adjustment'}: ${money(order.adjustment)}` : ''}\nShipping: ${order.shipping == null ? 'To be confirmed' : order.shipping === 0 ? 'Free' : money(order.shipping)}\nTotal: ${order.total == null ? 'To be confirmed' : money(order.total)}`;
+    `\nSubtotal: ${money(order.subtotal)}${order.discount ? `\nBundle saving (${order.discountLabel}): -${money(order.discount)}` : ''}${order.adjustment ? `\n${order.adjustmentLabel || 'Adjustment'}: ${money(order.adjustment)}` : ''}\nShipping: ${order.shipping == null ? 'To be confirmed' : order.shipping === 0 ? 'Free' : money(order.shipping)}\nTotal: ${order.total == null ? 'To be confirmed' : money(order.total)}`;
 }
 
 const deliveryBlock = order => `<p style="margin:18px 0 6px;font-size:11px;letter-spacing:1.5px;font-weight:bold;color:${ORANGE}">DELIVER TO</p>
@@ -45,7 +46,7 @@ const noteBlock = note => note ? `<p style="margin:16px 0;padding:12px 14px;back
 function ownerAlert(order, link) {
   const c = order.customer;
   const html = shell(`New order ${e(order.id)}`, `
-<p style="margin:0 0 18px;font-size:15px;line-height:1.6">${e(c.name)} from ${e(c.city)} placed an order worth <b>${money(order.subtotal)}</b> on ${e(istTime(order.createdAt))}.</p>
+<p style="margin:0 0 18px;font-size:15px;line-height:1.6">${e(c.name)} from ${e(c.city)} placed an order worth <b>${money(order.subtotal - (order.discount || 0))}</b> on ${e(istTime(order.createdAt))}.</p>
 ${itemsTable(order)}
 ${order.unverified ? `<p style="margin:14px 0;padding:10px 12px;background:#fff5df;font-size:13px;line-height:1.5">Check prices: one or more items could not be matched against the published catalogue.</p>` : ''}
 ${deliveryBlock(order)}
@@ -55,7 +56,7 @@ ${button(link, 'Review &amp; confirm this order →')}
 <p style="margin:0;font-size:13px;line-height:1.6;color:${MUTED}">Confirming sends ${e(c.name.split(' ')[0])} the order details and the payment request by email. Nothing is sent to the customer until you confirm.</p>`,
     'You are receiving this because an order was placed on thepapertheory.in. Replying to this email writes to the customer.');
   const plain = `New order ${order.id}\n${c.name} · ${c.phone} · ${c.email}\n${address(c)}\n\n${itemsPlain(order)}\n${order.note ? '\nCustomer note: ' + order.note + '\n' : ''}\nReview and confirm: ${link}`;
-  return { subject: `New order ${order.id} · ${money(order.subtotal)} · ${c.name} (${c.city})`, html, plain };
+  return { subject: `New order ${order.id} · ${money(order.subtotal - (order.discount || 0))} · ${c.name} (${c.city})`, html, plain };
 }
 
 // Sent to the customer when the owner confirms: order details plus the payment request.
@@ -87,12 +88,15 @@ ${noteBlock(order.ownerNote)}${itemsTable(order)}${deliveryBlock(order)}`);
   return { subject: `Payment received for order ${order.id}`, html, plain: `Hi ${first},\n\nWe have received ${money(order.total)} for order ${order.id} and are preparing it now. We will email you again when it ships.\n\n${itemsPlain(order)}\n\nThe Paper Theory · WhatsApp ${WHATSAPP}` };
 }
 
-function customerShipped(order) {
+function customerShipped(order, site) {
   const first = order.customer.name.split(' ')[0], t = order.tracking || {};
+  // Ask for a review once the parcel is on its way; the link opens the first product they bought.
+  const bought = order.items.find(i => /^[A-Z0-9-]{3,40}$/.test(i.productId || '')), reviewLink = site && bought ? `${site}/index.html?product=${encodeURIComponent(bought.productId)}` : '';
+  const review = reviewLink ? `<p style="margin:18px 0 0;font-size:14px;line-height:1.6">When it arrives, tell other shoppers how it looks. A short review with a photo helps a small shop a lot.</p>${button(reviewLink, 'Leave a review', GREEN)}` : '';
   const track = t.courier || t.number ? `<p style="margin:0 0 16px;font-size:15px;line-height:1.6">${t.courier ? 'Courier: <b>' + e(t.courier) + '</b>' : ''}${t.courier && t.number ? '<br>' : ''}${t.number ? 'Tracking number: <b>' + e(t.number) + '</b>' : ''}</p>` : '';
   const html = shell(`Your order is on its way, ${e(first)}.`, `
-<p style="margin:0 0 16px;font-size:15px;line-height:1.6">Order <b>${e(order.id)}</b> has been dispatched.</p>${track}${noteBlock(order.ownerNote)}${itemsTable(order)}${deliveryBlock(order)}`);
-  return { subject: `Order ${order.id} has shipped`, html, plain: `Hi ${first},\n\nOrder ${order.id} has been dispatched.${t.courier ? '\nCourier: ' + t.courier : ''}${t.number ? '\nTracking number: ' + t.number : ''}\n\n${itemsPlain(order)}\n\nThe Paper Theory · WhatsApp ${WHATSAPP}` };
+<p style="margin:0 0 16px;font-size:15px;line-height:1.6">Order <b>${e(order.id)}</b> has been dispatched.</p>${track}${noteBlock(order.ownerNote)}${itemsTable(order)}${deliveryBlock(order)}${review}`);
+  return { subject: `Order ${order.id} has shipped`, html, plain: `Hi ${first},\n\nOrder ${order.id} has been dispatched.${t.courier ? '\nCourier: ' + t.courier : ''}${t.number ? '\nTracking number: ' + t.number : ''}\n\n${itemsPlain(order)}${reviewLink ? '\n\nWhen it arrives, leave a review: ' + reviewLink : ''}\n\nThe Paper Theory · WhatsApp ${WHATSAPP}` };
 }
 
 function customerCancelled(order) {

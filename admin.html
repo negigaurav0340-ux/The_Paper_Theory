@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en-IN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Analytics · The Paper Theory</title><link rel="icon" href="assets/logo.jpg"><link rel="stylesheet" href="backoffice.css"><script defer src="js/products.js"></script><script defer src="js/lightbox-data.js"></script><script defer src="js/backoffice.js"></script><script defer src="admin.js"></script></head>
+<html lang="en-IN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Analytics · The Paper Theory</title><link rel="icon" href="assets/logo.jpg"><link rel="stylesheet" href="backoffice.css"><script defer src="js/products.js"></script><script defer src="js/lightbox-data.js"></script><script defer src="js/sticker-packs-data.js"></script><script defer src="js/backoffice.js"></script><script defer src="admin.js"></script></head>
 <body>
 <header class="bo-header"><a class="bo-brand" href="index.html"><img src="assets/logo.jpg" alt="" width="34" height="34">THE PAPER THEORY</a><nav class="bo-nav" aria-label="Owner tools"><a href="orders.html">Orders</a><a href="inventory.html">Inventory</a><a href="admin.html" aria-current="page">Analytics</a><a href="owner.html">Store editor</a></nav></header>
 <main>
@@ -31,6 +31,10 @@
 </div>
 
 <section class="card"><p class="eyebrow">Orders</p><h2>Latest orders</h2><div id="orderFeed"></div><div class="row" style="margin-top:12px"><a class="btn" href="orders.html">Open the orders panel</a></div></section>
+
+<section class="card"><p class="eyebrow">Share links</p><h2>Make a tracked link for a post</h2><p class="hint">Pick the product a reel or story shows, name the post, and paste the link under it. Visits from that link then appear above by source and campaign.</p>
+<div class="grid3" style="margin-top:12px"><label>Product<select id="linkProduct"></select></label><label>Where you will post it<select id="linkSource"><option value="instagram">Instagram</option><option value="whatsapp">WhatsApp</option><option value="youtube">YouTube</option><option value="facebook">Facebook</option><option value="other">Somewhere else</option></select></label><label>Name of the post<input id="linkCampaign" maxlength="60" placeholder="e.g. ghost-reel-nov"><small>Short, no spaces needed. Used as the campaign name.</small></label></div>
+<div class="row" style="margin-top:12px"><input id="linkOut" readonly aria-label="Link to share" style="flex:1;min-width:220px" onfocus="this.select()"><button id="linkCopy" type="button" class="dark">Copy link</button></div><p id="linkStatus" class="status-line" role="status"></p></section>
 
 <section class="card"><p class="eyebrow">Store checklist</p><h2>Changes most likely to bring your first orders</h2><p class="hint">These come from a review of the shop itself, not from the numbers above. Tick them off in order.</p><ul id="checklist" class="tips"></ul></section>
 

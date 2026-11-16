@@ -74,6 +74,14 @@ Orders hold the customer's name, phone, email, delivery address and items. They 
 
 Four 12-sticker sheets were added the same way as earlier packs (product, pack, 48 individual catalogue codes, product pages, sitemap): Cute Ghost Moods (`GHOST-001…012`), Capybara Calm (`CAPY-…`), Girl Who Codes (`GCODE-…`) and Dev Life (`DEV-…`). They follow the existing sheet pricing of ₹99 regular / ₹199 holographic and the 3 × 4, 2-inch description. Change any of it in the store editor.
 
+## Bundle offer, delivery line, reviews and share links
+
+- **Any 3 sheets for ₹249.** Every three regular ₹99 sticker sheets in a bag cost ₹249 together. The bag shows the saving and tells a shopper who is one or two sheets short. The server applies the same rule, so the order, your alert email and the payment email all carry the "Bundle saving" line. Holographic sheets and non-sticker products are not part of it. To change or stop the offer, edit `bundleOffer` at the end of `js/products.js` (quantity, price, eligiblePrice), or delete that block.
+- **Shipping** is unchanged: free from ₹699, otherwise you set it when you confirm the order.
+- **Dispatch and damage line.** The bag, each product window and each product page say: dispatch usually takes 2–4 business days, and what to send if an item arrives damaged.
+- **Review request.** The "order shipped" email ends with a Leave a review button for the product bought.
+- **Share links.** Analytics has a "Share links" box that builds a link to any product page with the source and post name attached, so each post shows up by name in your traffic report.
+
 ## Checks
 
 `npm run check` now also runs `scripts/verify-orders.cjs`, which tests the order flow, emails, access rules and inventory against an in-memory database with no network.

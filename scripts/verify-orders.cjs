@@ -57,6 +57,15 @@ const customer = { name: 'Asha Verma', phone: '+91 98765 43210', email: 'asha@ex
   r = await call(orders, 'POST', { body: { action: 'place', customer, items: [{ type: 'product', productId: 'PACK-GYM-MOTIVATION', variantId: 'REG', quantity: 1 }] }, headers: { origin: 'https://evil.example' } }); assert.equal(r.status, 403);
   r = await call(orders, 'POST', { body: { action: 'place', customer, items: [{ type: 'product', productId: 'LIT-001', variantId: [...orders._test.prices().get('LIT-001').variants.keys()][0], quantity: 1 }] } }); assert.equal(r.status, 201); assert.equal(r.body.shipping, 0, 'Free shipping applies automatically at ₹699 or more');
 
+  /* Bundle: every 3 regular ₹99 sheets cost ₹249, worked out on the server. */
+  r = await call(orders, 'POST', { body: { action: 'place', customer, items: [{ type: 'product', productId: 'PACK-GYM-MOTIVATION', variantId: 'REG', quantity: 2 }, { type: 'product', productId: 'PACK-HEALTHY-FOOD', variantId: 'REG', quantity: 2 }, { type: 'product', productId: 'PACK-GYM-MOTIVATION', variantId: 'HOLO', quantity: 1 }] } });
+  assert.equal(r.status, 201); assert.equal(r.body.subtotal, 595); assert.equal(r.body.discount, 48, 'Four ₹99 sheets make one bundle; the holographic sheet does not count');
+  assert(sentMail.at(-1).html.includes('Bundle saving') && sentMail.at(-1).subject.includes('₹547'));
+  const bundleId = r.body.id, bundleKey = sentMail.at(-1).html.match(/&amp;k=([a-f0-9]{40})/)[1];
+  r = await call(orders, 'POST', { body: { action: 'confirm', id: bundleId, key: bundleKey, shipping: 50 } }); assert.equal(r.body.order.total, 597);
+  r = await call(orders, 'POST', { headers: owner, body: { action: 'delete', id: bundleId } }); assert.equal(r.status, 200);
+  sentMail.length = 2;
+
   /* Access control. */
   r = await call(orders, 'GET'); assert.equal(r.status, 401);
   r = await call(orders, 'GET', { headers: { 'x-catalogue-secret': 'wrong' } }); assert.equal(r.status, 401);
@@ -74,7 +83,7 @@ const customer = { name: 'Asha Verma', phone: '+91 98765 43210', email: 'asha@ex
   r = await call(orders, 'POST', { body: { action: 'paid', id, key, reference: 'UPI123' } }); assert.equal(r.body.order.status, 'paid'); assert(sentMail.at(-1).subject.includes('Payment received'));
   assert.equal(JSON.parse(db.get('tpt:events:v1')[0]).revenue, 248, 'Paid orders feed verified revenue into analytics');
   r = await call(orders, 'POST', { body: { action: 'confirm', id, key, shipping: 0 } }); assert.equal(r.status, 409);
-  r = await call(orders, 'POST', { body: { action: 'shipped', id, key, courier: 'India Post', tracking: 'EH123' } }); assert.equal(r.body.order.status, 'shipped'); assert(sentMail.at(-1).html.includes('EH123'));
+  r = await call(orders, 'POST', { body: { action: 'shipped', id, key, courier: 'India Post', tracking: 'EH123' } }); assert.equal(r.body.order.status, 'shipped'); assert(sentMail.at(-1).html.includes('EH123')); assert(sentMail.at(-1).html.includes('https://thepapertheory.in/index.html?product=PACK-GYM-MOTIVATION'), 'The shipped email asks for a review');
 
   /* Manual orders, visitor emails and the owner list. */
   r = await call(orders, 'POST', { headers: owner, body: { action: 'create', channel: 'Instagram', status: 'paid', date: '2026-11-10', shipping: 40, customer: { name: 'Ravi <script>' }, items: [{ name: 'Anime sticker sheet', option: 'Holographic', quantity: 3, unitPrice: 199 }] } });
@@ -82,7 +91,7 @@ const customer = { name: 'Asha Verma', phone: '+91 98765 43210', email: 'asha@ex
   r = await call(orders, 'POST', { body: { action: 'subscribe', email: 'Fan@Example.com', consent: true, source: 'footer' } }); assert.equal(r.status, 201);
   r = await call(orders, 'POST', { body: { action: 'subscribe', email: 'nope', consent: true } }); assert.equal(r.status, 400);
   r = await call(orders, 'GET', { headers: owner }); assert.equal(r.status, 200); assert.equal(r.body.orders.length, 3); assert.equal(r.body.mail.sender, 'thepapertheory.in@gmail.com');
-  assert.deepEqual(r.body.leads.map(l => l.email).sort(), ['asha@example.com', 'fan@example.com']); assert.equal(r.body.leads.find(l => l.email === 'asha@example.com').orders, 2);
+  assert.deepEqual(r.body.leads.map(l => l.email).sort(), ['asha@example.com', 'fan@example.com']); assert.equal(r.body.leads.find(l => l.email === 'asha@example.com').orders, 3);
 
   /* Inventory: the owner edits; each place sees only its own stock with its own access code. */
   r = await call(inventory, 'GET'); assert.equal(r.status, 401);
@@ -95,5 +104,5 @@ const customer = { name: 'Asha Verma', phone: '+91 98765 43210', email: 'asha@ex
   r = await call(inventory, 'GET', { query: { place: 'a' }, headers: { 'x-place-code': 'cafe-2468' } }); assert.equal(r.status, 200); assert.equal(r.body.items.length, 1); assert.equal(r.body.items[0].name, 'Gym Motivation sheet'); assert.equal(r.body.place.name, 'Campus Cafe');
   r = await call(inventory, 'GET', { query: { place: 'b' }, headers: { 'x-place-code': 'cafe-2468' } }); assert.equal(r.status, 401, 'One place cannot read the other');
   r = await call(inventory, 'POST', { headers: owner, body: { action: 'save', rev: 1, places, items: [{ placeId: 'a', name: 'x', price: -5, quantity: 1, givenOn: '2026-11-01' }] } }); assert.equal(r.status, 400);
-  console.log('PASS: mail structure and SMTP dialogue, server-side pricing, owner-confirm-before-customer-email flow, payment QR email, link/owner access limits, manual orders, visitor emails and two-place inventory.');
+  console.log('PASS: mail structure and SMTP dialogue, server-side pricing and bundle saving, owner-confirm-before-customer-email flow, payment QR email, link/owner access limits, manual orders, visitor emails and two-place inventory.');
 })().catch(e => { console.error(e); process.exitCode = 1; });
