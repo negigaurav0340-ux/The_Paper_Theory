@@ -14,7 +14,7 @@
       ]
     },
     {
-      "source": "/(owner|catalogue-manager|product-manager|review-manager|admin).html",
+      "source": "/(owner|catalogue-manager|product-manager|review-manager|admin|orders|inventory|stock).html",
       "headers": [
         {
           "key": "X-Robots-Tag",
@@ -38,5 +38,11 @@
   ],
   "buildCommand": "node scripts/build-seo.cjs",
   "outputDirectory": ".",
-  "framework": null
+  "framework": null,
+  "functions": {
+    "api/orders.js": {
+      "maxDuration": 30,
+      "includeFiles": "js/*.js"
+    }
+  }
 }

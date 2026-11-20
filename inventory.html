@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en-IN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Inventory · The Paper Theory</title><link rel="icon" href="assets/logo.jpg"><link rel="stylesheet" href="backoffice.css"><script defer src="js/products.js"></script><script defer src="js/lightbox-data.js"></script><script defer src="js/backoffice.js"></script><script defer src="js/inventory.js"></script></head>
+<body>
+<header class="bo-header"><a class="bo-brand" href="index.html"><img src="assets/logo.jpg" alt="" width="34" height="34">THE PAPER THEORY</a><nav class="bo-nav" aria-label="Owner tools"><a href="orders.html">Orders</a><a href="inventory.html" aria-current="page">Inventory</a><a href="admin.html">Analytics</a><a href="owner.html">Store editor</a></nav></header>
+<main>
+<p class="eyebrow">Stock with partners</p><h1>Inventory</h1>
+<p class="lede">Record what you have handed to each place: the product, its price, how many, and the date. Each place gets its own private link to see its list. Only you can change it.</p>
+<form id="signin" class="signin"><label>Owner password<input id="password" type="password" autocomplete="current-password" placeholder="The CATALOGUE_ADMIN_PASSWORD you set in Vercel"></label><button class="dark" type="submit">Open inventory</button></form>
+<p id="status" class="status-line" role="status" aria-live="polite"></p>
+<div id="app" hidden>
+<div id="places" class="grid2" style="margin-top:16px"></div>
+<div class="card">
+<div class="row" style="justify-content:space-between"><h2 style="margin:0">Products given</h2><div class="row"><button id="exportInv" type="button">Export CSV</button><button id="addRow" type="button">+ Add product</button><button id="save" class="primary" type="button">Save changes</button></div></div>
+<div id="placeFilter" class="chips" role="group" aria-label="Show place"></div>
+<div class="table-wrap"><table class="inv-table"><thead><tr><th>Place</th><th>Product name</th><th class="num">Price (₹)</th><th class="num">Qty given</th><th class="num">Sold</th><th class="num">Left</th><th>Date given</th><th>Note</th><th></th></tr></thead><tbody id="rows"></tbody><tfoot id="totals"></tfoot></table></div>
+<datalist id="productNames"></datalist>
+<p id="saveStatus" class="status-line" role="status" aria-live="polite"></p>
+<p class="hint">“Sold” is optional: update it when a place tells you what has sold, and “Left” and the amounts work themselves out. Nothing is saved until you press Save changes.</p>
+</div>
+</div>
+</main></body></html>

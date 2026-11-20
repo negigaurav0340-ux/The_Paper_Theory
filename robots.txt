@@ -5,4 +5,7 @@ Disallow: /owner.html
 Disallow: /admin.html
 Disallow: /catalogue-manager.html
 Disallow: /product-manager.html
+Disallow: /orders.html
+Disallow: /inventory.html
+Disallow: /stock.html
 Sitemap: https://thepapertheory.in/sitemap.xml

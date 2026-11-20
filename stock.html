@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en-IN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Your stock · The Paper Theory</title><link rel="icon" href="assets/logo.jpg"><link rel="stylesheet" href="backoffice.css"><script defer src="js/backoffice.js"></script><script defer src="js/stock-view.js"></script></head>
+<body>
+<header class="bo-header"><span class="bo-brand"><img src="assets/logo.jpg" alt="" width="34" height="34">THE PAPER THEORY</span></header>
+<main>
+<p class="eyebrow">Stock list</p><h1 id="title">Products with you</h1>
+<p class="lede" id="lede">Enter the access code The Paper Theory gave you to see the products placed with you.</p>
+<form id="signin" class="signin"><label>Access code<input id="code" type="password" autocomplete="off" required></label><button class="dark" type="submit">Show my stock</button></form>
+<p id="status" class="status-line" role="status" aria-live="polite"></p>
+<div id="app" hidden>
+<div class="kpis"><div class="kpi"><span>Products</span><strong id="kLines">0</strong><small>Different items</small></div><div class="kpi"><span>Units received</span><strong id="kGiven">0</strong><small id="kSold"></small></div><div class="kpi hot"><span>Units with you</span><strong id="kLeft">0</strong><small>Still to sell</small></div><div class="kpi"><span>Value with you</span><strong id="kValue">₹0</strong><small>At listed prices</small></div></div>
+<div class="card"><div class="row" style="justify-content:space-between"><h2 style="margin:0">What you received</h2><div class="row"><button id="print" type="button">Print</button><button id="signout" type="button" class="quiet">Lock</button></div></div>
+<div class="table-wrap" style="margin-top:12px"><table><thead><tr><th>Product</th><th class="num">With you</th><th class="num">Price</th><th class="num">Received</th><th class="num">Sold</th><th>Date given</th><th>Note</th></tr></thead><tbody id="rows"></tbody></table></div>
+<p id="updated" class="hint" style="margin-top:12px"></p></div>
+<p class="footnote">This list is view-only. If something looks wrong, message The Paper Theory on WhatsApp at +91 82195 78050.</p>
+</div>
+</main></body></html>
