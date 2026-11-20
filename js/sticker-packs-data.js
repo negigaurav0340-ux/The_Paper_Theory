@@ -8,6 +8,7 @@ window.STICKER_PACKS = [
     "layout": "3 × 4",
     "image": "assets/sticker-packs/cute-ghost.webp",
     "holoImage": "assets/sticker-packs/cute-ghost.webp",
+    "laptopImage": "assets/sticker-packs/cute-ghost-laptop.webp",
     "codes": "GHOST-001, GHOST-002, GHOST-003, GHOST-004, GHOST-005, GHOST-006, GHOST-007, GHOST-008, GHOST-009, GHOST-010, GHOST-011, GHOST-012",
     "code_list": [
       "GHOST-001",
@@ -35,6 +36,7 @@ window.STICKER_PACKS = [
     "layout": "3 × 4",
     "image": "assets/sticker-packs/capybara-calm.webp",
     "holoImage": "assets/sticker-packs/capybara-calm.webp",
+    "laptopImage": "assets/sticker-packs/capybara-calm-laptop.webp",
     "codes": "CAPY-001, CAPY-002, CAPY-003, CAPY-004, CAPY-005, CAPY-006, CAPY-007, CAPY-008, CAPY-009, CAPY-010, CAPY-011, CAPY-012",
     "code_list": [
       "CAPY-001",
@@ -62,6 +64,7 @@ window.STICKER_PACKS = [
     "layout": "3 × 4",
     "image": "assets/sticker-packs/girl-who-codes.webp",
     "holoImage": "assets/sticker-packs/girl-who-codes.webp",
+    "laptopImage": "assets/sticker-packs/girl-who-codes-laptop.webp",
     "codes": "GCODE-001, GCODE-002, GCODE-003, GCODE-004, GCODE-005, GCODE-006, GCODE-007, GCODE-008, GCODE-009, GCODE-010, GCODE-011, GCODE-012",
     "code_list": [
       "GCODE-001",
@@ -89,6 +92,7 @@ window.STICKER_PACKS = [
     "layout": "3 × 4",
     "image": "assets/sticker-packs/dev-life.webp",
     "holoImage": "assets/sticker-packs/dev-life.webp",
+    "laptopImage": "assets/sticker-packs/dev-life-laptop.webp",
     "codes": "DEV-001, DEV-002, DEV-003, DEV-004, DEV-005, DEV-006, DEV-007, DEV-008, DEV-009, DEV-010, DEV-011, DEV-012",
     "code_list": [
       "DEV-001",

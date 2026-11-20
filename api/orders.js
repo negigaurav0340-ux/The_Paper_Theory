@@ -9,13 +9,14 @@ const path = require('node:path');
 const vm = require('node:vm');
 const S = require('../server/store.cjs');
 const mail = require('../server/order-emails.cjs');
+const { bundle } = require('../js/cart-utils.js');
 
 const ORDERS = 'tpt:orders:v1', INDEX = 'tpt:order-index:v1', LEADS = 'tpt:leads:v1', SETTINGS = 'tpt:shop-settings:v1', EVENTS = 'tpt:events:v1';
 const STATUSES = ['new', 'awaiting_payment', 'paid', 'shipped', 'delivered', 'cancelled'];
 const fail = (status, message) => Object.assign(Error(message), { status });
 
 /* ---------- Catalogue prices (server-side check so a tampered browser cannot set its own price) ---------- */
-let catalogue, freeShippingFrom = 699;
+let catalogue, freeShippingFrom = 699, bundleOffer = null;
 function prices() {
   if (catalogue) return catalogue;
   catalogue = new Map();
@@ -25,8 +26,9 @@ function prices() {
     for (const file of ['products.js', 'lightbox-data.js', 'product-updates.js']) vm.runInContext(fs.readFileSync(path.join(__dirname, '..', 'js', file), 'utf8'), ctx);
     const products = new Map(ctx.window.CATALOGUE.products.map(p => [p.id, p]));
     if (Number.isFinite(ctx.window.CATALOGUE.freeShippingThreshold)) freeShippingFrom = ctx.window.CATALOGUE.freeShippingThreshold;
+    bundleOffer = ctx.window.CATALOGUE.bundleOffer || null;
     for (const p of ctx.window.TPT_PRODUCT_UPDATES?.upserts || []) products.set(p.id, { ...products.get(p.id), ...p });
-    for (const p of products.values()) catalogue.set(p.id, { name: p.name, variants: new Map((p.variants || []).map(v => [v.id, v])) });
+    for (const p of products.values()) catalogue.set(p.id, { name: p.name, categories: p.categories || [], variants: new Map((p.variants || []).map(v => [v.id, v])) });
   } catch { /* prices stay unverified; the owner reviews every order before payment is requested */ }
   return catalogue;
 }
@@ -56,7 +58,7 @@ function cleanItems(input, trusted) {
     let item;
     if (product && variant) {
       const unitPrice = Number.isFinite(variant.price) ? variant.price : null;
-      item = { type: 'product', productId: S.text(raw.productId, 40), variantId: S.text(raw.variantId, 40), name: product.name, option: [variant.size, variant.finish].filter(Boolean).join(' · '), unitPrice, verified: true };
+      item = { type: 'product', productId: S.text(raw.productId, 40), variantId: S.text(raw.variantId, 40), name: product.name, option: [variant.size, variant.finish].filter(Boolean).join(' · '), unitPrice, verified: true, categories: product.categories };
     } else {
       const name = S.text(raw.name, 160);
       if (!name) throw fail(400, 'Each item needs a name.');
@@ -73,8 +75,11 @@ function cleanItems(input, trusted) {
 // Recomputes subtotal and total. The total stays null ("to be confirmed") until shipping is known.
 function totals(order) {
   order.subtotal = order.items.reduce((sum, item) => sum + (item.lineTotal || 0), 0);
+  // The bundle offer applies to catalogue sheets ordered on the website; manual orders carry the price the owner typed.
+  const deal = order.origin === 'website' ? bundle(order.items, bundleOffer) : { discount: 0 };
+  order.discount = deal.discount; order.discountLabel = deal.discount ? bundleOffer.label : '';
   order.unverified = order.items.some(item => !item.verified);
-  order.total = order.shipping == null ? null : Math.max(0, Math.round((order.subtotal + (order.adjustment || 0) + order.shipping) * 100) / 100);
+  order.total = order.shipping == null ? null : Math.max(0, Math.round((order.subtotal - order.discount + (order.adjustment || 0) + order.shipping) * 100) / 100);
   return order;
 }
 
@@ -137,14 +142,14 @@ async function place(req, input, cfg) {
   const now = new Date().toISOString();
   const order = totals({ id: newId(), createdAt: now, updatedAt: now, status: 'new', origin: 'website', customer, items, note: S.text(input.note, 1000), ownerNote: '', adjustment: 0, shipping: null, history: [{ at: now, action: 'placed' }], emails: {}, sessionId: /^[-\w]{8,80}$/.test(input.sessionId || '') ? input.sessionId : '', trafficSource: S.text(input.source, 80) });
   // Free domestic shipping above the published threshold is known immediately; anything else is set at confirmation.
-  if (customer.country === 'India' && order.subtotal >= freeShippingFrom && order.items.every(i => i.lineTotal != null)) { order.shipping = 0; totals(order); }
+  if (customer.country === 'India' && order.subtotal - order.discount >= freeShippingFrom && order.items.every(i => i.lineTotal != null)) { order.shipping = 0; totals(order); }
   await saveOrder(cfg, order);
   await saveLead(cfg, customer.email, { type: 'customer', source: order.trafficSource, name: customer.name, city: customer.city, order: true, subscribed: input.subscribe === true });
   const link = `${S.siteUrl(req)}/orders.html#o=${order.id}&k=${S.sign(cfg.password, 'order:' + order.id)}`;
   const sent = await S.sendMail({ to: S.mailConfig()?.alert, replyTo: customer.email, ...mail.ownerAlert(order, link) });
   order.emails.ownerAlert = sent.ok ? 'sent' : 'failed: ' + sent.error;
   await saveOrder(cfg, order);
-  return { ok: true, id: order.id, subtotal: order.subtotal, shipping: order.shipping, total: order.total };
+  return { ok: true, id: order.id, subtotal: order.subtotal, discount: order.discount, shipping: order.shipping, total: order.total };
 }
 
 async function subscribe(req, input, cfg) {
@@ -196,12 +201,12 @@ async function markPaid(input, cfg) {
   return { order, mail: sent };
 }
 
-async function markShipped(input, cfg) {
+async function markShipped(input, cfg, site) {
   const order = await loadOrder(cfg, input.id);
   if (order.status !== 'paid') throw fail(409, 'Only paid orders can be marked as shipped.');
   order.status = 'shipped'; order.tracking = { courier: S.text(input.courier, 80), number: S.text(input.tracking, 80) };
   stamp(order, 'shipped', [order.tracking.courier, order.tracking.number].filter(Boolean).join(' '));
-  const sent = input.notify === false ? { ok: false, error: 'not requested' } : await notifyCustomer(cfg, order, mail.customerShipped(order), 'shipped');
+  const sent = input.notify === false ? { ok: false, error: 'not requested' } : await notifyCustomer(cfg, order, mail.customerShipped(order, site), 'shipped');
   await saveOrder(cfg, order);
   return { order, mail: sent };
 }
@@ -216,9 +221,9 @@ async function cancel(input, cfg) {
   return { order, mail: sent };
 }
 
-async function resend(input, cfg) {
+async function resend(input, cfg, site) {
   const order = await loadOrder(cfg, input.id), settings = await loadSettings(cfg), inline = qrAttachment(settings);
-  const template = { awaiting_payment: () => ({ ...mail.customerConfirm(order, settings, inline.length > 0), inline }), paid: () => mail.customerPaid(order), shipped: () => mail.customerShipped(order) }[order.status];
+  const template = { awaiting_payment: () => ({ ...mail.customerConfirm(order, settings, inline.length > 0), inline }), paid: () => mail.customerPaid(order), shipped: () => mail.customerShipped(order, site) }[order.status];
   if (!template) throw fail(409, 'There is no customer email to resend for this status.');
   const sent = await notifyCustomer(cfg, order, template(), 'resent');
   stamp(order, 'email resent'); await saveOrder(cfg, order);
@@ -298,9 +303,9 @@ module.exports = async function handler(req, res) {
       case 'get': { const order = await loadOrder(cfg, input.id), settings = await loadSettings(cfg); return res.status(200).json({ order, payment: { hasQr: Boolean(settings.qr), upiId: settings.upiId }, mail: { configured: Boolean(S.mailConfig()) } }); }
       case 'confirm': return res.status(200).json(await confirm(input, cfg));
       case 'paid': return res.status(200).json(await markPaid(input, cfg));
-      case 'shipped': return res.status(200).json(await markShipped(input, cfg));
+      case 'shipped': return res.status(200).json(await markShipped(input, cfg, S.siteUrl(req)));
       case 'cancel': return res.status(200).json(await cancel(input, cfg));
-      case 'resend': return res.status(200).json(await resend(input, cfg));
+      case 'resend': return res.status(200).json(await resend(input, cfg, S.siteUrl(req)));
       case 'update': ownerOnly(level); return res.status(200).json(await update(input, cfg));
       case 'create': ownerOnly(level); return res.status(201).json(await create(input, cfg));
       case 'delete': ownerOnly(level); return res.status(200).json(await remove(input, cfg));

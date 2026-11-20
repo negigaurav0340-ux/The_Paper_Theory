@@ -4,7 +4,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Anime Classics",
     "pack_id": "PACK-ANIME-01",
     "category": "Anime",
-    "image": "assets/catalogue/clean/ANIME-001.png",
+    "image": "assets/catalogue/clean/ANIME-001.webp",
     "name": "Rengoku Flame Hashira"
   },
   {
@@ -12,7 +12,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Anime Classics",
     "pack_id": "PACK-ANIME-01",
     "category": "Anime",
-    "image": "assets/catalogue/clean/ANIME-002.png",
+    "image": "assets/catalogue/clean/ANIME-002.webp",
     "name": "Zenitsu Chibi"
   },
   {
@@ -20,7 +20,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Anime Classics",
     "pack_id": "PACK-ANIME-01",
     "category": "Anime",
-    "image": "assets/catalogue/clean/ANIME-003.png",
+    "image": "assets/catalogue/clean/ANIME-003.webp",
     "name": "Shinobu Butterfly"
   },
   {
@@ -28,7 +28,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Anime Classics",
     "pack_id": "PACK-ANIME-01",
     "category": "Anime",
-    "image": "assets/catalogue/clean/ANIME-004.png",
+    "image": "assets/catalogue/clean/ANIME-004.webp",
     "name": "Rengoku Chibi"
   },
   {
@@ -36,7 +36,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Anime Classics",
     "pack_id": "PACK-ANIME-01",
     "category": "Anime",
-    "image": "assets/catalogue/clean/ANIME-005.png",
+    "image": "assets/catalogue/clean/ANIME-005.webp",
     "name": "Nezuko Chibi"
   },
   {
@@ -44,7 +44,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Anime Classics",
     "pack_id": "PACK-ANIME-01",
     "category": "Anime",
-    "image": "assets/catalogue/clean/ANIME-006.png",
+    "image": "assets/catalogue/clean/ANIME-006.webp",
     "name": "Giyu Water Hashira"
   },
   {
@@ -52,7 +52,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Anime Classics",
     "pack_id": "PACK-ANIME-01",
     "category": "Anime",
-    "image": "assets/catalogue/clean/ANIME-007.png",
+    "image": "assets/catalogue/clean/ANIME-007.webp",
     "name": "Tanjiro Chibi"
   },
   {
@@ -60,7 +60,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Anime Classics",
     "pack_id": "PACK-ANIME-01",
     "category": "Anime",
-    "image": "assets/catalogue/clean/ANIME-008.png",
+    "image": "assets/catalogue/clean/ANIME-008.webp",
     "name": "Orange-haired Anime Girl"
   },
   {
@@ -68,7 +68,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Anime Classics",
     "pack_id": "PACK-ANIME-01",
     "category": "Anime",
-    "image": "assets/catalogue/clean/ANIME-009.png",
+    "image": "assets/catalogue/clean/ANIME-009.webp",
     "name": "Black-haired Anime Girl"
   },
   {
@@ -76,7 +76,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Anime Classics",
     "pack_id": "PACK-ANIME-01",
     "category": "Anime",
-    "image": "assets/catalogue/clean/ANIME-010.png",
+    "image": "assets/catalogue/clean/ANIME-010.webp",
     "name": "Nezuko Sitting"
   },
   {
@@ -84,7 +84,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Anime Classics",
     "pack_id": "PACK-ANIME-01",
     "category": "Anime",
-    "image": "assets/catalogue/clean/ANIME-011.png",
+    "image": "assets/catalogue/clean/ANIME-011.webp",
     "name": "Blue-haired Chibi Hero"
   },
   {
@@ -92,7 +92,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Anime Classics",
     "pack_id": "PACK-ANIME-01",
     "category": "Anime",
-    "image": "assets/catalogue/clean/ANIME-012.png",
+    "image": "assets/catalogue/clean/ANIME-012.webp",
     "name": "Kakashi Chibi"
   },
   {
@@ -100,7 +100,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Anime Heroes",
     "pack_id": "PACK-ANIME-HEROES",
     "category": "Anime",
-    "image": "assets/catalogue/clean/ANIME-013.png",
+    "image": "assets/catalogue/clean/ANIME-013.webp",
     "name": "Naruto Rasengan"
   },
   {
@@ -108,7 +108,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Anime Heroes",
     "pack_id": "PACK-ANIME-HEROES",
     "category": "Anime",
-    "image": "assets/catalogue/clean/ANIME-014.png",
+    "image": "assets/catalogue/clean/ANIME-014.webp",
     "name": "Goku Super Saiyan"
   },
   {
@@ -116,7 +116,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Anime Heroes",
     "pack_id": "PACK-ANIME-HEROES",
     "category": "Anime",
-    "image": "assets/catalogue/clean/ANIME-015.png",
+    "image": "assets/catalogue/clean/ANIME-015.webp",
     "name": "Luffy Punch"
   },
   {
@@ -124,7 +124,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Anime Heroes",
     "pack_id": "PACK-ANIME-HEROES",
     "category": "Anime",
-    "image": "assets/catalogue/clean/ANIME-016.png",
+    "image": "assets/catalogue/clean/ANIME-016.webp",
     "name": "Tanjiro Water Slash"
   },
   {
@@ -132,7 +132,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Anime Heroes",
     "pack_id": "PACK-ANIME-HEROES",
     "category": "Anime",
-    "image": "assets/catalogue/clean/ANIME-017.png",
+    "image": "assets/catalogue/clean/ANIME-017.webp",
     "name": "Yuji Fighting Stance"
   },
   {
@@ -140,7 +140,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Anime Heroes",
     "pack_id": "PACK-ANIME-HEROES",
     "category": "Anime",
-    "image": "assets/catalogue/clean/ANIME-018.png",
+    "image": "assets/catalogue/clean/ANIME-018.webp",
     "name": "Ichigo Soul Reaper"
   },
   {
@@ -148,7 +148,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Anime Heroes",
     "pack_id": "PACK-ANIME-HEROES",
     "category": "Anime",
-    "image": "assets/catalogue/clean/ANIME-019.png",
+    "image": "assets/catalogue/clean/ANIME-019.webp",
     "name": "Sailor Moon"
   },
   {
@@ -156,7 +156,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Anime Heroes",
     "pack_id": "PACK-ANIME-HEROES",
     "category": "Anime",
-    "image": "assets/catalogue/clean/ANIME-020.png",
+    "image": "assets/catalogue/clean/ANIME-020.webp",
     "name": "Deku Hero"
   },
   {
@@ -164,7 +164,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Anime Heroes",
     "pack_id": "PACK-ANIME-HEROES",
     "category": "Anime",
-    "image": "assets/catalogue/clean/ANIME-021.png",
+    "image": "assets/catalogue/clean/ANIME-021.webp",
     "name": "Saitama Punch"
   },
   {
@@ -172,7 +172,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Anime Heroes",
     "pack_id": "PACK-ANIME-HEROES",
     "category": "Anime",
-    "image": "assets/catalogue/clean/ANIME-022.png",
+    "image": "assets/catalogue/clean/ANIME-022.webp",
     "name": "Levi Attack"
   },
   {
@@ -180,7 +180,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Anime Heroes",
     "pack_id": "PACK-ANIME-HEROES",
     "category": "Anime",
-    "image": "assets/catalogue/clean/ANIME-023.png",
+    "image": "assets/catalogue/clean/ANIME-023.webp",
     "name": "Ash and Pikachu"
   },
   {
@@ -188,7 +188,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Anime Heroes",
     "pack_id": "PACK-ANIME-HEROES",
     "category": "Anime",
-    "image": "assets/catalogue/clean/ANIME-024.png",
+    "image": "assets/catalogue/clean/ANIME-024.webp",
     "name": "Edward Elric"
   },
   {
@@ -196,7 +196,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Anime Meme Pack",
     "pack_id": "PACK-ANIME-MEME",
     "category": "Anime Meme",
-    "image": "assets/catalogue/clean/AMEME-001.png",
+    "image": "assets/catalogue/clean/AMEME-001.webp",
     "name": "Wings of Freedom"
   },
   {
@@ -204,7 +204,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Anime Meme Pack",
     "pack_id": "PACK-ANIME-MEME",
     "category": "Anime Meme",
-    "image": "assets/catalogue/clean/AMEME-002.png",
+    "image": "assets/catalogue/clean/AMEME-002.webp",
     "name": "Do Your Best"
   },
   {
@@ -212,7 +212,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Anime Meme Pack",
     "pack_id": "PACK-ANIME-MEME",
     "category": "Anime Meme",
-    "image": "assets/catalogue/clean/AMEME-003.png",
+    "image": "assets/catalogue/clean/AMEME-003.webp",
     "name": "My Besto Friendo"
   },
   {
@@ -220,7 +220,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Anime Meme Pack",
     "pack_id": "PACK-ANIME-MEME",
     "category": "Anime Meme",
-    "image": "assets/catalogue/clean/AMEME-004.png",
+    "image": "assets/catalogue/clean/AMEME-004.webp",
     "name": "This World Is Cruel"
   },
   {
@@ -228,7 +228,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Anime Meme Pack",
     "pack_id": "PACK-ANIME-MEME",
     "category": "Anime Meme",
-    "image": "assets/catalogue/clean/AMEME-005.png",
+    "image": "assets/catalogue/clean/AMEME-005.webp",
     "name": "Nah I Would Win"
   },
   {
@@ -236,7 +236,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Anime Meme Pack",
     "pack_id": "PACK-ANIME-MEME",
     "category": "Anime Meme",
-    "image": "assets/catalogue/clean/AMEME-006.png",
+    "image": "assets/catalogue/clean/AMEME-006.webp",
     "name": "Shy Anime Girl"
   },
   {
@@ -244,7 +244,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Anime Meme Pack",
     "pack_id": "PACK-ANIME-MEME",
     "category": "Anime Meme",
-    "image": "assets/catalogue/clean/AMEME-007.png",
+    "image": "assets/catalogue/clean/AMEME-007.webp",
     "name": "Cute Girl"
   },
   {
@@ -252,7 +252,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Anime Meme Pack",
     "pack_id": "PACK-ANIME-MEME",
     "category": "Anime Meme",
-    "image": "assets/catalogue/clean/AMEME-008.png",
+    "image": "assets/catalogue/clean/AMEME-008.webp",
     "name": "Anti Hentai Club"
   },
   {
@@ -260,7 +260,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Anime Meme Pack",
     "pack_id": "PACK-ANIME-MEME",
     "category": "Anime Meme",
-    "image": "assets/catalogue/clean/AMEME-009.png",
+    "image": "assets/catalogue/clean/AMEME-009.webp",
     "name": "Cat Girl"
   },
   {
@@ -268,7 +268,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Anime Meme Pack",
     "pack_id": "PACK-ANIME-MEME",
     "category": "Anime Meme",
-    "image": "assets/catalogue/clean/AMEME-010.png",
+    "image": "assets/catalogue/clean/AMEME-010.webp",
     "name": "Red-haired Anime Girl"
   },
   {
@@ -276,7 +276,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Anime Meme Pack",
     "pack_id": "PACK-ANIME-MEME",
     "category": "Anime Meme",
-    "image": "assets/catalogue/clean/AMEME-011.png",
+    "image": "assets/catalogue/clean/AMEME-011.webp",
     "name": "Nobita Ding Ding"
   },
   {
@@ -284,7 +284,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Anime Meme Pack",
     "pack_id": "PACK-ANIME-MEME",
     "category": "Anime Meme",
-    "image": "assets/catalogue/clean/AMEME-012.png",
+    "image": "assets/catalogue/clean/AMEME-012.webp",
     "name": "You Are Next"
   },
   {
@@ -292,7 +292,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Anime Meme Pack",
     "pack_id": "PACK-ANIME-MEME",
     "category": "Anime Meme",
-    "image": "assets/catalogue/clean/AMEME-013.png",
+    "image": "assets/catalogue/clean/AMEME-013.webp",
     "name": "Zenitsu High Voltage"
   },
   {
@@ -300,7 +300,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Anime Meme Pack",
     "pack_id": "PACK-ANIME-MEME",
     "category": "Anime Meme",
-    "image": "assets/catalogue/clean/AMEME-014.png",
+    "image": "assets/catalogue/clean/AMEME-014.webp",
     "name": "Luffy Reaction"
   },
   {
@@ -308,7 +308,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Anime Meme Pack",
     "pack_id": "PACK-ANIME-MEME",
     "category": "Anime Meme",
-    "image": "assets/catalogue/clean/AMEME-015.png",
+    "image": "assets/catalogue/clean/AMEME-015.webp",
     "name": "Titan Grin"
   },
   {
@@ -316,7 +316,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Anime Meme Pack",
     "pack_id": "PACK-ANIME-MEME",
     "category": "Anime Meme",
-    "image": "assets/catalogue/clean/AMEME-016.png",
+    "image": "assets/catalogue/clean/AMEME-016.webp",
     "name": "You Do Not Like Anime"
   },
   {
@@ -324,7 +324,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Feel Good Pack",
     "pack_id": "PACK-FEEL-GOOD",
     "category": "Feel Good",
-    "image": "assets/catalogue/clean/FEEL-001.png",
+    "image": "assets/catalogue/clean/FEEL-001.webp",
     "name": "Happy Alien"
   },
   {
@@ -332,7 +332,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Feel Good Pack",
     "pack_id": "PACK-FEEL-GOOD",
     "category": "Feel Good",
-    "image": "assets/catalogue/clean/FEEL-002.png",
+    "image": "assets/catalogue/clean/FEEL-002.webp",
     "name": "Strong Bee"
   },
   {
@@ -340,7 +340,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Feel Good Pack",
     "pack_id": "PACK-FEEL-GOOD",
     "category": "Feel Good",
-    "image": "assets/catalogue/clean/FEEL-003.png",
+    "image": "assets/catalogue/clean/FEEL-003.webp",
     "name": "Good Vibes Only"
   },
   {
@@ -348,7 +348,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Feel Good Pack",
     "pack_id": "PACK-FEEL-GOOD",
     "category": "Feel Good",
-    "image": "assets/catalogue/clean/FEEL-004.png",
+    "image": "assets/catalogue/clean/FEEL-004.webp",
     "name": "Not User Friendly"
   },
   {
@@ -356,7 +356,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Feel Good Pack",
     "pack_id": "PACK-FEEL-GOOD",
     "category": "Feel Good",
-    "image": "assets/catalogue/clean/FEEL-005.png",
+    "image": "assets/catalogue/clean/FEEL-005.webp",
     "name": "Going Going Going"
   },
   {
@@ -364,7 +364,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Feel Good Pack",
     "pack_id": "PACK-FEEL-GOOD",
     "category": "Feel Good",
-    "image": "assets/catalogue/clean/FEEL-006.png",
+    "image": "assets/catalogue/clean/FEEL-006.webp",
     "name": "Never Give Up"
   },
   {
@@ -372,7 +372,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Feel Good Pack",
     "pack_id": "PACK-FEEL-GOOD",
     "category": "Feel Good",
-    "image": "assets/catalogue/clean/FEEL-007.png",
+    "image": "assets/catalogue/clean/FEEL-007.webp",
     "name": "You Do You"
   },
   {
@@ -380,7 +380,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Feel Good Pack",
     "pack_id": "PACK-FEEL-GOOD",
     "category": "Feel Good",
-    "image": "assets/catalogue/clean/FEEL-008.png",
+    "image": "assets/catalogue/clean/FEEL-008.webp",
     "name": "Rise and Shine"
   },
   {
@@ -388,7 +388,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Feel Good Pack",
     "pack_id": "PACK-FEEL-GOOD",
     "category": "Feel Good",
-    "image": "assets/catalogue/clean/FEEL-009.png",
+    "image": "assets/catalogue/clean/FEEL-009.webp",
     "name": "Bad Choices Good Stories"
   },
   {
@@ -396,7 +396,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Feel Good Pack",
     "pack_id": "PACK-FEEL-GOOD",
     "category": "Feel Good",
-    "image": "assets/catalogue/clean/FEEL-010.png",
+    "image": "assets/catalogue/clean/FEEL-010.webp",
     "name": "Start Now"
   },
   {
@@ -404,7 +404,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Feel Good Pack",
     "pack_id": "PACK-FEEL-GOOD",
     "category": "Feel Good",
-    "image": "assets/catalogue/clean/FEEL-011.png",
+    "image": "assets/catalogue/clean/FEEL-011.webp",
     "name": "Music Is My Medicine"
   },
   {
@@ -412,7 +412,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Feel Good Pack",
     "pack_id": "PACK-FEEL-GOOD",
     "category": "Feel Good",
-    "image": "assets/catalogue/clean/FEEL-012.png",
+    "image": "assets/catalogue/clean/FEEL-012.webp",
     "name": "Time for Plan B"
   },
   {
@@ -420,7 +420,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Feel Good Pack",
     "pack_id": "PACK-FEEL-GOOD",
     "category": "Feel Good",
-    "image": "assets/catalogue/clean/FEEL-013.png",
+    "image": "assets/catalogue/clean/FEEL-013.webp",
     "name": "Stronger Than You Think"
   },
   {
@@ -428,7 +428,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Feel Good Pack",
     "pack_id": "PACK-FEEL-GOOD",
     "category": "Feel Good",
-    "image": "assets/catalogue/clean/FEEL-014.png",
+    "image": "assets/catalogue/clean/FEEL-014.webp",
     "name": "Volume Up"
   },
   {
@@ -436,7 +436,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Feel Good Pack",
     "pack_id": "PACK-FEEL-GOOD",
     "category": "Feel Good",
-    "image": "assets/catalogue/clean/FEEL-015.png",
+    "image": "assets/catalogue/clean/FEEL-015.webp",
     "name": "Meant to Shine"
   },
   {
@@ -444,7 +444,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Feel Good Pack",
     "pack_id": "PACK-FEEL-GOOD",
     "category": "Feel Good",
-    "image": "assets/catalogue/clean/FEEL-016.png",
+    "image": "assets/catalogue/clean/FEEL-016.webp",
     "name": "Happy Cloud Star"
   },
   {
@@ -452,7 +452,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Team Motu Pack",
     "pack_id": "PACK-TEAM-MOTU",
     "category": "Motu vs Bheem",
-    "image": "assets/catalogue/clean/MOTU-001.png",
+    "image": "assets/catalogue/clean/MOTU-001.webp",
     "name": "Team Motu"
   },
   {
@@ -460,7 +460,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Team Motu Pack",
     "pack_id": "PACK-TEAM-MOTU",
     "category": "Motu vs Bheem",
-    "image": "assets/catalogue/clean/MOTU-002.png",
+    "image": "assets/catalogue/clean/MOTU-002.webp",
     "name": "Motu Supremacy"
   },
   {
@@ -468,7 +468,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Team Motu Pack",
     "pack_id": "PACK-TEAM-MOTU",
     "category": "Motu vs Bheem",
-    "image": "assets/catalogue/clean/MOTU-003.png",
+    "image": "assets/catalogue/clean/MOTU-003.webp",
     "name": "Samosa Squad"
   },
   {
@@ -476,7 +476,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Team Motu Pack",
     "pack_id": "PACK-TEAM-MOTU",
     "category": "Motu vs Bheem",
-    "image": "assets/catalogue/clean/MOTU-004.png",
+    "image": "assets/catalogue/clean/MOTU-004.webp",
     "name": "Patlu Brains"
   },
   {
@@ -484,7 +484,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Team Motu Pack",
     "pack_id": "PACK-TEAM-MOTU",
     "category": "Motu vs Bheem",
-    "image": "assets/catalogue/clean/MOTU-005.png",
+    "image": "assets/catalogue/clean/MOTU-005.webp",
     "name": "Best Buddies Forever"
   },
   {
@@ -492,7 +492,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Team Motu Pack",
     "pack_id": "PACK-TEAM-MOTU",
     "category": "Motu vs Bheem",
-    "image": "assets/catalogue/clean/MOTU-006.png",
+    "image": "assets/catalogue/clean/MOTU-006.webp",
     "name": "Motu for the Win"
   },
   {
@@ -500,7 +500,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Team Motu Pack",
     "pack_id": "PACK-TEAM-MOTU",
     "category": "Motu vs Bheem",
-    "image": "assets/catalogue/clean/MOTU-007.png",
+    "image": "assets/catalogue/clean/MOTU-007.webp",
     "name": "No Samosa No Peace"
   },
   {
@@ -508,7 +508,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Team Motu Pack",
     "pack_id": "PACK-TEAM-MOTU",
     "category": "Motu vs Bheem",
-    "image": "assets/catalogue/clean/MOTU-008.png",
+    "image": "assets/catalogue/clean/MOTU-008.webp",
     "name": "Motu Mode On"
   },
   {
@@ -516,7 +516,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Team Motu Pack",
     "pack_id": "PACK-TEAM-MOTU",
     "category": "Motu vs Bheem",
-    "image": "assets/catalogue/clean/MOTU-009.png",
+    "image": "assets/catalogue/clean/MOTU-009.webp",
     "name": "Team Motu Only"
   },
   {
@@ -524,7 +524,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Team Motu Pack",
     "pack_id": "PACK-TEAM-MOTU",
     "category": "Motu vs Bheem",
-    "image": "assets/catalogue/clean/MOTU-010.png",
+    "image": "assets/catalogue/clean/MOTU-010.webp",
     "name": "Funniest Team"
   },
   {
@@ -532,7 +532,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Team Motu Pack",
     "pack_id": "PACK-TEAM-MOTU",
     "category": "Motu vs Bheem",
-    "image": "assets/catalogue/clean/MOTU-011.png",
+    "image": "assets/catalogue/clean/MOTU-011.webp",
     "name": "Choose Motu"
   },
   {
@@ -540,7 +540,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Team Motu Pack",
     "pack_id": "PACK-TEAM-MOTU",
     "category": "Motu vs Bheem",
-    "image": "assets/catalogue/clean/MOTU-012.png",
+    "image": "assets/catalogue/clean/MOTU-012.webp",
     "name": "Real Hero Motu"
   },
   {
@@ -548,7 +548,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Team Motu Pack",
     "pack_id": "PACK-TEAM-MOTU",
     "category": "Motu vs Bheem",
-    "image": "assets/catalogue/clean/MOTU-013.png",
+    "image": "assets/catalogue/clean/MOTU-013.webp",
     "name": "Motu Fan Club"
   },
   {
@@ -556,7 +556,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Team Motu Pack",
     "pack_id": "PACK-TEAM-MOTU",
     "category": "Motu vs Bheem",
-    "image": "assets/catalogue/clean/MOTU-014.png",
+    "image": "assets/catalogue/clean/MOTU-014.webp",
     "name": "Samosa for Life"
   },
   {
@@ -564,7 +564,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Team Motu Pack",
     "pack_id": "PACK-TEAM-MOTU",
     "category": "Motu vs Bheem",
-    "image": "assets/catalogue/clean/MOTU-015.png",
+    "image": "assets/catalogue/clean/MOTU-015.webp",
     "name": "Team Motu vs Everyone"
   },
   {
@@ -572,7 +572,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Team Motu Pack",
     "pack_id": "PACK-TEAM-MOTU",
     "category": "Motu vs Bheem",
-    "image": "assets/catalogue/clean/MOTU-016.png",
+    "image": "assets/catalogue/clean/MOTU-016.webp",
     "name": "Life Is Better with Samosa"
   },
   {
@@ -580,7 +580,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Team Bheem Pack",
     "pack_id": "PACK-TEAM-BHEEM",
     "category": "Motu vs Bheem",
-    "image": "assets/catalogue/clean/BHEEM-001.png",
+    "image": "assets/catalogue/clean/BHEEM-001.webp",
     "name": "Team Bheem"
   },
   {
@@ -588,7 +588,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Team Bheem Pack",
     "pack_id": "PACK-TEAM-BHEEM",
     "category": "Motu vs Bheem",
-    "image": "assets/catalogue/clean/BHEEM-002.png",
+    "image": "assets/catalogue/clean/BHEEM-002.webp",
     "name": "Bheem Supremacy"
   },
   {
@@ -596,7 +596,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Team Bheem Pack",
     "pack_id": "PACK-TEAM-BHEEM",
     "category": "Motu vs Bheem",
-    "image": "assets/catalogue/clean/BHEEM-003.png",
+    "image": "assets/catalogue/clean/BHEEM-003.webp",
     "name": "Laddoo Power"
   },
   {
@@ -604,7 +604,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Team Bheem Pack",
     "pack_id": "PACK-TEAM-BHEEM",
     "category": "Motu vs Bheem",
-    "image": "assets/catalogue/clean/BHEEM-004.png",
+    "image": "assets/catalogue/clean/BHEEM-004.webp",
     "name": "Bheem Mode On"
   },
   {
@@ -612,7 +612,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Team Bheem Pack",
     "pack_id": "PACK-TEAM-BHEEM",
     "category": "Motu vs Bheem",
-    "image": "assets/catalogue/clean/BHEEM-005.png",
+    "image": "assets/catalogue/clean/BHEEM-005.webp",
     "name": "Bheem for the Win"
   },
   {
@@ -620,7 +620,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Team Bheem Pack",
     "pack_id": "PACK-TEAM-BHEEM",
     "category": "Motu vs Bheem",
-    "image": "assets/catalogue/clean/BHEEM-006.png",
+    "image": "assets/catalogue/clean/BHEEM-006.webp",
     "name": "Strongest Team"
   },
   {
@@ -628,7 +628,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Team Bheem Pack",
     "pack_id": "PACK-TEAM-BHEEM",
     "category": "Motu vs Bheem",
-    "image": "assets/catalogue/clean/BHEEM-007.png",
+    "image": "assets/catalogue/clean/BHEEM-007.webp",
     "name": "Stand with Bheem"
   },
   {
@@ -636,7 +636,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Team Bheem Pack",
     "pack_id": "PACK-TEAM-BHEEM",
     "category": "Motu vs Bheem",
-    "image": "assets/catalogue/clean/BHEEM-008.png",
+    "image": "assets/catalogue/clean/BHEEM-008.webp",
     "name": "Bheem Brigade"
   },
   {
@@ -644,7 +644,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Team Bheem Pack",
     "pack_id": "PACK-TEAM-BHEEM",
     "category": "Motu vs Bheem",
-    "image": "assets/catalogue/clean/BHEEM-009.png",
+    "image": "assets/catalogue/clean/BHEEM-009.webp",
     "name": "Chutki and Bheem"
   },
   {
@@ -652,7 +652,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Team Bheem Pack",
     "pack_id": "PACK-TEAM-BHEEM",
     "category": "Motu vs Bheem",
-    "image": "assets/catalogue/clean/BHEEM-010.png",
+    "image": "assets/catalogue/clean/BHEEM-010.webp",
     "name": "Jaggu Approves"
   },
   {
@@ -660,7 +660,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Team Bheem Pack",
     "pack_id": "PACK-TEAM-BHEEM",
     "category": "Motu vs Bheem",
-    "image": "assets/catalogue/clean/BHEEM-011.png",
+    "image": "assets/catalogue/clean/BHEEM-011.webp",
     "name": "Raju Squad"
   },
   {
@@ -668,7 +668,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Team Bheem Pack",
     "pack_id": "PACK-TEAM-BHEEM",
     "category": "Motu vs Bheem",
-    "image": "assets/catalogue/clean/BHEEM-012.png",
+    "image": "assets/catalogue/clean/BHEEM-012.webp",
     "name": "Choose Bheem"
   },
   {
@@ -676,7 +676,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Team Bheem Pack",
     "pack_id": "PACK-TEAM-BHEEM",
     "category": "Motu vs Bheem",
-    "image": "assets/catalogue/clean/BHEEM-013.png",
+    "image": "assets/catalogue/clean/BHEEM-013.webp",
     "name": "Real Hero Bheem"
   },
   {
@@ -684,7 +684,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Team Bheem Pack",
     "pack_id": "PACK-TEAM-BHEEM",
     "category": "Motu vs Bheem",
-    "image": "assets/catalogue/clean/BHEEM-014.png",
+    "image": "assets/catalogue/clean/BHEEM-014.webp",
     "name": "Bheem Fan Club"
   },
   {
@@ -692,7 +692,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Team Bheem Pack",
     "pack_id": "PACK-TEAM-BHEEM",
     "category": "Motu vs Bheem",
-    "image": "assets/catalogue/clean/BHEEM-015.png",
+    "image": "assets/catalogue/clean/BHEEM-015.webp",
     "name": "Team Bheem Only"
   },
   {
@@ -700,7 +700,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Team Bheem Pack",
     "pack_id": "PACK-TEAM-BHEEM",
     "category": "Motu vs Bheem",
-    "image": "assets/catalogue/clean/BHEEM-016.png",
+    "image": "assets/catalogue/clean/BHEEM-016.webp",
     "name": "Dholakpur Defender"
   },
   {
@@ -708,7 +708,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Diwali Devotional Pack",
     "pack_id": "PACK-DIWALI-01",
     "category": "Diwali",
-    "image": "assets/catalogue/clean/DIWALI-001.png",
+    "image": "assets/catalogue/clean/DIWALI-001.webp",
     "name": "Happy Diwali Wreath"
   },
   {
@@ -716,7 +716,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Diwali Devotional Pack",
     "pack_id": "PACK-DIWALI-01",
     "category": "Diwali",
-    "image": "assets/catalogue/clean/DIWALI-002.png",
+    "image": "assets/catalogue/clean/DIWALI-002.webp",
     "name": "Ganesha Blessings"
   },
   {
@@ -724,7 +724,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Diwali Devotional Pack",
     "pack_id": "PACK-DIWALI-01",
     "category": "Diwali",
-    "image": "assets/catalogue/clean/DIWALI-003.png",
+    "image": "assets/catalogue/clean/DIWALI-003.webp",
     "name": "Peacock Mandala"
   },
   {
@@ -732,7 +732,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Diwali Devotional Pack",
     "pack_id": "PACK-DIWALI-01",
     "category": "Diwali",
-    "image": "assets/catalogue/clean/DIWALI-004.png",
+    "image": "assets/catalogue/clean/DIWALI-004.webp",
     "name": "Happy Diwali Om"
   },
   {
@@ -740,7 +740,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Diwali Devotional Pack",
     "pack_id": "PACK-DIWALI-01",
     "category": "Diwali",
-    "image": "assets/catalogue/clean/DIWALI-005.png",
+    "image": "assets/catalogue/clean/DIWALI-005.webp",
     "name": "Saraswati Veena"
   },
   {
@@ -748,7 +748,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Diwali Devotional Pack",
     "pack_id": "PACK-DIWALI-01",
     "category": "Diwali",
-    "image": "assets/catalogue/clean/DIWALI-006.png",
+    "image": "assets/catalogue/clean/DIWALI-006.webp",
     "name": "Auspicious Swastika"
   },
   {
@@ -756,7 +756,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Diwali Devotional Pack",
     "pack_id": "PACK-DIWALI-01",
     "category": "Diwali",
-    "image": "assets/catalogue/clean/DIWALI-007.png",
+    "image": "assets/catalogue/clean/DIWALI-007.webp",
     "name": "Saraswati Lotus"
   },
   {
@@ -764,7 +764,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Diwali Devotional Pack",
     "pack_id": "PACK-DIWALI-01",
     "category": "Diwali",
-    "image": "assets/catalogue/clean/DIWALI-008.png",
+    "image": "assets/catalogue/clean/DIWALI-008.webp",
     "name": "Lakshmi Lotus"
   },
   {
@@ -772,7 +772,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Diwali Devotional Pack",
     "pack_id": "PACK-DIWALI-01",
     "category": "Diwali",
-    "image": "assets/catalogue/clean/DIWALI-009.png",
+    "image": "assets/catalogue/clean/DIWALI-009.webp",
     "name": "Baby Ganesha"
   },
   {
@@ -780,7 +780,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Diwali Devotional Pack",
     "pack_id": "PACK-DIWALI-01",
     "category": "Diwali",
-    "image": "assets/catalogue/clean/DIWALI-010.png",
+    "image": "assets/catalogue/clean/DIWALI-010.webp",
     "name": "Shubh Labh"
   },
   {
@@ -788,7 +788,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Diwali Devotional Pack",
     "pack_id": "PACK-DIWALI-01",
     "category": "Diwali",
-    "image": "assets/catalogue/clean/DIWALI-011.png",
+    "image": "assets/catalogue/clean/DIWALI-011.webp",
     "name": "Festive Kalash"
   },
   {
@@ -796,7 +796,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Diwali Devotional Pack",
     "pack_id": "PACK-DIWALI-01",
     "category": "Diwali",
-    "image": "assets/catalogue/clean/DIWALI-012.png",
+    "image": "assets/catalogue/clean/DIWALI-012.webp",
     "name": "Glowing Diya"
   },
   {
@@ -804,7 +804,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Diwali Festive Pack",
     "pack_id": "PACK-DIWALI-02",
     "category": "Diwali",
-    "image": "assets/catalogue/clean/DIWALI-013.png",
+    "image": "assets/catalogue/clean/DIWALI-013.webp",
     "name": "Happy Diwali Wreath"
   },
   {
@@ -812,7 +812,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Diwali Festive Pack",
     "pack_id": "PACK-DIWALI-02",
     "category": "Diwali",
-    "image": "assets/catalogue/clean/DIWALI-014.png",
+    "image": "assets/catalogue/clean/DIWALI-014.webp",
     "name": "Ganesha Blessings"
   },
   {
@@ -820,7 +820,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Diwali Festive Pack",
     "pack_id": "PACK-DIWALI-02",
     "category": "Diwali",
-    "image": "assets/catalogue/clean/DIWALI-015.png",
+    "image": "assets/catalogue/clean/DIWALI-015.webp",
     "name": "Peacock Mandala"
   },
   {
@@ -828,7 +828,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Diwali Festive Pack",
     "pack_id": "PACK-DIWALI-02",
     "category": "Diwali",
-    "image": "assets/catalogue/clean/DIWALI-016.png",
+    "image": "assets/catalogue/clean/DIWALI-016.webp",
     "name": "Happy Diwali Om"
   },
   {
@@ -836,7 +836,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Diwali Festive Pack",
     "pack_id": "PACK-DIWALI-02",
     "category": "Diwali",
-    "image": "assets/catalogue/clean/DIWALI-017.png",
+    "image": "assets/catalogue/clean/DIWALI-017.webp",
     "name": "Saraswati Veena"
   },
   {
@@ -844,7 +844,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Diwali Festive Pack",
     "pack_id": "PACK-DIWALI-02",
     "category": "Diwali",
-    "image": "assets/catalogue/clean/DIWALI-018.png",
+    "image": "assets/catalogue/clean/DIWALI-018.webp",
     "name": "Auspicious Swastika"
   },
   {
@@ -852,7 +852,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Diwali Festive Pack",
     "pack_id": "PACK-DIWALI-02",
     "category": "Diwali",
-    "image": "assets/catalogue/clean/DIWALI-019.png",
+    "image": "assets/catalogue/clean/DIWALI-019.webp",
     "name": "Saraswati Lotus"
   },
   {
@@ -860,7 +860,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Diwali Festive Pack",
     "pack_id": "PACK-DIWALI-02",
     "category": "Diwali",
-    "image": "assets/catalogue/clean/DIWALI-020.png",
+    "image": "assets/catalogue/clean/DIWALI-020.webp",
     "name": "Lakshmi Lotus"
   },
   {
@@ -868,7 +868,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Diwali Festive Pack",
     "pack_id": "PACK-DIWALI-02",
     "category": "Diwali",
-    "image": "assets/catalogue/clean/DIWALI-021.png",
+    "image": "assets/catalogue/clean/DIWALI-021.webp",
     "name": "Baby Ganesha"
   },
   {
@@ -876,7 +876,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Diwali Festive Pack",
     "pack_id": "PACK-DIWALI-02",
     "category": "Diwali",
-    "image": "assets/catalogue/clean/DIWALI-022.png",
+    "image": "assets/catalogue/clean/DIWALI-022.webp",
     "name": "Shubh Labh"
   },
   {
@@ -884,7 +884,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Diwali Festive Pack",
     "pack_id": "PACK-DIWALI-02",
     "category": "Diwali",
-    "image": "assets/catalogue/clean/DIWALI-023.png",
+    "image": "assets/catalogue/clean/DIWALI-023.webp",
     "name": "Festive Kalash"
   },
   {
@@ -892,7 +892,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Diwali Festive Pack",
     "pack_id": "PACK-DIWALI-02",
     "category": "Diwali",
-    "image": "assets/catalogue/clean/DIWALI-024.png",
+    "image": "assets/catalogue/clean/DIWALI-024.webp",
     "name": "Glowing Diya"
   },
   {
@@ -900,7 +900,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Cute Mood Pack",
     "pack_id": "PACK-CUTE-MOOD",
     "category": "Cute / Relatable",
-    "image": "assets/catalogue/clean/CUTE-001.png",
+    "image": "assets/catalogue/clean/CUTE-001.webp",
     "name": "Sleeping Panda"
   },
   {
@@ -908,7 +908,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Cute Mood Pack",
     "pack_id": "PACK-CUTE-MOOD",
     "category": "Cute / Relatable",
-    "image": "assets/catalogue/clean/CUTE-002.png",
+    "image": "assets/catalogue/clean/CUTE-002.webp",
     "name": "Cactus Hugger"
   },
   {
@@ -916,7 +916,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Cute Mood Pack",
     "pack_id": "PACK-CUTE-MOOD",
     "category": "Cute / Relatable",
-    "image": "assets/catalogue/clean/CUTE-003.png",
+    "image": "assets/catalogue/clean/CUTE-003.webp",
     "name": "Panda Hearts"
   },
   {
@@ -924,7 +924,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Cute Mood Pack",
     "pack_id": "PACK-CUTE-MOOD",
     "category": "Cute / Relatable",
-    "image": "assets/catalogue/clean/CUTE-004.png",
+    "image": "assets/catalogue/clean/CUTE-004.webp",
     "name": "Nope Not Today Panda"
   },
   {
@@ -932,7 +932,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Cute Mood Pack",
     "pack_id": "PACK-CUTE-MOOD",
     "category": "Cute / Relatable",
-    "image": "assets/catalogue/clean/CUTE-005.png",
+    "image": "assets/catalogue/clean/CUTE-005.webp",
     "name": "Happy Fox"
   },
   {
@@ -940,7 +940,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Cute Mood Pack",
     "pack_id": "PACK-CUTE-MOOD",
     "category": "Cute / Relatable",
-    "image": "assets/catalogue/clean/CUTE-006.png",
+    "image": "assets/catalogue/clean/CUTE-006.webp",
     "name": "Sleepy Sloth"
   },
   {
@@ -948,7 +948,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Cute Mood Pack",
     "pack_id": "PACK-CUTE-MOOD",
     "category": "Cute / Relatable",
-    "image": "assets/catalogue/clean/CUTE-007.png",
+    "image": "assets/catalogue/clean/CUTE-007.webp",
     "name": "Too Hot Chilli"
   },
   {
@@ -956,7 +956,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Cute Mood Pack",
     "pack_id": "PACK-CUTE-MOOD",
     "category": "Cute / Relatable",
-    "image": "assets/catalogue/clean/CUTE-008.png",
+    "image": "assets/catalogue/clean/CUTE-008.webp",
     "name": "Happy Avocado"
   },
   {
@@ -964,7 +964,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Cute Mood Pack",
     "pack_id": "PACK-CUTE-MOOD",
     "category": "Cute / Relatable",
-    "image": "assets/catalogue/clean/CUTE-009.png",
+    "image": "assets/catalogue/clean/CUTE-009.webp",
     "name": "Sleeping Cat"
   },
   {
@@ -972,7 +972,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Cute Mood Pack",
     "pack_id": "PACK-CUTE-MOOD",
     "category": "Cute / Relatable",
-    "image": "assets/catalogue/clean/CUTE-010.png",
+    "image": "assets/catalogue/clean/CUTE-010.webp",
     "name": "Book-loving Ghost"
   },
   {
@@ -980,7 +980,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Cute Mood Pack",
     "pack_id": "PACK-CUTE-MOOD",
     "category": "Cute / Relatable",
-    "image": "assets/catalogue/clean/CUTE-011.png",
+    "image": "assets/catalogue/clean/CUTE-011.webp",
     "name": "Panda Tea Time"
   },
   {
@@ -988,7 +988,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Cute Mood Pack",
     "pack_id": "PACK-CUTE-MOOD",
     "category": "Cute / Relatable",
-    "image": "assets/catalogue/clean/CUTE-012.png",
+    "image": "assets/catalogue/clean/CUTE-012.webp",
     "name": "Dancing Avocado"
   },
   {
@@ -996,7 +996,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Cute Mood Pack",
     "pack_id": "PACK-CUTE-MOOD",
     "category": "Cute / Relatable",
-    "image": "assets/catalogue/clean/CUTE-013.png",
+    "image": "assets/catalogue/clean/CUTE-013.webp",
     "name": "Book Stack"
   },
   {
@@ -1004,7 +1004,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Cute Mood Pack",
     "pack_id": "PACK-CUTE-MOOD",
     "category": "Cute / Relatable",
-    "image": "assets/catalogue/clean/CUTE-014.png",
+    "image": "assets/catalogue/clean/CUTE-014.webp",
     "name": "Cute Mushroom"
   },
   {
@@ -1012,7 +1012,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Cute Mood Pack",
     "pack_id": "PACK-CUTE-MOOD",
     "category": "Cute / Relatable",
-    "image": "assets/catalogue/clean/CUTE-015.png",
+    "image": "assets/catalogue/clean/CUTE-015.webp",
     "name": "Happy Taco"
   },
   {
@@ -1020,7 +1020,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Cute Mood Pack",
     "pack_id": "PACK-CUTE-MOOD",
     "category": "Cute / Relatable",
-    "image": "assets/catalogue/clean/CUTE-016.png",
+    "image": "assets/catalogue/clean/CUTE-016.webp",
     "name": "Spicy Chilli"
   },
   {
@@ -1028,7 +1028,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Engineering & Campus Pack",
     "pack_id": "PACK-ENG-01",
     "category": "Engineering / Coding",
-    "image": "assets/catalogue/clean/ENG-001.png",
+    "image": "assets/catalogue/clean/ENG-001.webp",
     "name": "Engineer Idiot Proof"
   },
   {
@@ -1036,7 +1036,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Engineering & Campus Pack",
     "pack_id": "PACK-ENG-01",
     "category": "Engineering / Coding",
-    "image": "assets/catalogue/clean/ENG-002.png",
+    "image": "assets/catalogue/clean/ENG-002.webp",
     "name": "Hello World"
   },
   {
@@ -1044,7 +1044,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Engineering & Campus Pack",
     "pack_id": "PACK-ENG-01",
     "category": "Engineering / Coding",
-    "image": "assets/catalogue/clean/ENG-003.png",
+    "image": "assets/catalogue/clean/ENG-003.webp",
     "name": "Eat Sleep Engineering Repeat"
   },
   {
@@ -1052,7 +1052,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Engineering & Campus Pack",
     "pack_id": "PACK-ENG-01",
     "category": "Engineering / Coding",
-    "image": "assets/catalogue/clean/ENG-004.png",
+    "image": "assets/catalogue/clean/ENG-004.webp",
     "name": "I Know HTML"
   },
   {
@@ -1060,7 +1060,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Engineering & Campus Pack",
     "pack_id": "PACK-ENG-01",
     "category": "Engineering / Coding",
-    "image": "assets/catalogue/clean/ENG-005.png",
+    "image": "assets/catalogue/clean/ENG-005.webp",
     "name": "Born Creative Forced to Code"
   },
   {
@@ -1068,7 +1068,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Engineering & Campus Pack",
     "pack_id": "PACK-ENG-01",
     "category": "Engineering / Coding",
-    "image": "assets/catalogue/clean/ENG-006.png",
+    "image": "assets/catalogue/clean/ENG-006.webp",
     "name": "Without Users No Errors"
   },
   {
@@ -1076,7 +1076,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Engineering & Campus Pack",
     "pack_id": "PACK-ENG-01",
     "category": "Engineering / Coding",
-    "image": "assets/catalogue/clean/ENG-007.png",
+    "image": "assets/catalogue/clean/ENG-007.webp",
     "name": "Engineer Assumptions"
   },
   {
@@ -1084,7 +1084,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Engineering & Campus Pack",
     "pack_id": "PACK-ENG-01",
     "category": "Engineering / Coding",
-    "image": "assets/catalogue/clean/ENG-008.png",
+    "image": "assets/catalogue/clean/ENG-008.webp",
     "name": "Solving Unknown Problems"
   },
   {
@@ -1092,7 +1092,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Engineering & Campus Pack",
     "pack_id": "PACK-ENG-01",
     "category": "Engineering / Coding",
-    "image": "assets/catalogue/clean/ENG-009.png",
+    "image": "assets/catalogue/clean/ENG-009.webp",
     "name": "Save Water Drink Beer"
   },
   {
@@ -1100,7 +1100,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Engineering & Campus Pack",
     "pack_id": "PACK-ENG-01",
     "category": "Engineering / Coding",
-    "image": "assets/catalogue/clean/ENG-010.png",
+    "image": "assets/catalogue/clean/ENG-010.webp",
     "name": "Sab Moh Maya Hai"
   },
   {
@@ -1108,7 +1108,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Engineering & Campus Pack",
     "pack_id": "PACK-ENG-01",
     "category": "Engineering / Coding",
-    "image": "assets/catalogue/clean/ENG-011.png",
+    "image": "assets/catalogue/clean/ENG-011.webp",
     "name": "Buddy Like a Brother"
   },
   {
@@ -1116,7 +1116,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Engineering & Campus Pack",
     "pack_id": "PACK-ENG-01",
     "category": "Engineering / Coding",
-    "image": "assets/catalogue/clean/ENG-012.png",
+    "image": "assets/catalogue/clean/ENG-012.webp",
     "name": "I Will Be There for You"
   },
   {
@@ -1124,7 +1124,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Friendship Pack",
     "pack_id": "PACK-FRIEND-01",
     "category": "Friendship",
-    "image": "assets/catalogue/clean/FRIEND-001.png",
+    "image": "assets/catalogue/clean/FRIEND-001.webp",
     "name": "Bread and Butter Friends"
   },
   {
@@ -1132,7 +1132,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Friendship Pack",
     "pack_id": "PACK-FRIEND-01",
     "category": "Friendship",
-    "image": "assets/catalogue/clean/FRIEND-002.png",
+    "image": "assets/catalogue/clean/FRIEND-002.webp",
     "name": "Unpaid Therapist"
   },
   {
@@ -1140,7 +1140,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Friendship Pack",
     "pack_id": "PACK-FRIEND-01",
     "category": "Friendship",
-    "image": "assets/catalogue/clean/FRIEND-003.png",
+    "image": "assets/catalogue/clean/FRIEND-003.webp",
     "name": "Buddy Like a Brother"
   },
   {
@@ -1148,7 +1148,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Friendship Pack",
     "pack_id": "PACK-FRIEND-01",
     "category": "Friendship",
-    "image": "assets/catalogue/clean/FRIEND-004.png",
+    "image": "assets/catalogue/clean/FRIEND-004.webp",
     "name": "I Will Be There for You"
   },
   {
@@ -1156,7 +1156,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Friendship Pack",
     "pack_id": "PACK-FRIEND-01",
     "category": "Friendship",
-    "image": "assets/catalogue/clean/FRIEND-005.png",
+    "image": "assets/catalogue/clean/FRIEND-005.webp",
     "name": "Monica to My Rachel"
   },
   {
@@ -1164,7 +1164,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Friendship Pack",
     "pack_id": "PACK-FRIEND-01",
     "category": "Friendship",
-    "image": "assets/catalogue/clean/FRIEND-006.png",
+    "image": "assets/catalogue/clean/FRIEND-006.webp",
     "name": "Sister Forever Friend"
   },
   {
@@ -1269,7 +1269,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Gym Motivation",
     "pack_id": "PACK-GYM-MOTIVATION",
     "category": "Fitness",
-    "image": "assets/catalogue/clean/GYM-001.png"
+    "image": "assets/catalogue/clean/GYM-001.webp"
   },
   {
     "code": "GYM-002",
@@ -1277,7 +1277,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Gym Motivation",
     "pack_id": "PACK-GYM-MOTIVATION",
     "category": "Fitness",
-    "image": "assets/catalogue/clean/GYM-002.png"
+    "image": "assets/catalogue/clean/GYM-002.webp"
   },
   {
     "code": "GYM-003",
@@ -1285,7 +1285,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Gym Motivation",
     "pack_id": "PACK-GYM-MOTIVATION",
     "category": "Fitness",
-    "image": "assets/catalogue/clean/GYM-003.png"
+    "image": "assets/catalogue/clean/GYM-003.webp"
   },
   {
     "code": "GYM-004",
@@ -1293,7 +1293,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Gym Motivation",
     "pack_id": "PACK-GYM-MOTIVATION",
     "category": "Fitness",
-    "image": "assets/catalogue/clean/GYM-004.png"
+    "image": "assets/catalogue/clean/GYM-004.webp"
   },
   {
     "code": "GYM-005",
@@ -1301,7 +1301,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Gym Motivation",
     "pack_id": "PACK-GYM-MOTIVATION",
     "category": "Fitness",
-    "image": "assets/catalogue/clean/GYM-005.png"
+    "image": "assets/catalogue/clean/GYM-005.webp"
   },
   {
     "code": "GYM-006",
@@ -1309,7 +1309,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Gym Motivation",
     "pack_id": "PACK-GYM-MOTIVATION",
     "category": "Fitness",
-    "image": "assets/catalogue/clean/GYM-006.png"
+    "image": "assets/catalogue/clean/GYM-006.webp"
   },
   {
     "code": "GYM-007",
@@ -1317,7 +1317,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Gym Motivation",
     "pack_id": "PACK-GYM-MOTIVATION",
     "category": "Fitness",
-    "image": "assets/catalogue/clean/GYM-007.png"
+    "image": "assets/catalogue/clean/GYM-007.webp"
   },
   {
     "code": "GYM-008",
@@ -1325,7 +1325,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Gym Motivation",
     "pack_id": "PACK-GYM-MOTIVATION",
     "category": "Fitness",
-    "image": "assets/catalogue/clean/GYM-008.png"
+    "image": "assets/catalogue/clean/GYM-008.webp"
   },
   {
     "code": "GYM-009",
@@ -1333,7 +1333,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Gym Motivation",
     "pack_id": "PACK-GYM-MOTIVATION",
     "category": "Fitness",
-    "image": "assets/catalogue/clean/GYM-009.png"
+    "image": "assets/catalogue/clean/GYM-009.webp"
   },
   {
     "code": "GYM-010",
@@ -1341,7 +1341,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Gym Motivation",
     "pack_id": "PACK-GYM-MOTIVATION",
     "category": "Fitness",
-    "image": "assets/catalogue/clean/GYM-010.png"
+    "image": "assets/catalogue/clean/GYM-010.webp"
   },
   {
     "code": "GYM-011",
@@ -1349,7 +1349,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Gym Motivation",
     "pack_id": "PACK-GYM-MOTIVATION",
     "category": "Fitness",
-    "image": "assets/catalogue/clean/GYM-011.png"
+    "image": "assets/catalogue/clean/GYM-011.webp"
   },
   {
     "code": "GYM-012",
@@ -1357,7 +1357,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Gym Motivation",
     "pack_id": "PACK-GYM-MOTIVATION",
     "category": "Fitness",
-    "image": "assets/catalogue/clean/GYM-012.png"
+    "image": "assets/catalogue/clean/GYM-012.webp"
   },
   {
     "code": "GYM-013",
@@ -1365,7 +1365,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Gym Motivation",
     "pack_id": "PACK-GYM-MOTIVATION",
     "category": "Fitness",
-    "image": "assets/catalogue/clean/GYM-013.png"
+    "image": "assets/catalogue/clean/GYM-013.webp"
   },
   {
     "code": "GYM-014",
@@ -1373,7 +1373,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Gym Motivation",
     "pack_id": "PACK-GYM-MOTIVATION",
     "category": "Fitness",
-    "image": "assets/catalogue/clean/GYM-014.png"
+    "image": "assets/catalogue/clean/GYM-014.webp"
   },
   {
     "code": "GYM-015",
@@ -1381,7 +1381,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Gym Motivation",
     "pack_id": "PACK-GYM-MOTIVATION",
     "category": "Fitness",
-    "image": "assets/catalogue/clean/GYM-015.png"
+    "image": "assets/catalogue/clean/GYM-015.webp"
   },
   {
     "code": "GYM-016",
@@ -1389,7 +1389,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Gym Motivation",
     "pack_id": "PACK-GYM-MOTIVATION",
     "category": "Fitness",
-    "image": "assets/catalogue/clean/GYM-016.png"
+    "image": "assets/catalogue/clean/GYM-016.webp"
   },
   {
     "code": "FIT-001",
@@ -1397,7 +1397,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Anime Fitness",
     "pack_id": "PACK-ANIME-FITNESS",
     "category": "Fitness",
-    "image": "assets/catalogue/clean/FIT-001.png"
+    "image": "assets/catalogue/clean/FIT-001.webp"
   },
   {
     "code": "FIT-002",
@@ -1405,7 +1405,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Anime Fitness",
     "pack_id": "PACK-ANIME-FITNESS",
     "category": "Fitness",
-    "image": "assets/catalogue/clean/FIT-002.png"
+    "image": "assets/catalogue/clean/FIT-002.webp"
   },
   {
     "code": "FIT-003",
@@ -1413,7 +1413,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Anime Fitness",
     "pack_id": "PACK-ANIME-FITNESS",
     "category": "Fitness",
-    "image": "assets/catalogue/clean/FIT-003.png"
+    "image": "assets/catalogue/clean/FIT-003.webp"
   },
   {
     "code": "FIT-004",
@@ -1421,7 +1421,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Anime Fitness",
     "pack_id": "PACK-ANIME-FITNESS",
     "category": "Fitness",
-    "image": "assets/catalogue/clean/FIT-004.png"
+    "image": "assets/catalogue/clean/FIT-004.webp"
   },
   {
     "code": "FIT-005",
@@ -1429,7 +1429,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Anime Fitness",
     "pack_id": "PACK-ANIME-FITNESS",
     "category": "Fitness",
-    "image": "assets/catalogue/clean/FIT-005.png"
+    "image": "assets/catalogue/clean/FIT-005.webp"
   },
   {
     "code": "FIT-006",
@@ -1437,7 +1437,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Anime Fitness",
     "pack_id": "PACK-ANIME-FITNESS",
     "category": "Fitness",
-    "image": "assets/catalogue/clean/FIT-006.png"
+    "image": "assets/catalogue/clean/FIT-006.webp"
   },
   {
     "code": "FIT-007",
@@ -1445,7 +1445,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Anime Fitness",
     "pack_id": "PACK-ANIME-FITNESS",
     "category": "Fitness",
-    "image": "assets/catalogue/clean/FIT-007.png"
+    "image": "assets/catalogue/clean/FIT-007.webp"
   },
   {
     "code": "FIT-008",
@@ -1453,7 +1453,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Anime Fitness",
     "pack_id": "PACK-ANIME-FITNESS",
     "category": "Fitness",
-    "image": "assets/catalogue/clean/FIT-008.png"
+    "image": "assets/catalogue/clean/FIT-008.webp"
   },
   {
     "code": "FIT-009",
@@ -1461,7 +1461,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Anime Fitness",
     "pack_id": "PACK-ANIME-FITNESS",
     "category": "Fitness",
-    "image": "assets/catalogue/clean/FIT-009.png"
+    "image": "assets/catalogue/clean/FIT-009.webp"
   },
   {
     "code": "FIT-010",
@@ -1469,7 +1469,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Anime Fitness",
     "pack_id": "PACK-ANIME-FITNESS",
     "category": "Fitness",
-    "image": "assets/catalogue/clean/FIT-010.png"
+    "image": "assets/catalogue/clean/FIT-010.webp"
   },
   {
     "code": "FIT-011",
@@ -1477,7 +1477,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Anime Fitness",
     "pack_id": "PACK-ANIME-FITNESS",
     "category": "Fitness",
-    "image": "assets/catalogue/clean/FIT-011.png"
+    "image": "assets/catalogue/clean/FIT-011.webp"
   },
   {
     "code": "FIT-012",
@@ -1485,7 +1485,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Anime Fitness",
     "pack_id": "PACK-ANIME-FITNESS",
     "category": "Fitness",
-    "image": "assets/catalogue/clean/FIT-012.png"
+    "image": "assets/catalogue/clean/FIT-012.webp"
   },
   {
     "code": "FIT-013",
@@ -1493,7 +1493,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Anime Fitness",
     "pack_id": "PACK-ANIME-FITNESS",
     "category": "Fitness",
-    "image": "assets/catalogue/clean/FIT-013.png"
+    "image": "assets/catalogue/clean/FIT-013.webp"
   },
   {
     "code": "FIT-014",
@@ -1501,7 +1501,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Anime Fitness",
     "pack_id": "PACK-ANIME-FITNESS",
     "category": "Fitness",
-    "image": "assets/catalogue/clean/FIT-014.png"
+    "image": "assets/catalogue/clean/FIT-014.webp"
   },
   {
     "code": "FIT-015",
@@ -1509,7 +1509,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Anime Fitness",
     "pack_id": "PACK-ANIME-FITNESS",
     "category": "Fitness",
-    "image": "assets/catalogue/clean/FIT-015.png"
+    "image": "assets/catalogue/clean/FIT-015.webp"
   },
   {
     "code": "FIT-016",
@@ -1517,7 +1517,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Anime Fitness",
     "pack_id": "PACK-ANIME-FITNESS",
     "category": "Fitness",
-    "image": "assets/catalogue/clean/FIT-016.png"
+    "image": "assets/catalogue/clean/FIT-016.webp"
   },
   {
     "code": "FOOD-001",
@@ -1525,7 +1525,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Healthy Food",
     "pack_id": "PACK-HEALTHY-FOOD",
     "category": "Healthy Food",
-    "image": "assets/catalogue/clean/FOOD-001.png"
+    "image": "assets/catalogue/clean/FOOD-001.webp"
   },
   {
     "code": "FOOD-002",
@@ -1533,7 +1533,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Healthy Food",
     "pack_id": "PACK-HEALTHY-FOOD",
     "category": "Healthy Food",
-    "image": "assets/catalogue/clean/FOOD-002.png"
+    "image": "assets/catalogue/clean/FOOD-002.webp"
   },
   {
     "code": "FOOD-003",
@@ -1541,7 +1541,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Healthy Food",
     "pack_id": "PACK-HEALTHY-FOOD",
     "category": "Healthy Food",
-    "image": "assets/catalogue/clean/FOOD-003.png"
+    "image": "assets/catalogue/clean/FOOD-003.webp"
   },
   {
     "code": "FOOD-004",
@@ -1549,7 +1549,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Healthy Food",
     "pack_id": "PACK-HEALTHY-FOOD",
     "category": "Healthy Food",
-    "image": "assets/catalogue/clean/FOOD-004.png"
+    "image": "assets/catalogue/clean/FOOD-004.webp"
   },
   {
     "code": "FOOD-005",
@@ -1557,7 +1557,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Healthy Food",
     "pack_id": "PACK-HEALTHY-FOOD",
     "category": "Healthy Food",
-    "image": "assets/catalogue/clean/FOOD-005.png"
+    "image": "assets/catalogue/clean/FOOD-005.webp"
   },
   {
     "code": "FOOD-006",
@@ -1565,7 +1565,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Healthy Food",
     "pack_id": "PACK-HEALTHY-FOOD",
     "category": "Healthy Food",
-    "image": "assets/catalogue/clean/FOOD-006.png"
+    "image": "assets/catalogue/clean/FOOD-006.webp"
   },
   {
     "code": "FOOD-007",
@@ -1573,7 +1573,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Healthy Food",
     "pack_id": "PACK-HEALTHY-FOOD",
     "category": "Healthy Food",
-    "image": "assets/catalogue/clean/FOOD-007.png"
+    "image": "assets/catalogue/clean/FOOD-007.webp"
   },
   {
     "code": "FOOD-008",
@@ -1581,7 +1581,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Healthy Food",
     "pack_id": "PACK-HEALTHY-FOOD",
     "category": "Healthy Food",
-    "image": "assets/catalogue/clean/FOOD-008.png"
+    "image": "assets/catalogue/clean/FOOD-008.webp"
   },
   {
     "code": "FOOD-009",
@@ -1589,7 +1589,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Healthy Food",
     "pack_id": "PACK-HEALTHY-FOOD",
     "category": "Healthy Food",
-    "image": "assets/catalogue/clean/FOOD-009.png"
+    "image": "assets/catalogue/clean/FOOD-009.webp"
   },
   {
     "code": "FOOD-010",
@@ -1597,7 +1597,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Healthy Food",
     "pack_id": "PACK-HEALTHY-FOOD",
     "category": "Healthy Food",
-    "image": "assets/catalogue/clean/FOOD-010.png"
+    "image": "assets/catalogue/clean/FOOD-010.webp"
   },
   {
     "code": "FOOD-011",
@@ -1605,7 +1605,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Healthy Food",
     "pack_id": "PACK-HEALTHY-FOOD",
     "category": "Healthy Food",
-    "image": "assets/catalogue/clean/FOOD-011.png"
+    "image": "assets/catalogue/clean/FOOD-011.webp"
   },
   {
     "code": "FOOD-012",
@@ -1613,7 +1613,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Healthy Food",
     "pack_id": "PACK-HEALTHY-FOOD",
     "category": "Healthy Food",
-    "image": "assets/catalogue/clean/FOOD-012.png"
+    "image": "assets/catalogue/clean/FOOD-012.webp"
   },
   {
     "code": "TECH-001",
@@ -1621,7 +1621,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Engineer Quotes",
     "pack_id": "PACK-ENGINEER-QUOTES",
     "category": "Engineering / Coding",
-    "image": "assets/catalogue/clean/TECH-001.png"
+    "image": "assets/catalogue/clean/TECH-001.webp"
   },
   {
     "code": "TECH-002",
@@ -1629,7 +1629,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Engineer Quotes",
     "pack_id": "PACK-ENGINEER-QUOTES",
     "category": "Engineering / Coding",
-    "image": "assets/catalogue/clean/TECH-002.png"
+    "image": "assets/catalogue/clean/TECH-002.webp"
   },
   {
     "code": "TECH-003",
@@ -1637,7 +1637,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Engineer Quotes",
     "pack_id": "PACK-ENGINEER-QUOTES",
     "category": "Engineering / Coding",
-    "image": "assets/catalogue/clean/TECH-003.png"
+    "image": "assets/catalogue/clean/TECH-003.webp"
   },
   {
     "code": "TECH-004",
@@ -1645,7 +1645,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Engineer Quotes",
     "pack_id": "PACK-ENGINEER-QUOTES",
     "category": "Engineering / Coding",
-    "image": "assets/catalogue/clean/TECH-004.png"
+    "image": "assets/catalogue/clean/TECH-004.webp"
   },
   {
     "code": "TECH-005",
@@ -1653,7 +1653,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Engineer Quotes",
     "pack_id": "PACK-ENGINEER-QUOTES",
     "category": "Engineering / Coding",
-    "image": "assets/catalogue/clean/TECH-005.png"
+    "image": "assets/catalogue/clean/TECH-005.webp"
   },
   {
     "code": "TECH-006",
@@ -1661,7 +1661,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Engineer Quotes",
     "pack_id": "PACK-ENGINEER-QUOTES",
     "category": "Engineering / Coding",
-    "image": "assets/catalogue/clean/TECH-006.png"
+    "image": "assets/catalogue/clean/TECH-006.webp"
   },
   {
     "code": "TECH-007",
@@ -1669,7 +1669,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Engineer Quotes",
     "pack_id": "PACK-ENGINEER-QUOTES",
     "category": "Engineering / Coding",
-    "image": "assets/catalogue/clean/TECH-007.png"
+    "image": "assets/catalogue/clean/TECH-007.webp"
   },
   {
     "code": "TECH-008",
@@ -1677,7 +1677,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Engineer Quotes",
     "pack_id": "PACK-ENGINEER-QUOTES",
     "category": "Engineering / Coding",
-    "image": "assets/catalogue/clean/TECH-008.png"
+    "image": "assets/catalogue/clean/TECH-008.webp"
   },
   {
     "code": "TECH-009",
@@ -1685,7 +1685,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Engineer Quotes",
     "pack_id": "PACK-ENGINEER-QUOTES",
     "category": "Engineering / Coding",
-    "image": "assets/catalogue/clean/TECH-009.png"
+    "image": "assets/catalogue/clean/TECH-009.webp"
   },
   {
     "code": "TECH-010",
@@ -1693,7 +1693,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Engineer Quotes",
     "pack_id": "PACK-ENGINEER-QUOTES",
     "category": "Engineering / Coding",
-    "image": "assets/catalogue/clean/TECH-010.png"
+    "image": "assets/catalogue/clean/TECH-010.webp"
   },
   {
     "code": "TECH-011",
@@ -1701,7 +1701,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Engineer Quotes",
     "pack_id": "PACK-ENGINEER-QUOTES",
     "category": "Engineering / Coding",
-    "image": "assets/catalogue/clean/TECH-011.png"
+    "image": "assets/catalogue/clean/TECH-011.webp"
   },
   {
     "code": "TECH-012",
@@ -1709,7 +1709,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Engineer Quotes",
     "pack_id": "PACK-ENGINEER-QUOTES",
     "category": "Engineering / Coding",
-    "image": "assets/catalogue/clean/TECH-012.png"
+    "image": "assets/catalogue/clean/TECH-012.webp"
   },
   {
     "code": "TECH-013",
@@ -1717,7 +1717,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Engineer Quotes",
     "pack_id": "PACK-ENGINEER-QUOTES",
     "category": "Engineering / Coding",
-    "image": "assets/catalogue/clean/TECH-013.png"
+    "image": "assets/catalogue/clean/TECH-013.webp"
   },
   {
     "code": "TECH-014",
@@ -1725,7 +1725,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Engineer Quotes",
     "pack_id": "PACK-ENGINEER-QUOTES",
     "category": "Engineering / Coding",
-    "image": "assets/catalogue/clean/TECH-014.png"
+    "image": "assets/catalogue/clean/TECH-014.webp"
   },
   {
     "code": "TECH-015",
@@ -1733,7 +1733,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Engineer Quotes",
     "pack_id": "PACK-ENGINEER-QUOTES",
     "category": "Engineering / Coding",
-    "image": "assets/catalogue/clean/TECH-015.png"
+    "image": "assets/catalogue/clean/TECH-015.webp"
   },
   {
     "code": "TECH-016",
@@ -1741,7 +1741,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Engineer Quotes",
     "pack_id": "PACK-ENGINEER-QUOTES",
     "category": "Engineering / Coding",
-    "image": "assets/catalogue/clean/TECH-016.png"
+    "image": "assets/catalogue/clean/TECH-016.webp"
   },
   {
     "code": "MEME-001",
@@ -1749,7 +1749,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Ultimate Memes Vol. 1",
     "pack_id": "PACK-ULTIMATE-MEMES-1",
     "category": "Memes",
-    "image": "assets/catalogue/clean/MEME-001.png"
+    "image": "assets/catalogue/clean/MEME-001.webp"
   },
   {
     "code": "MEME-002",
@@ -1757,7 +1757,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Ultimate Memes Vol. 1",
     "pack_id": "PACK-ULTIMATE-MEMES-1",
     "category": "Memes",
-    "image": "assets/catalogue/clean/MEME-002.png"
+    "image": "assets/catalogue/clean/MEME-002.webp"
   },
   {
     "code": "MEME-003",
@@ -1765,7 +1765,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Ultimate Memes Vol. 1",
     "pack_id": "PACK-ULTIMATE-MEMES-1",
     "category": "Memes",
-    "image": "assets/catalogue/clean/MEME-003.png"
+    "image": "assets/catalogue/clean/MEME-003.webp"
   },
   {
     "code": "MEME-004",
@@ -1773,7 +1773,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Ultimate Memes Vol. 1",
     "pack_id": "PACK-ULTIMATE-MEMES-1",
     "category": "Memes",
-    "image": "assets/catalogue/clean/MEME-004.png"
+    "image": "assets/catalogue/clean/MEME-004.webp"
   },
   {
     "code": "MEME-005",
@@ -1781,7 +1781,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Ultimate Memes Vol. 1",
     "pack_id": "PACK-ULTIMATE-MEMES-1",
     "category": "Memes",
-    "image": "assets/catalogue/clean/MEME-005.png"
+    "image": "assets/catalogue/clean/MEME-005.webp"
   },
   {
     "code": "MEME-006",
@@ -1789,7 +1789,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Ultimate Memes Vol. 1",
     "pack_id": "PACK-ULTIMATE-MEMES-1",
     "category": "Memes",
-    "image": "assets/catalogue/clean/MEME-006.png"
+    "image": "assets/catalogue/clean/MEME-006.webp"
   },
   {
     "code": "MEME-007",
@@ -1797,7 +1797,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Ultimate Memes Vol. 1",
     "pack_id": "PACK-ULTIMATE-MEMES-1",
     "category": "Memes",
-    "image": "assets/catalogue/clean/MEME-007.png"
+    "image": "assets/catalogue/clean/MEME-007.webp"
   },
   {
     "code": "MEME-008",
@@ -1805,7 +1805,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Ultimate Memes Vol. 1",
     "pack_id": "PACK-ULTIMATE-MEMES-1",
     "category": "Memes",
-    "image": "assets/catalogue/clean/MEME-008.png"
+    "image": "assets/catalogue/clean/MEME-008.webp"
   },
   {
     "code": "MEME-009",
@@ -1813,7 +1813,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Ultimate Memes Vol. 1",
     "pack_id": "PACK-ULTIMATE-MEMES-1",
     "category": "Memes",
-    "image": "assets/catalogue/clean/MEME-009.png"
+    "image": "assets/catalogue/clean/MEME-009.webp"
   },
   {
     "code": "MEME-010",
@@ -1821,7 +1821,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Ultimate Memes Vol. 1",
     "pack_id": "PACK-ULTIMATE-MEMES-1",
     "category": "Memes",
-    "image": "assets/catalogue/clean/MEME-010.png"
+    "image": "assets/catalogue/clean/MEME-010.webp"
   },
   {
     "code": "MEME-011",
@@ -1829,7 +1829,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Ultimate Memes Vol. 1",
     "pack_id": "PACK-ULTIMATE-MEMES-1",
     "category": "Memes",
-    "image": "assets/catalogue/clean/MEME-011.png"
+    "image": "assets/catalogue/clean/MEME-011.webp"
   },
   {
     "code": "MEME-012",
@@ -1837,7 +1837,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Ultimate Memes Vol. 1",
     "pack_id": "PACK-ULTIMATE-MEMES-1",
     "category": "Memes",
-    "image": "assets/catalogue/clean/MEME-012.png"
+    "image": "assets/catalogue/clean/MEME-012.webp"
   },
   {
     "code": "MEME-013",
@@ -1845,7 +1845,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Ultimate Memes Vol. 1",
     "pack_id": "PACK-ULTIMATE-MEMES-1",
     "category": "Memes",
-    "image": "assets/catalogue/clean/MEME-013.png"
+    "image": "assets/catalogue/clean/MEME-013.webp"
   },
   {
     "code": "MEME-014",
@@ -1853,7 +1853,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Ultimate Memes Vol. 1",
     "pack_id": "PACK-ULTIMATE-MEMES-1",
     "category": "Memes",
-    "image": "assets/catalogue/clean/MEME-014.png"
+    "image": "assets/catalogue/clean/MEME-014.webp"
   },
   {
     "code": "MEME-015",
@@ -1861,7 +1861,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Ultimate Memes Vol. 1",
     "pack_id": "PACK-ULTIMATE-MEMES-1",
     "category": "Memes",
-    "image": "assets/catalogue/clean/MEME-015.png"
+    "image": "assets/catalogue/clean/MEME-015.webp"
   },
   {
     "code": "MEME-016",
@@ -1869,7 +1869,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Ultimate Memes Vol. 1",
     "pack_id": "PACK-ULTIMATE-MEMES-1",
     "category": "Memes",
-    "image": "assets/catalogue/clean/MEME-016.png"
+    "image": "assets/catalogue/clean/MEME-016.webp"
   },
   {
     "code": "MEME-017",
@@ -1877,7 +1877,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Ultimate Memes Vol. 2",
     "pack_id": "PACK-ULTIMATE-MEMES-2",
     "category": "Memes",
-    "image": "assets/catalogue/clean/MEME-017.png"
+    "image": "assets/catalogue/clean/MEME-017.webp"
   },
   {
     "code": "MEME-018",
@@ -1885,7 +1885,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Ultimate Memes Vol. 2",
     "pack_id": "PACK-ULTIMATE-MEMES-2",
     "category": "Memes",
-    "image": "assets/catalogue/clean/MEME-018.png"
+    "image": "assets/catalogue/clean/MEME-018.webp"
   },
   {
     "code": "MEME-019",
@@ -1893,7 +1893,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Ultimate Memes Vol. 2",
     "pack_id": "PACK-ULTIMATE-MEMES-2",
     "category": "Memes",
-    "image": "assets/catalogue/clean/MEME-019.png"
+    "image": "assets/catalogue/clean/MEME-019.webp"
   },
   {
     "code": "MEME-020",
@@ -1901,7 +1901,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Ultimate Memes Vol. 2",
     "pack_id": "PACK-ULTIMATE-MEMES-2",
     "category": "Memes",
-    "image": "assets/catalogue/clean/MEME-020.png"
+    "image": "assets/catalogue/clean/MEME-020.webp"
   },
   {
     "code": "MEME-021",
@@ -1909,7 +1909,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Ultimate Memes Vol. 2",
     "pack_id": "PACK-ULTIMATE-MEMES-2",
     "category": "Memes",
-    "image": "assets/catalogue/clean/MEME-021.png"
+    "image": "assets/catalogue/clean/MEME-021.webp"
   },
   {
     "code": "MEME-022",
@@ -1917,7 +1917,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Ultimate Memes Vol. 2",
     "pack_id": "PACK-ULTIMATE-MEMES-2",
     "category": "Memes",
-    "image": "assets/catalogue/clean/MEME-022.png"
+    "image": "assets/catalogue/clean/MEME-022.webp"
   },
   {
     "code": "MEME-023",
@@ -1925,7 +1925,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Ultimate Memes Vol. 2",
     "pack_id": "PACK-ULTIMATE-MEMES-2",
     "category": "Memes",
-    "image": "assets/catalogue/clean/MEME-023.png"
+    "image": "assets/catalogue/clean/MEME-023.webp"
   },
   {
     "code": "MEME-024",
@@ -1933,7 +1933,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Ultimate Memes Vol. 2",
     "pack_id": "PACK-ULTIMATE-MEMES-2",
     "category": "Memes",
-    "image": "assets/catalogue/clean/MEME-024.png"
+    "image": "assets/catalogue/clean/MEME-024.webp"
   },
   {
     "code": "SASS-001",
@@ -1941,7 +1941,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Kawaii & Sassy Vol. 1",
     "pack_id": "PACK-KAWAII-SASSY-1",
     "category": "Cute / Relatable",
-    "image": "assets/catalogue/clean/SASS-001.png"
+    "image": "assets/catalogue/clean/SASS-001.webp"
   },
   {
     "code": "SASS-002",
@@ -1949,7 +1949,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Kawaii & Sassy Vol. 1",
     "pack_id": "PACK-KAWAII-SASSY-1",
     "category": "Cute / Relatable",
-    "image": "assets/catalogue/clean/SASS-002.png"
+    "image": "assets/catalogue/clean/SASS-002.webp"
   },
   {
     "code": "SASS-003",
@@ -1957,7 +1957,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Kawaii & Sassy Vol. 1",
     "pack_id": "PACK-KAWAII-SASSY-1",
     "category": "Cute / Relatable",
-    "image": "assets/catalogue/clean/SASS-003.png"
+    "image": "assets/catalogue/clean/SASS-003.webp"
   },
   {
     "code": "SASS-004",
@@ -1965,7 +1965,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Kawaii & Sassy Vol. 1",
     "pack_id": "PACK-KAWAII-SASSY-1",
     "category": "Cute / Relatable",
-    "image": "assets/catalogue/clean/SASS-004.png"
+    "image": "assets/catalogue/clean/SASS-004.webp"
   },
   {
     "code": "SASS-005",
@@ -1973,7 +1973,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Kawaii & Sassy Vol. 1",
     "pack_id": "PACK-KAWAII-SASSY-1",
     "category": "Cute / Relatable",
-    "image": "assets/catalogue/clean/SASS-005.png"
+    "image": "assets/catalogue/clean/SASS-005.webp"
   },
   {
     "code": "SASS-006",
@@ -1981,7 +1981,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Kawaii & Sassy Vol. 1",
     "pack_id": "PACK-KAWAII-SASSY-1",
     "category": "Cute / Relatable",
-    "image": "assets/catalogue/clean/SASS-006.png"
+    "image": "assets/catalogue/clean/SASS-006.webp"
   },
   {
     "code": "SASS-007",
@@ -1989,7 +1989,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Kawaii & Sassy Vol. 1",
     "pack_id": "PACK-KAWAII-SASSY-1",
     "category": "Cute / Relatable",
-    "image": "assets/catalogue/clean/SASS-007.png"
+    "image": "assets/catalogue/clean/SASS-007.webp"
   },
   {
     "code": "SASS-008",
@@ -1997,7 +1997,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Kawaii & Sassy Vol. 1",
     "pack_id": "PACK-KAWAII-SASSY-1",
     "category": "Cute / Relatable",
-    "image": "assets/catalogue/clean/SASS-008.png"
+    "image": "assets/catalogue/clean/SASS-008.webp"
   },
   {
     "code": "SASS-009",
@@ -2005,7 +2005,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Kawaii & Sassy Vol. 1",
     "pack_id": "PACK-KAWAII-SASSY-1",
     "category": "Cute / Relatable",
-    "image": "assets/catalogue/clean/SASS-009.png"
+    "image": "assets/catalogue/clean/SASS-009.webp"
   },
   {
     "code": "SASS-010",
@@ -2013,7 +2013,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Kawaii & Sassy Vol. 1",
     "pack_id": "PACK-KAWAII-SASSY-1",
     "category": "Cute / Relatable",
-    "image": "assets/catalogue/clean/SASS-010.png"
+    "image": "assets/catalogue/clean/SASS-010.webp"
   },
   {
     "code": "SASS-011",
@@ -2021,7 +2021,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Kawaii & Sassy Vol. 1",
     "pack_id": "PACK-KAWAII-SASSY-1",
     "category": "Cute / Relatable",
-    "image": "assets/catalogue/clean/SASS-011.png"
+    "image": "assets/catalogue/clean/SASS-011.webp"
   },
   {
     "code": "SASS-012",
@@ -2029,7 +2029,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Kawaii & Sassy Vol. 1",
     "pack_id": "PACK-KAWAII-SASSY-1",
     "category": "Cute / Relatable",
-    "image": "assets/catalogue/clean/SASS-012.png"
+    "image": "assets/catalogue/clean/SASS-012.webp"
   },
   {
     "code": "SASS-013",
@@ -2037,7 +2037,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Kawaii & Sassy Vol. 1",
     "pack_id": "PACK-KAWAII-SASSY-1",
     "category": "Cute / Relatable",
-    "image": "assets/catalogue/clean/SASS-013.png"
+    "image": "assets/catalogue/clean/SASS-013.webp"
   },
   {
     "code": "SASS-014",
@@ -2045,7 +2045,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Kawaii & Sassy Vol. 1",
     "pack_id": "PACK-KAWAII-SASSY-1",
     "category": "Cute / Relatable",
-    "image": "assets/catalogue/clean/SASS-014.png"
+    "image": "assets/catalogue/clean/SASS-014.webp"
   },
   {
     "code": "SASS-015",
@@ -2053,7 +2053,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Kawaii & Sassy Vol. 1",
     "pack_id": "PACK-KAWAII-SASSY-1",
     "category": "Cute / Relatable",
-    "image": "assets/catalogue/clean/SASS-015.png"
+    "image": "assets/catalogue/clean/SASS-015.webp"
   },
   {
     "code": "SASS-016",
@@ -2061,7 +2061,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Kawaii & Sassy Vol. 1",
     "pack_id": "PACK-KAWAII-SASSY-1",
     "category": "Cute / Relatable",
-    "image": "assets/catalogue/clean/SASS-016.png"
+    "image": "assets/catalogue/clean/SASS-016.webp"
   },
   {
     "code": "SASS-017",
@@ -2069,7 +2069,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Kawaii & Sassy Vol. 2",
     "pack_id": "PACK-KAWAII-SASSY-2",
     "category": "Cute / Relatable",
-    "image": "assets/catalogue/clean/SASS-017.png"
+    "image": "assets/catalogue/clean/SASS-017.webp"
   },
   {
     "code": "SASS-018",
@@ -2077,7 +2077,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Kawaii & Sassy Vol. 2",
     "pack_id": "PACK-KAWAII-SASSY-2",
     "category": "Cute / Relatable",
-    "image": "assets/catalogue/clean/SASS-018.png"
+    "image": "assets/catalogue/clean/SASS-018.webp"
   },
   {
     "code": "SASS-019",
@@ -2085,7 +2085,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Kawaii & Sassy Vol. 2",
     "pack_id": "PACK-KAWAII-SASSY-2",
     "category": "Cute / Relatable",
-    "image": "assets/catalogue/clean/SASS-019.png"
+    "image": "assets/catalogue/clean/SASS-019.webp"
   },
   {
     "code": "SASS-020",
@@ -2093,7 +2093,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Kawaii & Sassy Vol. 2",
     "pack_id": "PACK-KAWAII-SASSY-2",
     "category": "Cute / Relatable",
-    "image": "assets/catalogue/clean/SASS-020.png"
+    "image": "assets/catalogue/clean/SASS-020.webp"
   },
   {
     "code": "SASS-021",
@@ -2101,7 +2101,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Kawaii & Sassy Vol. 2",
     "pack_id": "PACK-KAWAII-SASSY-2",
     "category": "Cute / Relatable",
-    "image": "assets/catalogue/clean/SASS-021.png"
+    "image": "assets/catalogue/clean/SASS-021.webp"
   },
   {
     "code": "SASS-022",
@@ -2109,7 +2109,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Kawaii & Sassy Vol. 2",
     "pack_id": "PACK-KAWAII-SASSY-2",
     "category": "Cute / Relatable",
-    "image": "assets/catalogue/clean/SASS-022.png"
+    "image": "assets/catalogue/clean/SASS-022.webp"
   },
   {
     "code": "SASS-023",
@@ -2117,7 +2117,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Kawaii & Sassy Vol. 2",
     "pack_id": "PACK-KAWAII-SASSY-2",
     "category": "Cute / Relatable",
-    "image": "assets/catalogue/clean/SASS-023.png"
+    "image": "assets/catalogue/clean/SASS-023.webp"
   },
   {
     "code": "SASS-024",
@@ -2125,7 +2125,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Kawaii & Sassy Vol. 2",
     "pack_id": "PACK-KAWAII-SASSY-2",
     "category": "Cute / Relatable",
-    "image": "assets/catalogue/clean/SASS-024.png"
+    "image": "assets/catalogue/clean/SASS-024.webp"
   },
   {
     "code": "SASS-025",
@@ -2133,7 +2133,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Kawaii & Sassy Vol. 2",
     "pack_id": "PACK-KAWAII-SASSY-2",
     "category": "Cute / Relatable",
-    "image": "assets/catalogue/clean/SASS-025.png"
+    "image": "assets/catalogue/clean/SASS-025.webp"
   },
   {
     "code": "SASS-026",
@@ -2141,7 +2141,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Kawaii & Sassy Vol. 2",
     "pack_id": "PACK-KAWAII-SASSY-2",
     "category": "Cute / Relatable",
-    "image": "assets/catalogue/clean/SASS-026.png"
+    "image": "assets/catalogue/clean/SASS-026.webp"
   },
   {
     "code": "SASS-027",
@@ -2149,7 +2149,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Kawaii & Sassy Vol. 2",
     "pack_id": "PACK-KAWAII-SASSY-2",
     "category": "Cute / Relatable",
-    "image": "assets/catalogue/clean/SASS-027.png"
+    "image": "assets/catalogue/clean/SASS-027.webp"
   },
   {
     "code": "SASS-028",
@@ -2157,7 +2157,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Kawaii & Sassy Vol. 2",
     "pack_id": "PACK-KAWAII-SASSY-2",
     "category": "Cute / Relatable",
-    "image": "assets/catalogue/clean/SASS-028.png"
+    "image": "assets/catalogue/clean/SASS-028.webp"
   },
   {
     "code": "SASS-029",
@@ -2165,7 +2165,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Kawaii & Sassy Vol. 2",
     "pack_id": "PACK-KAWAII-SASSY-2",
     "category": "Cute / Relatable",
-    "image": "assets/catalogue/clean/SASS-029.png"
+    "image": "assets/catalogue/clean/SASS-029.webp"
   },
   {
     "code": "SASS-030",
@@ -2173,7 +2173,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Kawaii & Sassy Vol. 2",
     "pack_id": "PACK-KAWAII-SASSY-2",
     "category": "Cute / Relatable",
-    "image": "assets/catalogue/clean/SASS-030.png"
+    "image": "assets/catalogue/clean/SASS-030.webp"
   },
   {
     "code": "GHOST-001",
@@ -2565,7 +2565,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Anime Original Long Sticker Pack",
     "pack_id": "LONG-ANIME-ORIGINAL",
     "category": "Large Long Stickers",
-    "image": "assets/catalogue/clean/LONG-ANIME-ORIGINAL-1.png",
+    "image": "assets/catalogue/clean/LONG-ANIME-ORIGINAL-1.webp",
     "kind": "long",
     "sheet_count": 4
   },
@@ -2575,7 +2575,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Anime Original Long Sticker Pack",
     "pack_id": "LONG-ANIME-ORIGINAL",
     "category": "Large Long Stickers",
-    "image": "assets/catalogue/clean/LONG-ANIME-ORIGINAL-2.png",
+    "image": "assets/catalogue/clean/LONG-ANIME-ORIGINAL-2.webp",
     "kind": "long",
     "sheet_count": 4
   },
@@ -2585,7 +2585,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Anime Original Long Sticker Pack",
     "pack_id": "LONG-ANIME-ORIGINAL",
     "category": "Large Long Stickers",
-    "image": "assets/catalogue/clean/LONG-ANIME-ORIGINAL-3.png",
+    "image": "assets/catalogue/clean/LONG-ANIME-ORIGINAL-3.webp",
     "kind": "long",
     "sheet_count": 4
   },
@@ -2595,7 +2595,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Anime Original Long Sticker Pack",
     "pack_id": "LONG-ANIME-ORIGINAL",
     "category": "Large Long Stickers",
-    "image": "assets/catalogue/clean/LONG-ANIME-ORIGINAL-4.png",
+    "image": "assets/catalogue/clean/LONG-ANIME-ORIGINAL-4.webp",
     "kind": "long",
     "sheet_count": 4
   },
@@ -2605,7 +2605,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Anime Variant Long Sticker Pack",
     "pack_id": "LONG-ANIME-VARIANT",
     "category": "Large Long Stickers",
-    "image": "assets/catalogue/clean/LONG-ANIME-VARIANT-1.png",
+    "image": "assets/catalogue/clean/LONG-ANIME-VARIANT-1.webp",
     "kind": "long",
     "sheet_count": 4
   },
@@ -2615,7 +2615,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Anime Variant Long Sticker Pack",
     "pack_id": "LONG-ANIME-VARIANT",
     "category": "Large Long Stickers",
-    "image": "assets/catalogue/clean/LONG-ANIME-VARIANT-2.png",
+    "image": "assets/catalogue/clean/LONG-ANIME-VARIANT-2.webp",
     "kind": "long",
     "sheet_count": 4
   },
@@ -2625,7 +2625,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Anime Variant Long Sticker Pack",
     "pack_id": "LONG-ANIME-VARIANT",
     "category": "Large Long Stickers",
-    "image": "assets/catalogue/clean/LONG-ANIME-VARIANT-3.png",
+    "image": "assets/catalogue/clean/LONG-ANIME-VARIANT-3.webp",
     "kind": "long",
     "sheet_count": 4
   },
@@ -2635,7 +2635,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Anime Variant Long Sticker Pack",
     "pack_id": "LONG-ANIME-VARIANT",
     "category": "Large Long Stickers",
-    "image": "assets/catalogue/clean/LONG-ANIME-VARIANT-4.png",
+    "image": "assets/catalogue/clean/LONG-ANIME-VARIANT-4.webp",
     "kind": "long",
     "sheet_count": 4
   },
@@ -2645,7 +2645,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Multi Anime Long Sticker Pack",
     "pack_id": "LONG-MULTI-ANIME",
     "category": "Large Long Stickers",
-    "image": "assets/catalogue/clean/LONG-MULTI-ANIME-1.png",
+    "image": "assets/catalogue/clean/LONG-MULTI-ANIME-1.webp",
     "kind": "long",
     "sheet_count": 4
   },
@@ -2655,7 +2655,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Multi Anime Long Sticker Pack",
     "pack_id": "LONG-MULTI-ANIME",
     "category": "Large Long Stickers",
-    "image": "assets/catalogue/clean/LONG-MULTI-ANIME-2.png",
+    "image": "assets/catalogue/clean/LONG-MULTI-ANIME-2.webp",
     "kind": "long",
     "sheet_count": 4
   },
@@ -2665,7 +2665,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Multi Anime Long Sticker Pack",
     "pack_id": "LONG-MULTI-ANIME",
     "category": "Large Long Stickers",
-    "image": "assets/catalogue/clean/LONG-MULTI-ANIME-3.png",
+    "image": "assets/catalogue/clean/LONG-MULTI-ANIME-3.webp",
     "kind": "long",
     "sheet_count": 4
   },
@@ -2675,7 +2675,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Multi Anime Long Sticker Pack",
     "pack_id": "LONG-MULTI-ANIME",
     "category": "Large Long Stickers",
-    "image": "assets/catalogue/clean/LONG-MULTI-ANIME-4.png",
+    "image": "assets/catalogue/clean/LONG-MULTI-ANIME-4.webp",
     "kind": "long",
     "sheet_count": 4
   },
@@ -2685,7 +2685,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Naruto & Akatsuki Long Sticker Pack",
     "pack_id": "LONG-NARUTO-AKATSUKI",
     "category": "Extra Large Long Stickers",
-    "image": "assets/catalogue/clean/LONG-NARUTO-AKATSUKI-1.png",
+    "image": "assets/catalogue/clean/LONG-NARUTO-AKATSUKI-1.webp",
     "kind": "long",
     "sheet_count": 2
   },
@@ -2695,7 +2695,7 @@ window.STICKER_CATALOGUE = [
     "pack": "Naruto & Akatsuki Long Sticker Pack",
     "pack_id": "LONG-NARUTO-AKATSUKI",
     "category": "Extra Large Long Stickers",
-    "image": "assets/catalogue/clean/LONG-NARUTO-AKATSUKI-2.png",
+    "image": "assets/catalogue/clean/LONG-NARUTO-AKATSUKI-2.webp",
     "kind": "long",
     "sheet_count": 2
   }

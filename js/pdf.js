@@ -1,7 +1,15 @@
 (() => {
   'use strict';
   const clean = value => String(value ?? '').normalize('NFKD').replace(/[^\x20-\x7E]/g, ' ');
+  // The PDF library is half a megabyte, so it is fetched the first time someone asks for a PDF rather than on every visit.
+  let engine;
+  const loadEngine = () => window.PDFLib ? Promise.resolve() : (engine ||= new Promise((resolve, reject) => {
+    const script = document.createElement('script'); script.src = 'vendor/pdf-lib.min.js';
+    script.onload = resolve; script.onerror = () => { engine = null; reject(new Error('PDF engine unavailable')); };
+    document.head.append(script);
+  }));
   window.createOrderPdf = async function createOrderPdf(cart, products, customer = {}, options = {}) {
+    await loadEngine();
     if (!window.PDFLib) throw new Error('PDF engine unavailable');
     const { PDFDocument, StandardFonts, rgb, PDFName, PDFString } = window.PDFLib;
     const pdf = await PDFDocument.create();
@@ -62,12 +70,12 @@
       }
       top += 8;
     }
-    let subtotal = 0;
+    let subtotal = 0, bundleLines = [];
     for (const item of cart) {
       if (top > 690) { page = await header(true); top = 132; }
       if (item.type === 'product') {
         const product = productById(item.productId), variant = product?.variants.find(entry => entry.id === item.variantId); if (!product || !variant) continue;
-        const lineTotal = (variant.price || 0) * item.quantity; subtotal += lineTotal;
+        const lineTotal = (variant.price || 0) * item.quantity; subtotal += lineTotal; bundleLines.push({ categories: product.categories || [], unitPrice: variant.price, quantity: item.quantity });
         page.drawRectangle({ x:left, y:H-top-84, width:right-left, height:84, color:colours.white, borderColor:colours.line, borderWidth:.7 });
         const image = await embedImage(variant.image || product.images?.[0]); if (image) { const scale = Math.min(64/image.width,64/image.height); page.drawImage(image,{x:left+10,y:H-top-74,width:image.width*scale,height:image.height*scale}); }
         else { page.drawRectangle({x:left+10,y:H-top-74,width:64,height:64,color:rgb(.92,.92,.88)}); text(page,'IMAGE',left+26,top+37,7,bold,colours.muted); }
@@ -87,6 +95,8 @@
     if (top > 655) { page = await header(true); top = 132; }
     page.drawLine({ start:{x:left,y:H-top}, end:{x:right,y:H-top}, thickness:1, color:colours.line }); top += 18;
     text(page, `PRODUCT SUBTOTAL: Rs. ${subtotal.toLocaleString('en-IN')}`, left, top, 13, bold); top += 22;
+    const deal = window.TPTCartUtils?.bundle(bundleLines, window.CATALOGUE?.bundleOffer) || { discount: 0 };
+    if (deal.discount) { text(page, `BUNDLE SAVING (3 sheets for Rs. ${window.CATALOGUE.bundleOffer.price}): - Rs. ${deal.discount.toLocaleString('en-IN')}  |  PRODUCT TOTAL: Rs. ${(subtotal - deal.discount).toLocaleString('en-IN')}`, left, top, 9, bold); top += 16; subtotal -= deal.discount; }
     const freeShippingThreshold = window.CATALOGUE?.freeShippingThreshold || 699;
     const freeShipping = customer.country === 'India' && subtotal >= freeShippingThreshold;
     text(page, freeShipping ? `SHIPPING: FREE - product subtotal reached Rs. ${freeShippingThreshold}.` : `SHIPPING: Calculated at order confirmation using the delivery PIN code. Free from Rs. ${freeShippingThreshold}.`, left, top, 8, regular, freeShipping ? colours.blue : colours.muted); top += 14;

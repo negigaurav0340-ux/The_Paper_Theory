@@ -22,3 +22,6 @@
 @media(max-width:700px){.footer-signup{grid-template-columns:1fr}.footer-signup>div{flex-direction:column}.footer-signup .button{width:100%}}
 #cartDialog[data-checkout-step="3"] .checkout-actions{position:static;border-top:0;padding:0;margin-top:6px;background:none}
 #cartDialog[data-checkout-step="3"] #checkoutBack{min-height:42px;background:none;border-color:transparent;text-decoration:underline}
+
+.bundle-note:empty{display:none}.bundle-note{margin:10px 0 0;padding:9px 12px;background:#eef4e4;border:1px solid #b9cba0;border-radius:8px;font-size:13px;font-weight:700;color:#1f5a3a}
+#bundleRow b{color:#1f6b45}.delivery-promise{margin-top:10px}.bundle-hint{margin-top:6px;color:#1f5a3a}

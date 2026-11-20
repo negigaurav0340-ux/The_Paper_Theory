@@ -105,6 +105,8 @@
   $('#lightboxSave')?.addEventListener('click', event => { const saved = new Set(safeParse('tpt-favourites-v4', [])), id = current().productId, add = !saved.has(id); add ? saved.add(id) : saved.delete(id); localStorage.setItem('tpt-favourites-v4', JSON.stringify([...saved])); event.currentTarget.textContent = add ? '♥' : '♡'; event.currentTarget.classList.toggle('saved', add); if (add) track('wishlist_added', { productId: id }); });
 
   const video = $('#lightboxVideo');
+  // The demo plays only while it is on screen, so the footage is not downloaded by visitors who never scroll to it.
+  if (video) { if ('IntersectionObserver' in window) new IntersectionObserver(entries => entries.forEach(entry => { if (entry.isIntersecting) video.play().catch(() => {}); else video.pause(); }), { threshold: .25 }).observe(video); else video.play().catch(() => {}); }
   let videoStarted = false, videoCompleted = false;
   video?.addEventListener('play', () => { if (!videoStarted) { videoStarted = true; track('product_video_started', { productId: current().productId, variantId: current().variant }); } });
   video?.addEventListener('timeupdate', () => { if (!videoCompleted && video.duration && video.currentTime / video.duration > .9) { videoCompleted = true; track('product_video_completed', { productId: current().productId, variantId: current().variant }); } });
